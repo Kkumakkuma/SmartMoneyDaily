@@ -1,0 +1,39 @@
+name: Auto Generate Blog Post
+
+on:
+  schedule:
+    # Run every 4 hours: 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC
+    - cron: '0 */4 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Generate new post
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/generate_post.py
+
+      - name: Commit and push new post
+        run: |
+          git config user.name "SmartMoneyDaily Bot"
+          git config user.email "bot@smartmoneydaily.com"
+          git add _posts/
+          git diff --staged --quiet || git commit -m "Auto-publish new article $(date +%Y-%m-%d-%H%M)"
+          git push

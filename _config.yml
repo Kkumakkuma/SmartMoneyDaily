@@ -1,0 +1,33 @@
+title: SmartMoneyDaily
+description: "Your daily guide to personal finance, saving money, and building wealth."
+url: "https://kkumakkuma.github.io"
+baseurl: "/SmartMoneyDaily"
+permalink: /:year/:month/:day/:title/
+
+theme: minima
+
+author:
+  name: SmartMoneyDaily
+  email: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+
+google_analytics: ""
+
+exclude:
+  - scripts/
+  - .github/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
