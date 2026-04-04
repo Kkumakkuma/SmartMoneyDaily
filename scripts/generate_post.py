@@ -9,7 +9,6 @@ import datetime
 import os
 import random
 import re
-import subprocess
 
 # High CPC keyword categories for personal finance
 TOPIC_POOLS = {
@@ -147,15 +146,22 @@ def slugify(title):
     return slug
 
 
+def get_repo_root():
+    """Get the repository root directory."""
+    # In GitHub Actions, the working directory is the repo root
+    # Locally, navigate up from scripts/
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    return os.path.dirname(script_dir)
+
+
 def get_existing_titles():
     """Get titles of existing posts to avoid duplicates."""
-    posts_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), '_posts')
+    posts_dir = os.path.join(get_repo_root(), '_posts')
     titles = set()
     if os.path.exists(posts_dir):
         for filename in os.listdir(posts_dir):
             if filename.endswith('.md'):
-                # Extract title from filename (remove date prefix and extension)
-                title_part = filename[11:-3]  # Remove YYYY-MM-DD- and .md
+                title_part = filename[11:-3]
                 titles.add(title_part)
     return titles
 
@@ -185,7 +191,7 @@ def create_post():
     date_str = today.strftime('%Y-%m-%d')
     filename = f"{date_str}-{slug}.md"
 
-    posts_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), '_posts')
+    posts_dir = os.path.join(get_repo_root(), '_posts')
     os.makedirs(posts_dir, exist_ok=True)
 
     filepath = os.path.join(posts_dir, filename)
@@ -209,20 +215,6 @@ description: "{title} - Learn practical tips and strategies for your personal fi
     return filepath, filename
 
 
-def git_commit_and_push(filepath, filename):
-    """Commit and push the new post."""
-    repo_dir = os.path.dirname(os.path.dirname(__file__))
-    os.chdir(repo_dir)
-
-    subprocess.run(['git', 'add', filepath], check=True)
-    subprocess.run(
-        ['git', 'commit', '-m', f'Add new post: {filename}'],
-        check=True,
-    )
-    subprocess.run(['git', 'push'], check=True)
-    print("Post committed and pushed successfully!")
-
-
 if __name__ == '__main__':
     filepath, filename = create_post()
-    git_commit_and_push(filepath, filename)
+    print(f"Done! Post generated: {filename}")
