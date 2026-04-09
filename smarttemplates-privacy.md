@@ -1,12 +1,16 @@
 ---
 layout: page
-title: Privacy Policy
-permalink: /privacy/
+title: SmartTemplates Privacy Policy
+permalink: /smarttemplates/privacy/
 ---
 
-# Privacy Policy
+# SmartTemplates Privacy Policy
 
 **Last updated: April 9, 2026**
+
+## About SmartTemplates
+
+SmartTemplates is the creator of Notion productivity templates sold on Gumroad and promoted across our network of educational blogs.
 
 ## Information We Collect
 
@@ -29,4 +33,4 @@ We do not sell or share your personal information with third parties.
 
 ## Contact
 
-If you have questions about this privacy policy, please contact us through the blog.
+If you have questions about this privacy policy, please contact SmartTemplates through our blog.
