@@ -1,134 +1,220 @@
 """
-SmartMoneyDaily Auto Post Generator
-Generates SEO-optimized personal finance articles using OpenAI GPT API
-and commits them to the blog repository.
+SmartMoneyDaily Auto Post Generator v2
+- GPT generates unique long-tail keyword topics dynamically
+- used_topics.json prevents any duplicate content
+- High-CPC keywords + FAQ sections for Google featured snippets
+- Internal linking to boost SEO
 """
 
 from openai import OpenAI
 import datetime
+import json
 import os
 import random
 import re
 
-# High CPC keyword categories for personal finance
-TOPIC_POOLS = {
-    "credit_score": [
-        "How to Improve Your Credit Score Fast in {year}",
-        "Credit Score Myths That Are Costing You Money",
-        "{number} Ways to Boost Your Credit Score by 100 Points",
-        "How Your Credit Score Affects Your Mortgage Rate",
-        "Best Credit Cards for Building Credit in {year}",
-        "How to Check Your Credit Score for Free",
-        "What Is a Good Credit Score and Why It Matters",
-    ],
-    "saving_money": [
-        "How to Save $10,000 in {number} Months on Any Income",
-        "{number} Simple Ways to Cut Your Monthly Expenses",
-        "The 50/30/20 Budget Rule Explained Simply",
-        "How to Build an Emergency Fund from Scratch",
-        "Best High-Yield Savings Accounts in {year}",
-        "Money-Saving Hacks That Actually Work in {year}",
-        "How to Save Money on Groceries Without Coupons",
-    ],
-    "investing": [
-        "Beginner's Guide to Investing in Index Funds",
-        "How to Start Investing with Just $100",
-        "ETF vs Mutual Fund: Which Is Better for You",
-        "How to Build a Diversified Investment Portfolio",
-        "{number} Investing Mistakes Beginners Should Avoid",
-        "Dollar Cost Averaging: The Simplest Investment Strategy",
-        "Roth IRA vs Traditional IRA: Complete Comparison {year}",
-    ],
-    "debt": [
-        "How to Pay Off Credit Card Debt Fast",
-        "Debt Snowball vs Debt Avalanche: Which Method Works",
-        "How to Get Out of $10,000 in Debt in {number} Months",
-        "Should You Consolidate Your Student Loans in {year}",
-        "Balance Transfer Cards: How to Use Them to Eliminate Debt",
-        "{number} Steps to Becoming Completely Debt-Free",
-        "How to Negotiate Lower Interest Rates on Your Debt",
-    ],
-    "passive_income": [
-        "{number} Passive Income Ideas That Actually Work in {year}",
-        "How to Make Money While You Sleep",
-        "Dividend Investing for Beginners: Complete Guide",
-        "How to Build Multiple Streams of Income",
-        "Best Side Hustles That Can Replace Your 9-to-5",
-        "How to Earn Passive Income with $1,000",
-        "Real Estate Investing for Beginners Without Buying Property",
-    ],
-    "retirement": [
-        "How Much Money Do You Need to Retire Comfortably",
-        "401(k) Guide: Everything You Need to Know in {year}",
-        "How to Retire Early with the FIRE Method",
-        "Social Security Benefits: When Should You Start Claiming",
-        "Best Retirement Accounts for Self-Employed People",
-        "How to Catch Up on Retirement Savings in Your 40s",
-        "Retirement Planning Mistakes to Avoid at Every Age",
-    ],
-    "taxes": [
-        "Tax Deductions You Might Be Missing in {year}",
-        "How to Reduce Your Tax Bill Legally",
-        "Tax Tips for Freelancers and Self-Employed Workers",
-        "Understanding Capital Gains Tax: A Simple Guide",
-        "Best Tax Software Compared: {year} Edition",
-        "How to File Your Taxes for Free in {year}",
-        "{number} Year-End Tax Moves to Save You Money",
-    ],
-    "insurance": [
-        "How Much Life Insurance Do You Actually Need",
-        "Best Health Insurance Options If You Are Self-Employed",
-        "Car Insurance: How to Get the Lowest Rate in {year}",
-        "Home Insurance Guide: What Is and Isn't Covered",
-        "Term vs Whole Life Insurance: Which One Should You Choose",
-        "How to Save Money on Insurance Premiums",
-        "Disability Insurance: The Most Overlooked Protection",
-    ],
-}
+BLOG_NAME = "SmartMoneyDaily"
+BLOG_NICHE = "personal finance"
+BLOG_DESCRIPTION = "Your daily guide to personal finance, saving money, and building wealth."
 
-SYSTEM_PROMPT = """You are an expert personal finance writer for a blog called SmartMoneyDaily.
-Write SEO-optimized, informative, and engaging blog posts.
+CATEGORIES = [
+    "credit-score",     "saving-money",     "investing",     "debt",
+    "passive-income",     "retirement",     "taxes",     "insurance",
+    "budgeting",     "real-estate",     "side-hustle",     "frugal-living",
+    "financial-planning",     "banking",     "crypto",
+]
 
-Rules:
-- Write in a friendly, conversational but authoritative tone
-- Use short paragraphs (2-3 sentences max)
-- Include practical, actionable advice
-- Use headers (##) to break up sections
-- Include bullet points and numbered lists where appropriate
-- Write between 1200-1800 words
-- Naturally include the main keyword 3-5 times
-- Include a compelling introduction that hooks the reader
-- End with a clear conclusion/call-to-action
-- Do NOT include any AI disclaimers or mentions of being AI-generated
-- Write as if you are a certified financial planner sharing expertise
-- Make content evergreen where possible
-- Include specific numbers and examples
-- Do NOT use markdown title (# Title) - just start with the content
+SYSTEM_PROMPT = """You are an expert personal finance writer for SmartMoneyDaily.
+You write SEO-optimized, highly informative articles that rank on Google.
+
+Writing rules:
+- Friendly, conversational but authoritative tone (like a trusted financial advisor friend)
+- Short paragraphs (2-3 sentences max)
+- Use ## for section headers (H2) and ### for subsections (H3)
+- Include bullet points and numbered lists
+- Write 1500-2200 words
+- Naturally weave the main keyword throughout (4-6 times)
+- Start with a hook that addresses the reader's pain point
+- Include specific numbers, percentages, and real examples
+- End with a clear actionable takeaway
+- Do NOT use markdown title (# Title) - start directly with content
+- Do NOT include AI disclaimers
+- Write as a certified financial planner sharing expertise
+
+SEO rules:
+- Include a "Frequently Asked Questions" section at the end with 3-4 Q&As using ### for each question
+- Use power words in subheadings (Ultimate, Essential, Proven, Complete)
+- Write in second person ("you") to engage readers
+- Include comparison elements (vs, compared to, better than)
+- Add year references where relevant for freshness
 """
 
 
-def pick_topic():
-    """Select a random topic from the pools."""
-    year = datetime.datetime.now().year
-    number = random.choice([3, 5, 7, 10, 12, 15])
-    category = random.choice(list(TOPIC_POOLS.keys()))
-    title_template = random.choice(TOPIC_POOLS[category])
-    title = title_template.format(year=year, number=number)
-    return title, category
+def get_repo_root():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    return os.path.dirname(script_dir)
 
 
-def generate_post_content(title, category):
-    """Generate a blog post using OpenAI GPT API."""
+def load_used_topics():
+    """Load previously used topic slugs."""
+    filepath = os.path.join(get_repo_root(), "scripts", "used_topics.json")
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def save_used_topics(topics):
+    filepath = os.path.join(get_repo_root(), "scripts", "used_topics.json")
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(topics, f, indent=2)
+
+
+def get_existing_slugs():
+    """Get all existing post slugs from _posts/."""
+    posts_dir = os.path.join(get_repo_root(), "_posts")
+    slugs = set()
+    if os.path.exists(posts_dir):
+        for filename in os.listdir(posts_dir):
+            if filename.endswith(".md"):
+                # Remove date prefix and .md suffix
+                slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", filename[:-3])
+                # Normalize: remove trailing random numbers
+                slug = re.sub(r"-\d{2,3}$", "", slug)
+                slugs.add(slug)
+    return slugs
+
+
+def get_recent_titles(limit=10):
+    """Get recent post titles for internal linking context."""
+    posts_dir = os.path.join(get_repo_root(), "_posts")
+    titles = []
+    if os.path.exists(posts_dir):
+        files = sorted(os.listdir(posts_dir), reverse=True)
+        for filename in files[:limit]:
+            if filename.endswith(".md"):
+                filepath = os.path.join(posts_dir, filename)
+                with open(filepath, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.startswith("title:"):
+                            title = line.split(":", 1)[1].strip().strip('"')
+                            titles.append(title)
+                            break
+    return titles
+
+
+def slugify(title):
+    slug = title.lower()
+    slug = re.sub(r"[^a-z0-9\s-]", "", slug)
+    slug = re.sub(r"[\s]+", "-", slug)
+    slug = re.sub(r"-+", "-", slug)
+    return slug.strip("-")
+
+
+def generate_unique_topic(used_topics, existing_slugs):
+    """Ask GPT to generate a unique, high-CPC long-tail keyword topic."""
     client = OpenAI()
+    year = datetime.datetime.now().year
+    category = random.choice(CATEGORIES)
+
+    used_list = "\n".join(f"- {t}" for t in used_topics[-50:]) if used_topics else "(none yet)"
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",
-        max_tokens=4000,
+        max_tokens=200,
+        temperature=1.0,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    f"You generate blog post titles for a {BLOG_NICHE} blog. "
+                    "Generate exactly ONE unique, SEO-optimized blog title.\n\n"
+                    "Requirements:\n"
+                    "- Long-tail keyword (5-12 words) that people actually search on Google\n"
+                    "- High commercial intent (topics where advertisers pay high CPC)\n"
+                    "- Specific and actionable (not generic)\n"
+                    "- Include numbers, year, or power words when natural\n"
+                    f"- Relevant to {year}\n"
+                    "- MUST be completely different from the used titles below\n"
+                    "- DO NOT just rephrase an existing title\n\n"
+                    "Reply with ONLY the title, nothing else."
+                ),
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Category: {category.replace('-', ' ')}\n\n"
+                    f"Already used titles (DO NOT repeat or rephrase these):\n{used_list}\n\n"
+                    "Generate one new unique title:"
+                ),
+            },
+        ],
+    )
+
+    title = response.choices[0].message.content.strip().strip('"').strip("'")
+    slug = slugify(title)
+
+    # Verify it's actually unique
+    norm_slug = re.sub(r"-\d{2,3}$", "", slug)
+    if norm_slug in existing_slugs or norm_slug in [slugify(t) for t in used_topics[-100:]]:
+        # Retry once with stronger instruction
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            max_tokens=200,
+            temperature=1.2,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        f"Generate a COMPLETELY NEW and UNIQUE {BLOG_NICHE} blog title. "
+                        f"Category: {category.replace('-', ' ')}. "
+                        f"This MUST NOT overlap with any existing content. "
+                        f"Think of a specific subtopic or angle that hasn't been covered. "
+                        f"Use long-tail keywords (6-12 words). Year: {year}. "
+                        "Reply with ONLY the title."
+                    ),
+                },
+                {"role": "user", "content": "Generate:"},
+            ],
+        )
+        title = response.choices[0].message.content.strip().strip('"').strip("'")
+        slug = slugify(title)
+
+    return title, category, slug
+
+
+def generate_post_content(title, category, recent_titles):
+    """Generate high-quality blog post with FAQ and internal linking."""
+    client = OpenAI()
+
+    internal_links_hint = ""
+    if recent_titles:
+        links = "\n".join(f"- {t}" for t in recent_titles[:5])
+        internal_links_hint = (
+            f"\n\nFor internal linking, naturally reference 1-2 of these related articles "
+            f"where relevant (use the exact title in a mention like "
+            f"'as we covered in [Article Title]'):\n{links}"
+        )
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        max_tokens=5000,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {
                 "role": "user",
-                "content": f"Write a comprehensive blog post with the title: \"{title}\"\n\nCategory: {category.replace('_', ' ')}\n\nRemember to write 1200-1800 words, use ## for section headers, and make it SEO-friendly.",
+                "content": (
+                    f'Write a comprehensive blog post titled: "{title}"\n\n'
+                    f"Category: {category.replace('-', ' ')}\n\n"
+                    "Structure:\n"
+                    "1. Hook intro (address the reader's problem)\n"
+                    "2. 4-6 detailed sections with ## headers\n"
+                    "3. Practical tips with specific examples\n"
+                    "4. FAQ section (## Frequently Asked Questions) with 3-4 ### questions\n"
+                    "5. Brief conclusion with call-to-action\n\n"
+                    "Write 1500-2200 words. Make it genuinely helpful and unique."
+                    f"{internal_links_hint}"
+                ),
             },
         ],
     )
@@ -136,87 +222,75 @@ def generate_post_content(title, category):
     return response.choices[0].message.content
 
 
-def slugify(title):
-    """Convert title to URL-friendly slug."""
-    slug = title.lower()
-    slug = re.sub(r'[^a-z0-9\s-]', '', slug)
-    slug = re.sub(r'[\s]+', '-', slug)
-    slug = re.sub(r'-+', '-', slug)
-    slug = slug.strip('-')
-    return slug
-
-
-def get_repo_root():
-    """Get the repository root directory."""
-    # In GitHub Actions, the working directory is the repo root
-    # Locally, navigate up from scripts/
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    return os.path.dirname(script_dir)
-
-
-def get_existing_titles():
-    """Get titles of existing posts to avoid duplicates."""
-    posts_dir = os.path.join(get_repo_root(), '_posts')
-    titles = set()
-    if os.path.exists(posts_dir):
-        for filename in os.listdir(posts_dir):
-            if filename.endswith('.md'):
-                title_part = filename[11:-3]
-                titles.add(title_part)
-    return titles
+def generate_meta_description(title):
+    """Generate a unique, compelling meta description."""
+    client = OpenAI()
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        max_tokens=100,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "Write a compelling meta description for a blog post. "
+                    "150-160 characters max. Include the main keyword. "
+                    "Add a call-to-action. Reply with ONLY the description."
+                ),
+            },
+            {"role": "user", "content": f"Title: {title}"},
+        ],
+    )
+    desc = response.choices[0].message.content.strip().strip('"')
+    return desc[:160]
 
 
 def create_post():
-    """Generate and save a new blog post."""
-    existing = get_existing_titles()
+    """Generate and save a new unique blog post."""
+    used_topics = load_used_topics()
+    existing_slugs = get_existing_slugs()
+    recent_titles = get_recent_titles(10)
 
-    # Try up to 10 times to find a non-duplicate topic
-    for _ in range(10):
-        title, category = pick_topic()
-        slug = slugify(title)
-        if slug not in existing:
-            break
-    else:
-        # If all attempts hit duplicates, add a random suffix
-        title, category = pick_topic()
-        slug = slugify(title) + f"-{random.randint(100, 999)}"
-
+    title, category, slug = generate_unique_topic(used_topics, existing_slugs)
     print(f"Generating post: {title}")
     print(f"Category: {category}")
 
-    content = generate_post_content(title, category)
+    content = generate_post_content(title, category, recent_titles)
+    description = generate_meta_description(title)
 
-    # Create the post file
     today = datetime.datetime.now()
-    date_str = today.strftime('%Y-%m-%d')
+    date_str = today.strftime("%Y-%m-%d")
     filename = f"{date_str}-{slug}.md"
 
-    posts_dir = os.path.join(get_repo_root(), '_posts')
+    posts_dir = os.path.join(get_repo_root(), "_posts")
     os.makedirs(posts_dir, exist_ok=True)
-
     filepath = os.path.join(posts_dir, filename)
 
-    # Create frontmatter
     frontmatter = f"""---
 layout: post
 title: "{title}"
 date: {today.strftime('%Y-%m-%d %H:%M:%S')} +0000
-categories: [{category.replace('_', '-')}]
-description: "{title} - Learn practical tips and strategies for your personal finances."
+categories: [{category}]
+description: "{description}"
+tags: [{category}, {BLOG_NICHE.replace(' ', '-')}, {today.year}]
 ---
 
 {content}
 """
 
-    with open(filepath, 'w', encoding='utf-8') as f:
+    with open(filepath, "w", encoding="utf-8") as f:
         f.write(frontmatter)
+
+    # Track used topic
+    used_topics.append(title)
+    save_used_topics(used_topics)
 
     print(f"Post saved: {filepath}")
     return filepath, filename
 
-if __name__ == '__main__':
-    # Every 5th post: generate a Gumroad promo post
+
+if __name__ == "__main__":
     from promo_post import should_write_promo, create_promo_post
+
     if should_write_promo():
         print("Generating promotional post...")
         filepath, filename = create_promo_post()
