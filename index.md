@@ -1,4 +1,4 @@
 ---
 layout: home
-title: SmartMoneyDaily - Your Daily Personal Finance Guide
+title: "SmartMoneyDaily &mdash; Your daily guide to personal finance, saving money, and building wealth."
 ---
