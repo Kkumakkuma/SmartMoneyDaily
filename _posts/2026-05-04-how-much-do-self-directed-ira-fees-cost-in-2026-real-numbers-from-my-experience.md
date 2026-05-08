@@ -7,6 +7,8 @@ description: "Discover the real costs of self-directed IRA fees in 2026 from per
 tags: [investing, personal-finance, 2026]
 ---
 
+![How Much Do Self-Directed IRA Fees Cost in 2026? Real Numbers from My Experience](/SmartMoneyDaily/assets/pin-images/2026-05-04-how-much-do-self-directed-ira-fees-cost-in-2026-real-numbers-from-my-experience.png)
+
 On July 15, 2026, I realized that managing a self-directed IRA was costing me more than I had initially anticipated—$1,500 over the past year alone. After getting frustrated by the rising fees, I decided to dig deeper into these costs and the impact they would have on my future retirement goals. Self-directed IRAs can be a great way to invest creatively, but the associated fees can really add up if you aren’t careful. In this post, I’ll share real, concrete numbers derived from my own experience, as well as some insights into managing expenses and making the most of this investing strategy.
 
 ## How I Researched This
