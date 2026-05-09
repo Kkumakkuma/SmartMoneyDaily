@@ -2,8 +2,8 @@ name: Auto Generate Blog Post
 
 on:
   schedule:
-    # Run every 4 hours: 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC
-    - cron: '0 */4 * * *'
+    # Run every 6 hours: 00:00, 06:00, 12:00, 18:00 UTC + random 0-60min delay
+    - cron: '0 */6 * * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -24,6 +24,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Random delay (0-3600s) — avoid posting on the dot
+        run: |
+          DELAY=$((RANDOM % 3600))
+          echo "Sleeping ${DELAY}s before generation"
+          sleep $DELAY
 
       - name: Install dependencies
         run: pip install openai Pillow
