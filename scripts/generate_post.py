@@ -42,6 +42,9 @@ ACCURACY — THE #1 RULE (this is exactly what gets finance sites approved or re
       that would be about $400 in a year before tax").
 - Never state a specific CURRENT APY as a fact (rates change constantly). Instead explain how to find and compare current rates.
 - All examples and references must be consistent with the current year {YEAR}. Never cite a past personal result with a specific date.
+- Accuracy note: the Federal Reserve suspended Regulation D's six-per-month savings/money-market withdrawal limit in 2020.
+  Do NOT present a federal "six withdrawals per month" rule as if it is current. Describe withdrawal limits as set by each
+  individual bank or credit union (some still impose their own limits).
 
 Writing rules:
 - Friendly, clear, authoritative tone. Short paragraphs (2-3 sentences).
@@ -459,6 +462,10 @@ def _enforce_word_count(client, title, content, min_words=1500, max_extra_words=
             ],
         ))
         extra = resp.choices[0].message.content.strip()
+        # About the Author 섹션이 있으면 그 앞에 삽입해 About가 항상 글의 마지막에 오게 함
+        m = re.search(r"\n##\s+About the Author", content)
+        if m:
+            return content[:m.start()].rstrip() + "\n\n" + extra + "\n\n" + content[m.start():].lstrip("\n")
         return content.rstrip() + "\n\n" + extra
     except Exception as _e:
         print(f"[expand] failed: {_e}")
@@ -583,6 +590,9 @@ def create_post():
 
     content = generate_post_content(title, category, recent_titles)
     content = inject_internal_links(content, recent_posts, min_links=5, max_links=8)
+    # About the Author의 "Last reviewed" 월을 실제 현재 월로 정정 (GPT 월 오기 방지)
+    content = re.sub(r"Last reviewed:\s*[A-Za-z]+\.?\s*\d{4}",
+                     f"Last reviewed: {datetime.datetime.now().strftime('%B %Y')}", content)
     description = generate_meta_description(title)
 
     # v7 (2026-05-08): 자동 핀 이미지 생성 + 본문 맨 위 markdown 이미지 삽입
