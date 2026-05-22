@@ -1,5 +1,5 @@
 title: SmartMoneyDaily
-description: "Your daily guide to personal finance, saving money, and building wealth."
+description: "Plain-English guides to high-yield savings accounts, CDs, and money market accounts."
 url: "https://kkumakkuma.github.io"
 baseurl: "/SmartMoneyDaily"
 permalink: /:year/:month/:day/:title/

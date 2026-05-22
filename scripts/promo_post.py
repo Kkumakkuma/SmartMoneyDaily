@@ -79,11 +79,10 @@ def save_used_promo_titles(titles):
 
 
 def should_write_promo():
-    posts_dir = os.path.join(get_repo_root(), "_posts")
-    if not os.path.exists(posts_dir):
-        return False
-    post_count = len([f for f in os.listdir(posts_dir) if f.endswith(".md")])
-    return post_count > 0 and post_count % 5 == 0
+    # v8 (2026-05-23): AdSense 재심사 동안 Gumroad 홍보(상업) 글 전면 차단.
+    # 상업 홍보 글은 심사에서 thin/ad-heavy 인상을 주고, Gumroad는 매출 0 자산이라 제외.
+    # 승인 후 다시 켜려면 아래 return False 를 지우고 기존 "5의 배수" 로직을 복구할 것.
+    return False
 
 
 def generate_promo_title(product, used_titles):

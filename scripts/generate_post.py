@@ -1,9 +1,9 @@
 """
-SmartMoneyDaily Auto Post Generator v2
-- GPT generates unique long-tail keyword topics dynamically
-- used_topics.json prevents any duplicate content
-- High-CPC keywords + FAQ sections for Google featured snippets
-- Internal linking to boost SEO
+SmartMoneyDaily Auto Post Generator v8 (2026-05-23) — AdSense re-approval rebuild
+- Single narrow niche: high-yield savings, CDs, money market accounts (US)
+- ACCURACY FIRST: no fabricated numbers, dates, personal results, or current APYs
+- Public 1st-party sources (FDIC / Federal Reserve / CFPB / NCUA / Treasury) by name
+- used_topics.json prevents duplicate content; internal linking kept for SEO
 """
 
 from openai import OpenAI
@@ -15,110 +15,83 @@ import re
 import time
 
 BLOG_NAME = "SmartMoneyDaily"
-BLOG_NICHE = "personal finance"
-BLOG_DESCRIPTION = "Your daily guide to personal finance, saving money, and building wealth."
+BLOG_NICHE = "high-yield savings accounts, CDs, and money market accounts"
+BLOG_DESCRIPTION = "Plain-English guides to high-yield savings accounts, CDs, and money market accounts, built from public FDIC and Federal Reserve information."
 
 CATEGORIES = [
-    "credit-score",     "saving-money",     "investing",     "debt",
-    "passive-income",     "retirement",     "taxes",     "insurance",
-    "budgeting",     "real-estate",     "side-hustle",     "frugal-living",
-    "financial-planning",     "banking",     "crypto",
+    "high-yield-savings",     "cd-rates",     "money-market",     "fdic-insurance",
+    "savings-strategy",     "bank-comparison",     "interest-rates",     "emergency-fund",
 ]
 
-SYSTEM_PROMPT = """You are an expert personal finance writer for SmartMoneyDaily.
-You write SEO-optimized, highly informative, AdSense-approval-grade articles that rank on Google
-and feel written by a human expert — not by AI.
+# {YEAR} is a literal placeholder; it is substituted at call time (see _generate_post_content_inner).
+SYSTEM_PROMPT = """You are a personal finance writer for SmartMoneyDaily, a site focused narrowly on
+high-yield savings accounts (HYSAs), certificates of deposit (CDs), and money market accounts in the United States.
+
+Your job: write accurate, genuinely useful, AdSense-quality explainers that a careful reader can trust —
+written like a knowledgeable human, not generic AI filler.
+
+ACCURACY — THE #1 RULE (this is exactly what gets finance sites approved or rejected):
+- Do NOT invent specific dollar amounts, dates, personal results, account names, or test outcomes.
+- Do NOT fabricate a personal anecdote (e.g. "In 2023 I moved $4,200 into..."). If you did not do it, do not claim it.
+- Use ONLY:
+  (a) general facts stated as ranges or typical behavior ("online banks usually pay meaningfully more than the national average"),
+  (b) named public reference points that are stable and verifiable (FDIC standard deposit insurance is $250,000 per depositor,
+      per insured bank, per ownership category; the FDIC publishes national-average deposit rates; the Federal Reserve sets the
+      federal funds rate; NCUA insures credit unions),
+  (c) clearly hypothetical examples explicitly labeled ("For example, if you kept $10,000 in an account earning 4% APY,
+      that would be about $400 in a year before tax").
+- Never state a specific CURRENT APY as a fact (rates change constantly). Instead explain how to find and compare current rates.
+- All examples and references must be consistent with the current year {YEAR}. Never cite a past personal result with a specific date.
 
 Writing rules:
-- Friendly, conversational but authoritative tone (like a trusted expert friend, not a textbook)
-- Short paragraphs (2-3 sentences max)
-- Use ## for section headers (H2) and ### for subsections (H3)
-- Include bullet points and numbered lists where they help comprehension
-- Write 2500-3500 words (Google penalises thin content under 2000 words and AdSense reviewers
-  often reject sites whose typical post is under 2500 words)
-- Naturally weave the main keyword throughout (5-8 times) without keyword stuffing
-- Start with a hook that addresses the reader's pain point — never with a generic intro
-- Include specific numbers, percentages, real examples, and real product / brand names where relevant
-- End with a clear actionable takeaway
-- Do NOT use markdown title (# Title) - start directly with content
-- Do NOT include AI disclaimers
-- Write as a certified financial planner sharing expertise
+- Friendly, clear, authoritative tone. Short paragraphs (2-3 sentences).
+- Use ## for H2 and ### for H3. Bullet/numbered lists where they aid comprehension.
+- Naturally use the main keyword 4-6 times — no keyword stuffing.
+- Open with a concrete, specific hook (a common mistake, a number that is generally true, or the core question) —
+  never a generic "In today's world" intro.
+- End with a clear, actionable next step.
+- Do NOT output a markdown "# Title". Do NOT add AI disclaimers inside the article body.
 
-ANTI-AI CLICHE (critical — these phrases trigger AdSense reviewers' "low value AI content" flag):
-- NEVER start with: "In today's fast-paced world", "In the modern era", "It's no secret that",
-  "Have you ever wondered", "Welcome to my blog", "Are you struggling with", "Imagine waking up to",
-  "Picture this", "Let's dive in", "In this article we will explore".
-- NEVER use: "delve into", "navigate the world of", "unlock the secrets", "embark on a journey",
-  "treasure trove", "in the realm of", "tapestry of", "ever-evolving landscape".
-- AVOID empty filler: "It is important to note that", "It goes without saying", "Needless to say".
-- Replace with concrete first-sentence hooks: a specific number, a personal mistake,
-  a counterintuitive finding, or a recent event.
+ANTI-AI-CLICHE (these phrases trigger reviewers' "low-value AI" flag — never use):
+- "In today's fast-paced world", "In the modern era", "It's no secret that", "Have you ever wondered",
+  "Welcome to my blog", "Let's dive in", "delve into", "navigate the world of", "unlock the secrets",
+  "embark on a journey", "treasure trove", "in the realm of", "tapestry of", "ever-evolving landscape".
+- Avoid empty filler: "It is important to note that", "It goes without saying", "Needless to say".
 
-FIRST-PERSON EXPERIENCE (mandatory for AdSense / Google E-E-A-T):
-- Use first-person voice ("I tested", "In my experience", "I spent", "When I tried") at least 5 times.
-- Include at least ONE short, vivid anecdote with a specific month, dollar amount, brand,
-  or measurable mistake. Invent plausible, concrete detail; never use vague "many people" claims.
-- The author persona is **Kkuma Park**, a Seoul-based indie writer who tests things personally
-  before recommending. Mention this naturally at least once.
-- Never say "as an AI" or "I don't have personal experience".
+VOICE / E-E-A-T (honest version — do NOT fabricate):
+- You may use a light editorial first-person voice to show judgment ("Here's how I'd compare them", "What I'd check first",
+  "In my view") — but NEVER invented personal financial results or fake test stories.
+- Demonstrate expertise through accurate explanation of mechanics (how APY compounding works, how CD early-withdrawal
+  penalties work, how FDIC coverage is calculated across ownership categories), not through made-up anecdotes.
 
-INFORMATION GAIN (at least 30% of the post must feel unique vs other blogs):
-- Include ONE comparison table (Markdown) with at least 4 rows and 4 columns of real numbers
-  or attributes. Each cell should be a complete short phrase (≥4 words), not a single word.
-- Include a "## What Most Guides Get Wrong" section with **3 contrarian insights**, and for each
-  insight include a 1-sentence "Why this matters:" explanation. Generic warnings without rationale
-  are not allowed.
-- Include one specific, quantified example (e.g., "In 2025 I moved $4,200 from a 0.05% APY savings
-  account to a 4.2% HYSA; over 18 months that netted $XXX after tax.").
-- Avoid generic listicle phrasing; reward specificity.
+SOURCES (build trust without fabrication):
+- Reference real, well-known public authorities by name where relevant: FDIC, the Federal Reserve, the Consumer Financial
+  Protection Bureau (CFPB), the U.S. Treasury, the National Credit Union Administration (NCUA). Cite what each one actually
+  provides ("the FDIC's BankFind Suite lets you confirm a bank is insured").
+- Do NOT fabricate URLs, study titles, or specific statistics. Name the organization and what it does; never invent a number
+  and attribute it to them.
 
-EXTERNAL SOURCES (mandatory — drives E-E-A-T trust signals):
-- Reference 3+ external authority sources naturally inside the body. Mix the source TYPES
-  (government / industry association / peer-reviewed journal / manufacturer official guide /
-  major media outlet). Do not list 3 government bodies in a row.
-- Format: cite by NAME of the resource and what it specifically provides. Example:
-  "according to the FDA's Consumer Updates page on supplement labeling..." or
-  "Consumer Reports' 2024 mattress durability study found...".
-- Do NOT fabricate URLs. Mentioning the official organisation by name is enough.
-- NEVER use the cliché format "look up X on Y website" or "search for X on Y" — write like
-  a journalist, not like a textbook.
+INFORMATION GAIN (make it genuinely more useful than a thin AI page):
+- Include ONE Markdown comparison table with 4+ rows and 3-4 columns comparing real, stable attributes
+  (e.g., HYSA vs CD vs money market account: liquidity, how the rate behaves, FDIC coverage, best use case).
+  Each cell should be a short complete phrase, not a single word.
+- Include a "## Common Mistakes" (or "## What People Get Wrong") section with 3 specific, accurate misconceptions,
+  each followed by a one-line "Why it matters:" explanation.
 
-STRUCTURE (must include ALL):
-1. First-person hook intro (2-3 sentences, specific anecdote or number — no generic intro)
-2. 5-7 H2 sections, each with 2-3 H3 subsections where useful
-3. ONE Markdown comparison table (≥4 rows × 4 columns, real values)
-4. "## How I Researched This" — 2-3 sentence methodology callout (how long you tested,
-   what you compared, what bias you tried to avoid). Place near the top, after the intro.
-5. "## What Most Guides Get Wrong" with 3 contrarian insights + "Why this matters:" each
-6. "## Is It Worth It?" or "## My Verdict" judgment paragraph
-7. "## Frequently Asked Questions" with 4-5 ### Q&A pairs (include 1-2 price questions)
-8. Conclusion with a clear next step the reader can take today
-9. "## About the Author" — 2-3 sentences: Kkuma Park, Seoul-based indie writer, why they
-   started writing in this niche, what their angle is. End with "Last reviewed: <Month YYYY>."
-
-SEO rules:
-- Use power words in subheadings sparingly (Ultimate, Essential, Proven, Complete) — overuse
-  signals AI templating
-- Mix second person ("you") with first person ("I") throughout
-- Include comparison elements (vs, compared to, better than)
-- Add year references where relevant for freshness
-SEO v6 (2026-05-08) — RANKING + CTR + AI OVERVIEW INCLUSION:
-- TL;DR blockquote MUST be the very first content after the title. Format:
-  > **Quick answer:** <40-60 words direct answer that echoes the search query verbatim once and gives a complete one-paragraph answer with one specific number>
-  Then ONE blank line, THEN start the first-person hook intro.
-- This TL;DR is the strongest single trigger for Google AI Overview / Featured Snippet inclusion.
-- People Also Ask matching — among your 6-8 H2 sections, AT LEAST 4 must be phrased as the actual
-  questions a user types into Google (real PAA-style questions). Use these 4 question patterns
-  (each H2 = one pattern, in any order):
-    a) "How does <topic> work?" or "How can I <verb> <topic>?"
-    b) "Is <topic> worth it in YYYY?"
-    c) "What's the difference between <topic A> and <topic B>?"
-    d) "How much does <topic> cost in YYYY?" or "How long does <topic> take?"
-  Each of these 4 H2s MUST be followed IMMEDIATELY by a 50-word direct-answer paragraph
-  BEFORE expanding into the rest of the section.
-- These question-style H2s + their direct-answer paragraphs are what Google uses to populate
-  PAA boxes and AI Overview citations. This is non-negotiable for organic traffic.
-
+STRUCTURE (include ALL):
+1. ONE blockquote first: "> **Quick answer:** <40-60 words: accurate direct answer to the title, with one general
+   (non-fabricated) number or rule>." Then a blank line.
+2. A 1-2 sentence specific lead (a common mistake, a true general fact, or the core question) — no generic intro.
+3. 5-7 H2 sections; at least 3 phrased as real search questions, each followed IMMEDIATELY by a 40-60 word direct answer
+   before expanding.
+4. ONE comparison table (as above).
+5. "## How to Compare [topic] Yourself" — a practical checklist of what to look at and in what order.
+6. "## Common Mistakes" — 3 accurate misconceptions + a "Why it matters:" line each.
+7. "## Frequently Asked Questions" — 4-5 ### Q&A pairs, accurate and specific.
+8. Conclusion with a concrete next step the reader can take today.
+9. "## About the Author" — Kkuma Park, a Seoul-based independent writer who compiles and explains publicly available
+   U.S. deposit-account information. Be honest about the editorial approach (compares published rates and rules, cites
+   public sources); do NOT claim invented personal banking results. End with "Last reviewed: <Month {YEAR}>."
 """
 
 
@@ -275,18 +248,19 @@ def slugify(title):
     return slug.strip("-")
 
 
-# === v5 diversity helpers (2026-05-06) ===========================
+# === v8 explainer patterns (2026-05-23) ==========================
+# Informational / comparison angles only — no fake "I tried X for 30 days" buyer-intent listicles.
 TITLE_PATTERNS = [
-    "Best [thing] for [use case] in [YEAR]",
-    "[Brand A] vs [Brand B]: Which Is Better for [use case] in [YEAR]",
-    "Is [thing] Worth It in [YEAR]? My [N]-Month Review",
-    "How Much Does [thing] Cost in [YEAR]? Real Numbers From My Experience",
-    "[N] Cheapest [things] That Actually [benefit] in [YEAR]",
-    "I Tried [product] for [N] [days/weeks] - Here Is What Happened",
-    "[Tool] Review [YEAR]: Pros, Cons, and Cheaper Alternatives",
-    "Top [N] [service type] for [specific audience] in [YEAR] (Ranked)",
+    "How does a [thing] work?",
+    "What is [thing] and how is it calculated?",
+    "[Thing A] vs [Thing B]: which fits [situation]?",
+    "How to compare [thing] without getting burned",
+    "Is a [thing] worth it right now?",
+    "Common mistakes with [thing] (and how to avoid them)",
+    "How [thing] is taxed / what happens when rates change",
+    "A beginner's guide to [thing]",
 ]
-PATTERN_PREFIXES = ["best", "is", "how much", "how to", "i tried", "top", "what", "the"]
+PATTERN_PREFIXES = ["how", "what", "is", "common", "a beginner", "the", "why", "should"]
 
 STOPWORDS_TITLE = {
     "the","a","an","for","and","with","to","of","in","on","at","is","are","my","best","top","how","what",
@@ -352,15 +326,15 @@ def _forced_pattern_hint(used_topics, recent_n=5):
 
 
 def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
-    """v5: GPT unique high-CPC long-tail topic 생성.
-    카테고리 회전 + 패턴 회전 + 키워드 차단 + 의미 유사도 차단.
+    """v8: GPT가 단일 니치(HYSA/CD/MMA) 안에서 설명형/비교형 고유 토픽 생성.
+    카테고리 회전 + 패턴 회전 + 키워드 차단 + 의미 유사도 차단. 날조형 패턴 제거.
     """
     client = OpenAI()
     year = datetime.datetime.now().year
     used_set = set(slugify(t) for t in used_topics[-200:]) | existing_slugs
     used_list = "\n".join(f"- {t}" for t in used_topics[-30:]) if used_topics else "(none yet)"
 
-    banned_keywords = _recent_keywords(used_topics, window=7, top_n=4)  # v6 cluster 허용
+    banned_keywords = _recent_keywords(used_topics, window=7, top_n=4)
     banned_str = ", ".join(banned_keywords) if banned_keywords else "(none yet)"
     forced_pattern = _forced_pattern_hint(used_topics, recent_n=5)
 
@@ -388,28 +362,29 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
                 {
                     "role": "system",
                     "content": (
-                        f"You generate blog post titles for a {BLOG_NICHE} blog.\n"
-                        "TARGET: HIGH-CPC buyer-intent long-tail keywords that drive ad revenue.\n\n"
-                        "Title patterns (mix across the full set — do NOT default to 'Best X' every time):\n"
-                        "1. 'Best [product/service] for [specific use case] in {YEAR}'\n"
-                        "2. '[Brand A] vs [Brand B]: Which Is Better for [use case] in {YEAR}?'\n"
-                        "3. 'Is [product/service] Worth It in {YEAR}? My [N]-Month Review'\n"
-                        "4. 'How Much Does [thing] Cost in {YEAR}? Real Numbers From My Experience'\n"
-                        "5. '[N] Cheapest [things] That Actually [benefit] in {YEAR}'\n"
-                        "6. 'I Tried [product] for [N] [days/weeks] - Here Is What Happened'\n"
-                        "7. '[Tool] Review {YEAR}: Pros, Cons, and Cheaper Alternatives'\n"
-                        "8. 'Top [N] [service type] for [specific audience] in {YEAR} (Ranked)'\n\n"
+                        f"You generate blog post titles for a blog focused narrowly on {BLOG_NICHE} in the United States.\n"
+                        "Generate clear, informational titles that match what people actually search when researching "
+                        "savings accounts, CDs, and money market accounts.\n\n"
+                        "Use a MIX of these explainer / comparison patterns (do NOT default to one):\n"
+                        "1. 'How does a [thing] work?'\n"
+                        "2. 'What is [thing] and how is it calculated?' (e.g., APY, FDIC coverage, compounding)\n"
+                        "3. '[Thing A] vs [Thing B]: which fits [situation]?' (e.g., HYSA vs money market account)\n"
+                        "4. 'How to compare [thing] without getting burned'\n"
+                        "5. 'Is a [thing] worth it right now?'\n"
+                        "6. 'Common mistakes with [thing] (and how to avoid them)'\n"
+                        "7. 'How [thing] is taxed' or 'What happens to [thing] when interest rates change'\n"
+                        "8. 'A beginner's guide to [thing]'\n\n"
                         "Rules:\n"
-                        "- Long-tail (5-12 words) real Google search query.\n"
-                        "- Buyer intent > informational intent (people about to spend money).\n"
-                        "- Mention specific product/brand/price/number when natural.\n"
-                        f"- Relevant to {year}.\n"
-                        "- MUST be completely different from used titles below — different topic AND different pattern.\n"
-                        "- DO NOT rephrase or merely synonym-swap an existing title.\n"
-                        f"- BANNED keywords (over-represented in last 14 posts, ABSOLUTELY do not use any of these in the title): {banned_str}.\n"
+                        "- Real, natural Google search phrasing (5-12 words).\n"
+                        "- Informational / decision intent — NOT fake 'I tried it for 30 days' angles.\n"
+                        "- Do NOT promise a specific current rate or dollar result in the title.\n"
+                        f"- Relevant to {year}, but do NOT bake a year number into most titles.\n"
+                        "- MUST be clearly different in topic AND angle from the used titles below.\n"
+                        "- Do NOT merely synonym-swap an existing title.\n"
+                        f"- BANNED keywords (over-represented recently, do not use any of these): {banned_str}.\n"
                         f"{forced_hint}\n\n"
                         "Reply with ONLY the title, nothing else."
-                    ).replace("{YEAR}", str(year)),
+                    ),
                 },
                 {
                     "role": "user",
@@ -451,34 +426,35 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
 
 
 def generate_post_content(title, category, recent_titles):
-    """Generate high-quality blog post with FAQ and internal linking. (retry 3x)"""
+    """Generate accurate, useful blog post with FAQ and internal linking. (retry 3x)"""
     client = OpenAI()
     return _generate_post_content_inner(client, title, category, recent_titles)
 
 
-
-# === v4 단어수 강화 (2026-04-26) =================================
-def _enforce_word_count(client, title, content, min_words=2700, max_extra_words=2000):
-    """본문이 min_words 미만이면 GPT-4o-mini로 1회 확장. 시간/비용 trade-off."""
+# === v8 word count (2026-05-23) — quality over padding =============
+def _enforce_word_count(client, title, content, min_words=1500, max_extra_words=600):
+    """본문이 min_words 미만이면 1회만 가볍게 보강. 무리한 확장(thin/padding 신호) 금지.
+    날조 금지 — 지어낸 수치/날짜/개인경험 추가 금지."""
     wc = len(content.split())
     if wc >= min_words:
         return content
     try:
         resp = _openai_retry(lambda: client.chat.completions.create(
             model="gpt-4o-mini",
-            max_tokens=6000,
+            max_tokens=2500,
             messages=[
                 {"role": "system", "content": (
-                    "You add substantive depth to blog posts. "
-                    "Append fresh H2 sections (with H3 subsections), real numbers, brand names, "
-                    "and specific personal anecdotes. NO filler, NO repetition, NO meta-commentary. "
-                    "Return ONLY the new sections to append (start directly with '## ...')."
+                    "You add ONE genuinely useful, accurate section to a US personal-finance explainer about "
+                    "savings accounts, CDs, or money market accounts. "
+                    "Do NOT invent dollar amounts, dates, current APYs, or personal results. "
+                    "Add a section that explains a mechanism or comparison the reader actually needs. "
+                    "NO filler, NO repetition. Return ONLY the new section (start directly with '## ')."
                 )},
                 {"role": "user", "content": (
-                    f"My post titled \"{title}\" is currently {wc} words but AdSense requires {min_words}+ words.\n"
-                    f"Append 2-3 new H2 sections that genuinely fit the topic with first-person voice, "
-                    f"real brand/price details, and concrete anecdotes. Approximately {min_words - wc + 200} more words.\n\n"
-                    f"Existing post (do not repeat content from this):\n---\n{content[:7000]}\n---"
+                    f"My post titled \"{title}\" is currently {wc} words; I'd like it a bit more complete "
+                    f"(around {min_words} words) WITHOUT padding or fabrication.\n"
+                    f"Add ONE accurate H2 section that genuinely fits the topic.\n\n"
+                    f"Existing post (do not repeat content from this):\n---\n{content[:6000]}\n---"
                 )},
             ],
         ))
@@ -490,6 +466,7 @@ def _enforce_word_count(client, title, content, min_words=2700, max_extra_words=
 
 
 def _generate_post_content_inner(client, title, category, recent_titles):
+    _year = datetime.datetime.now().year
 
     internal_links_hint = ""
     if recent_titles:
@@ -498,87 +475,67 @@ def _generate_post_content_inner(client, title, category, recent_titles):
             "\n\nINTERNAL LINKING (mandatory, SEO-critical):\n"
             "- Reference AT LEAST 3 of the related articles below inside the body text.\n"
             "- Mention each one by its EXACT title. Do not paraphrase the title.\n"
-            "- Weave them into natural sentences (e.g., 'as I wrote in [Exact Title]', "
-            "'for more on this check [Exact Title]'). Do not invent URLs — the titles alone are enough; a post-processor will link them.\n"
+            "- Weave them into natural sentences (e.g., 'as I covered in [Exact Title]', "
+            "'for more on this see [Exact Title]'). Do not invent URLs — the titles alone are enough; a post-processor will link them.\n"
             "- Spread them across different sections of the article.\n\n"
             f"Related articles to reference (exact titles):\n{links}"
         )
+
+    user_content = (
+        f'Write an accurate, genuinely useful article titled: "{title}"\n\n'
+        f"Category: {category.replace('-', ' ')}\n"
+        f"Topic scope: {BLOG_NICHE} (United States).\n\n"
+        "LENGTH: 1500-2200 words. Quality and accuracy beat length. Do NOT pad. "
+        "If you run short, add another genuinely useful angle — never filler.\n\n"
+        "ACCURACY (most important — this is what gets the site approved):\n"
+        "- Do NOT invent dollar amounts, dates, personal results, or specific CURRENT APYs.\n"
+        "- Use ranges / typical behavior, named public references (FDIC $250,000 coverage per depositor per bank per "
+        "ownership category, FDIC national-average rates, Federal Reserve rate decisions, NCUA for credit unions), "
+        "and clearly-labeled hypotheticals ('for example, if you had $10,000 at 4% APY...').\n"
+        f"- Everything must be consistent with the year {_year}. Do NOT cite a past personal result with a specific date.\n\n"
+        "STRUCTURE:\n"
+        "0. ONE blockquote first: > **Quick answer:** <40-60 words, accurate direct answer to the title, with one general "
+        "(non-fabricated) number or rule>. Then a blank line.\n"
+        "1. A 1-2 sentence specific lead (a common mistake, a true general fact, or the core question) — no generic intro.\n"
+        "2. 5-7 H2 sections; at least 3 phrased as real search questions, each followed IMMEDIATELY by a 40-60 word direct "
+        "answer before expanding.\n"
+        "3. ONE Markdown comparison table (4+ rows, 3-4 columns) of stable, real attributes (each cell a short complete phrase).\n"
+        "4. ## How to Compare ... Yourself — a practical checklist of what to look at and in what order.\n"
+        "5. ## Common Mistakes — 3 accurate misconceptions, each with a 'Why it matters:' line.\n"
+        "6. ## Frequently Asked Questions — 4-5 ### Q&A pairs, accurate and specific.\n"
+        "7. Conclusion with a concrete next step the reader can take today.\n"
+        "8. ## About the Author — Kkuma Park, Seoul-based independent writer who compiles and explains publicly available "
+        "U.S. deposit-account information; honest about the editorial approach (compares published rates and rules, cites "
+        f"public sources); NO invented personal banking results. End with 'Last reviewed: <Month {_year}>.'\n\n"
+        "SOURCES: reference real authorities by name (FDIC, Federal Reserve, CFPB, NCUA, U.S. Treasury) and what they "
+        "actually provide. Do NOT fabricate URLs, study titles, or statistics.\n\n"
+        "BANNED phrases (instant AI flag): 'In today's fast-paced world', 'In the modern era', 'Have you ever wondered', "
+        "'Welcome to my blog', 'Let's dive in', 'delve into', 'unlock the secrets', 'embark on a journey', "
+        "'in the realm of', 'tapestry of', 'ever-evolving landscape', 'navigate the world of', 'treasure trove'.\n"
+        "Do NOT fabricate a personal anecdote with a specific past date or dollar amount.\n\n"
+        "FINAL SELF-CHECK (do silently, then output the article):\n"
+        "  - Any invented specific current APY, dollar result, or dated personal story? Remove or replace it.\n"
+        "  - 5+ H2 sections, 3+ phrased as questions with an immediate direct answer?\n"
+        "  - Comparison table with 4+ rows?\n"
+        "  - Common Mistakes has 3 items, each with a 'Why it matters:' line?\n"
+        f"  - About the Author ends with 'Last reviewed: <Month {_year}>'?\n"
+        "  - Zero banned phrases, zero fabrication?\n"
+        "If any check fails, fix it before output."
+        f"{internal_links_hint}"
+    )
 
     response = _openai_retry(lambda: client.chat.completions.create(
         model="gpt-4o-mini",
         max_tokens=8000,
         messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {
-                "role": "user",
-                "content": (
-                    f'Write a comprehensive, ad-revenue-optimized blog post titled: "{title}"\n\n'
-                    f"Category: {category.replace('-', ' ')}\n\n"
-                    "WORD COUNT IS A HARD REQUIREMENT — 2500 to 3500 words.\n"
-                    "Articles under 2500 words trigger Google's thin-content filter and AdSense rejection. This is non-negotiable.\n"
-                    "If you finish drafting and the total is under 2500 words, you MUST keep expanding before delivering: add another H2 with a fresh angle, deepen a personal story with concrete numbers, or add a 4th-5th item to your comparison table. Do not stop early. Do not add filler — add substance.\n\n"
-                    "v6 STRUCTURE INJECT (CRITICAL — do not skip):\n"
-                    "0a. BEFORE the hook intro, output ONE blockquote: > **Quick answer:** <40-60 words echoing the search query verbatim and giving the full one-paragraph answer with one specific number>. Then a blank line.\n"
-                    "0b. Among your 6-8 H2 sections, AT LEAST 4 MUST be phrased as actual user questions: \n"
-                    "   • \"How does <topic> work?\" or \"How can I <verb> <topic>?\"\n"
-                    "   • \"Is <topic> worth it in YYYY?\"\n"
-                    "   • \"What's the difference between A and B?\"\n"
-                    "   • \"How much does <topic> cost in YYYY?\" or \"How long does <topic> take?\"\n"
-                    "   Each of these 4 question H2s MUST be followed IMMEDIATELY by a 50-word direct-answer paragraph BEFORE the regular section body.\n"
-                    "   These trigger Google PAA + AI Overview citations.\n"
-                    "Structure (follow ALL — partial structure = rejection):\n"
-                    "1. First-person hook intro (3-5 sentences, use I/me/my; open with a specific dollar amount, month, or measurable mistake — never a generic intro)\n"
-                    "2. ## How I Researched This — 3-4 sentence methodology callout (testing duration, comparison method, what bias you tried to avoid, what you would not have known without testing)\n"
-                    "3. 6-8 main H2 sections (NOT 4-5 — six is the floor); each H2 should be 250-400 words with 2-3 H3 subsections where useful\n"
-                    "4. ONE Markdown comparison table with 5+ rows AND 4+ columns (real values, each cell at least one full sentence of 6+ words)\n"
-                    "5. At least 3 H2 sections that mention specific REAL brands/products/services by name and compare them honestly with concrete spec/price data\n"
-                    "6. ## What Most Guides Get Wrong — 3 contrarian insights, each opened with the contrarian claim, followed by \"Why this matters:\" line, followed by a 2-3 sentence concrete example or anecdote\n"
-                    "7. ## Is It Worth It? or ## My Verdict — direct purchase-decision judgment with a buyer profile (\"worth it if you …, skip if you …\")\n"
-                    "8. ## Frequently Asked Questions — 5-6 ### Q&A pairs (include 2 price-related questions and 1 \"how long until I see results\" question). Each answer 2-4 sentences.\n"
-                    "9. Conclusion with a clear, actionable next step the reader can take today\n"
-                    "10. ## About the Author — Kkuma Park, Seoul-based indie writer; angle/why they cover this niche; what real-world test or experience qualifies them; end with \"Last reviewed: <Month YYYY>.\"\n\n"
-                    "Commercial intent (this blog monetizes via Google AdSense; buyer-intent pages earn 3-10x more per view):\n"
-                    "- Mention real products/brands/services by name (5-10 mentions across the post). Never invent fake brand names.\n"
-                    "- Include realistic US dollar price ranges where relevant — give a number, not just \"affordable\".\n"
-                    "- Use buyer-intent phrases: \"is it worth it\", \"cheaper alternative\", \"best for X budget\", \"before you buy\".\n"
-                    "- Do NOT fabricate URLs. Reference an organisation/page by NAME instead.\n\n"
-                    "External sources (mandatory): cite 3+ authority sources naturally in the body, mixing TYPES (government agency, industry association, peer-reviewed journal, manufacturer guide, major media outlet). Format like a journalist (\"according to the FDA's 2024 supplement labeling update...\") — never \"search for X on Y site\".\n\n"
-                    "First-person voice mandatory: use I/my/me at least 8 times across different sections — distribute, do not cluster in one section.\n"
-                    "Author persona: Kkuma Park, a Seoul-based indie writer who personally tests before recommending.\n"
-                    "Avoid generic 'many people' or 'most experts agree' claims. Replace with specific numbers, months, dollar amounts, brand names, or your own observed result.\n\n"
-                    "BANNED openings/phrases (instant AdSense flag): 'In today\'s fast-paced world', 'In the modern era', 'Have you ever wondered', 'Welcome to my blog', 'Let\'s dive in', 'delve into', 'unlock the secrets', 'embark on a journey', 'in the realm of', 'tapestry of', 'ever-evolving landscape', 'navigate the world of', 'treasure trove'.\n\n"
-                    "FINAL SELF-CHECK before you deliver (do this silently then output the article):\n"
-                    "  - Word count >= 2500? If not, expand. (count actual words excluding markdown syntax)\n"
-                    "  - 6+ main H2 sections present?\n"
-                    "  - Comparison table has 5+ rows?\n"
-                    "  - 3 contrarian insights, each with \"Why this matters:\" line and a concrete example?\n"
-                    "  - About the Author section ends with \"Last reviewed: <Month YYYY>\"?\n"
-                    "  - Zero banned phrases?\n"
-                    "  - 8+ first-person mentions distributed across sections?\n"
-                    "If any check fails, fix before output."
-                    f"{internal_links_hint}"
-                ),
-            },
+            {"role": "system", "content": SYSTEM_PROMPT.replace("{YEAR}", str(_year))},
+            {"role": "user", "content": user_content},
         ],
     ))
 
     content = response.choices[0].message.content
     content = _enforce_word_count(client, title, content)
     return content
-def _ensure_year_bracket(title, year=None):
-    """v6 (2026-05-08): 제목에 [YYYY Guide] / (Updated YYYY) 등 bracket 자동 append.
-    현 연도가 제목에 없으면 강제 추가. CTR +3.5% 케이스 보고.
-    """
-    import datetime as _dt
-    year = year or _dt.datetime.now().year
-    ys = str(year)
-    if ys in title:
-        return title
-    # 70자 이내면 ' [YYYY Guide]' append, 넘으면 그대로
-    candidate = title.rstrip() + f" [{ys} Guide]"
-    if len(candidate) <= 78:
-        return candidate
-    return title
 
 
 def generate_meta_description(title):
@@ -595,9 +552,9 @@ def generate_meta_description(title):
                     "STRICT RULES (non-negotiable — meta descriptions are the #1 SERP CTR variable). "
                     "1) Length: 145-155 characters (Google truncates at ~155). "
                     "2) Main keyword from the title MUST appear in the FIRST 60 characters. "
-                    "3) Include ONE specific number (e.g., '7 ways', '$200/year', '12-min'). "
-                    "4) Include ONE benefit verb (Save / Cut / Avoid / Skip / Get / Stop / Boost / Slash). "
-                    "5) Include ONE freshness signal: '2026', 'this year', 'right now', or 'updated'. "
+                    "3) Include ONE specific number (e.g., '7 ways', '$250k', '12-min'). "
+                    "4) Include ONE benefit verb (Save / Cut / Avoid / Skip / Get / Stop / Boost / Compare). "
+                    "5) Do NOT promise a specific current interest rate (rates change). "
                     "6) End with an implicit promise or curiosity gap, never just a flat summary. "
                     "NEVER use generic AI-meta phrases: 'Discover the secrets', 'Learn everything', "
                     "'In this guide', 'Find out how', 'In our comprehensive guide'. "
@@ -612,6 +569,7 @@ def generate_meta_description(title):
         desc = desc[:155].rsplit(" ", 1)[0] + "..."
     return desc[:160]
 
+
 def create_post():
     """Generate and save a new unique blog post."""
     used_topics = load_used_topics()
@@ -620,7 +578,6 @@ def create_post():
     recent_titles = [p["title"] for p in recent_posts]
 
     title, category, slug = generate_unique_topic(used_topics, existing_slugs)
-    title = _ensure_year_bracket(title)
     print(f"Generating post: {title}")
     print(f"Category: {category}")
 
@@ -665,7 +622,7 @@ title: "{title}"
 date: {today.strftime('%Y-%m-%d %H:%M:%S')} +0000
 categories: [{category}]
 description: "{description}"
-tags: [{category}, {BLOG_NICHE.replace(' ', '-')}, {today.year}]
+tags: [{category}, {BLOG_NICHE.split(',')[0].replace(' ', '-')}, {today.year}]
 ---
 
 {content}
@@ -695,7 +652,6 @@ if __name__ == "__main__":
 
 # v4_wordcount_patched
 # v5_diversity_patched 2026-05-06
-
 # v6_seo_patched 2026-05-08
-
 # v7_pin_patched 2026-05-08
+# v8_accuracy_rebuild 2026-05-23  (single niche HYSA/CD/MMA, no fabrication, 1st-party sources)
