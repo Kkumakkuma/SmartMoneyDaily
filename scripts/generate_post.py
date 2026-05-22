@@ -652,12 +652,21 @@ tags: [{category}, {BLOG_NICHE.split(',')[0].replace(' ', '-')}, {today.year}]
 if __name__ == "__main__":
     from promo_post import should_write_promo, create_promo_post
 
-    if should_write_promo():
-        print("Generating promotional post...")
-        filepath, filename = create_promo_post()
-    else:
-        filepath, filename = create_post()
-    print(f"Done! Post generated: {filename}")
+    # POST_COUNT 환경변수로 한 번 실행에 여러 글 배치 생성 (기본 1). 개별 실패는 건너뛰고 계속.
+    count = max(1, int(os.environ.get("POST_COUNT", "1") or "1"))
+    ok = 0
+    for i in range(count):
+        try:
+            if should_write_promo():
+                print(f"[{i+1}/{count}] Generating promotional post...")
+                filepath, filename = create_promo_post()
+            else:
+                filepath, filename = create_post()
+            ok += 1
+            print(f"[{i+1}/{count}] Done: {filename}")
+        except Exception as _e:
+            print(f"[{i+1}/{count}] FAILED (skipped): {_e}")
+    print(f"All done. {ok}/{count} posts generated.")
 
 
 # v4_wordcount_patched
