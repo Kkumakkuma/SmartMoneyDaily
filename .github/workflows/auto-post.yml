@@ -2,8 +2,14 @@ name: Auto Generate Blog Post
 
 on:
   schedule:
-    # v8 (2026-05-23): slow cadence for AdSense re-review — once a day at 09:07 UTC (~18:07 KST)
-    - cron: '7 9 * * *'
+    # v8.1 (2026-05-23): 저녁 시간대(KST 18~22시) 랜덤 발행.
+    # 아래 5개 슬롯이 매일 모두 트리거되지만, gate step 이 그 중 1개만 확률적으로
+    # 선택해 실제 발행한다(하루 정확히 1편). "매일 같은 시각 발행" 패턴 제거 목적.
+    - cron: '11 9 * * *'   # ~KST 18:11
+    - cron: '23 10 * * *'  # ~KST 19:23
+    - cron: '42 11 * * *'  # ~KST 20:42
+    - cron: '17 12 * * *'  # ~KST 21:17
+    - cron: '50 12 * * *'  # ~KST 21:50
   workflow_dispatch: # Allow manual trigger
     inputs:
       count:
@@ -19,28 +25,67 @@ permissions:
 jobs:
   generate-post:
     runs-on: ubuntu-latest
+    outputs:
+      post: ${{ steps.gate.outputs.post }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      - name: Gate — pick one random evening slot per day
+        id: gate
+        run: |
+          # 수동 트리거(workflow_dispatch)는 항상 발행
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "manual/dispatch run — post"
+            echo "post=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # 오늘(KST) 이미 자동발행했으면 skip — 하루 1편 보장
+          TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
+          if git log --since="${TODAY_KST}T00:00:00+09:00" --pretty=%s | grep -q '^Auto-publish new'; then
+            echo "already auto-published today (KST $TODAY_KST) — skip"
+            echo "post=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # 슬롯 균등 확률: 현재 슬롯이 '남은 슬롯 수' 분의 1 확률로 당첨, 마지막 슬롯은 강제.
+          # → 하루 1편이 5개 슬롯에 균등(각 1/5)하게 분산됨.
+          SLOTS=("11 9 * * *" "23 10 * * *" "42 11 * * *" "17 12 * * *" "50 12 * * *")
+          THIS="${{ github.event.schedule }}"
+          idx=-1
+          for i in "${!SLOTS[@]}"; do [ "${SLOTS[$i]}" = "$THIS" ] && idx=$i; done
+          if [ "$idx" -lt 0 ]; then
+            echo "unrecognized slot ($THIS) — post to be safe"
+            echo "post=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          remaining=$(( ${#SLOTS[@]} - idx ))
+          pick=$(( RANDOM % remaining ))
+          if [ "$pick" -eq 0 ]; then
+            echo "slot #$idx chosen (prob 1/$remaining) — post"
+            echo "post=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "slot #$idx skipped (prob 1/$remaining) — wait for a later slot"
+            echo "post=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.gate.outputs.post == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Random delay (0-3600s) — avoid posting on the dot
-        if: github.event_name == 'schedule'
+      - name: Random delay (0-1800s) — extra jitter within the slot
+        if: steps.gate.outputs.post == 'true' && github.event_name == 'schedule'
         run: |
-          DELAY=$((RANDOM % 3600))
+          DELAY=$((RANDOM % 1800))
           echo "Sleeping ${DELAY}s before generation"
           sleep $DELAY
 
       - name: Install dependencies
+        if: steps.gate.outputs.post == 'true'
         run: pip install openai Pillow
 
       - name: Generate new post (with retry on transient failures)
+        if: steps.gate.outputs.post == 'true'
         uses: nick-fields/retry@v3
         with:
           timeout_minutes: 28
@@ -53,6 +98,7 @@ jobs:
           POST_COUNT: ${{ github.event.inputs.count || '1' }}
 
       - name: Commit new post
+        if: steps.gate.outputs.post == 'true'
         run: |
           git config user.name "SmartMoneyDaily Bot"
           git config user.email "bot@smartmoneydaily.com"
@@ -70,6 +116,7 @@ jobs:
           echo "push failed after retries"; exit 1
 
       - name: Setup Ruby
+        if: steps.gate.outputs.post == 'true'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
@@ -77,22 +124,26 @@ jobs:
 
       - name: Setup Pages
         id: pages
+        if: steps.gate.outputs.post == 'true'
         uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
+        if: steps.gate.outputs.post == 'true'
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
       - name: Upload artifact
+        if: steps.gate.outputs.post == 'true'
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    needs: generate-post
+    if: needs.generate-post.outputs.post == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: generate-post
     steps:
       - name: Checkout for IndexNow
         uses: actions/checkout@v4
@@ -252,4 +303,3 @@ jobs:
           PINTEREST_APP_ID: ${{ secrets.PINTEREST_APP_ID }}
           PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
           PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
-
