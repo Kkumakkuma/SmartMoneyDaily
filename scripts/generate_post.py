@@ -553,35 +553,50 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
     return content
 
 
+# 메타 디스크립션 양산 템플릿 단어 — 검출되면 재생성 (GPT가 프롬프트만으론 가끔 어김)
+_BANNED_META = (
+    "unlock", "discover", "boost", "maximize", "don't miss out", "dont miss out",
+    "explore", "dive into", "learn everything", "in this guide", "find out how",
+    "in our comprehensive guide", "the secrets",
+)
+
+
 def generate_meta_description(title):
-    """v6 hotfix (2026-05-08): CTR-optimized 메타 디스크립션."""
+    """v9 (2026-05-26): CTR 메타 + 양산 템플릿 단어 후처리 차단(최대 3회 재생성)."""
     client = OpenAI()
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        max_tokens=120,
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "Write a meta description for a blog post that ranks on Google. "
-                    "RULES: "
-                    "1) Length: 145-155 characters (Google truncates at ~155). "
-                    "2) Main keyword from the title MUST appear in the FIRST 60 characters. "
-                    "3) Do NOT promise a specific current interest rate (rates change). "
-                    "4) Write a natural, specific summary of THIS post's actual angle — not a reusable template. "
-                    "VARY THE OPENING every time: rotate between a real question (How/Why/What/When), a plain "
-                    "statement, or a concrete point. Do NOT always start with a command verb or a '5 ways / 7 tips' count. "
-                    "Use a numeric count ONLY if it is a real, stable fact (e.g. $250k FDIC), never a forced 'N ways/tips/steps'. "
-                    "BANNED words/phrases (instant AI-template flag — never use any of these): 'Unlock', 'Discover', "
-                    "'Boost your', 'Maximize your', \"Don't miss out\", 'Explore', 'Dive into', 'Learn everything', "
-                    "'In this guide', 'Find out how', 'In our comprehensive guide', 'the secrets'. "
-                    "Reply with ONLY the description, no quotes, no leading 'Meta:'."
-                ),
-            },
-            {"role": "user", "content": f"Blog post title: {title}. Write the meta description now."},
-        ],
+    sys_msg = (
+        "Write a meta description for a blog post that ranks on Google. "
+        "RULES: "
+        "1) Length: 145-155 characters (Google truncates at ~155). "
+        "2) Main keyword from the title MUST appear in the FIRST 60 characters. "
+        "3) Do NOT promise a specific current interest rate (rates change). "
+        "4) Write a natural, specific summary of THIS post's actual angle — not a reusable template. "
+        "VARY THE OPENING every time: rotate between a real question (How/Why/What/When), a plain "
+        "statement, or a concrete point. Do NOT always start with a command verb or a '5 ways / 7 tips' count. "
+        "Use a numeric count ONLY if it is a real, stable fact (e.g. $250k FDIC), never a forced 'N ways/tips/steps'. "
+        "BANNED words/phrases (instant AI-template flag — never use any of these): 'Unlock', 'Discover', "
+        "'Boost', 'Maximize', \"Don't miss out\", 'Explore', 'Dive into', 'Learn everything', "
+        "'In this guide', 'Find out how', 'In our comprehensive guide', 'the secrets'. "
+        "Reply with ONLY the description, no quotes, no leading 'Meta:'."
     )
-    desc = response.choices[0].message.content.strip().strip('"').strip("'")
+    desc = ""
+    for attempt in range(3):
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            max_tokens=120,
+            temperature=0.7 + 0.15 * attempt,
+            messages=[
+                {"role": "system", "content": sys_msg},
+                {"role": "user", "content": (
+                    f"Blog post title: {title}. Write the meta description now."
+                    + ("" if attempt == 0 else " Your previous attempt used a banned template word — rewrite WITHOUT any banned word.")
+                )},
+            ],
+        )
+        desc = response.choices[0].message.content.strip().strip('"').strip("'")
+        low = desc.lower()
+        if not any(b in low for b in _BANNED_META):
+            break
     if len(desc) > 158:
         desc = desc[:155].rsplit(" ", 1)[0] + "..."
     return desc[:160]
