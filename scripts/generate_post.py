@@ -41,6 +41,7 @@ ACCURACY — THE #1 RULE (this is exactly what gets finance sites approved or re
   (c) clearly hypothetical examples explicitly labeled ("For example, if you kept $10,000 in an account earning 4% APY,
       that would be about $400 in a year before tax").
 - Never state a specific CURRENT APY as a fact (rates change constantly). Instead explain how to find and compare current rates.
+- Do NOT state a numeric pass-through ratio between Federal Reserve rate moves and account APYs (e.g., "a 0.25% Fed hike adds about 0.1-0.3% to your APY"). No authority publishes such a fixed ratio and it cannot be verified. Describe the relationship qualitatively only (when the Fed raises rates, deposit yields generally tend to rise too, but the timing and amount vary by institution).
 - All examples and references must be consistent with the current year {YEAR}. Never cite a past personal result with a specific date.
 - Accuracy note: the Federal Reserve suspended Regulation D's six-per-month savings/money-market withdrawal limit in 2020.
   Do NOT present a federal "six withdrawals per month" rule as if it is current. Describe withdrawal limits as set by each
@@ -53,12 +54,14 @@ Writing rules:
 - Open with a concrete, specific hook (a common mistake, a number that is generally true, or the core question) —
   never a generic "In today's world" intro.
 - End with a clear, actionable next step.
-- Do NOT output a markdown "# Title". Do NOT add AI disclaimers inside the article body.
+- Do NOT output a markdown "# Title". Do NOT add AI disclaimers inside the article body (the About-the-Author transparency note is added automatically by the publisher after generation, not by you).
 
 ANTI-AI-CLICHE (these phrases trigger reviewers' "low-value AI" flag — never use):
 - "In today's fast-paced world", "In the modern era", "It's no secret that", "Have you ever wondered",
   "Welcome to my blog", "Let's dive in", "delve into", "navigate the world of", "unlock the secrets",
-  "embark on a journey", "treasure trove", "in the realm of", "tapestry of", "ever-evolving landscape".
+  "embark on a journey", "treasure trove", "in the realm of", "tapestry of", "ever-evolving landscape",
+  "in today's market", "when it comes to", "the world of personal finance", "navigating the complexities",
+  "can feel daunting", "can feel overwhelming".
 - Avoid empty filler: "It is important to note that", "It goes without saying", "Needless to say".
 
 VOICE / E-E-A-T (honest version — do NOT fabricate):
@@ -147,21 +150,24 @@ def get_existing_slugs():
 
 
 def get_recent_posts_for_linking(limit=10):
-    """Return list of dicts {title, slug} for internal linking context."""
+    """Return list of dicts {title, slug, url} for internal linking context.
+    url은 실제 permalink(/{BLOG}/:year/:month/:day/:title/) — slug만으로 링크하면 404 (permalink가 날짜 포함)."""
     posts_dir = os.path.join(get_repo_root(), "_posts")
     posts = []
     if os.path.exists(posts_dir):
         files = sorted(os.listdir(posts_dir), reverse=True)
         for filename in files[:limit]:
-            if not filename.endswith(".md"):
+            m = re.match(r"^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$", filename)
+            if not m:
                 continue
+            y, mo, d, slug = m.groups()
+            url = f"/{BLOG_NAME}/{y}/{mo}/{d}/{slug}/"
             filepath = os.path.join(posts_dir, filename)
-            slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", filename[:-3])
             with open(filepath, "r", encoding="utf-8") as f:
                 for line in f:
                     if line.startswith("title:"):
                         title = line.split(":", 1)[1].strip().strip('"').strip("'")
-                        posts.append({"title": title, "slug": slug})
+                        posts.append({"title": title, "slug": slug, "url": url})
                         break
     return posts
 
@@ -183,8 +189,8 @@ def inject_internal_links(content, recent_posts, min_links=3, max_links=5):
     inserted_slugs = set()
     STOPWORDS = {"the", "a", "an", "for", "and", "with", "to", "of", "in", "on", "at", "is", "are", "my"}
 
-    def already_linked(slug):
-        return f"](/{slug}/)" in content
+    def already_linked(url):
+        return f"]({url})" in content
 
     # Pass 1: exact title
     for rp in recent_posts:
@@ -192,13 +198,14 @@ def inject_internal_links(content, recent_posts, min_links=3, max_links=5):
             break
         title = rp.get("title", "")
         slug = rp.get("slug", "")
-        if not title or not slug or already_linked(slug):
+        url = rp.get("url", "")
+        if not title or not slug or not url or already_linked(url):
             continue
         if title not in content:
             continue
         safe_title = re.escape(title)
         pattern = re.compile(r"(?<!\]\()(?<!\[)" + safe_title + r"(?!\])")
-        new_content, n = pattern.subn(f"[{title}](/{slug}/)", content, count=1)
+        new_content, n = pattern.subn(f"[{title}]({url})", content, count=1)
         if n:
             content = new_content
             inserted_slugs.add(slug)
@@ -209,7 +216,8 @@ def inject_internal_links(content, recent_posts, min_links=3, max_links=5):
             break
         title = rp.get("title", "")
         slug = rp.get("slug", "")
-        if not title or not slug or slug in inserted_slugs or already_linked(slug):
+        url = rp.get("url", "")
+        if not title or not slug or not url or slug in inserted_slugs or already_linked(url):
             continue
         words = [w for w in re.findall(r"[A-Za-z0-9']+", title)
                  if w.lower() not in STOPWORDS and len(w) > 1]
@@ -223,21 +231,21 @@ def inject_internal_links(content, recent_posts, min_links=3, max_links=5):
             m = re.search(phrase_pattern, content, flags=re.IGNORECASE)
             if m:
                 matched = m.group(0)
-                content = content[: m.start()] + f"[{matched}](/{slug}/)" + content[m.end():]
+                content = content[: m.start()] + f"[{matched}]({url})" + content[m.end():]
                 inserted_slugs.add(slug)
                 break
 
     # Fallback: append Further Reading if we still don't have enough links
     if len(inserted_slugs) < min_links:
         remaining = [rp for rp in recent_posts
-                     if rp.get("slug") and rp["slug"] not in inserted_slugs
-                     and not already_linked(rp["slug"])]
+                     if rp.get("slug") and rp.get("url") and rp["slug"] not in inserted_slugs
+                     and not already_linked(rp["url"])]
         need = max(min_links - len(inserted_slugs), 3)
         picks = remaining[:need]
         if picks:
             block = "\n\n## Further Reading\n\n"
             for rp in picks:
-                block += f"- [{rp['title']}](/{rp['slug']}/)\n"
+                block += f"- [{rp['title']}]({rp['url']})\n"
             content = content.rstrip() + block
 
     return content
@@ -428,10 +436,10 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
     return title, category, slug
 
 
-def generate_post_content(title, category, recent_titles):
+def generate_post_content(title, category, recent_titles, min_words=1500):
     """Generate accurate, useful blog post with FAQ and internal linking. (retry 3x)"""
     client = OpenAI()
-    return _generate_post_content_inner(client, title, category, recent_titles)
+    return _generate_post_content_inner(client, title, category, recent_titles, min_words)
 
 
 # === v8 word count (2026-05-23) — quality over padding =============
@@ -472,7 +480,7 @@ def _enforce_word_count(client, title, content, min_words=1500, max_extra_words=
         return content
 
 
-def _generate_post_content_inner(client, title, category, recent_titles):
+def _generate_post_content_inner(client, title, category, recent_titles, min_words=1500):
     _year = datetime.datetime.now().year
 
     internal_links_hint = ""
@@ -541,7 +549,7 @@ def _generate_post_content_inner(client, title, category, recent_titles):
     ))
 
     content = response.choices[0].message.content
-    content = _enforce_word_count(client, title, content)
+    content = _enforce_word_count(client, title, content, min_words=min_words)
     return content
 
 
@@ -555,16 +563,18 @@ def generate_meta_description(title):
             {
                 "role": "system",
                 "content": (
-                    "Write a CTR-optimized meta description for a blog post that ranks on Google. "
-                    "STRICT RULES (non-negotiable — meta descriptions are the #1 SERP CTR variable). "
+                    "Write a meta description for a blog post that ranks on Google. "
+                    "RULES: "
                     "1) Length: 145-155 characters (Google truncates at ~155). "
                     "2) Main keyword from the title MUST appear in the FIRST 60 characters. "
-                    "3) Include ONE specific number (e.g., '7 ways', '$250k', '12-min'). "
-                    "4) Include ONE benefit verb (Save / Cut / Avoid / Skip / Get / Stop / Boost / Compare). "
-                    "5) Do NOT promise a specific current interest rate (rates change). "
-                    "6) End with an implicit promise or curiosity gap, never just a flat summary. "
-                    "NEVER use generic AI-meta phrases: 'Discover the secrets', 'Learn everything', "
-                    "'In this guide', 'Find out how', 'In our comprehensive guide'. "
+                    "3) Do NOT promise a specific current interest rate (rates change). "
+                    "4) Write a natural, specific summary of THIS post's actual angle — not a reusable template. "
+                    "VARY THE OPENING every time: rotate between a real question (How/Why/What/When), a plain "
+                    "statement, or a concrete point. Do NOT always start with a command verb or a '5 ways / 7 tips' count. "
+                    "Use a numeric count ONLY if it is a real, stable fact (e.g. $250k FDIC), never a forced 'N ways/tips/steps'. "
+                    "BANNED words/phrases (instant AI-template flag — never use any of these): 'Unlock', 'Discover', "
+                    "'Boost your', 'Maximize your', \"Don't miss out\", 'Explore', 'Dive into', 'Learn everything', "
+                    "'In this guide', 'Find out how', 'In our comprehensive guide', 'the secrets'. "
                     "Reply with ONLY the description, no quotes, no leading 'Meta:'."
                 ),
             },
@@ -588,11 +598,25 @@ def create_post():
     print(f"Generating post: {title}")
     print(f"Category: {category}")
 
-    content = generate_post_content(title, category, recent_titles)
+    content = generate_post_content(title, category, recent_titles, min_words=random.randint(1300, 1900))
     content = inject_internal_links(content, recent_posts, min_links=5, max_links=8)
-    # About the Author의 "Last reviewed" 월을 실제 현재 월로 정정 (GPT 월 오기 방지)
-    content = re.sub(r"Last reviewed:\s*[A-Za-z]+\.?\s*\d{4}",
-                     f"Last reviewed: {datetime.datetime.now().strftime('%B %Y')}", content)
+    # About the Author 단락을 고정 텍스트로 치환 (GPT가 매번 다른 1인칭/3인칭·월 오기 방지 + about.md 톤 일치)
+    _about_block = (
+        "## About the Author\n\n"
+        "I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain "
+        "publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and "
+        "money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal "
+        "Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and "
+        "structure articles, and I check them against those public sources before publishing; I don't claim "
+        "personal banking results I didn't have.\n\n"
+        f"Last reviewed: {datetime.datetime.now().strftime('%B %Y')}."
+    )
+    if re.search(r"^##\s+About the Author\b", content, flags=re.MULTILINE | re.IGNORECASE):
+        content = re.sub(r"^##\s+About the Author\b.*?(?=\n##\s|\Z)",
+                         lambda _m: _about_block, content, count=1,
+                         flags=re.DOTALL | re.MULTILINE | re.IGNORECASE)
+    else:
+        content = content.rstrip() + "\n\n" + _about_block
     description = generate_meta_description(title)
 
     # v7 (2026-05-08): 자동 핀 이미지 생성 + 본문 맨 위 markdown 이미지 삽입

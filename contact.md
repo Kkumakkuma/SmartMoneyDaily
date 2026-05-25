@@ -13,7 +13,7 @@ I read every email. Response time is usually within a few business days — some
 
 **Email:** [kkumaspark@gmail.com](mailto:kkumaspark@gmail.com)
 
-Please include a short subject line that tells me what the message is about (e.g., "Correction on credit score post", "Question about meal prep").
+Please include a short subject line that tells me what the message is about (e.g., "Correction on a CD article", "Question about FDIC coverage").
 
 ## For content corrections
 

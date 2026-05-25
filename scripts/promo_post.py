@@ -46,7 +46,7 @@ Rules:
 - Use ## headers and bullet points
 - Include a FAQ section with 2-3 questions
 - Conversational, helpful tone - NOT salesy
-- Do NOT mention AI or being AI-generated
+- Accuracy first: do NOT invent specific numbers, dates, or personal results
 - The post must stand on its own as valuable content even without the product mention
 """
 
