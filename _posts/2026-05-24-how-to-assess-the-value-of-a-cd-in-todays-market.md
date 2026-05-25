@@ -3,7 +3,7 @@ layout: post
 title: "How to Assess the Value of a CD in Today's Market"
 date: 2026-05-24 11:08:16 +0000
 categories: [interest-rates]
-description: "Understand the true value of a CD in today's market with 5 expert tips. Grow your investment strategy and make informed choices that pay off!"
+description: "Whether a CD is worth it depends on its term, rate, and your need for access. Here's how to weigh a CD against flexible savings before locking your money in."
 tags: [interest-rates, high-yield-savings-accounts, 2026]
 ---
 

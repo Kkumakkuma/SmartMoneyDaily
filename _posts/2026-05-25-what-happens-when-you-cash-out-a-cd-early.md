@@ -3,7 +3,7 @@ layout: post
 title: "What Happens When You Cash Out a CD Early?"
 date: 2026-05-25 15:46:46 +0000
 categories: [cd-rates]
-description: "Cashing out a CD early can cost you. Compare 5 key consequences to avoid and Grow your financial wellness. Don't miss these essential insights!"
+description: "Cashing out a CD before maturity usually triggers an early-withdrawal penalty. Here's what it costs, when it's still worth it, and how to plan around the rules."
 tags: [cd-rates, high-yield-savings-accounts, 2026]
 ---
 

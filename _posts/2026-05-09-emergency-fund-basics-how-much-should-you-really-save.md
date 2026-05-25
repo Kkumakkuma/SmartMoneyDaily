@@ -3,7 +3,7 @@ layout: post
 title: "Emergency Fund Basics: How Much Should You Really Save?"
 date: 2026-05-09 09:14:00 +0000
 categories: [emergency-fund]
-description: "Emergency fund basics: Save at least 3 to 6 months' worth of expenses to secure your financial future. Are you prepared for life's surprises?"
+description: "An emergency fund usually means three to six months of essential expenses. Here's how to size yours and where to keep it so it stays safe and reachable."
 tags: [emergency-fund, high-yield-savings-accounts, 2026]
 ---
 

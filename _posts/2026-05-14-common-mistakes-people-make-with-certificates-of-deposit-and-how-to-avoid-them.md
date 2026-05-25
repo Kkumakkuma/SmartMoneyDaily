@@ -3,7 +3,7 @@ layout: post
 title: "Common Mistakes People Make with Certificates of Deposit and How to Avoid Them"
 date: 2026-05-14 21:30:56 +0000
 categories: [savings-strategy]
-description: "Avoid 5 common mistakes with Certificates of Deposit to Grow your savings strategy. Master these tips and secure your financial future today!"
+description: "Common CD mistakes — ignoring penalties, auto-renewal, or term length — quietly cost savers. Here's what to watch for and how to avoid the priciest ones."
 tags: [savings-strategy, high-yield-savings-accounts, 2026]
 ---
 

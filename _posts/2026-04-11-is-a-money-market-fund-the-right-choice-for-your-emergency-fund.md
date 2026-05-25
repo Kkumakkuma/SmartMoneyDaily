@@ -3,7 +3,7 @@ layout: post
 title: "Is a Money Market Fund the Right Choice for Your Emergency Fund?"
 date: 2026-04-11 21:49:08 +0000
 categories: [emergency-fund]
-description: "Is a Money Market Fund the Right Choice for Your Emergency Fund? Get 5 key benefits to Grow your financial security and make an informed decision today!"
+description: "A money market fund isn't FDIC-insured like a savings account, which matters for an emergency fund. Here's how it works and whether it suits cash you need fast."
 tags: [emergency-fund, high-yield-savings-accounts, 2026]
 ---
 

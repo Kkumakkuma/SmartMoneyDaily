@@ -3,7 +3,7 @@ layout: post
 title: "HYSA vs CDs: Which is Better for Your Savings Goals?"
 date: 2026-05-01 19:41:24 +0000
 categories: [bank-comparison]
-description: "HYSA vs CDs: 5 key differences to Grow your savings goals and Make the most of your earnings. Choose wisely and Understand the best option for your future!"
+description: "HYSAs stay liquid with variable rates; CDs lock a fixed rate for a term. Here's how the two compare so you can match each to the right savings goal."
 tags: [bank-comparison, high-yield-savings-accounts, 2026]
 ---
 

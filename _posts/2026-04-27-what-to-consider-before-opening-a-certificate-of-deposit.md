@@ -3,7 +3,7 @@ layout: post
 title: "What to Consider Before Opening a Certificate of Deposit"
 date: 2026-04-27 20:26:34 +0000
 categories: [cd-rates]
-description: "Opening a Certificate of Deposit? Here are 5 key factors to consider that can help you Make the most of your savings and achieve your financial goals. Don't..."
+description: "Before opening a certificate of deposit, weigh the term, rate, penalty, and your timeline. Here's what to check so the money you lock away truly works for you."
 tags: [cd-rates, high-yield-savings-accounts, 2026]
 ---
 

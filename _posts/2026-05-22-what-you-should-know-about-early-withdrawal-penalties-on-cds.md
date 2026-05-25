@@ -3,7 +3,7 @@ layout: post
 title: "What You Should Know About Early Withdrawal Penalties on CDs"
 date: 2026-05-22 19:21:14 +0000
 categories: [savings-strategy]
-description: "Understand early withdrawal penalties on CDs with 5 key insights that can help you avoid costly mistakes. Don’t let your savings be affected!"
+description: "Early-withdrawal penalties on CDs can erase months of interest if you break the term. Learn how they're set, how to estimate them, and how to avoid surprises."
 tags: [savings-strategy, high-yield-savings-accounts, 2026]
 ---
 

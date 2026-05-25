@@ -3,7 +3,7 @@ layout: post
 title: "How to Calculate the APY for High-Yield Savings Accounts"
 date: 2026-03-27 13:07:10 +0000
 categories: [high-yield-savings]
-description: "Understand 5 simple steps to calculate the APY for high-yield savings accounts and Grow your savings strategy."
+description: "APY shows what a high-yield savings account truly earns once compounding counts. Learn how to calculate it and compare accounts on equal footing."
 tags: [high-yield-savings, high-yield-savings-accounts, 2026]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "A Beginner's Guide to Understanding CD Terms and Conditions"
 date: 2026-05-25 14:03:18 +0000
 categories: [cd-rates]
-description: "Understand 7 key CD terms and conditions that can save you money and time. Master these concepts for smarter savings and stay ahead of the financial curve!"
+description: "CD terms like maturity, APY, and early-withdrawal penalty decide what you earn. Here's a plain-English guide to the conditions before you commit your money."
 tags: [cd-rates, high-yield-savings-accounts, 2026]
 ---
 
