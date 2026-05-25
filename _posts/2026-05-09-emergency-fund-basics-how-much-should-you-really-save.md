@@ -51,13 +51,13 @@ Apply the three-to-six month rule by multiplying your monthly expenses by three 
 
 ### Step 3: Choose an Appropriate Savings Vehicle
 
-Deciding whether to keep your emergency fund in a HYSA, CD, or money market account should hinge on your confidence in your income stability and your expected life events. For more on this, see “[HYSA vs CDs: Which is Better for Your Savings Goals?](/hysa-vs-cds-which-is-better-for-your-savings-goals/)”
+Deciding whether to keep your emergency fund in a HYSA, CD, or money market account should hinge on your confidence in your income stability and your expected life events. For more on this, see “[HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/2026/05/01/hysa-vs-cds-which-is-better-for-your-savings-goals/)”
 
 ## What to Consider When Saving for an Emergency Fund
 
 ### How Do Interest Rates Affect Savings?
 
-Interest rates play a crucial role in how much money you’ll accumulate in your emergency fund. As discussed in “[Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/),” even small differences in interest rates can significantly impact how much your savings grow over time.
+Interest rates play a crucial role in how much money you’ll accumulate in your emergency fund. As discussed in “[Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/SmartMoneyDaily/2026/05/18/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/),” even small differences in interest rates can significantly impact how much your savings grow over time.
 
 ### Are There Withdrawal Limitations?
 
@@ -101,7 +101,7 @@ Ideally, an emergency fund should only be used for unexpected expenses. Using it
 
 ### What happens if I need to withdraw from a CD?
 
-Withdrawing early before the maturity date generally incurs penalties, as described in “[What You Should Know About Early Withdrawal Penalties on CDs](/what-you-should-know-about-early-withdrawal-penalties-on-cds/).” 
+Withdrawing early before the maturity date generally incurs penalties, as described in “[What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/).” 
 
 ### How can I increase my emergency fund?
 
@@ -137,11 +137,12 @@ Consistent saving is vital for reaching your emergency fund goal, providing you 
 
 ## About the Author
 
-Kkuma Park is a Seoul-based independent writer who compiles and explains publicly available U.S. deposit-account information. She compares published rates and rules, citing public sources to ensure accuracy. Last reviewed: May 2026.
+I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
 
+Last reviewed: May 2026.
 ## Further Reading
 
-- [What to Consider Before Opening a Certificate of Deposit](/what-to-consider-before-opening-a-certificate-of-deposit/)
-- [What Are the Benefits of Opening a CD in 2026?](/what-are-the-benefits-of-opening-a-cd-in-2026/)
-- [Understanding High-Yield Savings Accounts: Key Features to Consider](/understanding-high-yield-savings-accounts-key-features-to-consider/)
+- [What to Consider Before Opening a Certificate of Deposit](/SmartMoneyDaily/2026/04/27/what-to-consider-before-opening-a-certificate-of-deposit/)
+- [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
+- [Understanding High-Yield Savings Accounts: Key Features to Consider](/SmartMoneyDaily/2026/04/07/understanding-high-yield-savings-accounts-key-features-to-consider/)
 

@@ -3,7 +3,7 @@ layout: post
 title: "HYSA vs CDs: Which is Better for Your Savings Goals?"
 date: 2026-05-01 19:41:24 +0000
 categories: [bank-comparison]
-description: "HYSA vs CDs: 5 key differences to boost your savings goals and maximize your earnings. Choose wisely and unlock the best option for your future!"
+description: "HYSA vs CDs: 5 key differences to Grow your savings goals and Make the most of your earnings. Choose wisely and Understand the best option for your future!"
 tags: [bank-comparison, high-yield-savings-accounts, 2026]
 ---
 
@@ -130,4 +130,6 @@ By understanding how interest rate fluctuations impact each savings option, you 
 
 ## About the Author
 
-Kkuma Park is a Seoul-based independent writer who compiles and explains publicly available U.S. deposit-account information. She compares published rates and rules, citing public sources without inventing personal banking results. Last reviewed: May 2026.
+I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
+
+Last reviewed: May 2026.

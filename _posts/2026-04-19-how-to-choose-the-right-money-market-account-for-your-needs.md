@@ -94,9 +94,10 @@ Ensure to confirm the APY offered at the time of account opening and keep an eye
 
 ## About the Author
 
-Kkuma Park is a Seoul-based independent writer who compiles and explains publicly available U.S. deposit-account information. The editorial approach compares published rates and rules while citing public sources. Last reviewed: May 2026.
+I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
 
+Last reviewed: April 2026.
 ## Further Reading
 
-- [HYSA vs CDs: Which is Better for Your Savings Goals?](/hysa-vs-cds-which-is-better-for-your-savings-goals/)
+- [HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/2026/05/01/hysa-vs-cds-which-is-better-for-your-savings-goals/)
 

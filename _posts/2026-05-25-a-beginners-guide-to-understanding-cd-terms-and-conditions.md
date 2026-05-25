@@ -3,7 +3,7 @@ layout: post
 title: "A Beginner's Guide to Understanding CD Terms and Conditions"
 date: 2026-05-25 14:03:18 +0000
 categories: [cd-rates]
-description: "Unlock 7 key CD terms and conditions that can save you money and time. Master these concepts for smarter savings and stay ahead of the financial curve!"
+description: "Understand 7 key CD terms and conditions that can save you money and time. Master these concepts for smarter savings and stay ahead of the financial curve!"
 tags: [cd-rates, high-yield-savings-accounts, 2026]
 ---
 
@@ -128,13 +128,14 @@ Understanding these different types can help you choose the one that aligns best
 
 ## About the Author
 
-Kkuma Park is a Seoul-based independent writer who compiles and explains publicly available U.S. deposit-account information. The editorial approach focuses on comparing published rates and rules while citing public sources. No personal banking results are claimed. Last reviewed: May 2026.
+I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
 
+Last reviewed: May 2026.
 ## Further Reading
 
-- [How to Assess the Value of a CD in Today's Market](/how-to-assess-the-value-of-a-cd-in-todays-market/)
-- [What to Know About the Impact of Interest Rate Changes on Your Earnings](/what-to-know-about-the-impact-of-interest-rate-changes-on-your-earnings/)
-- [What You Should Know About Early Withdrawal Penalties on CDs](/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
-- [Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/)
-- [Common Mistakes People Make with Certificates of Deposit and How to Avoid Them](/common-mistakes-people-make-with-certificates-of-deposit-and-how-to-avoid-them/)
+- [How to Assess the Value of a CD in Today's Market](/SmartMoneyDaily/2026/05/24/how-to-assess-the-value-of-a-cd-in-todays-market/)
+- [What to Know About the Impact of Interest Rate Changes on Your Earnings](/SmartMoneyDaily/2026/05/23/what-to-know-about-the-impact-of-interest-rate-changes-on-your-earnings/)
+- [What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
+- [Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/SmartMoneyDaily/2026/05/18/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/)
+- [Common Mistakes People Make with Certificates of Deposit and How to Avoid Them](/SmartMoneyDaily/2026/05/14/common-mistakes-people-make-with-certificates-of-deposit-and-how-to-avoid-them/)
 

@@ -3,7 +3,7 @@ layout: post
 title: "Understanding FDIC Insurance: What You Need to Know Before Opening an Account"
 date: 2026-04-16 08:08:09 +0000
 categories: [fdic-insurance]
-description: "Understand FDIC insurance in 5 simple steps to boost your financial security. Don't miss out on essential insights before opening an account!"
+description: "Understand FDIC insurance in 5 simple steps to Grow your financial security. on essential insights before opening an account!"
 tags: [fdic-insurance, high-yield-savings-accounts, 2026]
 ---
 
@@ -124,11 +124,12 @@ By understanding how joint accounts function under FDIC insurance, you can bette
 
 ## About the Author
 
-Kkuma Park is a Seoul-based independent writer who compiles and explains publicly available U.S. deposit-account information. Her editorial approach includes comparing published rates and rules while citing public sources; she does not claim invented personal banking results. Last reviewed: May 2026.
+I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
 
+Last reviewed: April 2026.
 ## Further Reading
 
-- [HYSA vs CDs: Which is Better for Your Savings Goals?](/hysa-vs-cds-which-is-better-for-your-savings-goals/)
-- [How to Choose the Right Money Market Account for Your Needs](/how-to-choose-the-right-money-market-account-for-your-needs/)
-- [How to Calculate the APY for High-Yield Savings Accounts](/how-to-calculate-the-apy-for-high-yield-savings-accounts/)
+- [HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/2026/05/01/hysa-vs-cds-which-is-better-for-your-savings-goals/)
+- [How to Choose the Right Money Market Account for Your Needs](/SmartMoneyDaily/2026/04/19/how-to-choose-the-right-money-market-account-for-your-needs/)
+- [How to Calculate the APY for High-Yield Savings Accounts](/SmartMoneyDaily/2026/03/27/how-to-calculate-the-apy-for-high-yield-savings-accounts/)
 

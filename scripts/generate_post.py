@@ -594,7 +594,7 @@ def generate_meta_description(title):
             ],
         )
         desc = response.choices[0].message.content.strip().strip('"').strip("'")
-        low = desc.lower()
+        low = desc.replace("’", "'").lower()
         if not any(b in low for b in _BANNED_META):
             break
     if len(desc) > 158:
