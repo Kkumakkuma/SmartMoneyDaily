@@ -8,12 +8,11 @@ future: true
 theme: minima
 
 author:
-  name: SmartMoneyDaily
-  email: ""
+  name: Kkuma Park
+  email: "kkumaspark@gmail.com"
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
 
 defaults:
@@ -32,9 +31,3 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-
-# Social / Pinterest
-social:
-  name: SmartTemplates
-  links:
-    - https://pinterest.com/smarttemplates

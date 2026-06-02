@@ -25,7 +25,7 @@ For collaboration, sponsorship, or partnership proposals, email me with "Busines
 
 ## What I cannot do
 
-- Provide **personalized** financial, medical, legal, or professional advice (please see the [Disclaimer](/disclaimer/)).
+- Provide **personalized** financial, tax, legal, or professional advice (please see the [Disclaimer](/disclaimer/)).
 - Respond to every guest-post pitch. I do not accept unsolicited guest posts at this time.
 - Reply to mass marketing email.
 

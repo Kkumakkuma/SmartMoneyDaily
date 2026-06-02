@@ -6,7 +6,6 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% seo %}
   {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   {% feed_meta %}
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
@@ -67,19 +66,10 @@
     .hero { background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%); color: white; padding: 40px 28px; border-radius: 14px; margin-bottom: 36px; }
     .hero h1 { color: white; margin: 0 0 10px; font-size: 1.8em; }
     .hero p { color: #dce5ff; margin: 0; font-size: 1.02em; }
-    .other-blogs { padding: 14px 0 18px; border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 16px; }
-    .other-blogs-title { color: #fff; font-weight: 600; margin-bottom: 10px; font-size: 0.95em; }
-    .other-blogs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4px 16px; text-align: left; max-width: 780px; margin: 0 auto 12px; }
-    .other-blogs-grid a { color: #cfe0ff; text-decoration: none; font-size: 0.88em; padding: 3px 0; display: block; }
-    .other-blogs-grid a:hover { color: #fff; text-decoration: underline; }
-    .hub-link { margin: 4px 0 0; font-size: 0.9em; }
-    .hub-link a { color: #fff; font-weight: 600; text-decoration: none; }
-    .hub-link a:hover { text-decoration: underline; }
     @media (max-width: 600px) {
       header h1 { font-size: 1.3em; }
       .hero { padding: 28px 20px; }
       .hero h1 { font-size: 1.4em; }
-      nav.main-nav a[href="/"][style*="margin-left"] { margin-left: 0 !important; }
     }
   </style>
   <!-- Google Analytics -->

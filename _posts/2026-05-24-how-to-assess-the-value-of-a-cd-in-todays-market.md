@@ -76,7 +76,7 @@ Typical CD terms range from 3 months to 5 years, with longer terms usually offer
 
 ### Are CDs a good option in a rising interest rate environment?
 
-While locking in a fixed rate during rising rates may seem less attractive, if you secure a higher rate beforehand, you can benefit from guaranteed returns compared to current market offerings.
+While locking in a fixed rate during rising rates may seem less attractive, if you secure a higher rate beforehand, you can benefit from a locked-in interest rate compared to current market offerings.
 
 ### How often do CD rates change?
 

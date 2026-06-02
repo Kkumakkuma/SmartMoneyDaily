@@ -84,7 +84,7 @@ Knowing how to select the right money market account is crucial for optimizing y
 
 ## Understanding APY and its Impact on Your Savings
 
-Annual Percentage Yield (APY) is a critical factor to understand when choosing a money market account, as it reflects the true rate of return on your savings, taking into account the effects of compounding interest. When comparing accounts, APY gives you a clearer picture of how much interest you will earn over time, compared to the nominal interest rate, which does not consider compounding effects. 
+Annual Percentage Yield (APY) is a critical factor to understand when choosing a money market account, as it reflects the true rate of return on your savings, taking into account the effects of compounding interest. When comparing accounts, APY gives you a clearer picture of how much interest you can expect to earn over time, compared to the nominal interest rate, which does not consider compounding effects. 
 
 For instance, if one money market account offers a 1.5% APY and another offers 1.8% APY, the latter will yield a higher return due to the increased rate. Note that APY can fluctuate based on changes in interest rates set by the Federal Reserve or bank policies.
 

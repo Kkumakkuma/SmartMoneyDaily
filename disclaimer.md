@@ -19,7 +19,7 @@ I make reasonable efforts to ensure the information on this Site is accurate and
 
 ## AI-assisted writing disclosure
 
-Some posts on SmartMoneyDaily are drafted with the help of AI tools (including large language models such as ChatGPT). All AI-assisted drafts are reviewed, edited, and fact-checked by Kkuma Park before publication. AI is used as a writing tool — the editorial judgment, positions, and personal experiences expressed are my own.
+Many posts on SmartMoneyDaily are drafted with the help of AI tools (including large language models such as ChatGPT). I use AI to help draft and structure articles, and I check them against primary public sources such as the FDIC, the Federal Reserve, and the CFPB before publishing. I don't claim personal banking results I didn't have — where an article uses figures, they are illustrative examples or are drawn from those public sources, not a record of my own accounts.
 
 ## Affiliate disclosure
 
@@ -31,7 +31,7 @@ This Site displays advertisements served by Google AdSense and possibly other th
 
 ## No professional relationship
 
-Reading this Site does **not** create a professional-client relationship between you and Kkuma Park — including, but not limited to, financial advisor, medical provider, attorney, accountant, or licensed contractor.
+Reading this Site does **not** create a professional-client relationship between you and Kkuma Park — including, but not limited to, financial advisor, attorney, accountant, or tax professional.
 
 ## External links
 

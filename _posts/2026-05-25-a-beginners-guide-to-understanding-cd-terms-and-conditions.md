@@ -17,7 +17,7 @@ When opening a certificate of deposit (CD), many people misjudge the details in 
 
 A certificate of deposit is a fixed-term savings account offered by banks and credit unions that typically pays higher interest rates than standard savings accounts. Key terms include:
 
-- **APY**: The annual percentage yield indicates how much interest you will earn over a year. 
+- **APY**: The annual percentage yield indicates how much interest you can expect to earn over a year. 
 - **Term Length**: This is the duration for which you commit your money, commonly ranging from a few months to several years.
 - **Minimum Deposit Requirement**: Many CDs require a minimum initial deposit, which can vary widely.
 
@@ -25,7 +25,7 @@ For additional insights on CD value, consider reading [How to Assess the Value o
 
 ## Why Is the APY Important When Choosing a CD?
 
-The APY reflects the total interest you'll earn within a year, factoring in compounding interest. A higher APY generally translates to better earnings on your investment. 
+The APY reflects the total interest you can expect to earn within a year, factoring in compounding interest. A higher APY generally translates to better earnings on your investment. 
 
 For example, if you invested $10,000 in a CD with a 4% APY, it would generate about $400 in interest within a year before taxes. However, APYs can fluctuate; always compare them through financial sites or direct bank listings to find the best rate available.
 

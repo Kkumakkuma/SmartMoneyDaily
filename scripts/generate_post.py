@@ -46,6 +46,9 @@ ACCURACY — THE #1 RULE (this is exactly what gets finance sites approved or re
 - Accuracy note: the Federal Reserve suspended Regulation D's six-per-month savings/money-market withdrawal limit in 2020.
   Do NOT present a federal "six withdrawals per month" rule as if it is current. Describe withdrawal limits as set by each
   individual bank or credit union (some still impose their own limits).
+- Do NOT use promotional or promissory phrasing such as "guaranteed returns", "risk-free profit", or "you will earn".
+  A CD pays a fixed, contractual interest rate and (within FDIC limits) protects principal — describe that precisely as a
+  "fixed interest rate" or "guaranteed interest rate", never as "guaranteed returns" on an "investment".
 
 Writing rules:
 - Friendly, clear, authoritative tone. Short paragraphs (2-3 sentences).

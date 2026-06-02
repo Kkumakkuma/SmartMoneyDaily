@@ -95,7 +95,7 @@ Most traditional CDs do not allow additional deposits once opened. However, some
 At maturity, the bank will typically transfer your principal and interest to your account unless you provide instructions otherwise. Always check if automatic renewal is an option.
 
 ### Are CDs a good choice for retirement savings?
-While CDs offer guaranteed returns, they are generally less effective for long-term growth compared to stocks or bonds. Assess your entire portfolio when considering a retirement strategy.
+While CDs offer a fixed, guaranteed interest rate, they are generally less effective for long-term growth compared to stocks or bonds. Assess your entire portfolio when considering a retirement strategy.
 
 ### Can I use a CD as collateral for a loan?
 Some banks allow you to use a CD as collateral for loans. This means you can access funds without penalizing your CD, but terms vary by institution, so inquire beforehand.

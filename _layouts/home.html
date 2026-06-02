@@ -7,40 +7,12 @@ layout: default
   <p>{{ site.description }}</p>
 </div>
 
-<p style="font-size: 1.02em; color: #333;">Welcome to <strong>SmartMoneyDaily</strong>. Everything on this site is written by me, Kkuma Park, based on what I have actually tried, tested, and learned about personal finance. No recycled listicles, no AI word-salad &mdash; just useful notes I wish I had when I started.</p>
-
-<h2>Explore by Topic</h2>
-<div class="category-grid">
-  <div class="category-card">
-    <h3>Credit & Debt</h3>
-    <p>credit score, debt</p>
-  </div>
-  <div class="category-card">
-    <h3>Saving Money</h3>
-    <p>saving money, frugal living, budgeting</p>
-  </div>
-  <div class="category-card">
-    <h3>Investing</h3>
-    <p>investing, crypto, real estate</p>
-  </div>
-  <div class="category-card">
-    <h3>Side Hustle</h3>
-    <p>side hustle, passive income</p>
-  </div>
-  <div class="category-card">
-    <h3>Retirement</h3>
-    <p>retirement, financial planning</p>
-  </div>
-  <div class="category-card">
-    <h3>Banking & Taxes</h3>
-    <p>banking, taxes, insurance</p>
-  </div>
-</div>
+<p style="font-size: 1.02em; color: #333;">Welcome to <strong>SmartMoneyDaily</strong>. I'm Kkuma Park, an independent writer in Seoul, and this site covers one thing: how U.S. <strong>high-yield savings accounts, CDs, and money market accounts</strong> actually work. I explain the public rules in plain English and cite primary sources like the FDIC and the Federal Reserve so you can verify everything yourself. I'm upfront about using AI tools to help draft these guides, and I check them against those sources before publishing.</p>
 
 <h2>Latest Articles</h2>
 
 <ul class="post-list">
-  {% for post in site.posts limit:12 %}
+  {% for post in site.posts %}
   <li>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}{% if post.categories %} &middot; {{ post.categories | join: ", " }}{% endif %}</p>
@@ -54,6 +26,6 @@ layout: default
   <div class="avatar">K</div>
   <div>
     <h4>Written by Kkuma Park</h4>
-    <p>I'm Kkuma Park, an indie writer in Seoul. I write about personal finance from my own experience, not summaries of what other blogs say. <a href="{{ '/about/' | relative_url }}">More about me &rarr;</a></p>
+    <p>I'm Kkuma Park, an independent writer in Seoul. I compile and explain public U.S. deposit-account information &mdash; high-yield savings, CDs, and money market accounts &mdash; citing primary sources like the FDIC. I'm transparent about using AI tools to help draft, and I check the facts against those sources before publishing. <a href="{{ '/about/' | relative_url }}">More about me &rarr;</a></p>
   </div>
 </div>
