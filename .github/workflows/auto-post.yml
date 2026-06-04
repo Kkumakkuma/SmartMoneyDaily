@@ -2,9 +2,9 @@ name: Auto Generate Blog Post
 
 on:
   schedule:
-    # v8.1 (2026-05-23): 저녁 시간대(KST 18~22시) 랜덤 발행.
-    # 아래 5개 슬롯이 매일 모두 트리거되지만, gate step 이 그 중 1개만 확률적으로
-    # 선택해 실제 발행한다(하루 정확히 1편). "매일 같은 시각 발행" 패턴 제거 목적.
+    # v8.2 (2026-06-04): 저녁 시간대(KST 18~22시) 랜덤 발행.
+    # 아래 5개 슬롯이 매일 모두 트리거되지만, gate step 이 그 중 2개를 확률적으로
+    # 선택해 실제 발행한다(하루 정확히 2편). "매일 같은 시각 발행" 패턴 제거 목적.
     - cron: '11 9 * * *'   # ~KST 18:11
     - cron: '23 10 * * *'  # ~KST 19:23
     - cron: '42 11 * * *'  # ~KST 20:42
@@ -46,14 +46,18 @@ jobs:
             echo "manual/dispatch run — post"
             echo "post=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          # 오늘(KST) 이미 자동발행했으면 skip — 하루 1편 보장
+          # 하루 발행 목표 편수. 오늘(KST) 이미 채웠으면 skip — 하루 정확히 N편 보장.
+          DAILY_TARGET=2
           TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
-          if git log --since="${TODAY_KST}T00:00:00+09:00" --pretty=%s | grep -q '^Auto-publish new'; then
-            echo "already auto-published today (KST $TODAY_KST) — skip"
+          published=$(git log --since="${TODAY_KST}T00:00:00+09:00" --pretty=%s | grep -c '^Auto-publish new' || true)
+          need=$(( DAILY_TARGET - published ))
+          if [ "$need" -le 0 ]; then
+            echo "already published $published today (KST $TODAY_KST, target $DAILY_TARGET) — skip"
             echo "post=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          # 슬롯 균등 확률: 현재 슬롯이 '남은 슬롯 수' 분의 1 확률로 당첨, 마지막 슬롯은 강제.
-          # → 하루 1편이 5개 슬롯에 균등(각 1/5)하게 분산됨.
+          # 슬롯 균등 확률: 남은 슬롯에 '남은 발행 수(need)'를 균등 분산.
+          # 현재 슬롯 당첨 확률 = need/remaining. 남은 슬롯이 need 이하로 줄면 강제 발행.
+          # → 하루 DAILY_TARGET 편이 5개 슬롯에 균등하게 흩어짐.
           SLOTS=("11 9 * * *" "23 10 * * *" "42 11 * * *" "17 12 * * *" "50 12 * * *")
           THIS="${{ github.event.schedule }}"
           idx=-1
@@ -63,12 +67,11 @@ jobs:
             echo "post=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
           remaining=$(( ${#SLOTS[@]} - idx ))
-          pick=$(( RANDOM % remaining ))
-          if [ "$pick" -eq 0 ]; then
-            echo "slot #$idx chosen (prob 1/$remaining) — post"
+          if [ "$(( RANDOM % remaining ))" -lt "$need" ]; then
+            echo "slot #$idx chosen (need $need / remaining $remaining, published $published) — post"
             echo "post=true" >> "$GITHUB_OUTPUT"
           else
-            echo "slot #$idx skipped (prob 1/$remaining) — wait for a later slot"
+            echo "slot #$idx skipped (need $need / remaining $remaining, published $published) — wait for a later slot"
             echo "post=false" >> "$GITHUB_OUTPUT"
           fi
 
