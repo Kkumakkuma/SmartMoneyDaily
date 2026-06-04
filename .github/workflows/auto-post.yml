@@ -49,7 +49,20 @@ jobs:
           # 하루 발행 목표 편수. 오늘(KST) 이미 채웠으면 skip — 하루 정확히 N편 보장.
           DAILY_TARGET=2
           TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
-          published=$(git log --since="${TODAY_KST}T00:00:00+09:00" --pretty=%s | grep -c '^Auto-publish new' || true)
+          # 발행수는 최신 원격(origin) 기준으로 센다 — 직렬 대기하다 시작한 run 이 트리거
+          # 시점의 stale SHA 를 checkout 해 앞 슬롯 발행을 못 보고 과발행(3편+)하는 것 방지.
+          # fetch 실패 시 로컬 HEAD 로 안전 폴백(기존 동작 유지).
+          git fetch origin "${{ github.ref_name }}" --quiet 2>/dev/null || true
+          COUNT_REF="origin/${{ github.ref_name }}"
+          git rev-parse --verify --quiet "$COUNT_REF" >/dev/null || COUNT_REF=HEAD
+          # git log 자체 실패는 fail-closed(발행 안 함). `| grep -c ... || true` 한 줄로 쓰면
+          # git log 실패까지 || true 가 삼켜 published=0 → 과발행하므로, log 단계를 분리해
+          # 실패 시 이 슬롯은 skip. grep 0매치(빈 날)만 || true 로 정상 0 처리.
+          if ! log_subjects=$(git log "$COUNT_REF" --since="${TODAY_KST}T00:00:00+09:00" --pretty=%s); then
+            echo "git log failed — skip this slot for safety"
+            echo "post=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          published=$(printf '%s\n' "$log_subjects" | grep -c '^Auto-publish new' || true)
           need=$(( DAILY_TARGET - published ))
           if [ "$need" -le 0 ]; then
             echo "already published $published today (KST $TODAY_KST, target $DAILY_TARGET) — skip"
