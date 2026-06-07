@@ -46,9 +46,12 @@ jobs:
             echo "manual/dispatch run — post"
             echo "post=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          # 하루 발행 목표 편수. 오늘(KST) 이미 채웠으면 skip — 하루 정확히 N편 보장.
+          # 하루 발행 목표 편수. 오늘(UTC) 이미 채웠으면 skip — 하루 정확히 N편 보장.
+          # ⚠️ 카운트 기준 UTC: 슬롯(cron)·커밋 타임스탬프가 UTC인데 KST(+09:00)로 세면
+          #    GitHub Actions 스케줄 지연(3~6h)이 KST 자정 경계(UTC 15:00)를 넘겨, 전날 발행을
+          #    오늘로 잘못 세 하루 전체 skip되는 버그가 났었다(2026-06-06 0편). UTC로 통일.
           DAILY_TARGET=2
-          TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
+          TODAY_UTC="$(date -u +%Y-%m-%d)"
           # 발행수는 최신 원격(origin) 기준으로 센다 — 직렬 대기하다 시작한 run 이 트리거
           # 시점의 stale SHA 를 checkout 해 앞 슬롯 발행을 못 보고 과발행(3편+)하는 것 방지.
           # fetch 실패 시 로컬 HEAD 로 안전 폴백(기존 동작 유지).
@@ -58,14 +61,14 @@ jobs:
           # git log 자체 실패는 fail-closed(발행 안 함). `| grep -c ... || true` 한 줄로 쓰면
           # git log 실패까지 || true 가 삼켜 published=0 → 과발행하므로, log 단계를 분리해
           # 실패 시 이 슬롯은 skip. grep 0매치(빈 날)만 || true 로 정상 0 처리.
-          if ! log_subjects=$(git log "$COUNT_REF" --since="${TODAY_KST}T00:00:00+09:00" --pretty=%s); then
+          if ! log_subjects=$(git log "$COUNT_REF" --since="${TODAY_UTC}T00:00:00Z" --pretty=%s); then
             echo "git log failed — skip this slot for safety"
             echo "post=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
           published=$(printf '%s\n' "$log_subjects" | grep -c '^Auto-publish new' || true)
           need=$(( DAILY_TARGET - published ))
           if [ "$need" -le 0 ]; then
-            echo "already published $published today (KST $TODAY_KST, target $DAILY_TARGET) — skip"
+            echo "already published $published today (UTC $TODAY_UTC, target $DAILY_TARGET) — skip"
             echo "post=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
           # 슬롯 균등 확률: 남은 슬롯에 '남은 발행 수(need)'를 균등 분산.
