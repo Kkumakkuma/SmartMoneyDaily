@@ -117,15 +117,10 @@ If you find yourself in a position where you need to access your funds before a 
 5. **Understand Your Financial Needs**: Before investing in a CD, clearly assess your short and long-term liquidity needs. This foresight can help you choose the right investment vehicle and term length to minimize the chance of needing to withdraw early.
 
 Implementing these strategies can help you maximize the benefits of your CD investment while reducing the adverse effects of potential early withdrawals.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [Understanding FDIC Insurance: What You Need to Know Before Opening an Account](/SmartMoneyDaily/2026/04/16/understanding-fdic-insurance-what-you-need-to-know-before-opening-an-account/)
 - [Is a Money Market Fund the Right Choice for Your Emergency Fund?](/SmartMoneyDaily/2026/04/11/is-a-money-market-fund-the-right-choice-for-your-emergency-fund/)
 - [How to Maximize Your Interest Earnings with Certificate Laddering Strategies](/SmartMoneyDaily/2026/04/04/how-to-maximize-your-interest-earnings-with-certificate-laddering-strategies/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

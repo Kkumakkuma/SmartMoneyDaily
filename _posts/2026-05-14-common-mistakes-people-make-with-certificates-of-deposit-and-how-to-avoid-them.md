@@ -95,15 +95,10 @@ One of the critical mistakes people make with Certificates of Deposit (CDs) is a
 4. **Stay Informed about Bank Policies**: Institutions may change terms and conditions or introduce new savings products. Stay updated to ensure you're leveraging the best options available.
 
 Implementing these strategies allows savers to remain proactive rather than reactive, maximizing their savings' potential benefits and ensuring alignment with their broader financial goals.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
 - [Understanding High-Yield Savings Accounts: Key Features to Consider](/SmartMoneyDaily/2026/04/07/understanding-high-yield-savings-accounts-key-features-to-consider/)
 - [Understanding FDIC Insurance: What You Need to Know Before Opening an Account](/SmartMoneyDaily/2026/04/16/understanding-fdic-insurance-what-you-need-to-know-before-opening-an-account/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

@@ -133,15 +133,10 @@ Laddering CDs is a strategy that allows you to take advantage of higher interest
 - **Risk Management:** This method helps mitigate the risk of needing funds early by having staggered maturity dates, avoiding the early withdrawal penalties on longer-term CDs. 
 
 Laddering CDs can be an effective way to earn competitive interest rates while also ensuring that you have some access to your savings as needed, making it a compelling option for those considering multiple CD investments.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What Happens When You Cash Out a CD Early?](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
 - [How to Find the Best Savings Accounts for Your Financial Goals](/SmartMoneyDaily/2026/05/25/how-to-find-the-best-savings-accounts-for-your-financial-goals/)
 - [How to Assess the Value of a CD in Today's Market](/SmartMoneyDaily/2026/05/24/how-to-assess-the-value-of-a-cd-in-todays-market/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

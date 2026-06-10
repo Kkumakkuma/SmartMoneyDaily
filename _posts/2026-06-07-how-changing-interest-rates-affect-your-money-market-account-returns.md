@@ -114,12 +114,6 @@ When considering money market accounts, it's essential to understand how the typ
 - **Traditional Banks**: Conventional brick-and-mortar banks tend to have longer adjustment periods when it comes to interest rate changes. While they may offer additional services and face-to-face support, their higher operational costs can result in lower interest rates on their money market accounts. Consumers seeking the best returns may find that traditional banks pay less attention to interest competitiveness.
 
 Understanding this distinction can help you make informed decisions about where to open your money market account, ensuring that you maximize your potential returns in varying interest rate climates. Consider the trade-offs between convenience, service quality, and interest rates when selecting a financial institution for your savings needs.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [Common Factors to Weigh When Choosing Between CDs and High-Yield Options](/SmartMoneyDaily/2026/06/07/common-factors-to-weigh-when-choosing-between-cds-and-high-yield-options/)
@@ -127,3 +121,4 @@ Last reviewed: June 2026.
 - [How to Determine Which Banking Option Suits Your Long-Term Goals](/SmartMoneyDaily/2026/06/05/how-to-determine-which-banking-option-suits-your-long-term-goals/)
 - [How to Choose the Right Interest-Earning Option for Your Goals](/SmartMoneyDaily/2026/06/04/how-to-choose-the-right-interest-earning-option-for-your-goals/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

@@ -125,12 +125,6 @@ To get the most out of your money market account (MMA), consider implementing th
 5. **Use Automatic Transfers**: If your MMA allows for linking to a checking account, set up automatic transfers to ensure you consistently build your savings without having to think about it. This is especially useful for long-term savings goals.
 
 By applying these strategies, you can ensure that your money market account not only provides safety and liquidity but also maximizes your earning potential.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [What Limits Does FDIC Insurance Have on Your Funds?](/SmartMoneyDaily/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/)
@@ -139,3 +133,4 @@ Last reviewed: June 2026.
 - [How to Build an Effective Emergency Fund Using High-Yield Options](/SmartMoneyDaily/2026/05/28/how-to-build-an-effective-emergency-fund-using-high-yield-options/)
 - [How Is a Certificate of Deposit Insured Against Bank Failures?](/SmartMoneyDaily/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

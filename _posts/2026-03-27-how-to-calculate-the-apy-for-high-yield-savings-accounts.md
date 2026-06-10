@@ -120,8 +120,4 @@ For instance, if your high-yield savings account has an APY of 5% but the inflat
 
 By integrating the understanding of inflation with your APY calculations, you can make more informed decisions about where to save and how to grow your wealth effectively.
 
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: March 2026.
+*Last reviewed: March 2026 by Kkuma Park.*

@@ -109,12 +109,6 @@ When evaluating an MMA's interest rate, consider these key components:
 4. **Market Trends**: Keep an eye on market conditions, as significant changes in the federal funds rate can lead banks to adjust their MMA interest rates. Monitoring these trends allows you to anticipate potential changes in your account's yield, prompting you to switch accounts or institutions if needed.
 
 By understanding these interest rate mechanics, you can better navigate the landscape of money market accounts and make informed decisions to enhance your savings strategy over time.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [Should You Opt for a Short-Term or Long-Term CD?](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/)
@@ -122,3 +116,4 @@ Last reviewed: June 2026.
 - [How Changing Interest Rates Affect Your Money Market Account Returns](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/)
 - [Common Factors to Weigh When Choosing Between CDs and High-Yield Options](/SmartMoneyDaily/2026/06/07/common-factors-to-weigh-when-choosing-between-cds-and-high-yield-options/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

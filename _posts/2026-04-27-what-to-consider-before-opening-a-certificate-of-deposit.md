@@ -110,8 +110,4 @@ Interest earned on a CD is reported to you on a Form 1099-INT if you accumulate 
 
 Additionally, if you withdraw funds from the CD early, not only may you face penalties from the bank, but you will also be responsible for taxes on any interest earned up to that point. Keeping your CDs until maturity can help you manage your tax liabilities and maximize your interest earnings without unexpected tax consequences.
 
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
+*Last reviewed: April 2026 by Kkuma Park.*

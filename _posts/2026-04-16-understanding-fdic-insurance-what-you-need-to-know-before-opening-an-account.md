@@ -121,15 +121,10 @@ When you open a joint account, whether it's a high-yield savings account or a mo
 4. **Consideration of Relationships**: Ensure that the individuals you choose for a joint account have a trusted relationship, as all parties will have equal access to the funds and responsibilities regarding limit awareness.
 
 By understanding how joint accounts function under FDIC insurance, you can better safeguard your assets and utilize banking situations to maximize your insurance coverage.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
 ## Further Reading
 
 - [HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/2026/05/01/hysa-vs-cds-which-is-better-for-your-savings-goals/)
 - [How to Choose the Right Money Market Account for Your Needs](/SmartMoneyDaily/2026/04/19/how-to-choose-the-right-money-market-account-for-your-needs/)
 - [How to Calculate the APY for High-Yield Savings Accounts](/SmartMoneyDaily/2026/03/27/how-to-calculate-the-apy-for-high-yield-savings-accounts/)
 
+*Last reviewed: April 2026 by Kkuma Park.*

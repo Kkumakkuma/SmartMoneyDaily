@@ -128,8 +128,4 @@ When deciding which account type to use, consider these follow-up points:
 
 By understanding how interest rate fluctuations impact each savings option, you can make a more informed decision that aligns with your financial goals.
 
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
+*Last reviewed: May 2026 by Kkuma Park.*

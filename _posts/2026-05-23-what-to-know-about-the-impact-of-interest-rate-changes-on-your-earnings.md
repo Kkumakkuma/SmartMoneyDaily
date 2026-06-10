@@ -117,8 +117,4 @@ When evaluating savings accounts, it’s important to consider both the nominal 
 
 Understanding this relationship can help you choose the right mix of savings vehicles to not only protect your principal but also to grow your wealth in real terms.
 
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
+*Last reviewed: May 2026 by Kkuma Park.*

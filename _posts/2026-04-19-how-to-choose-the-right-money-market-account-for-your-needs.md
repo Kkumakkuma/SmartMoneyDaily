@@ -91,13 +91,8 @@ For instance, if one money market account offers a 1.5% APY and another offers 1
 In addition, it's important to consider how often interest compounds in your potential accounts—daily, monthly, or annually—as this can significantly affect how much interest you earn over time. An account that compounds interest daily will likely yield more at the end of the year compared to one that compounds annually, even if both accounts have the same APY.
 
 Ensure to confirm the APY offered at the time of account opening and keep an eye out for any promotional rates that may change after an introductory period. By understanding APY and its implications fully, you can make a more informed decision that maximizes your savings potential.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
 ## Further Reading
 
 - [HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/2026/05/01/hysa-vs-cds-which-is-better-for-your-savings-goals/)
 
+*Last reviewed: April 2026 by Kkuma Park.*

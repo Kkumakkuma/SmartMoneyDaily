@@ -112,15 +112,10 @@ When deciding between high-yield savings accounts (HYSAs) and cash reserves, und
 It is also crucial to take into account how often interest compounds in these accounts. Many HYSAs compound interest daily or monthly, which can lead to a higher effective yield over time compared to accounts that compound less frequently. This compounding effect means that even slight differences in interest rates can lead to substantial differences in your returns, especially over longer periods. Conversely, if you keep cash reserves in low-interest accounts, you may miss out on growth that would otherwise help your funds outpace inflation.
 
 Lastly, consider how interest rate changes can affect your decisions. If rates are expected to rise, opting for a HYSA can be beneficial as you can take advantage of better rates with minimal effort. On the other hand, fixed-rate options like CDs may lock you into lower rates if you commit to them when rates are low. Understanding these dynamics can inform a more strategic approach in managing both your emergency fund and cash reserves.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [Is Your Savings Strategy Aligning with Current Interest Trends?](/SmartMoneyDaily/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/)
 - [What Is a Money Market Account and How Does It Work?](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/)
 - [What Limits Does FDIC Insurance Have on Your Funds?](/SmartMoneyDaily/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

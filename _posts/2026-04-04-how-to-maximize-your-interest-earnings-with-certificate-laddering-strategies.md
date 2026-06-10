@@ -129,12 +129,6 @@ To mitigate this risk in your laddering strategy, consider the following approac
 4. **Diversify Investment Types**: Beyond CDs, consider diversifying with other investment options that may offer higher returns, such as Treasury Inflation-Protected Securities (TIPS), stocks, or mutual funds, especially if inflation is consistently above your CD yields.
 
 By developing an awareness of how inflation interacts with your earnings, you can better structure your laddering strategy to ensure your investments not only grow but also retain their value over time.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
 ## Further Reading
 
 - [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
@@ -142,3 +136,4 @@ Last reviewed: April 2026.
 - [HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/2026/05/01/hysa-vs-cds-which-is-better-for-your-savings-goals/)
 - [How to Choose the Right Money Market Account for Your Needs](/SmartMoneyDaily/2026/04/19/how-to-choose-the-right-money-market-account-for-your-needs/)
 
+*Last reviewed: April 2026 by Kkuma Park.*

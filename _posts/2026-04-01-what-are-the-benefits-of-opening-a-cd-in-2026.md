@@ -127,15 +127,10 @@ Here’s a straightforward formula to calculate your earnings:
      \]
 
 This calculation gives you a clear idea of how much your investment in a CD could grow, helping you assess whether the commitment to a fixed rate aligns with your financial goals. Always consider any early withdrawal penalties or fees that could affect your final return when accessing your funds before maturity.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
 ## Further Reading
 
 - [Understanding FDIC Insurance: What You Need to Know Before Opening an Account](/SmartMoneyDaily/2026/04/16/understanding-fdic-insurance-what-you-need-to-know-before-opening-an-account/)
 - [How to Choose the Right Money Market Account for Your Needs](/SmartMoneyDaily/2026/04/19/how-to-choose-the-right-money-market-account-for-your-needs/)
 - [How to Calculate the APY for High-Yield Savings Accounts](/SmartMoneyDaily/2026/03/27/how-to-calculate-the-apy-for-high-yield-savings-accounts/)
 
+*Last reviewed: April 2026 by Kkuma Park.*

@@ -101,12 +101,6 @@ When selecting a savings vehicle, one crucial aspect to consider is how interest
 For example, if you invest $1,000 at a 2% interest rate compounded daily versus annually, you'll end up with more money after a year with daily compounding. This mechanism illustrates the "snowball effect," where your interest earns additional interest over time, leading to substantial growth in your savings.
 
 As you compare HYSAs, CDs, and MMAs, pay attention to the compounding frequency along with the interest rate offered. Choosing an account with more frequent compounding can enhance the growth of your savings, helping you maximize your returns in alignment with current interest trends.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [How to Avoid Common Pitfalls with High-Yield Savings Accounts](/SmartMoneyDaily/2026/06/04/how-to-avoid-common-pitfalls-with-high-yield-savings-accounts/)
@@ -115,3 +109,4 @@ Last reviewed: June 2026.
 - [What Limits Does FDIC Insurance Have on Your Funds?](/SmartMoneyDaily/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/)
 - [How Much Should You Actually Keep in an Emergency Fund?](/SmartMoneyDaily/2026/05/31/how-much-should-you-actually-keep-in-an-emergency-fund/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

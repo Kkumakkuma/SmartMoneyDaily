@@ -139,15 +139,10 @@ To fully utilize the protections offered by FDIC insurance, consider adopting th
 5. **Stay Informed About Bank Mergers and Changes**: Bank consolidations may impact your FDIC insurance coverage if the total amount held exceeds $250,000 post-merger. It’s vital to stay informed of any changes that could affect your accounts.
 
 By implementing these strategies, you can maximize your protection under FDIC insurance and gain peace of mind knowing your funds are secure.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [What is FDIC Insurance and How Does It Protect Your Money?](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
 - [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/SmartMoneyDaily/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
 - [What Happens When You Cash Out a CD Early?](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

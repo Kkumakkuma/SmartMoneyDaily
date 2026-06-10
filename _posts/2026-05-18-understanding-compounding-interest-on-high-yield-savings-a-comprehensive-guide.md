@@ -125,15 +125,10 @@ While high-yield savings accounts (HYSAs) offer attractive interest rates, it is
 The real interest rate is essentially the APY minus the inflation rate. For example, if your HYSA offers a 4% APY but the inflation rate is 3%, your real return is only 1%. This means that even though your savings balance is increasing, the amount of goods and services you can purchase with that money is only growing slightly.
 
 To evaluate whether a high-yield savings account is a prudent choice, compare its APY with current inflation trends. Monitoring economic indicators can help you assess how well your savings will perform in keeping up with or outpacing inflation. Consider diversifying your savings strategy by looking into investments, like stocks or bonds, that may offer higher returns that can help mitigate inflation's effects over the long term. Ultimately, understanding the relationship between interest rates and inflation can significantly affect your overall savings strategy and financial health.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
 - [What to Consider Before Opening a Certificate of Deposit](/SmartMoneyDaily/2026/04/27/what-to-consider-before-opening-a-certificate-of-deposit/)
 - [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

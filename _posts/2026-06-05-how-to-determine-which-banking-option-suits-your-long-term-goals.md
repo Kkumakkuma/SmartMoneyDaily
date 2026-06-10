@@ -115,15 +115,10 @@ When evaluating savings options, understanding how interest compounds can be cru
 - **Money Market Accounts** typically offer compounding in a similar manner to HYSAs but may vary by financial institution.
 
 To see the difference that compounding frequency can make, consider using an online compound interest calculator. Inputting various compounding frequencies and interest rates can yield surprising results, emphasizing the importance of understanding how your chosen banking option calculates interest. When making your decision, consider how compounding will impact your savings growth relative to your timeline and financial goals.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [How to Choose the Right Interest-Earning Option for Your Goals](/SmartMoneyDaily/2026/06/04/how-to-choose-the-right-interest-earning-option-for-your-goals/)
 - [How to Avoid Common Pitfalls with High-Yield Savings Accounts](/SmartMoneyDaily/2026/06/04/how-to-avoid-common-pitfalls-with-high-yield-savings-accounts/)
 - [A Beginner's Guide to Money Market Accounts: Key Factors to Consider](/SmartMoneyDaily/2026/06/03/a-beginners-guide-to-money-market-accounts-key-factors-to-consider/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

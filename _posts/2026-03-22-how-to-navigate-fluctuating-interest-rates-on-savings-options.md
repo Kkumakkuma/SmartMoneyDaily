@@ -106,14 +106,9 @@ When comparing savings options, it’s essential to differentiate between the st
 For instance, if a high-yield savings account advertises a 3% interest rate compounded monthly, the APY will be higher than 3% because you earn interest on the interest accrued each month. Understanding APY can help you make better comparisons across different accounts since accounts with the same interest rate may yield different returns when compounding frequency is considered.
 
 When analyzing savings products, always look for the APY rather than just the interest rate to determine which account will truly offer you the best return on your savings. Additionally, consider that as interest rates fluctuate, the impact on your overall earnings will also depend on how frequently the bank compounds interest, which can vary from one institution to another. Therefore, always perform thorough comparisons that take APY into account to ensure you maximize your savings during times of changing rates.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: March 2026.
 ## Further Reading
 
 - [Understanding FDIC Insurance: What You Need to Know Before Opening an Account](/SmartMoneyDaily/2026/04/16/understanding-fdic-insurance-what-you-need-to-know-before-opening-an-account/)
 - [How to Choose the Right Money Market Account for Your Needs](/SmartMoneyDaily/2026/04/19/how-to-choose-the-right-money-market-account-for-your-needs/)
 
+*Last reviewed: March 2026 by Kkuma Park.*

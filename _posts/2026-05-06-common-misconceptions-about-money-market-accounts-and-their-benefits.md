@@ -137,15 +137,10 @@ To fully leverage the benefits of a money market account, consider implementing 
 5. **Maintain Required Balance**: To avoid monthly maintenance fees or diminished interest, ensure you maintain the required minimum balance. This will help you maximize your earnings and keep your account fees low.
 
 By implementing these strategies, you can utilize your money market account not only as a safe place to store your funds but also as a powerful tool for achieving your financial goals.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
 - [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
 - [How to Navigate Fluctuating Interest Rates on Savings Options](/SmartMoneyDaily/2026/03/22/how-to-navigate-fluctuating-interest-rates-on-savings-options/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

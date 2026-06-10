@@ -101,12 +101,6 @@ When comparing CDs and high-yield savings accounts, it's crucial to consider how
 High-yield savings accounts may provide more flexibility with interest rates that can adjust based on market conditions, potentially allowing them to keep pace with or exceed inflation in a favorable environment. However, if market rates are stagnant, they may not offer adequate protection against inflation. 
 
 To make informed decisions, regularly monitor inflation rates and consider how both CDs and HYSAs are performing relative to the current economic climate. This approach ensures that your savings grow in real terms, preserving your purchasing power over time.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [What You Need to Know About CD Penalties and Fees](/SmartMoneyDaily/2026/06/05/what-you-need-to-know-about-cd-penalties-and-fees/)
@@ -115,3 +109,4 @@ Last reviewed: June 2026.
 - [How to Choose the Right Interest-Earning Option for Your Goals](/SmartMoneyDaily/2026/06/04/how-to-choose-the-right-interest-earning-option-for-your-goals/)
 - [How to Choose Between High-Yield Savings and Cash Reserves for Emergencies](/SmartMoneyDaily/2026/06/04/how-to-choose-between-high-yield-savings-and-cash-reserves-for-emergencies/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

@@ -115,15 +115,10 @@ To enhance the value of your CD investments, consider implementing a CD ladderin
 4. **Reinvest Upon Maturity**: Once a CD matures, reinvest the principal into a new CD with a longer term at the current market rate. This keeps your ladder intact and continues to capture advantageous rates as they fluctuate. 
 
 By employing a laddering strategy, you can harness the benefits of CD investments while maintaining access to your funds and adapting to market changes.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What to Know About the Impact of Interest Rate Changes on Your Earnings](/SmartMoneyDaily/2026/05/23/what-to-know-about-the-impact-of-interest-rate-changes-on-your-earnings/)
 - [Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/SmartMoneyDaily/2026/05/18/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/)
 - [Common Mistakes People Make with Certificates of Deposit and How to Avoid Them](/SmartMoneyDaily/2026/05/14/common-mistakes-people-make-with-certificates-of-deposit-and-how-to-avoid-them/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

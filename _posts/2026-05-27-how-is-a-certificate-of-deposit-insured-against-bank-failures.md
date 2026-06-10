@@ -121,8 +121,4 @@ To fully take advantage of the insurance benefits provided by the FDIC or NCUA, 
 
 These strategies can provide peace of mind by maximizing your insurance coverage while still allowing your savings to grow effectively. Understanding how to navigate the world of insured deposits can enhance your financial security and support your long-term savings goals.
 
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
+*Last reviewed: May 2026 by Kkuma Park.*

@@ -111,15 +111,10 @@ Most high-yield savings accounts compound interest daily, monthly, quarterly, or
 - **Quarterly or Annual Compounding**: These frequencies result in the least amount of interest accrued. With quarterly compounding, you earn interest every three months, while annual compounding means you only earn interest once a year on your accumulated balance.
 
 To illustrate the impact of compounding frequency on your savings, consider two accounts offering the same annual percentage yield (APY). If one compounds daily and the other compounds monthly, the account with daily compounding will typically yield a higher effective annual yield. Therefore, when choosing a high-yield savings account, ensure you understand not just the stated APY but also how often interest is compounded, as this can significantly influence your total return over time.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
 ## Further Reading
 
 - [What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
 - [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
 - [Understanding FDIC Insurance: What You Need to Know Before Opening an Account](/SmartMoneyDaily/2026/04/16/understanding-fdic-insurance-what-you-need-to-know-before-opening-an-account/)
 
+*Last reviewed: April 2026 by Kkuma Park.*

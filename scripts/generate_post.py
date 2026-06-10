@@ -57,7 +57,7 @@ Writing rules:
 - Open with a concrete, specific hook (a common mistake, a number that is generally true, or the core question) —
   never a generic "In today's world" intro.
 - End with a clear, actionable next step.
-- Do NOT output a markdown "# Title". Do NOT add AI disclaimers inside the article body (the About-the-Author transparency note is added automatically by the publisher after generation, not by you).
+- Do NOT output a markdown "# Title". Do NOT add AI disclaimers or an "About the Author" section inside the article body (author info and the transparency note are shown by the site layout, not inside the article).
 
 ANTI-AI-CLICHE (these phrases trigger reviewers' "low-value AI" flag — never use):
 - "In today's fast-paced world", "In the modern era", "It's no secret that", "Have you ever wondered",
@@ -97,10 +97,8 @@ STRUCTURE (include ALL):
 5. "## How to Compare [topic] Yourself" — a practical checklist of what to look at and in what order.
 6. "## Common Mistakes" — 3 accurate misconceptions + a "Why it matters:" line each.
 7. "## Frequently Asked Questions" — 4-5 ### Q&A pairs, accurate and specific.
-8. Conclusion with a concrete next step the reader can take today.
-9. "## About the Author" — Kkuma Park, a Seoul-based independent writer who compiles and explains publicly available
-   U.S. deposit-account information. Be honest about the editorial approach (compares published rates and rules, cites
-   public sources); do NOT claim invented personal banking results. End with "Last reviewed: <Month {YEAR}>."
+8. Conclusion with a concrete next step the reader can take today. Do NOT add an "About the Author" section —
+   author info is rendered by the site layout (adding it in every article body is a mass-production signal).
 """
 
 
@@ -521,10 +519,8 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
         "4. ## How to Compare ... Yourself — a practical checklist of what to look at and in what order.\n"
         "5. ## Common Mistakes — 3 accurate misconceptions, each with a 'Why it matters:' line.\n"
         "6. ## Frequently Asked Questions — 4-5 ### Q&A pairs, accurate and specific.\n"
-        "7. Conclusion with a concrete next step the reader can take today.\n"
-        "8. ## About the Author — Kkuma Park, Seoul-based independent writer who compiles and explains publicly available "
-        "U.S. deposit-account information; honest about the editorial approach (compares published rates and rules, cites "
-        f"public sources); NO invented personal banking results. End with 'Last reviewed: <Month {_year}>.'\n\n"
+        "7. Conclusion with a concrete next step the reader can take today. Do NOT add an 'About the Author' "
+        "section — author info is rendered by the site layout.\n\n"
         "SOURCES: reference real authorities by name (FDIC, Federal Reserve, CFPB, NCUA, U.S. Treasury) and what they "
         "actually provide. Do NOT fabricate URLs, study titles, or statistics.\n\n"
         "BANNED phrases (instant AI flag): 'In today's fast-paced world', 'In the modern era', 'Have you ever wondered', "
@@ -536,7 +532,7 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
         "  - 5+ H2 sections, 3+ phrased as questions with an immediate direct answer?\n"
         "  - Comparison table with 4+ rows?\n"
         "  - Common Mistakes has 3 items, each with a 'Why it matters:' line?\n"
-        f"  - About the Author ends with 'Last reviewed: <Month {_year}>'?\n"
+        "  - No 'About the Author' section in the body?\n"
         "  - Zero banned phrases, zero fabrication?\n"
         "If any check fails, fix it before output."
         f"{internal_links_hint}"
@@ -600,6 +596,19 @@ def generate_meta_description(title):
         low = desc.replace("’", "'").lower()
         if not any(b in low for b in _BANNED_META):
             break
+    else:
+        # v11 (2026-06-10): 3회 재생성 후에도 BANNED 잔존 시 결정적 동의어 치환 (누수 0 보장)
+        _despam = {"unlock": "understand", "discover": "see", "boost": "grow",
+                   "maximize": "make the most of", "explore": "compare", "dive into": "review",
+                   "don't miss out": "", "dont miss out": "", "learn everything": "learn what matters",
+                   "in this guide": "here", "find out how": "see how",
+                   "in our comprehensive guide": "here", "the secrets": "the details"}
+        for bad, good in _despam.items():
+            desc = re.sub(re.escape(bad), good, desc.replace("’", "'"), flags=re.IGNORECASE)
+        desc = re.sub(r"\s{2,}", " ", desc).strip(" .,") + "."
+        # 치환으로 첫 글자가 소문자가 되면 대문자화
+        if desc and desc[0].islower():
+            desc = desc[0].upper() + desc[1:]
     if len(desc) > 158:
         desc = desc[:155].rsplit(" ", 1)[0] + "..."
     return desc[:160]
@@ -618,23 +627,13 @@ def create_post():
 
     content = generate_post_content(title, category, recent_titles, min_words=random.randint(1300, 1900))
     content = inject_internal_links(content, recent_posts, min_links=5, max_links=8)
-    # About the Author 단락을 고정 텍스트로 치환 (GPT가 매번 다른 1인칭/3인칭·월 오기 방지 + about.md 톤 일치)
-    _about_block = (
-        "## About the Author\n\n"
-        "I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain "
-        "publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and "
-        "money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal "
-        "Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and "
-        "structure articles, and I check them against those public sources before publishing; I don't claim "
-        "personal banking results I didn't have.\n\n"
-        f"Last reviewed: {datetime.datetime.now().strftime('%B %Y')}."
-    )
-    if re.search(r"^##\s+About the Author\b", content, flags=re.MULTILINE | re.IGNORECASE):
-        content = re.sub(r"^##\s+About the Author\b.*?(?=\n##\s|\Z)",
-                         lambda _m: _about_block, content, count=1,
-                         flags=re.DOTALL | re.MULTILINE | re.IGNORECASE)
-    else:
-        content = content.rstrip() + "\n\n" + _about_block
+    # v11 (2026-06-10): 본문 About the Author 섹션 제거 — 모든 글에 동일 고정 단락 반복은 양산 시그니처
+    # (codex 지적). 저자 표기는 _layouts/post.html author-box 하나로 단일화하고,
+    # 신선도 신호(Last reviewed)만 한 줄로 유지.
+    content = re.sub(r"\n*^##\s+About the Author\b.*?(?=\n##\s|\Z)", "", content,
+                     flags=re.DOTALL | re.MULTILINE | re.IGNORECASE)
+    content = (content.rstrip()
+               + f"\n\n*Last reviewed: {datetime.datetime.now().strftime('%B %Y')} by Kkuma Park.*")
     description = generate_meta_description(title)
 
     # v7 (2026-05-08): 자동 핀 이미지 생성 + 본문 맨 위 markdown 이미지 삽입

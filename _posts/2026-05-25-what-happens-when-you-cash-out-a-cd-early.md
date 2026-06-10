@@ -115,12 +115,6 @@ No-penalty CDs are a unique type of certificate of deposit that allows account h
 ### When to Consider a No-Penalty CD
 
 No-penalty CDs can be particularly advantageous if you anticipate needing your funds for specific short-term goals while also wanting to earn a fixed return. If you prioritize access over maximum interest earnings, they may be a strong addition to your overall savings strategy. Always be sure to shop around and compare rates and terms across institutions before committing, as the offerings can vary significantly.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [A Beginner's Guide to Understanding CD Terms and Conditions](/SmartMoneyDaily/2026/05/25/a-beginners-guide-to-understanding-cd-terms-and-conditions/)
@@ -128,3 +122,4 @@ Last reviewed: May 2026.
 - [What to Know About the Impact of Interest Rate Changes on Your Earnings](/SmartMoneyDaily/2026/05/23/what-to-know-about-the-impact-of-interest-rate-changes-on-your-earnings/)
 - [What You Should Know About Early Withdrawal Penalties on CDs](/SmartMoneyDaily/2026/05/22/what-you-should-know-about-early-withdrawal-penalties-on-cds/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

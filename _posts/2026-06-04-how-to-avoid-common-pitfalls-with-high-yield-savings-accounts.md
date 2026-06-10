@@ -97,15 +97,10 @@ Promotional rates are often used by banks to attract customers to their high-yie
 When assessing a high-yield savings account, inquire about the duration of the promotional rate and what the standard rate will be afterward. For instance, an account might offer a 2.5% APY for the first six months, but after that period, it could drop to 1.0% or lower. If you plan on using the account for a longer term, evaluating the post-promotional rate is essential to ensure that your savings will continue to grow effectively.
 
 Additionally, consider how often the bank adjusts its rates and whether it's known for consistently competitive rates after promotional offers end. Reading customer feedback and checking the bank's history in maintaining competitive interest rates can provide insight into whether it’s worth pursuing a promotional account.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [A Beginner's Guide to Money Market Accounts: Key Factors to Consider](/SmartMoneyDaily/2026/06/03/a-beginners-guide-to-money-market-accounts-key-factors-to-consider/)
 - [What Is a Money Market Account and How Does It Work?](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/)
 - [How Much Should You Actually Keep in an Emergency Fund?](/SmartMoneyDaily/2026/05/31/how-much-should-you-actually-keep-in-an-emergency-fund/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

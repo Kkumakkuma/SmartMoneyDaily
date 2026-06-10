@@ -122,15 +122,10 @@ To make the most informed decisions regarding money market accounts, consider th
 3. **Monitor Rate Trends**: Stay informed about current economic conditions and projected interest rate changes. Many financial websites and news outlets provide updates on these trends, which can help you anticipate when to switch accounts.
 
 By factoring in the dynamics of interest rates along with upfront fees, you can better navigate the choices available in the money market landscape, ensuring that you maximize your savings in the long run.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [Should You Opt for a Short-Term or Long-Term CD?](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/)
 - [How Changing Interest Rates Affect Your Money Market Account Returns](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/)
 - [What You Need to Know About CD Penalties and Fees](/SmartMoneyDaily/2026/06/05/what-you-need-to-know-about-cd-penalties-and-fees/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

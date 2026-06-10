@@ -135,15 +135,10 @@ Here's how to evaluate the impact of compound interest on different account type
 - **Money Market Accounts:** Similar to HYSAs, many MMAs also take advantage of daily compounding, making your savings grow more efficiently.
 
 When comparing accounts, inquire about the compounding frequency. The more frequently interest is compounded, the more money you could potentially earn, giving you a clearer picture of which account aligns best with your savings goals. To better illustrate this concept, consider using a compound interest calculator to project potential earnings across different accounts.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [A Beginner's Guide to Understanding CD Terms and Conditions](/SmartMoneyDaily/2026/05/25/a-beginners-guide-to-understanding-cd-terms-and-conditions/)
 - [How to Assess the Value of a CD in Today's Market](/SmartMoneyDaily/2026/05/24/how-to-assess-the-value-of-a-cd-in-todays-market/)
 - [Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/SmartMoneyDaily/2026/05/18/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

@@ -134,15 +134,10 @@ As your financial situation changes—whether through a raise, a new job, or red
 Building an emergency fund can be a lengthy process, so take time to celebrate achieving significant milestones, such as reaching your first $1,000 or completing three months of living expenses. This can motivate you to maintain your savings momentum.
 
 Consistent saving is vital for reaching your emergency fund goal, providing you with a sense of security and financial resilience when life’s unexpected events arise.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What to Consider Before Opening a Certificate of Deposit](/SmartMoneyDaily/2026/04/27/what-to-consider-before-opening-a-certificate-of-deposit/)
 - [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
 - [Understanding High-Yield Savings Accounts: Key Features to Consider](/SmartMoneyDaily/2026/04/07/understanding-high-yield-savings-accounts-key-features-to-consider/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

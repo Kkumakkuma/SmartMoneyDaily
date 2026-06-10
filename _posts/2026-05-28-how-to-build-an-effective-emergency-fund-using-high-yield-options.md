@@ -123,12 +123,6 @@ Take the first step today by researching current interest rates for high-yield s
 Inflation can significantly erode the purchasing power of your savings over time. This means that even if your emergency fund is growing in dollar amounts, it may not be growing in real terms when adjusted for inflation. For example, if you have $10,000 saved in a high-yield savings account with a modest interest rate but inflation is at 3%, your money loses effectiveness in covering future expenses. 
 
 To ensure your emergency fund retains its value, aim for higher interest rates that outpace inflation. With high-yield accounts, you not only increase your principal but also position your savings to counteract inflation, keeping your fund effective over the long term. Regularly review and adjust your savings strategy and consider reinvesting portions of your fund into higher-yielding options if necessary, ensuring you account for inflation to maintain your financial resilience.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [How Is a Certificate of Deposit Insured Against Bank Failures?](/SmartMoneyDaily/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)
@@ -137,3 +131,4 @@ Last reviewed: May 2026.
 - [How to Find the Best Savings Accounts for Your Financial Goals](/SmartMoneyDaily/2026/05/25/how-to-find-the-best-savings-accounts-for-your-financial-goals/)
 - [A Beginner's Guide to Understanding CD Terms and Conditions](/SmartMoneyDaily/2026/05/25/a-beginners-guide-to-understanding-cd-terms-and-conditions/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

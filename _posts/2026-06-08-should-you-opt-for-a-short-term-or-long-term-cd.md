@@ -123,12 +123,6 @@ In an inflationary environment, short-term CDs might be more appealing because t
 To protect against inflation while investing in CDs, consider diversifying your portfolio. This might include a mix of short- and long-term CDs, alongside other investment vehicles such as Treasury Inflation-Protected Securities (TIPS) or stocks, which historically have outpaced inflation in the long run.
 
 By understanding the interplay between inflation and CD returns, you can make more educated decisions that preserve your savings' purchasing power over time.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: June 2026.
 ## Further Reading
 
 - [How Changing Interest Rates Affect Your Money Market Account Returns](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/)
@@ -136,3 +130,4 @@ Last reviewed: June 2026.
 - [What You Need to Know About CD Penalties and Fees](/SmartMoneyDaily/2026/06/05/what-you-need-to-know-about-cd-penalties-and-fees/)
 - [How to Determine Which Banking Option Suits Your Long-Term Goals](/SmartMoneyDaily/2026/06/05/how-to-determine-which-banking-option-suits-your-long-term-goals/)
 
+*Last reviewed: June 2026 by Kkuma Park.*

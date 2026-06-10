@@ -126,12 +126,6 @@ Knowing when to dip into your emergency fund is just as crucial as building it. 
 5. **Natural Disasters**: Expenses incurred from unexpected natural events like floods or hurricanes, which may not be fully covered by insurance, justify tapping into your emergency fund for immediate needs.
 
 In contrast, it's advisable to avoid using your emergency fund for non-urgent matters like vacations, consumer spending, or planned expenses that can be budgeted for. Establishing clear guidelines for when to access your emergency fund can help maintain its integrity and purpose, ensuring it provides the intended financial security when truly needed.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [What is FDIC Insurance and How Does It Protect Your Money?](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
@@ -140,3 +134,4 @@ Last reviewed: May 2026.
 - [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/SmartMoneyDaily/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
 - [What Happens When You Cash Out a CD Early?](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

@@ -125,12 +125,6 @@ When choosing a certificate of deposit (CD), it's essential to recognize that no
 - **IRA CD**: Specifically designed to be held within an individual retirement account (IRA), these CDs offer the same fixed interest rates as traditional CDs but provide tax-advantaged growth.
 
 Understanding these different types can help you choose the one that aligns best with your financial goals, liquidity needs, and market expectations. Always compare the key terms and conditions of each type before committing to ensure it fits your savings strategy.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [How to Assess the Value of a CD in Today's Market](/SmartMoneyDaily/2026/05/24/how-to-assess-the-value-of-a-cd-in-todays-market/)
@@ -139,3 +133,4 @@ Last reviewed: May 2026.
 - [Understanding Compounding Interest on High-Yield Savings: A Comprehensive Guide](/SmartMoneyDaily/2026/05/18/understanding-compounding-interest-on-high-yield-savings-a-comprehensive-guide/)
 - [Common Mistakes People Make with Certificates of Deposit and How to Avoid Them](/SmartMoneyDaily/2026/05/14/common-mistakes-people-make-with-certificates-of-deposit-and-how-to-avoid-them/)
 
+*Last reviewed: May 2026 by Kkuma Park.*

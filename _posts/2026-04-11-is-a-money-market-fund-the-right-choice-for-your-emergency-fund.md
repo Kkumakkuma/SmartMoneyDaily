@@ -109,12 +109,6 @@ When considering money market funds for your emergency savings, it's essential t
 3. **Impact on Your Tax Bracket:** The interest earned from money market funds can increase your taxable income, potentially pushing you into a higher tax bracket. It's important to calculate how this additional income may affect your overall taxes and factor this into your financial planning.
 
 By understanding the tax implications associated with money market funds, you can better assess whether they align with your financial goals and after-tax return expectations.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: April 2026.
 ## Further Reading
 
 - [What Are the Benefits of Opening a CD in 2026?](/SmartMoneyDaily/2026/04/01/what-are-the-benefits-of-opening-a-cd-in-2026/)
@@ -122,3 +116,4 @@ Last reviewed: April 2026.
 - [How to Navigate Fluctuating Interest Rates on Savings Options](/SmartMoneyDaily/2026/03/22/how-to-navigate-fluctuating-interest-rates-on-savings-options/)
 - [How to Maximize Your Interest Earnings with Certificate Laddering Strategies](/SmartMoneyDaily/2026/04/04/how-to-maximize-your-interest-earnings-with-certificate-laddering-strategies/)
 
+*Last reviewed: April 2026 by Kkuma Park.*

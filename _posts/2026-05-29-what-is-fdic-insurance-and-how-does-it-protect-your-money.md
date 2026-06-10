@@ -126,15 +126,10 @@ To ensure your savings are fully protected by FDIC insurance, consider these str
 5. **Leverage Trust Accounts**: If you have significant assets, consider establishing a trust. Trust accounts can provide up to $250,000 in coverage per beneficiary, significantly increasing the overall protection for your savings, depending on the number of beneficiaries designated in the trust.
 
 By implementing these strategies, you can optimize the protection provided by FDIC insurance and ensure a safer financial environment for your savings.
-
-## About the Author
-
-I'm Kkuma Park, an independent writer and developer based in Seoul. I compile and explain publicly available U.S. deposit-account information — high-yield savings accounts, CDs, and money market accounts — in plain English, and I cite primary sources like the FDIC, the Federal Reserve, and the CFPB so you can verify everything yourself. I use AI tools to help draft and structure articles, and I check them against those public sources before publishing; I don't claim personal banking results I didn't have.
-
-Last reviewed: May 2026.
 ## Further Reading
 
 - [How to Find the Best Savings Accounts for Your Financial Goals](/SmartMoneyDaily/2026/05/25/how-to-find-the-best-savings-accounts-for-your-financial-goals/)
 - [A Beginner's Guide to Understanding CD Terms and Conditions](/SmartMoneyDaily/2026/05/25/a-beginners-guide-to-understanding-cd-terms-and-conditions/)
 - [How to Assess the Value of a CD in Today's Market](/SmartMoneyDaily/2026/05/24/how-to-assess-the-value-of-a-cd-in-todays-market/)
 
+*Last reviewed: May 2026 by Kkuma Park.*
