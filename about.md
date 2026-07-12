@@ -32,6 +32,6 @@ SmartMoneyDaily is general educational information, not personalized financial, 
 
 Questions, corrections, or feedback are welcome.
 
-**Email:** [kkumaspark@gmail.com](mailto:kkumaspark@gmail.com)
+**Email:** [200kgBrothers@gmail.com](mailto:200kgBrothers@gmail.com)
 
 For privacy, legal, and data practices, please see the [Privacy Policy](/privacy-policy/), [Terms](/terms/), and [Disclaimer](/disclaimer/).

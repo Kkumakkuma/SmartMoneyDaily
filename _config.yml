@@ -9,7 +9,7 @@ theme: minima
 
 author:
   name: Kkuma Park
-  email: "kkumaspark@gmail.com"
+  email: "200kgBrothers@gmail.com"
 
 plugins:
   - jekyll-feed
