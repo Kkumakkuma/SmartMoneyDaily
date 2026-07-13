@@ -50,8 +50,10 @@ jobs:
           # ⚠️ 카운트 기준 UTC: 슬롯(cron)·커밋 타임스탬프가 UTC인데 KST(+09:00)로 세면
           #    GitHub Actions 스케줄 지연(3~6h)이 KST 자정 경계(UTC 15:00)를 넘겨, 전날 발행을
           #    오늘로 잘못 세 하루 전체 skip되는 버그가 났었다(2026-06-06 0편). UTC로 통일.
-          DAILY_TARGET=2
           TODAY_UTC="$(date -u +%Y-%m-%d)"
+          # v12 (2026-07-13): 하루 정확히 2편의 기계적 규칙성(30일 연속 실측 = 양산 신호) 제거.
+          # 날짜 기반 결정적 랜덤(cksum)이라 5개 슬롯 모두 같은 목표를 계산 — 1/2/3편 균등(평균 2편/일 유지).
+          DAILY_TARGET=$(( ( $(echo "seed-$TODAY_UTC" | cksum | cut -d' ' -f1) % 3 ) + 1 ))
           # 발행수는 최신 원격(origin) 기준으로 센다 — 직렬 대기하다 시작한 run 이 트리거
           # 시점의 stale SHA 를 checkout 해 앞 슬롯 발행을 못 보고 과발행(3편+)하는 것 방지.
           # fetch 실패 시 로컬 HEAD 로 안전 폴백(기존 동작 유지).
@@ -65,7 +67,8 @@ jobs:
             echo "git log failed — skip this slot for safety"
             echo "post=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          published=$(printf '%s\n' "$log_subjects" | grep -c '^Auto-publish new' || true)
+          # v12: 새 커밋 프리픽스('Add post:')와 과거 프리픽스('Auto-publish new') 둘 다 카운트(전환일 안전)
+          published=$(printf '%s\n' "$log_subjects" | grep -cE '^(Auto-publish new|Add post:)' || true)
           need=$(( DAILY_TARGET - published ))
           if [ "$need" -le 0 ]; then
             echo "already published $published today (UTC $TODAY_UTC, target $DAILY_TARGET) — skip"
@@ -131,7 +134,8 @@ jobs:
             echo "no staged changes"
             exit 0
           fi
-          git commit -m "Auto-publish new article $(date +%Y-%m-%d-%H%M)"
+          # v12: 커밋 메시지의 자동화 표식 완화 (공개 리포 — 'Auto-publish'가 이력에 그대로 노출됐었음)
+          git commit -m "Add post: $(date +%Y-%m-%d-%H%M)"
           for i in 1 2 3 4 5; do
             if git push; then echo pushed; exit 0; fi
             echo "push attempt $i failed; aborting half-done rebase and re-syncing"

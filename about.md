@@ -9,7 +9,7 @@ description: "About Kkuma Park and how SmartMoneyDaily covers high-yield savings
 
 ## Who writes here
 
-My name is **Kkuma Park**. I'm an independent writer and developer based in Seoul, South Korea, with more than a decade of experience in IT. I started SmartMoneyDaily because most explanations of savings accounts, CDs, and money market accounts are either oversimplified or buried in bank marketing — and I wanted a plain-English reference I could actually trust.
+My name is **Kkuma Park**. I'm an independent writer and developer based in Seoul, South Korea, with more than a decade of experience in IT. I started SmartMoneyDaily because most explanations of savings accounts, CDs, and money market accounts are either oversimplified or buried in bank marketing — and I wanted a plain-English reference I could actually trust. You can find my open-source work on [GitHub](https://github.com/Kkumakkuma), where this site is also built and published in the open.
 
 ## What SmartMoneyDaily is for
 

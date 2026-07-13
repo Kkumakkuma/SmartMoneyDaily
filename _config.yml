@@ -3,6 +3,8 @@ description: "Plain-English guides to high-yield savings accounts, CDs, and mone
 url: "https://kkumakkuma.github.io"
 baseurl: "/SmartMoneyDaily"
 permalink: /:year/:month/:day/:title/
+paginate: 12
+paginate_path: "/page/:num/"
 future: true
 
 theme: minima
@@ -14,6 +16,8 @@ author:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-paginate
 
 defaults:
   - scope:

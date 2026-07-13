@@ -17,7 +17,7 @@ The process of evaluating certificate of deposit (CD) options can often confuse 
 
 Annual Percentage Yield (APY) is crucial when evaluating CDs, as it reflects the total amount of interest you can earn in a year, taking compounding into account. Typically, CDs offer higher APYs than standard savings accounts. For example, if you had $10,000 in an account earning 4% APY, you would earn about $400 in a year before taxes.
 
-When shopping for CDs, compare rates across different banks and credit unions. Online institutions often provide better rates compared to traditional banks. To find the most competitive APYs, you can consult resources like the FDIC, which regularly publishes national averages.
+When shopping for CDs, compare rates across different banks and credit unions. Online institutions often provide better rates compared to traditional banks. To find the most competitive APYs, you can consult resources like the [FDIC](https://www.fdic.gov/resources/deposit-insurance), which regularly publishes national averages.
 
 ## What Terms Should You Consider for CDs?
 
@@ -48,18 +48,16 @@ When considering which type of CD is suitable for your savings strategy, weigh t
 | Bump-Up CD          | Higher than average, flexible        | Yes, varies by institution       | When expecting interest rates to rise   |
 | Liquid CD           | Competitive, varies                  | Limited withdrawals allowed      | Short-term savings with more access     |
 
-## How to Compare CD Options Yourself
-
+## What to Check Before Choosing CD Options
 To effectively compare your CD options, follow this checklist:
 
 1. **Determine Your Savings Goals:** Understand how much money you want to save and when you might need access to those funds.
 2. **Research APYs:** Look for the best APYs from various banks and credit unions, making sure to check both traditional and online institutions.
 3. **Analyze Terms and Conditions:** Review the length of the CD and any penalties associated with early withdrawal.
-4. **Consider Alternatives:** Check if a high-yield savings account or money market account may meet your needs better, as I covered in "[Is it Time to Switch to a Higher Interest Option?](/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/)"
+4. **Consider Alternatives:** Check if a high-yield savings account or money market account may meet your needs better, as covered in "[Is it Time to Switch to a Higher Interest Option?](/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/)"
 5. **Review FDIC Insurance:** Ensure that your deposits are fully insured, as per FDIC standards, which protect up to $250,000 per depositor, per bank.
 
-## Common Mistakes
-
+## What People Get Wrong
 1. **Only Focusing on APY:**
    Why it matters: Higher APYs might not always be the best choice if associated term conditions are unfavorable or penalties are excessive.
 
@@ -69,8 +67,7 @@ To effectively compare your CD options, follow this checklist:
 3. **Neglecting to Compare Different Account Types:**
    Why it matters: High-yield savings accounts or money market accounts might offer more flexibility for your needs without requiring a long-term commitment.
 
-## Frequently Asked Questions
-
+## Common Questions
 ### How do I know if a CD is right for me?
 
 Consider your financial goals, whether you can commit to leaving funds untouched for a specific term, and how the APYs compare to other savings options.
@@ -109,10 +106,7 @@ CD laddering is a savings strategy that involves dividing your investment into m
 
 Using a laddering strategy can enhance your long-term savings while giving you more flexibility and access to funds compared to investing in a single long-term CD.
 
-## Further Reading
-
+## More on This Topic
 - [Why You Should Consider Diversifying with Different Account Types](/SmartMoneyDaily/2026/07/02/why-you-should-consider-diversifying-with-different-account-types/)
 - [How to Diversify Your Financial Portfolio with Interest-Bearing Accounts](/SmartMoneyDaily/2026/07/01/how-to-diversify-your-financial-portfolio-with-interest-bearing-accounts/)
 - [How to Assess the Value of Money Market Funds in Today's Economy](/SmartMoneyDaily/2026/07/01/how-to-assess-the-value-of-money-market-funds-in-todays-economy/)
-
-*Last reviewed: July 2026 by Kkuma Park.*

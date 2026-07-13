@@ -9,10 +9,12 @@ layout: default
 
 <p style="font-size: 1.02em; color: #333;">Welcome to <strong>SmartMoneyDaily</strong>. I'm Kkuma Park, an independent writer in Seoul, and this site covers one thing: how U.S. <strong>high-yield savings accounts, CDs, and money market accounts</strong> actually work. I explain the public rules in plain English and cite primary sources like the FDIC and the Federal Reserve so you can verify everything yourself. I'm upfront about using AI tools to help draft these guides, and I check them against those sources before publishing.</p>
 
+<p style="font-size: 0.98em;"><a href="{{ '/topics/' | relative_url }}">Browse by topic &rarr;</a></p>
+
 <h2>Latest Articles</h2>
 
 <ul class="post-list">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <li>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}{% if post.categories %} &middot; {{ post.categories | join: ", " }}{% endif %}</p>
@@ -21,6 +23,18 @@ layout: default
   </li>
   {% endfor %}
 </ul>
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" style="display:flex; justify-content:space-between; align-items:center; margin:30px 0;">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer posts</a>
+  {% else %}<span></span>{% endif %}
+  <span style="color:#64748b;">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Older posts &rarr;</a>
+  {% else %}<span></span>{% endif %}
+</nav>
+{% endif %}
 
 <div class="author-box">
   <div class="avatar">K</div>

@@ -81,24 +81,16 @@ SOURCES (build trust without fabrication):
   and attribute it to them.
 
 INFORMATION GAIN (make it genuinely more useful than a thin AI page):
-- Include ONE Markdown comparison table with 4+ rows and 3-4 columns comparing real, stable attributes
-  (e.g., HYSA vs CD vs money market account: liquidity, how the rate behaves, FDIC coverage, best use case).
-  Each cell should be a short complete phrase, not a single word.
-- Include a "## Common Mistakes" (or "## What People Get Wrong") section with 3 specific, accurate misconceptions,
-  each followed by a one-line "Why it matters:" explanation.
+- Prefer concrete mechanics (how compounding is calculated step by step, how a CD penalty is computed,
+  how FDIC coverage stacks across ownership categories) over abstract advice anyone could write.
+- When the STRUCTURE PLAN asks for a comparison table, compare real, stable attributes
+  (e.g., liquidity, how the rate behaves, FDIC coverage, best use case) — each cell a short complete phrase.
 
-STRUCTURE (include ALL):
-1. ONE blockquote first: "> **Quick answer:** <40-60 words: accurate direct answer to the title, with one general
-   (non-fabricated) number or rule>." Then a blank line.
-2. A 1-2 sentence specific lead (a common mistake, a true general fact, or the core question) — no generic intro.
-3. 5-7 H2 sections; at least 3 phrased as real search questions, each followed IMMEDIATELY by a 40-60 word direct answer
-   before expanding.
-4. ONE comparison table (as above).
-5. "## How to Compare [topic] Yourself" — a practical checklist of what to look at and in what order.
-6. "## Common Mistakes" — 3 accurate misconceptions + a "Why it matters:" line each.
-7. "## Frequently Asked Questions" — 4-5 ### Q&A pairs, accurate and specific.
-8. Conclusion with a concrete next step the reader can take today. Do NOT add an "About the Author" section —
-   author info is rendered by the site layout (adding it in every article body is a mass-production signal).
+STRUCTURE:
+- Follow the STRUCTURE PLAN in the user message for THIS article exactly. Articles on this site
+  intentionally vary in structure — do NOT fall back to one fixed skeleton you used before.
+- Never output a markdown "# Title" line, and never add an "About the Author" section in the body
+  (author info is rendered by the site layout; repeating it in every article is a mass-production signal).
 """
 
 
@@ -337,6 +329,11 @@ def _forced_pattern_hint(used_topics, recent_n=5):
     return None
 
 
+# v12: 제목 클리셰 가드 — 사이트가 스스로 금지한 양산 단어가 제목으로 새던 구멍
+_TITLE_CLICHES = ("unlock", "discover", "boost", "maximize", "secrets", "ultimate guide",
+                  "essential guide", "game-changer", "revolutioniz")
+
+
 def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
     """v8: GPT가 단일 니치(HYSA/CD/MMA) 안에서 설명형/비교형 고유 토픽 생성.
     카테고리 회전 + 패턴 회전 + 키워드 차단 + 의미 유사도 차단. 날조형 패턴 제거.
@@ -422,9 +419,16 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
             last_reason = f"banned keyword used: {hit_banned[0]}"
             continue
 
+        # v12: 제목에도 AI 클리셰 가드 (메타에만 있던 검사를 제목까지 — 'Unlocking...' 통과 사고 재발 방지)
+        hit_cliche = [c for c in _TITLE_CLICHES if c in title_lower]
+        if hit_cliche:
+            last_reason = f"cliche word in title: {hit_cliche[0]}"
+            continue
+
         new_words = _title_words(title)
         worst_jaccard = 0.0
-        for past in used_topics[-30:]:
+        # v12: 최근 30개 → 전체 이력 검사 (21일 지나면 같은 글이 다시 나오던 준중복 구멍 봉합)
+        for past in used_topics:
             j = _jaccard(new_words, _title_words(past))
             if j > worst_jaccard:
                 worst_jaccard = j
@@ -434,7 +438,9 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
 
         return title, category, slug
 
-    return title, category, slug
+    # v12: fail-closed — 시도 소진 시 유사/중복 제목을 그대로 발행하던 fail-open 제거.
+    # __main__ 의 per-post try/except 가 잡아 이 회차 발행만 건너뛴다.
+    raise RuntimeError(f"unique topic generation failed after {max_attempts} attempts (last: {last_reason})")
 
 
 def generate_post_content(title, category, recent_titles, min_words=1500):
@@ -471,14 +477,70 @@ def _enforce_word_count(client, title, content, min_words=1500, max_extra_words=
             ],
         ))
         extra = resp.choices[0].message.content.strip()
-        # About the Author 섹션이 있으면 그 앞에 삽입해 About가 항상 글의 마지막에 오게 함
-        m = re.search(r"\n##\s+About the Author", content)
-        if m:
-            return content[:m.start()].rstrip() + "\n\n" + extra + "\n\n" + content[m.start():].lstrip("\n")
+        # v12: 글 '맨 끝' append 금지 — 결론 뒤에 고아 섹션이 붙는 조립 흔적(76/107편 실측)의 원인이었다.
+        # 결론 문단이 있으면 그 앞에, 없으면 마지막 H2 섹션 앞에 삽입.
+        pos = content.rfind("\nIn conclusion")
+        if pos == -1:
+            h2s = list(re.finditer(r"\n##\s", content))
+            pos = h2s[-1].start() if len(h2s) >= 2 else -1
+        if pos != -1:
+            return content[:pos].rstrip() + "\n\n" + extra + "\n\n" + content[pos:].lstrip("\n")
         return content.rstrip() + "\n\n" + extra
     except Exception as _e:
         print(f"[expand] failed: {_e}")
         return content
+
+
+# === v12 (2026-07-13) — 글별 구조 로테이션: 고정 8단 골격(전 글 동일 = 양산 지문) 제거 =====
+_QUICK_LABELS = ["Quick answer", "Bottom line", "In short", "The short version"]
+_MISTAKE_HEADINGS = ["Common Mistakes", "What People Get Wrong", "Pitfalls to Avoid", "Mistakes to Avoid"]
+_FAQ_HEADINGS = ["Frequently Asked Questions", "FAQ", "Common Questions", "Questions Savers Ask"]
+
+
+def _build_structure_plan():
+    """글마다 다른 골격을 확률적으로 조립. 반환된 플랜 텍스트가 user 프롬프트에 그대로 들어간다."""
+    parts = []
+    if random.random() < 0.5:
+        label = random.choice(_QUICK_LABELS)
+        parts.append(
+            f'- Open with ONE blockquote: "> **{label}:** <40-60 words: accurate direct answer to the title, '
+            'with one general (non-fabricated) number or rule>." Then a blank line, then a 1-2 sentence specific lead.'
+        )
+    else:
+        parts.append(
+            "- NO opening blockquote. Open directly with a specific 2-3 sentence lead "
+            "(a common mistake, a true general fact, or the core question) — no generic intro."
+        )
+    h2_count = random.randint(4, 8)
+    q_share = random.choice(["one or two", "roughly half", "most"])
+    parts.append(
+        f"- {h2_count} H2 sections total; {q_share} of them phrased as real search questions, each followed "
+        "immediately by a direct 40-60 word answer before expanding. The rest use plain descriptive headings."
+    )
+    if random.random() < 0.65:
+        parts.append("- Include ONE Markdown comparison table (4+ rows, 3-4 columns) of stable, real attributes.")
+    if random.random() < 0.45:
+        parts.append(
+            "- Include a practical checklist section readers can follow in order — write your own natural "
+            "heading for it (do NOT title it 'How to Compare X Yourself')."
+        )
+    if random.random() < 0.5:
+        parts.append(
+            f"- Include a '## {random.choice(_MISTAKE_HEADINGS)}' section: 3 accurate misconceptions, "
+            "each with a one-line 'Why it matters:' explanation."
+        )
+    if random.random() < 0.45:
+        parts.append(
+            "- Include ONE fully worked, clearly hypothetical numeric example (labeled 'for example, if you had...'), "
+            "walking through the arithmetic step by step."
+        )
+    if random.random() < 0.55:
+        parts.append(f"- Near the end, include '## {random.choice(_FAQ_HEADINGS)}' with 3-5 ### Q&A pairs, accurate and specific.")
+    parts.append(
+        "- Close with a short conclusion and one concrete next step the reader can take today. "
+        "Vary the closing style — do NOT open the final paragraph with 'In conclusion'."
+    )
+    return "\n".join(parts)
 
 
 def _generate_post_content_inner(client, title, category, recent_titles, min_words=1500):
@@ -490,9 +552,12 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
         internal_links_hint = (
             "\n\nINTERNAL LINKING (mandatory, SEO-critical):\n"
             "- Reference AT LEAST 3 of the related articles below inside the body text.\n"
-            "- Mention each one by its EXACT title. Do not paraphrase the title.\n"
-            "- Weave them into natural sentences (e.g., 'as I covered in [Exact Title]', "
-            "'for more on this see [Exact Title]'). Do not invent URLs — the titles alone are enough; a post-processor will link them.\n"
+            "- Mention each one by its EXACT title in double quotes — NEVER in [square brackets] "
+            "(bare brackets render as broken markup).\n"
+            "- Weave them into natural, impersonal sentences (e.g., 'see \"Exact Title\"', "
+            "'our guide \"Exact Title\" walks through this'). Do NOT write 'as I covered in' — the site "
+            "discloses AI-assisted drafting, so first-person authorship claims are off. "
+            "Do not invent URLs — the titles alone are enough; a post-processor will link them.\n"
             "- Spread them across different sections of the article.\n\n"
             f"Related articles to reference (exact titles):\n{links}"
         )
@@ -501,7 +566,7 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
         f'Write an accurate, genuinely useful article titled: "{title}"\n\n'
         f"Category: {category.replace('-', ' ')}\n"
         f"Topic scope: {BLOG_NICHE} (United States).\n\n"
-        "LENGTH: 1500-2200 words. Quality and accuracy beat length. Do NOT pad. "
+        f"LENGTH: roughly {min_words}-{min_words + 500} words. Quality and accuracy beat length. Do NOT pad. "
         "If you run short, add another genuinely useful angle — never filler.\n\n"
         "ACCURACY (most important — this is what gets the site approved):\n"
         "- Do NOT invent dollar amounts, dates, personal results, or specific CURRENT APYs.\n"
@@ -509,18 +574,9 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
         "ownership category, FDIC national-average rates, Federal Reserve rate decisions, NCUA for credit unions), "
         "and clearly-labeled hypotheticals ('for example, if you had $10,000 at 4% APY...').\n"
         f"- Everything must be consistent with the year {_year}. Do NOT cite a past personal result with a specific date.\n\n"
-        "STRUCTURE:\n"
-        "0. ONE blockquote first: > **Quick answer:** <40-60 words, accurate direct answer to the title, with one general "
-        "(non-fabricated) number or rule>. Then a blank line.\n"
-        "1. A 1-2 sentence specific lead (a common mistake, a true general fact, or the core question) — no generic intro.\n"
-        "2. 5-7 H2 sections; at least 3 phrased as real search questions, each followed IMMEDIATELY by a 40-60 word direct "
-        "answer before expanding.\n"
-        "3. ONE Markdown comparison table (4+ rows, 3-4 columns) of stable, real attributes (each cell a short complete phrase).\n"
-        "4. ## How to Compare ... Yourself — a practical checklist of what to look at and in what order.\n"
-        "5. ## Common Mistakes — 3 accurate misconceptions, each with a 'Why it matters:' line.\n"
-        "6. ## Frequently Asked Questions — 4-5 ### Q&A pairs, accurate and specific.\n"
-        "7. Conclusion with a concrete next step the reader can take today. Do NOT add an 'About the Author' "
-        "section — author info is rendered by the site layout.\n\n"
+        "STRUCTURE PLAN for THIS article (follow exactly — other articles on the site use different plans):\n"
+        f"{_build_structure_plan()}\n"
+        "Do NOT add an 'About the Author' section — author info is rendered by the site layout.\n\n"
         "SOURCES: reference real authorities by name (FDIC, Federal Reserve, CFPB, NCUA, U.S. Treasury) and what they "
         "actually provide. Do NOT fabricate URLs, study titles, or statistics.\n\n"
         "BANNED phrases (instant AI flag): 'In today's fast-paced world', 'In the modern era', 'Have you ever wondered', "
@@ -529,9 +585,7 @@ def _generate_post_content_inner(client, title, category, recent_titles, min_wor
         "Do NOT fabricate a personal anecdote with a specific past date or dollar amount.\n\n"
         "FINAL SELF-CHECK (do silently, then output the article):\n"
         "  - Any invented specific current APY, dollar result, or dated personal story? Remove or replace it.\n"
-        "  - 5+ H2 sections, 3+ phrased as questions with an immediate direct answer?\n"
-        "  - Comparison table with 4+ rows?\n"
-        "  - Common Mistakes has 3 items, each with a 'Why it matters:' line?\n"
+        "  - Does the article follow the STRUCTURE PLAN above (and nothing from a different fixed skeleton)?\n"
         "  - No 'About the Author' section in the body?\n"
         "  - Zero banned phrases, zero fabrication?\n"
         "If any check fails, fix it before output."
@@ -614,6 +668,70 @@ def generate_meta_description(title):
     return desc[:160]
 
 
+# === v12 (2026-07-13) — 1차출처 실링크: '인용한다' 주장만 있고 외부 링크 0이던 모순 해소 ======
+# 실존 확인(2026-07-13 curl 200)된 공식 URL만. GPT가 URL을 만들지 않도록 후처리에서만 링크.
+_SOURCE_LINKS = [
+    (r"FDIC's BankFind( Suite)?|BankFind( Suite)?", "https://banks.data.fdic.gov/bankfind-suite/bankfind"),
+    (r"FDIC", "https://www.fdic.gov/resources/deposit-insurance"),
+    (r"Federal Reserve", "https://www.federalreserve.gov/monetarypolicy.htm"),
+    (r"Consumer Financial Protection Bureau|CFPB", "https://www.consumerfinance.gov/"),
+    (r"National Credit Union Administration|NCUA", "https://ncua.gov/consumers/share-insurance-coverage"),
+    (r"U\.S\. Treasury", "https://www.treasurydirect.gov/"),
+]
+
+_MD_LINK_SPLIT = re.compile(r"(\[[^\]]*\]\([^)]*\)|!\[[^\]]*\]\([^)]*\))")
+
+
+def _link_primary_sources(content, max_links=3):
+    """본문에서 1차출처 기관명 첫 언급을 공식 URL로 링크 (헤딩/기존 링크/이미지 제외)."""
+    lines = content.split("\n")
+    linked = 0
+    used_urls = set()
+    for pattern, url in _SOURCE_LINKS:
+        if linked >= max_links or url in used_urls:
+            continue
+        rx = re.compile(r"\b(" + pattern + r")\b")
+        done = False
+        for i, line in enumerate(lines):
+            if done:
+                break
+            if line.lstrip().startswith("#") or line.lstrip().startswith("|"):
+                continue  # 헤딩·표는 링크 안 넣음
+            segments = _MD_LINK_SPLIT.split(line)
+            for j, seg in enumerate(segments):
+                if j % 2 == 1:  # 이미 마크다운 링크/이미지인 조각
+                    continue
+                m = rx.search(seg)
+                if m:
+                    segments[j] = seg[:m.start()] + f"[{m.group(1)}]({url})" + seg[m.end():]
+                    lines[i] = "".join(segments)
+                    linked += 1
+                    used_urls.add(url)
+                    done = True
+                    break
+    return "\n".join(lines)
+
+
+_BARE_BRACKET = re.compile(r"\[([^\[\]\n]{10,120})\](?!\()")
+
+
+def _resolve_bare_brackets(content, recent_posts):
+    """v12b: GPT가 남긴 생 대괄호 [Title] 참조를 발행 전에 해소 — 실존 제목이면 실링크, 아니면 대괄호 제거."""
+    title_map = {re.sub(r"\s+", " ", p["title"].replace("’", "'").strip().strip(".").lower()): p["url"]
+                 for p in recent_posts if p.get("title") and p.get("url")}
+
+    def repl(m):
+        t = m.group(1)
+        key = re.sub(r"\s+", " ", t.replace("’", "'").strip().strip(".").lower())
+        if key in title_map:
+            return f"[{t}]({title_map[key]})"
+        if t[0].isupper() and len(t.split()) >= 3:
+            return t  # 제목처럼 보이지만 매칭 없음 → 대괄호만 벗겨 깨진 마크업 방지
+        return m.group(0)
+
+    return _BARE_BRACKET.sub(repl, content)
+
+
 def create_post():
     """Generate and save a new unique blog post."""
     used_topics = load_used_topics()
@@ -625,15 +743,25 @@ def create_post():
     print(f"Generating post: {title}")
     print(f"Category: {category}")
 
-    content = generate_post_content(title, category, recent_titles, min_words=random.randint(1300, 1900))
+    # v12: 단어수 밴드 확대 — 균질한 1300~1900 협대역(양산 신호) 대신 자연 분산
+    _band = random.random()
+    if _band < 0.2:
+        _min_words = random.randint(700, 1000)
+    elif _band < 0.85:
+        _min_words = random.randint(1200, 1800)
+    else:
+        _min_words = random.randint(1900, 2300)
+
+    content = generate_post_content(title, category, recent_titles, min_words=_min_words)
     content = inject_internal_links(content, recent_posts, min_links=5, max_links=8)
+    content = _resolve_bare_brackets(content, recent_posts)
     # v11 (2026-06-10): 본문 About the Author 섹션 제거 — 모든 글에 동일 고정 단락 반복은 양산 시그니처
-    # (codex 지적). 저자 표기는 _layouts/post.html author-box 하나로 단일화하고,
-    # 신선도 신호(Last reviewed)만 한 줄로 유지.
+    # (codex 지적). 저자 표기는 _layouts/post.html author-box 하나로 단일화.
     content = re.sub(r"\n*^##\s+About the Author\b.*?(?=\n##\s|\Z)", "", content,
                      flags=re.DOTALL | re.MULTILINE | re.IGNORECASE)
-    content = (content.rstrip()
-               + f"\n\n*Last reviewed: {datetime.datetime.now().strftime('%B %Y')} by Kkuma Park.*")
+    # v12: 'Last reviewed ... by Kkuma Park' 자동 날인 제거 — 실제 검수 없이 봇이 찍는 가짜
+    # 검수 스탬프는 정직성 결격(발행일은 레이아웃이 이미 표시). 실검수한 글만 수동 표기.
+    content = _link_primary_sources(content)
     description = generate_meta_description(title)
 
     # v7 (2026-05-08): 자동 핀 이미지 생성 + 본문 맨 위 markdown 이미지 삽입
@@ -657,6 +785,11 @@ def create_post():
     posts_dir = os.path.join(get_repo_root(), "_posts")
     os.makedirs(posts_dir, exist_ok=True)
 
+    # v12: 태그 고정 3종([category, niche, 연도]) → 가변 — '태그 정확히 3개+2026 리터럴 107/107' 지문 제거
+    _tag_pool = ["savings", "banking", "deposit-accounts", "interest-rates-explained", "personal-finance"]
+    _tags = [category] + random.sample(_tag_pool, k=random.randint(1, 3))
+    _tags_str = ", ".join(dict.fromkeys(_tags))  # 순서 보존 중복 제거
+
     # 파일명 충돌 방지 — 같은 날 같은 slug 면 -2, -3, ... 자동 접미사
     filename = f"{date_str}-{slug}.md"
     filepath = os.path.join(posts_dir, filename)
@@ -673,7 +806,7 @@ title: "{title}"
 date: {today.strftime('%Y-%m-%d %H:%M:%S')} +0000
 categories: [{category}]
 description: "{description}"
-tags: [{category}, {BLOG_NICHE.split(',')[0].replace(' ', '-')}, {today.year}]
+tags: [{_tags_str}]
 ---
 
 {content}
