@@ -281,7 +281,26 @@ jobs:
               access = tokens["access_token"]
               print(f"Pinterest: access_token refreshed (expires_in {tokens.get('expires_in')}s)")
           except urllib.error.HTTPError as e:
-              print(f"Pinterest token refresh FAIL HTTP {e.code}: {e.read().decode()[:300]}")
+              detail = e.read().decode()[:200]
+              print(f"Pinterest token refresh FAIL HTTP {e.code}: {detail}")
+              # refresh_token 은 60일 만료다. 만료를 모르고 19일간 핀 0개로 방치된 적이 있어
+              # (2026-07-08 만료 → 07-28 발견) 갱신 실패는 반드시 텔레그램으로 알린다.
+              tg_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+              tg_chat = os.environ.get("TELEGRAM_CHAT_ID", "")
+              if tg_token and tg_chat:
+                  msg = (
+                      "⚠️ 핀터레스트 자동 등록 중단\n"
+                      f"토큰 갱신 실패 (HTTP {e.code}). refresh_token 만료로 보입니다.\n"
+                      "재발급: 블로그 클로드/pinterest_oauth_helper.py 실행 → GitHub Secret 갱신"
+                  )
+                  try:
+                      urllib.request.urlopen(
+                          f"https://api.telegram.org/bot{tg_token}/sendMessage",
+                          data=urllib.parse.urlencode({"chat_id": tg_chat, "text": msg}).encode(),
+                          timeout=15,
+                      )
+                  except Exception as te:
+                      print(f"  telegram notify failed: {te}")
               raise SystemExit(0)
 
           # 각 새 글 마다 핀 업로드
@@ -339,3 +358,5 @@ jobs:
           PINTEREST_APP_ID: ${{ secrets.PINTEREST_APP_ID }}
           PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
           PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
