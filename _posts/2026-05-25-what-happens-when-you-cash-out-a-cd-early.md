@@ -94,7 +94,7 @@ Here is the same logic as a threshold. Assuming a CD paying 4.00%, this is rough
 
 The pattern is the useful part: the more time left, the easier it is to justify breaking, because a one-time cost is spread over a longer earning period. A CD in its final year almost never justifies an early exit.
 
-To run your own figures, enter your balance, the rate on your disclosure, how many months you have held it, how many are left, the penalty in months, and the rate you could move to:
+To run your own figures, enter your balance, your CD's APY, how many months you have held it, how many are left, the penalty in days from your disclosure, and the APY you could move to:
 
 {% include tools/cd-penalty.html %}
 

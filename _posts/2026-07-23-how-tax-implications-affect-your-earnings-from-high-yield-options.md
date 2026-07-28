@@ -138,7 +138,7 @@ A few operational details that generate letters from the IRS more often than the
 
 Keep 1099s, December statements, and CD disclosures together for as long as your records retention rule requires. If a bank ever restates a form, having the original statement is what settles the argument. General consumer-facing explanations of account disclosures are available from the [CFPB](https://www.consumerfinance.gov/) if a bank's own paperwork is unclear.
 
-## Inflation and Savings: Questions Worth Asking at Filing Time
+## Tax Questions That Come Up at Filing Time
 
 **Can I avoid tax by leaving the interest in the account?** No. Credited interest is income whether or not you withdraw it. Compounding changes your balance, not your tax year.
 
