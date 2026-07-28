@@ -1,97 +1,158 @@
 ---
 layout: post
-title: "The Impact of Federal Interest Rate Changes on Your Financial Options"
+title: "When the Fed Moves, How Fast Do Deposit Rates Follow?"
 date: 2026-06-16 15:54:45 +0000
 categories: [interest-rates]
-description: "Federal interest rate changes can significantly influence your financial options. Understand how these shifts affect loans, savings, and investment..."
-tags: [interest-rates, high-yield-savings-accounts, 2026]
+description: "A Fed decision does not change your APY on its own. Here is the chain from policy rate to your statement, how to measure your own bank's pass-through, and what to do in each phase of the cycle."
+tags: [interest-rates, deposit-accounts, cd-rates, 2026]
+redirect_from:
+  - /2026/05/23/what-to-know-about-the-impact-of-interest-rate-changes-on-your-earnings/
+  - /2026/03/22/how-to-navigate-fluctuating-interest-rates-on-savings-options/
+  - /2026/07/13/what-to-expect-from-interest-rates-in-savings-accounts-and-cds/
+  - /2026/06/15/how-do-interest-rates-impact-your-high-yield-savings-account/
 ---
 
-![The Impact of Federal Interest Rate Changes on Your Financial Options](/SmartMoneyDaily/assets/pin-images/2026-06-16-the-impact-of-federal-interest-rate-changes-on-your-financial-options.png)
+![Diagram showing how a Federal Reserve policy rate change travels through banks to savings, money market, and CD yields](/SmartMoneyDaily/assets/pin-images/2026-06-16-the-impact-of-federal-interest-rate-changes-on-your-financial-options.png)
 
-> **In short:** Changes in federal interest rates directly affect the rates offered by high-yield savings accounts, CDs, and money market accounts in the U.S. Institutions usually adjust rates following [Federal Reserve](https://www.federalreserve.gov/monetarypolicy.htm) decisions, impacting how much you can earn on your deposits. It’s wise to stay informed about these fluctuations for better financial planning.
+> **Short answer:** The Fed does not set your APY. It sets the rate banks pay each other, and each bank then decides how much of that move to hand you, and when. Variable accounts (savings, money market) can change at any time with no advance notice. A CD you already own does not change at all. So the only two questions that matter are: how much of the last move did *your* bank actually pass through, and is your money in the right container for the phase the cycle is in.
 
-A frequent oversight is underestimating how federal interest rate changes can drastically influence your financial options. Savers who are aware of these shifts can make smarter decisions regarding high-yield savings accounts, certificates of deposit (CDs), and money market accounts. 
+A rate decision is news, not a deposit. Between the announcement and the number on your statement sits a bank's pricing committee with its own reasons to move fast, slow, or not at all. Savers who lose money in a rate cycle rarely lose it by guessing the Fed wrong. They lose it by leaving cash in an account that quietly stopped competing, or by locking a term at the wrong end of the cycle.
 
-## How Do Federal Interest Rates Affect Your Savings?
+## The Chain From the Policy Rate to Your Statement
 
-Federal interest rates set by the Federal Reserve influence the entire banking system. When the Federal Reserve wants to stimulate the economy, it may lower interest rates, which can lead to lower APYs on savings accounts and CDs. Conversely, when it raises rates to combat inflation, financial institutions often respond by increasing the interest rates offered to consumers. Ultimately, these shifts affect how much your savings will grow.
+There are four links, and your money only touches the last one.
 
-For example, if the Federal Reserve increases interest rates, a high-yield savings account (HYSA) that previously offered a 2% APY might raise its rate to 3% or higher, depending on the institution’s policies.
+1. **The Federal Open Market Committee sets a target range** for the federal funds rate — what banks charge each other for overnight funds. The meeting calendar and every statement are at [federalreserve.gov](https://www.federalreserve.gov/monetarypolicy.htm).
+2. **Short-term wholesale funding markets reprice**, usually within days. This is where the money a bank could raise *instead of* from you gets cheaper or more expensive.
+3. **Each institution decides its own deposit pricing.** A bank flush with deposits and short on lending demand has little reason to raise your rate. A bank funding loan growth, or an online bank whose whole pitch is yield, has every reason to move fast.
+4. **Your account changes — or doesn't.** Variable products can reprice any business day. Fixed products reprice only for new money.
 
-## Why Should You Care About Rate Changes?
+Link 3 is the one nobody can predict for you, and it is why two accounts at two banks pay very different rates a month after the same decision. The Fed sets the tide; your bank decides how much of it reaches your boat.
 
-Being aware of federal interest rate changes is crucial for several reasons:
+## Deposit Beta: The Number That Tells You How Much You Actually Got
 
-1. **Rate Adjustments:** Banks and credit unions adjust the rates on savings products based on the federal rate changes. Understanding these trends can help you choose the right account.
-   
-2. **Opportunity for Better Returns:** As rates increase, it might be an ideal time to transfer your funds to higher-yield offerings. Conversely, if rates are expected to decrease, locking in a solid APY through a CD could be wise.
-   
-3. **Inflation Considerations:** Rising rates can sometimes mean higher inflation. Savers need to evaluate if their interest earnings are outpacing inflation to maintain their purchasing power.
+Bankers call the share of a policy move that reaches depositors the **deposit beta**, and you can calculate your own without any industry data. Take the size of the Fed's move, take the change in your posted APY over the following weeks, and divide.
 
-## What Types of Accounts Are Affected by Rate Changes?
+> Suppose the FOMC cuts by 0.50 percentage points. Six weeks later your savings account has gone from 4.00% APY to 3.65% — a drop of 0.35 points. Your beta on that move was 0.35 ÷ 0.50 = **0.70**. Your bank kept 30% of the cut.
 
-When federal interest rates change, various types of financial accounts can be impacted:
+Run the same arithmetic on the next move, and the one after that. Two or three data points tell you something no article can: whether your bank is quick to cut and slow to raise, or genuinely competitive in both directions. Savers often suspect that cuts land faster than hikes — do not take that on faith from anyone, including this page. Measure it where your money actually sits. That is the only version of the question that affects your balance.
 
-1. **High-Yield Savings Accounts (HYSAs):** Typically found at online banks, these accounts often offer better returns than traditional savings accounts. They adjust their APYs in response to federal rate changes.
-   
-2. **Certificates of Deposit (CDs):** CDs provide a fixed interest rate for a specified term. If rates rise, new CDs may offer better returns than those issued at lower rates.
-   
-3. **Money Market Accounts:** Similar to HYSAs but usually include check-writing features. The APYs on these accounts are also influenced by changes in federal rates.
+### A tracking sheet worth keeping
 
-Below is a comparison of how these accounts typically behave concerning federal interest rate changes:
+One row per FOMC decision. A note app is enough.
 
-| Account Type                     | Rate Behaviour               | FDIC Coverage                               | Liquidity                      |
-|----------------------------------|------------------------------|---------------------------------------------|-------------------------------|
-| High-Yield Savings Accounts (HYSA)| Rates usually rise/fall with Fed changes | $250,000 per depositor, per bank | High; few withdrawal limits   |
-| Certificates of Deposit (CD)     | Fixed rate for term; new CDs may reflect current rates| $250,000 per depositor, per bank | Low; early withdrawal penalties apply|
-| Money Market Accounts           | Generally rise/fall with Fed changes | $250,000 per depositor, per bank | Moderate; may have limits    |
+| Column | What to record | Source |
+|---|---|---|
+| Meeting date | Date of the FOMC statement | federalreserve.gov calendar |
+| Policy move | Size and direction | The statement |
+| APY before | Posted APY the day before | Your bank's rate page |
+| APY at 30 days | Posted APY one month later | Same page |
+| APY at 60 days | Posted APY two months later | Same page |
+| Beta | APY change ÷ policy change | Your arithmetic |
+| National average | FDIC's published deposit rate average | fdic.gov national rates page |
 
-## Comparing Financial Options: A Practical Checklist
-1. **Check Current Rates:** Use resources like the [FDIC](https://www.fdic.gov/resources/deposit-insurance)'s website or bank comparison tools to check current APYs across institutions.
-   
-2. **Understand Terms and Conditions:** Look at withdrawal limits, minimum balance requirements, and early withdrawal penalties for CDs.
-   
-3. **Evaluate Inflation Rates:** Compare your potential earnings with current inflation rates. For example, tools from the [U.S. Treasury](https://www.treasurydirect.gov/) can help you gauge whether your returns will maintain purchasing power.
-   
-4. **Consider the Federal Reserve's Insights:** Pay attention to announcements and reports from the Federal Reserve to anticipate potential rate changes.
+The last column is the reality check. The [FDIC publishes national average deposit rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) on a regular schedule — look up the current figure and its as-of date yourself rather than trusting any number quoted secondhand. If your account has drifted toward that average while the banks you shopped last year have not, yours has stopped competing and is counting on your inertia. That is the cue to consider [whether it is time to switch banks for a higher rate](/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/).
 
-## Pitfalls to Avoid
-1. **Thinking All Banks Respond the Same Way:** Many consumers assume all banks raise their rates simultaneously.  
-   **Why it matters:** Different institutions react at different times, which means you could miss better rates if you don’t compare regularly.
+## The Notice Rule Most Savers Have Backwards
 
-2. **Ignoring Terms on Savings Products:** Potential savers might overlook the importance of understanding the terms associated with accounts.  
-   **Why it matters:** Knowing the details about withdrawal limits, fees, and penalties can save you money and frustration down the line.
+Here is the regulatory detail that catches people. Under the Truth in Savings Act and its implementing rule, Regulation DD (12 CFR Part 1030), a bank generally must give 30 days' advance notice before changing a term that adversely affects you — but the rule carves out an explicit exception for **variable-rate changes**. Read it at [consumerfinance.gov](https://www.consumerfinance.gov/rules-policy/regulations/1030/).
 
-3. **Focusing Solely on Interest Rates:** Some savers prioritize only the highest APY without considering other factors like fees and service quality.  
-   **Why it matters:** A higher APY can be less valuable if the account has significant fees, leading to reduced overall earnings.
+In plain terms: your bank can lower the APY on a high-yield savings or money market account without telling you first. No letter, no email, no banner. You find out when you check, or when the interest credit looks smaller than last month.
 
-## Frequently Asked Questions
+So "I'll notice when my rate drops" is not a plan. Put a recurring reminder on your calendar for the week after each FOMC meeting, open the rate disclosure page, write down the number.
 
-### How often do banks change their rates?
-Banks generally review their rates frequently, especially in response to changes by the Federal Reserve. While adjustments can occur periodically, some institutions change rates more frequently than others.
+Credit unions differ slightly: they pay **dividends** declared by the board rather than interest set by a pricing desk, and shares are insured by the [National Credit Union Administration](https://www.ncua.gov/consumers) rather than the FDIC. The rate can still move, but a board schedule sometimes means slower changes in both directions.
 
-### Can I find high-yield savings accounts with no fees?
-Yes, many online banks and credit unions offer high-yield savings accounts with no maintenance fees. However, it’s important to read the account terms carefully to understand any potential charges.
+## How Each Account Type Reacts
 
-### Should I lock in a CD when rates are high?
-Locking in a CD during high-rate periods can be beneficial, especially if you expect rates to fall. Keep in mind that this ties up your funds for the term of the CD, so consider your liquidity needs.
+| Account type | Rate mechanics | Reaction to a policy move | What you control |
+|---|---|---|---|
+| High-yield savings | Variable; can reprice any business day, no advance notice | Follows the cycle's direction; how much follow-through depends entirely on the bank | Where the balance sits — move it if the beta disappoints |
+| Money market account | Variable, often tiered by balance | Same as savings, plus the risk that a tier threshold moves and your effective yield falls while the headline APY holds | The tier table, not just the top-line APY |
+| Existing CD | Fixed by contract for the term | None at all | Nothing until maturity — that is the point |
+| New CD | Fixed at the rate posted the day you open | Reprices for new money; the term structure often moves before the policy rate does | Timing, term length, whether you ladder |
+| Branch checking / legacy savings | Often near-zero, rarely repriced | Frequently doesn't move | Whether you leave a balance there |
 
-### What is the difference between a HYSA and a money market account?
-Both accounts typically offer similar earning potentials, but HYSAs often come with fewer restrictions and typically don’t provide check-writing capabilities, while money market accounts often do.
+Money market tiers deserve a second look at a cycle turn. A bank that would rather not advertise a cut can leave the headline APY alone and raise the balance required to earn it — the disclosed rate stays flat while your actual yield falls. Those mechanics are covered in [why money market rates move and how fast yours follows](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/).
 
-## Understanding the Yield Curve and Its Implications
+## Why the CD You Already Own Never Changes
 
-The yield curve is a graphical representation that shows the relationship between interest rates and the maturity of debt securities, including loans and bonds. It can also help you understand how rate changes affect savings accounts, CDs, and money market accounts. Typically, a normal yield curve slopes upward, indicating that longer-term investments have higher yields compared to short-term ones. 
+A CD is a contract. You agreed to leave the money for a term; the bank agreed to a rate for that term. Rates moving afterward does not entitle the bank to renegotiate, and it does not entitle you to either. That symmetry is the whole product — and it means a CD opened at the wrong point in the cycle stays wrong for its entire term. A five-year CD opened on the way *up* watches better offers appear for years. One opened near the peak keeps paying a rate the market has stopped offering, which is exactly the point.
 
-When federal interest rates rise, short-term rates tend to increase more rapidly than long-term rates. For savers, this means that high-yield savings accounts and short-term CDs become more attractive quicker than longer-term CDs. Conversely, when rates are low or fall, the yield curve may flatten, which can signal economic uncertainty or a potential recession. In this environment, locking in higher rates through long-term CDs may become a prudent strategy. 
+If rates rise sharply after you lock, you can break the CD — but the early withdrawal penalty is the toll, usually quoted in months of interest. Compare that penalty in dollars against the extra interest a new rate would earn over the remaining term; the full calculation is in [what a CD early withdrawal penalty actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/). Breaking a CD with a few months left is usually pointless. Breaking one with three years left can be clearly worth it.
 
-For instance, if the yield curve is steep, you might opt for a robust savings account or a short-term CD to maximize returns until rates stabilize. However, if you anticipate a yield curve inversion (where short-term rates exceed long-term rates), it could be a signal to secure fixed rates on longer-term investments, protecting your savings from potential future rate declines. Understanding the dynamics of the yield curve not only clarifies how federal interest rates affect various savings vehicles but also aids in making informed decisions regarding investment strategies based on market conditions.
+## Reading Your Bank's CD Curve Before a Meeting
 
-In conclusion, understanding the impact of federal interest rate changes is essential for maximizing the benefits of HYSAs, CDs, and money market accounts. Staying informed about rate changes allows you to make better financial choices and potentially increase your returns. For continual updates and practical advice regarding your savings strategies, consider reading articles like "[How to Safely Use Your Emergency Fund in a Savings Strategy](/SmartMoneyDaily/2026/06/16/how-to-safely-use-your-emergency-fund-in-a-savings-strategy/)," "[How to Effectively Use CDs and Money Market Accounts Together](/SmartMoneyDaily/2026/06/14/how-to-effectively-use-cds-and-money-market-accounts-together/)," and "How To Evaluate The Impact of Inflation on Your High-Yield Options."
+You do not need a forecast. You need your own bank's rate page. Write down the posted APY for 6-month, 12-month, 24-month, and 60-month CDs on the same day. The shape tells you what that bank's funding desk expects:
 
-## Further Reading
+- **Longer terms pay more than shorter ones.** The bank is comfortable paying up for duration — usually a sign it is not bracing for imminent cuts.
+- **Short terms pay more than long ones.** The bank does not want to owe today's rate for five years. That is pricing for lower rates ahead, and a hint that today's short yields may not last.
+- **One term sticks out far above its neighbors.** Almost always a promotion aimed at a funding target rather than a signal about the cycle. Take the rate if you like, but read the renewal terms first.
 
-- [What to Consider When Opening a High-Yield Savings Account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/)
-- [How Do Interest Rates Impact Your High-Yield Savings Account?](/SmartMoneyDaily/2026/06/15/how-do-interest-rates-impact-your-high-yield-savings-account/)
-- [How to Smartly Diversify Your Funds Between Money Market and CDs](/SmartMoneyDaily/2026/06/14/how-to-smartly-diversify-your-funds-between-money-market-and-cds/)
+Check the same four numbers a week after the next FOMC decision. Movement in the *shape* usually tells you more than movement in any single rate.
+
+## The Rate-Cycle Playbook
+
+This is the table to keep. Find the phase, read across.
+
+| Cycle phase | High-yield savings | Money market | CDs |
+|---|---|---|---|
+| **Early hiking** — rate rising off a low base | Keep the bulk of cash here; it reprices upward on its own. Check your beta against competitors after each move | Fine as a checking-adjacent buffer; verify tier thresholds haven't shifted | Stay short. 3–6 month terms, so maturing money can chase the next step up |
+| **Late hiking / suspected peak** | Still the flexible home, but its yield edge over CDs is narrowest here | Same as savings | The window to extend. Terms locked near a peak keep paying after variable rates fall. Ladder in rather than committing everything at once |
+| **Early cutting** — first cuts arriving | Expect the APY to fall, possibly without notice. Check monthly; keep only what you truly need liquid | The quiet tier change usually shows up now | New CD rates fall fastest, often ahead of the first cut. If you meant to lock, don't wait for confirmation |
+| **Trough / flat** — low and steady | Yield is thin everywhere, so the proportional gap between best and worst banks is *wider*. Shopping matters more, not less | Compare honestly against savings; check-writing may be its only remaining edge | Existing long CDs are now your best-paying accounts — let them run. Roll maturing money short so you aren't locked long at the next turn up |
+
+Two rules survive every phase. An emergency fund does not get optimized into a CD — liquidity is its job. And whatever the nominal rate, what you keep is the after-inflation, after-tax figure, so a headline APY is never the number to compare on.
+
+## Timing a Lock-In When Cuts Look Likely
+
+The honest version of this decision is not "will the Fed cut." It is "what would the variable rate have to average from here for staying liquid to beat locking today." That break-even takes a minute.
+
+> Assume you have $20,000. Your savings account pays 4.00% APY today; your bank posts a 12-month CD at 3.85%. Lock it and you earn roughly $770 over the year, guaranteed. Stay in savings and suppose the rate holds for 4 months, then drops. Four months at 4.00% is about $267. To match the CD's $770, the remaining 8 months would have to earn $503 — which needs an average of about **3.78% APY** across those eight months. So the question narrows to something answerable: is my bank likely to still be paying north of 3.78% two-thirds of a year from now, given the beta I measured last cycle?
+
+If your logged beta says your bank passes cuts through fast, the answer is usually no, and locking wins. If your bank has been stubborn about cutting, staying liquid may well win and you keep the flexibility for free.
+
+You do not have to pick one side. A ladder splits the money across maturities so part locks now and part stays free to reprice. To size one, enter your total amount, the number of rungs, and the spacing between terms.
+
+{% include tools/ladder-builder.html %}
+
+Rung spacing and its trade-offs are covered in [how to build a CD ladder that beats one long CD](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
+
+## Signals Worth Watching, Noise Worth Ignoring
+
+**Worth watching:** the FOMC calendar and statement wording at federalreserve.gov; your bank's posted rate page, logged after each decision; the shape of its CD curve; the FDIC national average as a staleness test.
+
+**Worth ignoring:** headlines forecasting the Fed's next several moves, since your bank's pass-through decides your outcome and no forecast covers that; a teaser rate quoted without its conditions; any APY printed without an as-of date.
+
+## Mistakes That Cost Real Money
+
+1. **Waiting for an announcement that never comes.** Variable-rate cuts arrive without notice. If you are not checking, you are not informed.
+2. **Treating all banks as one bloc.** "Banks raised rates" is a headline, not a fact about your account. Pass-through varies enormously, and that gap is where the money is.
+3. **Locking a long CD early in a hiking cycle.** Short terms while rates climb; long terms near the peak.
+4. **Chasing a rate without reading its conditions.** A yield needing a balance you cannot hold, or one that reverts after a promo window, is not the yield you will earn.
+5. **Optimizing the emergency fund.** Locking cash you might need turns a rate decision into a penalty.
+
+## Fed Decisions and Your Account: Reader Questions
+
+**How long after a Fed decision does my rate change?**
+No fixed interval, because the bank decides. Variable accounts may move the same week or not at all — which is why measuring your own bank's 30- and 60-day response beats any general answer.
+
+**Can my bank cut my savings APY without telling me?**
+For a variable-rate account, generally yes. Regulation DD's advance-notice requirement carves out variable-rate changes.
+
+**Does a Fed cut change the CD I already have?**
+No. The rate is fixed by contract for the full term. Only newly opened CDs reflect current pricing.
+
+**Is my money still insured if rates fall?**
+Insurance and interest are unrelated. FDIC coverage is $250,000 per depositor, per insured bank, per ownership category, whatever the account pays. Credit union shares are insured comparably by the NCUA.
+
+**Should I move everything the moment rates start falling?**
+Acting on the announcement is usually late for CDs, since banks reprice new offers ahead of a decision, and unnecessary for savings, which drifts down wherever it sits. Decide in advance which portion of your cash is genuinely long-term, then lock that portion near the peak rather than after the turn.
+
+## This Month's Three Actions
+
+1. Open your bank's rate disclosure page today, screenshot it, and record the APY with the date. That is row one of your log.
+2. Write down four CD APYs — 6, 12, 24, and 60 months — from the same bank on the same day. Note the shape.
+3. Decide, in dollars, how much cash you would not touch for twelve months. That figure, and nothing larger, is the candidate for a term product the next time your log says the cycle has turned.
+
+Everything above is background. Those three lines in a notes file are what actually change your earnings.

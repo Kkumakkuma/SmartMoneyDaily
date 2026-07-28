@@ -4,19 +4,21 @@
 
   <div class="tool-grid">
     <label>Amount in the CD ($)<input type="number" id="cdBal" value="10000" min="0" step="100"></label>
-    <label>Current CD APY (%)<input type="number" id="cdRate" value="3.50" min="0" max="20" step="0.01"></label>
+    <label>CD interest rate (%)<input type="number" id="cdRate" value="3.50" min="0" max="20" step="0.01"></label>
     <label>Months already held<input type="number" id="cdHeld" value="6" min="0" max="120" step="1"></label>
     <label>Months left to maturity<input type="number" id="cdLeft" value="18" min="0" max="120" step="1"></label>
     <label>Penalty (months of interest)<input type="number" id="cdPen" value="6" min="0" max="24" step="1"></label>
-    <label>APY you could move to (%)<input type="number" id="cdNew" value="4.50" min="0" max="20" step="0.01"></label>
+    <label>Rate you could move to (%)<input type="number" id="cdNew" value="4.50" min="0" max="20" step="0.01"></label>
   </div>
   <button type="button" id="cdGo" class="tool-btn">Calculate</button>
 
   <div id="cdOut" class="tool-out"></div>
-  <p class="tool-note">Penalty is calculated the way most disclosures write it: a set number of months of
-  interest at the CD's own rate, charged whether or not you have earned that much. If earned interest is
-  smaller than the penalty, the difference comes out of principal — which federal rules permit. Check your
-  own disclosure for the exact penalty formula and any grace-period exception.</p>
+  <p class="tool-note">Enter the interest rate printed on your disclosure, not the APY. Disclosures set the
+  penalty as a fixed number of months of simple interest at that rate, charged whether or not you have
+  earned that much — so this tool applies the penalty as simple interest and the interest you keep as
+  compounded growth, which is how the two are actually calculated. If earned interest is smaller than the
+  penalty, the difference comes out of principal, which federal rules permit. Check your own disclosure for
+  the exact formula and any grace-period exception.</p>
 </div>
 
 <script>
@@ -57,8 +59,10 @@
       + '<li>Interest earned so far: ' + money(earned) + '</li>'
       + '<li>Penalty charged: ' + money(penalty) + '</li>'
       + principalHit
-      + '<li>Total if you stay to maturity: ' + money(stay) + '</li>'
-      + '<li>Total if you break and move: ' + money(move) + '</li></ul>';
+      + '<li>Interest if you stay to maturity: ' + money(stay)
+      + ' (balance ' + money(bal + stay) + ')</li>'
+      + '<li>Interest if you break and move: ' + money(move)
+      + ' (balance ' + money(bal + move) + ')</li></ul>';
   }
   el('cdGo').addEventListener('click', run);
   ['cdBal', 'cdRate', 'cdHeld', 'cdLeft', 'cdPen', 'cdNew'].forEach(function (id) {

@@ -1,143 +1,169 @@
 ---
 layout: post
-title: "What Limits Does FDIC Insurance Have on Your Funds?"
+title: "FDIC Limits: How the $250,000 Cap Is Really Calculated"
 date: 2026-06-01 16:47:38 +0000
 categories: [fdic-insurance]
-description: "What limits does FDIC insurance have on your funds? Understand the coverage thresholds and how they protect your deposits in different scenarios."
-tags: [fdic-insurance, high-yield-savings-accounts, 2026]
+description: "The $250,000 FDIC limit is per depositor, per bank, per ownership category. Here is how those three words are applied to real accounts, and where coverage quietly disappears."
+tags: [fdic-insurance, deposit-limits, ownership-categories, 2026]
+redirect_from:
+  - /2026/06/29/what-to-know-about-fdic-insurance-limits-for-savings-accounts/
+  - /2026/07/19/what-happens-to-your-fdic-insurance-when-you-open-multiple-accounts/
+  - /2026/06/18/is-your-money-fully-protected-by-fdic-insurance/
+  - /2026/06/20/understanding-fdic-insurance-coverage-for-your-savings-accounts/
 ---
 
-![What Limits Does FDIC Insurance Have on Your Funds?](/SmartMoneyDaily/assets/pin-images/2026-06-01-what-limits-does-fdic-insurance-have-on-your-funds.png)
+![Deposit accounts grouped by ownership category, showing how balances combine against a single insurance limit](/SmartMoneyDaily/assets/pin-images/2026-06-01-what-limits-does-fdic-insurance-have-on-your-funds.png)
 
-> **In short:** [FDIC](https://www.fdic.gov/resources/deposit-insurance) insurance protects depositors against bank failures, covering up to $250,000 per depositor, per bank, and per ownership category. Understanding these limits is crucial for proper fund allocation and maximizing your protection.
+> **Short answer:** The limit is $250,000 per depositor, per insured bank, per ownership category. Opening more accounts at the same bank in the same category does not add coverage — the balances are added together and measured against one $250,000 ceiling. Coverage multiplies only when the *category* changes, or the *bank charter* changes.
 
-A common misconception many depositors have is that all their funds at a bank are fully insured by the FDIC. While the FDIC does offer robust protection, there are essential limits and categories to consider that can significantly affect your coverage.
+Most people get the number right and the sentence wrong. They remember $250,000 and assume it applies to each account. It applies to each *bucket*, and a bucket is defined by two things you rarely think about when you open an account: whose name is on it and what legal category it falls into. Three savings accounts, a money market account, and two CDs in your name alone at one bank are one bucket, not six.
 
-## What is FDIC Insurance?
+This article is only about how the ceiling is calculated. If you want the broader question of which products are covered at all — and which ones look like deposits but are not — that belongs in [what FDIC insurance covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/). If your balances already exceed the ceiling and you want a layout that fixes it, see [how to insure more than $250,000](/SmartMoneyDaily/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/).
 
-FDIC insurance is a government-backed assurance that protects depositors' funds in the event that an FDIC-insured bank fails. Established in 1933, the Federal Deposit Insurance Corporation (FDIC) provides coverage up to $250,000 per depositor, per bank, and per ownership category. This means that if a bank goes under, you won’t lose your insured deposits up to this limit.
+## Per Depositor, Per Bank, Per Ownership Category, Decoded
 
-It’s crucial to remember that FDIC insurance applies only to specific deposit accounts, such as high-yield savings accounts (HYSAs), certificates of deposit (CDs), and money market accounts. Investments in securities, mutual funds, or similar products are not insured by the FDIC.
+Take the phrase one word at a time, because each one is a separate test.
 
-## How is FDIC Coverage Calculated?
+**Per depositor** means per legal owner, identified by name and taxpayer ID — not per account number, not per debit card, not per online login. If your name is the only name on five accounts, the FDIC sees one depositor.
 
-The calculation of FDIC coverage begins with the total amount of deposits held by an individual at an FDIC-insured bank. Each depositor is insured up to the $250,000 limit. This means if you’re an individual with multiple accounts at the same bank—like a savings account and a CD—combined, they cannot exceed $250,000 to be fully protected.
+**Per insured bank** means per *charter*, and a charter is identified by an FDIC certificate number. One bank can operate several consumer brands, several websites, and several sets of branches under a single certificate. Balances under that certificate combine even when the logos differ.
 
-For example, if you have a checking account with $150,000, a savings account with $80,000, and a CD worth $60,000 at the same bank, your coverage would only extend to the first $250,000, leaving you with exposure on the remainder of your funds.
+**Per ownership category** is the part that actually creates additional coverage. The FDIC's rules in 12 CFR Part 330 sort deposits into categories such as single accounts, joint accounts, certain retirement accounts, trust accounts, employee benefit plan accounts, business accounts, and government accounts. Each category you legitimately use at a bank carries its own separate $250,000 ceiling for you.
 
-## What Are the Ownership Categories for FDIC Insurance?
+One more piece that surprises people: coverage is measured as of the date the bank fails, and it includes interest accrued to that date. The number that has to stay under the ceiling is your balance *plus* the interest that will have posted by then, not the deposit you originally made.
 
-FDIC insurance extends its coverage across various ownership categories, which can allow depositors to increase their insured amounts significantly. The primary categories include:
+## The Ownership Categories and Their Separate Limits
 
-1. **Single Accounts**: Accounts owned by one person, insured up to $250,000.
-2. **Joint Accounts**: Accounts owned by two or more individuals, providing $250,000 per co-owner.
-3. **Retirement Accounts**: Such as IRAs, also covered up to $250,000 per owner.
-4. **Trust Accounts and Custodial Accounts**: These can have separate coverage depending on the number of beneficiaries.
+Here are the categories a typical household actually touches. The right-hand column is the question that decides whether the category applies to you at all.
 
-This classification is essential because understanding it can help you maximize your FDIC coverage. For instance, if you and a partner hold a joint account, you could potentially have $500,000 insured at that bank due to the category distinction.
+| Ownership category | Separate limit at one bank | What has to be true |
+|---|---|---|
+| Single accounts | $250,000 for you | Account is in one living person's name with no beneficiaries named |
+| Joint accounts | $250,000 per co-owner | All co-owners are living people with equal withdrawal rights, and signature requirements are met |
+| Certain retirement accounts | $250,000 for you | IRA, self-directed Keogh, or similar self-directed retirement deposits |
+| Trust accounts | $250,000 per eligible beneficiary, capped by rule | Account is revocable or irrevocable trust deposits, including payable-on-death accounts |
+| Employee benefit plan accounts | $250,000 per participant's non-contingent interest | Plan deposits held at the bank |
+| Business accounts | $250,000 for the entity | Corporation, partnership, or unincorporated association with a separate legal existence |
 
-## How Do High-Yield Savings Accounts and CDs Fit into FDIC Limits?
+Two clarifications that prevent the most common errors. First, a business account is not extra coverage for you personally — it is coverage for the entity, and it only exists if the entity is real and operating for a purpose other than getting more insurance. Second, "certain retirement accounts" does not mean every retirement account; the category covers self-directed retirement deposits, and the FDIC lists exactly which plan types qualify. Confirm your plan type on [fdic.gov](https://www.fdic.gov/resources/deposit-insurance/) rather than assuming.
 
-Both high-yield savings accounts and CDs are popular choices for individuals looking to grow their savings securely. These accounts generally fall under the category of standard deposits covered by FDIC insurance.
+## Single vs Joint: Why Two Names Can Mean $500,000
 
-### High-Yield Savings Accounts
-- **Liquidity**: High-yield savings accounts generally allow you to save while retaining easy access to your funds.
-- **Insurance Coverage**: As mentioned, if the account balances per ownership category do not exceed the $250,000 threshold, they are insured.
-  
-### Certificates of Deposit
-- **Fixed Terms**: CDs typically require you to lock your funds for a predetermined period, earning higher interest.
-- **Insurance Coverage**: Like savings accounts, as long as they don’t exceed $250,000 per ownership category, your investment is safe.
+A joint account is insured $250,000 per co-owner, and the FDIC presumes each co-owner's share is equal unless the account records say otherwise. Two owners on one joint account therefore reach $500,000 of coverage at that bank — and that is on top of whatever each of them has in their own single-account bucket.
 
-For more insights on CDs, see "[How Is a Certificate of Deposit Insured Against Bank Failures?](/SmartMoneyDaily/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)" 
+Work an example. Suppose a couple keeps $400,000 in a joint money market account at one bank. Each owner's share is $200,000, both under the ceiling, so the whole balance is covered. Now suppose one of them also keeps $330,000 in savings and CDs titled in their name alone at the *same* bank. That is a different bucket, insured to $250,000, so $80,000 of it is uninsured. Adding a third account in that same personal name changes nothing — it is the bucket that is capped, not the account.
 
-## Are There Any Exceptions to FDIC Insurance?
+The joint category also has conditions attached. Every co-owner must be a living person (a trust or a business cannot be a joint co-owner), each must have equal rights to withdraw, and signature requirements generally apply. An account you added a name to informally — for convenience, so a relative can pay your bills — may not qualify the way you expect. Check the titling on the signature card, not the nickname in your banking app.
 
-While FDIC insurance is comprehensive, it does not cover all types of funds or situations. Here are some key exceptions:
+## Trust Accounts After the Rule Change
 
-1. **Investment Products**: Securities, mutual funds, and similar products are not insured by the FDIC.
-2. **Foreign Branches**: If deposits are held in branches outside the U.S., they generally don’t receive FDIC protection.
-3. **Certain Types of Accounts**: Accounts such as life insurance policies, stocks, municipal bonds, and safe deposit boxes are not covered.
+Trust coverage was rewritten and took effect in April 2024, and the old advice still circulating online is wrong. Revocable and irrevocable trust deposits were merged into a single **trust accounts** category. Coverage for a trust owner at one bank is $250,000 per eligible beneficiary, and the rule caps the count at five beneficiaries — so the maximum for one owner at one bank in this category is $1,250,000, regardless of how many beneficiaries the trust names.
 
-Being aware of these limitations can help you make more informed decisions regarding where to allocate your savings.
+This matters in both directions. If you were told years ago that ten named beneficiaries meant $2,500,000 of coverage, that is no longer how it works. And if you have a simple payable-on-death designation on a savings account, that account is no longer in your single-account bucket at all — naming a beneficiary moves it into the trust category. That is sometimes a gift, because it opens a separate ceiling, and sometimes a trap, because people count the same money twice. The FDIC publishes the current trust rules and worked examples; verify the version in force before you restructure anything.
 
-## What Happens if You Exceed the FDIC Insurance Limits?
+## Multiple Accounts at One Bank: Added Up, Not Multiplied
 
-If your deposits exceed the insurance limits, the excess portion is not protected in case of a bank failure. For instance, if you have $300,000 in a single ownership saving account, only $250,000 is insured. This leaves you vulnerable to losing $50,000.
+This is the single most expensive misunderstanding in deposit insurance, so it is worth stating plainly. Within one ownership category at one bank, every account you hold is aggregated:
 
-To mitigate risk, consider:
-- **Spreading Funds**: Distributing your funds across multiple banks, thereby maximizing your insurance coverage.
-- **Using Different Ownership Categories**: Using family members as co-owners to extend your coverage.
+- Checking, savings, money market deposit accounts, and CDs all sit in the same pool.
+- Different terms, different rates, and different account numbers do not separate them.
+- Different branches of the same bank do not separate them.
+- Opening a seventh account does not add a seventh ceiling.
 
-For more on effective fund allocation, refer to "[How Much Should You Actually Keep in an Emergency Fund?](/SmartMoneyDaily/2026/05/31/how-much-should-you-actually-keep-in-an-emergency-fund/)"
+The following example shows how the arithmetic actually runs for a two-person household at a single bank.
 
-## Comparison of High-Yield Savings Accounts, CDs, and Money Market Accounts
+| Account at one bank | Category | Balance | Category total | Insured | Uninsured |
+|---|---|---|---|---|---|
+| Dana — savings | Single (Dana) | $180,000 | $330,000 | $250,000 | $80,000 |
+| Dana — 12-month CD | Single (Dana) | $150,000 | (same bucket) | — | — |
+| Dana & Sam — joint checking | Joint | $400,000 | $400,000 | $400,000 | $0 |
+| Sam — IRA CD | Retirement | $120,000 | $120,000 | $120,000 | $0 |
+| **Totals** | | **$850,000** | | **$770,000** | **$80,000** |
 
-| Account Type                   | Liquidity                                   | Insurance Coverage                      | Best Use Case                              |
-|--------------------------------|--------------------------------------------|---------------------------------------|-------------------------------------------|
-| High-Yield Savings Account     | High; easy access to funds                 | Up to $250,000 per depositor         | Short-term savings goals                   |
-| Certificates of Deposit (CDs)  | Low; funds locked for set period           | Up to $250,000 per depositor         | Earning higher interest for longer term    |
-| Money Market Accounts           | Moderate; limited checks and withdrawals    | Up to $250,000 per depositor         | Combining liquidity with savings            |
+Balances in this table are illustrative. The point is structural: $850,000 at one bank can be almost entirely insured, while an $80,000 slice sits exposed purely because of how one bucket was filled. The fix is not complicated — move the excess to an unrelated bank, or place it in a category Dana is not already using — but nothing about the account statements would flag the problem for you.
 
-This comparison highlights how each account serves different financial strategies while remaining within FDIC insurance limits.
+## Same Bank, Different Brands: When a Charter Is Shared
 
-## What to Check Before Choosing FDIC Insurance Coverage
-To ensure you’re effectively utilizing FDIC protection, follow this practical checklist:
+Banks acquire each other and keep the acquired name. Banks also launch online-only brands that are legally divisions of the parent, not separate institutions. In both cases there is one FDIC certificate number, and your deposits across both brands combine into one set of limits.
 
-1. **Check Coverage Limits**: Assess your accounts to make sure none exceed $250,000 in a single category.
-2. **Identify Ownership Categories**: Understand which categories apply to your accounts.
-3. **Evaluate Bank Reliability**: Research if your bank is FDIC-insured using resources like the [FDIC's BankFind Suite](https://banks.data.fdic.gov/bankfind-suite/bankfind).
-4. **Spread Your Deposits**: Consider diversifying your funds across multiple banks to enhance coverage.
-5. **Review Regularly**: Stay updated on your bank’s status and assess your deposits periodically, especially after major life changes.
+Checking this takes about a minute:
 
-## Pitfalls to Avoid
-### Assuming All Accounts Are Insured
-Many people think their total funds at a bank are federally insured, neglecting limits and ownership categories.
-- **Why it matters:** Failure to understand coverage limits may leave you with significant unprotected funds.
+1. Open [FDIC BankFind](https://banks.data.fdic.gov/bankfind-suite/bankfind).
+2. Search each brand name where you hold money.
+3. Write down the FDIC certificate number ("FDIC Cert #") for each.
+4. If two brands return the same certificate number, treat them as one bank for every calculation in this article.
+5. While you are there, note whether the brand appears as a trade name of another institution — BankFind lists those associations.
 
-### Overlooking Different Ownership Categories
-Some depositors may not realize they can leverage different ownership categories to increase their insured limits.
-- **Why it matters:** Maximizing different categories can help protect more of your wealth.
+There is a related check for app-based accounts. Many fintech products are not banks; they place your money at a partner bank, and the insurance depends on that bank and on how the records identify you. The brand on the app is not the answer — find the named partner institution in the deposit agreement, then run it through BankFind. Credit union members do the same exercise at [NCUA](https://ncua.gov/consumers/share-insurance-coverage), which insures share accounts to the same $250,000 limit under its own rules and its own agency.
 
-### Not Regularly Reviewing Account Balances
-People often forget to monitor the total amounts across various accounts at the same bank, assuming they are within the limit.
-- **Why it matters:** Regular reviews can prevent overexposure and ensure your funds remain protected.
+## Work Out Your Own Number in Five Steps
 
-## FAQ
-### What accounts are covered by FDIC insurance?
-FDIC insurance covers deposit accounts, including checking accounts, savings accounts, money market accounts, and CDs. Investment-related accounts, such as mutual funds or stocks, are not covered.
+You do not need a spreadsheet for this, but you do need to group before you add.
 
-### How is FDIC insurance funded?
-FDIC insurance is funded by premiums paid by member banks and thrifts. They pay into the Deposit Insurance Fund (DIF), which is used to reimburse depositors in case of bank failures.
+1. **List by charter, not by brand.** Use the certificate numbers you just collected. Every brand sharing a number becomes one line.
+2. **Sort each charter's accounts into categories.** Look at the titling — single, joint, retirement, trust or POD, business. The account nickname is irrelevant.
+3. **Add balances within each category, including accrued interest.** A CD at maturity is worth more than the deposit you made; use the maturity value.
+4. **Compare each category total to its own ceiling.** $250,000 for single and retirement; $250,000 times the number of co-owners for joint; per-beneficiary math for trust.
+5. **Write down every uninsured slice.** That list, not your total balance, is what you act on.
 
-### Can I increase my FDIC insurance coverage?
-Yes, by opening accounts at different banks or utilizing multiple ownership categories, you can legally increase your total insured amount beyond $250,000.
+The FDIC runs its own estimator, [EDIE](https://edie.fdic.gov/), which walks through the same grouping and produces a coverage report you can save. It is worth running once a year, and any time you add an owner, add a beneficiary, or open an account at a bank you have not used before.
 
-### What should I do if my bank fails?
-If your bank fails, the FDIC will typically notify you and automatically transfer your insured deposits to another insured bank, allowing you to access your funds without significant delay.
+## When Interest Pushes You Over the Line
 
-## Strategies for Maximizing FDIC Insurance
+A balance parked just under the ceiling does not stay just under it. Interest posts, and on the day a bank fails the accrued interest counts toward your limit alongside principal. A CD is the clearest case: you fund it under the ceiling and it matures above the ceiling, with no action from you in between.
 
-To fully utilize the protections offered by FDIC insurance, consider adopting these strategies to enhance coverage beyond the standard limits:
+To see when a given account crosses the line, put in the current balance, the account's APY, the compounding frequency, and the number of years, and read the ending balance — that projected figure, not today's number, is the one that has to stay under $250,000 in its category.
 
-1. **Open Accounts at Multiple Banks**: By maintaining accounts at different FDIC-insured banks, you effectively increase your total coverage. For example, with three banks, you can secure up to $750,000 in total coverage if you keep $250,000 in each bank.
+{% include tools/apy-calculator.html %}
 
-2. **Utilize Different Ownership Categories**: As previously noted, different ownership categories allow for additional coverage. You can establish accounts not just in your name as an individual, but also as a joint account with a spouse or partner. Each of you would then be insured for up to $250,000 per category.
+If the projection lands above the ceiling, you have three ordinary options: have the interest paid out to an account at a different bank instead of compounding in place, fund the account at a level that leaves headroom for the full term, or plan to move the excess during the grace period after maturity. For a refresher on how terms and maturity dates work, see [how a CD works from funding day to renewal](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
 
-3. **Leverage Trust Accounts**: If applicable, setting up trust accounts can also increase your coverage. Each beneficiary listed in a revocable trust can provide an additional $250,000 in coverage. This is particularly useful for estate planning.
+## What Happens to Deposits Above the Limit
 
-4. **Be Mindful of Changes**: Always be aware of how changes to your deposits may affect your coverage. For instance, transferring funds or naming a new account owner can influence your FDIC limits.
+Uninsured does not automatically mean lost, but it does mean unguaranteed, and the difference is large.
 
-5. **Stay Informed About Bank Mergers and Changes**: Bank consolidations may impact your FDIC insurance coverage if the total amount held exceeds $250,000 post-merger. It’s vital to stay informed of any changes that could affect your accounts.
+When an insured bank fails, the FDIC pays the insured portion — usually by transferring those deposits to an acquiring bank, or by paying the depositor directly. That part is a payment obligation of the insurance fund. The uninsured portion is different: it becomes a claim against the failed bank's receivership. You receive a receiver's certificate, and you are paid out of whatever the receivership recovers when the failed bank's assets are sold, over whatever period that takes. There is no fixed recovery rate and no promised schedule.
 
-By implementing these strategies, you can maximize your protection under FDIC insurance and gain peace of mind knowing your funds are secure.
+Two practical consequences. First, the uninsured slice is not just a risk of loss — it is a risk of your money being unavailable for an indefinite period, which matters enormously if that money was your emergency reserve. Second, the fact that regulators have sometimes protected uninsured depositors in particular failures is not a rule you can plan around. Plan around the limit.
 
-## Conclusion
+Note the contrast with products that are not deposits at all. A money market *fund* is not covered by deposit insurance under any structure, no matter how it is titled; its risk profile is a different subject, covered in [how money market funds work](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
 
-Understanding the limits of FDIC insurance is essential for managing your savings effectively, especially when using high-yield accounts, CDs, or money markets. By knowing the coverage limits, categorizing your accounts wisely, and regularly reviewing your balances, you can maximize your protection.
+## Titling Errors That Quietly Shrink Your Coverage
 
-Take a moment to review your current financial holdings to ensure they are covered appropriately. For future guidance on managing your savings and fund allocation, consider checking out "[How to Build an Effective Emergency Fund Using High-Yield Options](/SmartMoneyDaily/2026/05/28/how-to-build-an-effective-emergency-fund-using-high-yield-options/)."
+These are the ways coverage disappears without any balance changing.
 
-## Keep Reading
-- [What is FDIC Insurance and How Does It Protect Your Money?](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
-- [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/SmartMoneyDaily/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
-- [What Happens When You Cash Out a CD Early?](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
+**Adding a beneficiary and forgetting it.** A POD designation moves the account into the trust category. If you were mentally counting that balance in your single-account bucket, your real coverage map is not what you think it is — sometimes better, sometimes worse.
+
+**Removing a co-owner.** Divorce, an estate settlement, or a routine cleanup can convert a joint account into a single account overnight and cut its ceiling in half. The FDIC does provide a limited grace period after the death of an owner before coverage is recalculated, but it is temporary.
+
+**Assuming a business name creates a new bucket.** A sole proprietorship's deposits are insured in the *owner's* single-account category, not separately, because the business has no separate legal existence. A registered corporation or partnership is a separate category; a "doing business as" name is not.
+
+**Letting a merger sit unreviewed.** When your two banks become one bank, two ceilings become one. Separate coverage for the pre-merger deposits is temporary under FDIC rules, and the clock starts without a personal notice that reads like a warning.
+
+**Confusing the app with the bank.** If your records at the partner bank do not identify you as the owner of the funds in the way the pass-through rules require, coverage can fail even though the money sat at an insured institution the whole time.
+
+## Questions People Ask About the Limit
+
+**Does opening a second account at the same bank increase my coverage?**
+Not by itself. It increases coverage only if the second account is in a different ownership category — a joint account when your first was single, or a qualifying retirement account.
+
+**Is the $250,000 per account or per person?**
+Per person, per bank, per category. A single depositor with six accounts in one category at one bank has one $250,000 ceiling.
+
+**Do my joint account and my single account combine?**
+No. They are separate categories with separate ceilings at the same bank.
+
+**Are online banks insured the same way?**
+Yes, if the institution itself is FDIC-insured. Verify the certificate number in BankFind rather than trusting a badge on a homepage.
+
+**Does the limit include interest?**
+Yes. Principal plus interest accrued through the date of failure, measured together against the ceiling.
+
+**Are credit unions covered by the FDIC?**
+No — federally insured credit unions are covered by the NCUA's Share Insurance Fund, at the same $250,000 standard limit under NCUA's rules.
+
+## A Coverage Check You Can Do Today
+
+Collect the FDIC certificate numbers for every bank you use, group the balances by ownership category, and use maturity values rather than current balances for anything that compounds. If a category total is close to $250,000, treat it as already over — interest will get it there.
+
+The rules themselves are stable and public. The FDIC's [deposit insurance pages](https://www.fdic.gov/resources/deposit-insurance/) hold the current category definitions and trust rules, BankFind identifies the charter, and EDIE does the arithmetic if you would rather not. Twenty minutes with those three tools tells you exactly which dollars are guaranteed and which are not, and that is the only version of this question worth answering.

@@ -623,6 +623,8 @@ def _build_structure_plan():
         parts.append("- Do NOT add a FAQ or 'Questions' section to this article.")
     if _extra != "mistakes":
         parts.append("- Do NOT add a 'Common Mistakes' / 'What People Get Wrong' section to this article.")
+    if _extra != "worked_example":
+        parts.append("- Do NOT include a step-by-step worked numeric example section in this article.")
     parts.append(
         "- Close with a short conclusion and one concrete next step the reader can take today. "
         "Vary the closing style — do NOT open the final paragraph with 'In conclusion'."
