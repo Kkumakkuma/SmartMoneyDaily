@@ -14,12 +14,11 @@
 
   <div id="cdOut" class="tool-out"></div>
   <p class="tool-note">Disclosures usually state the penalty as a number of days of interest, so enter it that
-  way — 6 months is 180 days. Interest earned is compounded from the APY you enter, while the penalty is
-  applied as simple interest on the principal, which is how the two are normally calculated. If your
-  disclosure sets the penalty against a nominal interest rate rather than the APY, your bank's figure will
-  come out slightly lower than this estimate. If the penalty is larger than the interest earned so far, the
-  difference comes out of principal, which federal rules permit. Check your own disclosure for the exact
-  formula and any grace-period exception.</p>
+  way — 6 months is 180 days. Interest you have earned is compounded from the APY you enter. The penalty is
+  charged as simple interest at the stated rate rather than the APY, so this converts your APY back to that
+  rate before applying it — otherwise the estimate would overstate what your bank actually deducts. If the
+  penalty is larger than the interest earned so far, the difference comes out of principal, which federal
+  rules permit. Check your own disclosure for the exact formula and any grace-period exception.</p>
 </div>
 
 <script>
@@ -38,9 +37,12 @@
     var penDays = parseInt(el('cdPen').value, 10) || 0;
     var next = (parseFloat(el('cdNew').value) || 0) / 100;
 
-    // 지금까지 붙은 이자는 APY 복리로, 위약금은 공시 방식대로 원금에 대한 단리로 계산한다.
+    // 지금까지 붙은 이자는 APY 복리로 계산한다.
     var earned = bal * (Math.pow(1 + apy, held / 12) - 1);
-    var penalty = bal * apy * (penDays / 365);
+    // 위약금은 공시가 명목이자율 기준 단리로 정하므로, APY 를 일복리 명목이율로 역산해서 쓴다.
+    // APY 를 그대로 넣으면 복리 효과가 섞여 은행이 실제 부과하는 금액보다 크게 나온다.
+    var nominal = 365 * (Math.pow(1 + apy, 1 / 365) - 1);
+    var penalty = bal * nominal * (penDays / 365);
     var keptNow = earned - penalty;
 
     // 유지: 만기까지 받는 총이자. 이동: 위약금 반영 후 남은 원리금을 새 금리로 굴린 순이자.
