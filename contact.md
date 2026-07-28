@@ -25,15 +25,15 @@ For collaboration, sponsorship, or partnership proposals, email me with "Busines
 
 ## What I cannot do
 
-- Provide **personalized** financial, tax, legal, or professional advice (please see the [Disclaimer](/disclaimer/)).
+- Provide **personalized** financial, tax, legal, or professional advice (please see the [Disclaimer]({{ '/disclaimer/' | relative_url }})).
 - Respond to every guest-post pitch. I do not accept unsolicited guest posts at this time.
 - Reply to mass marketing email.
 
 ## About the author
 
-To learn more about the person behind this site, visit the [About](/about/) page.
+To learn more about the person behind this site, visit the [About]({{ '/about/' | relative_url }}) page.
 
-For privacy and data handling, see the [Privacy Policy](/privacy-policy/).
+For privacy and data handling, see the [Privacy Policy]({{ '/privacy-policy/' | relative_url }}).
 
 ---
 

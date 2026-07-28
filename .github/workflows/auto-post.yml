@@ -179,6 +179,11 @@ jobs:
       - name: Checkout for IndexNow
         uses: actions/checkout@v4
         with:
+          # ref 없이 체크아웃하면 워크플로 '트리거 시점' SHA 를 받는다. 새 글 커밋은 그
+          # 이후 generate-post 잡에서 만들어지므로 작업트리에 없고, 아래 IndexNow/Pinterest
+          # 스텝의 `git log --since '1 hour ago' --diff-filter=A` 가 항상 빈 결과가 됐다
+          # (실측: 로그가 매번 "IndexNow: no new URLs in last hour"). 브랜치 최신 헤드를 받게 고정.
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
       - name: Deploy to GitHub Pages
         id: deployment
@@ -274,7 +279,7 @@ jobs:
               token_resp = urllib.request.urlopen(token_req, timeout=20)
               tokens = json.loads(token_resp.read())
               access = tokens["access_token"]
-              print(f"Pinterest: access_token refreshed (expires_in {tokens.get(\"expires_in\")}s)")
+              print(f"Pinterest: access_token refreshed (expires_in {tokens.get('expires_in')}s)")
           except urllib.error.HTTPError as e:
               print(f"Pinterest token refresh FAIL HTTP {e.code}: {e.read().decode()[:300]}")
               raise SystemExit(0)

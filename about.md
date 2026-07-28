@@ -26,7 +26,7 @@ You'll find explainers on how APY and compounding actually work, how FDIC and NC
 
 ## A note on what this is not
 
-SmartMoneyDaily is general educational information, not personalized financial, tax, or investment advice. Your situation is unique — for decisions that matter, confirm the details with the bank or a qualified professional. See the [Disclaimer](/disclaimer/) for more.
+SmartMoneyDaily is general educational information, not personalized financial, tax, or investment advice. Your situation is unique — for decisions that matter, confirm the details with the bank or a qualified professional. See the [Disclaimer]({{ '/disclaimer/' | relative_url }}) for more.
 
 ## Get in touch
 
@@ -34,4 +34,4 @@ Questions, corrections, or feedback are welcome.
 
 **Email:** [200kgBrothers@gmail.com](mailto:200kgBrothers@gmail.com)
 
-For privacy, legal, and data practices, please see the [Privacy Policy](/privacy-policy/), [Terms](/terms/), and [Disclaimer](/disclaimer/).
+For privacy, legal, and data practices, please see the [Privacy Policy]({{ '/privacy-policy/' | relative_url }}), [Terms]({{ '/terms/' | relative_url }}), and [Disclaimer]({{ '/disclaimer/' | relative_url }}).

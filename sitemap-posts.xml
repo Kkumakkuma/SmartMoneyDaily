@@ -16,7 +16,11 @@ sitemap: false
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
 {% endfor %}
-{% for page in site.pages %}{% if page.url contains '.html' or page.url contains '.md' %}{% else %}{% unless page.url == '/' or page.url contains 'sitemap' or page.url contains '404' or page.url contains '/page/' %}
+{% comment %}
+  색인 대상 페이지만 담는다. 확장자가 붙은 산출물(rss.xml·feed.xml·robots.txt·main.css·
+  redirects.json 등)은 검색 결과에 뜨면 안 되는 리소스라 전부 제외한다.
+{% endcomment %}
+{% for page in site.pages %}{% assign last = page.url | split: '/' | last %}{% if last contains '.' %}{% else %}{% unless page.url == '/' or page.url contains 'sitemap' or page.url contains '404' or page.url contains '/page/' %}
   <url>
     <loc>{{ page.url | absolute_url }}</loc>
   </url>

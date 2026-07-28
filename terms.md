@@ -42,7 +42,7 @@ To the maximum extent permitted by law, Kkuma Park is not liable for any direct,
 
 ## 5. External links and affiliate disclosure
 
-The Site may contain links to third-party websites and affiliate links. Affiliate links mean we may earn a commission if you click and purchase, at no extra cost to you. We only link to products we believe may be genuinely useful. See also our [Disclaimer](/disclaimer/).
+The Site may contain links to third-party websites and affiliate links. Affiliate links mean we may earn a commission if you click and purchase, at no extra cost to you. We only link to products we believe may be genuinely useful. See also our [Disclaimer]({{ '/disclaimer/' | relative_url }}).
 
 ## 6. Comments and user submissions
 
