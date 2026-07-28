@@ -1,0 +1,69 @@
+<div class="tool-card">
+  <h3 class="tool-title">Early withdrawal break-even calculator</h3>
+  <p class="tool-sub">Should you break this CD and move the money? Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Amount in the CD ($)<input type="number" id="cdBal" value="10000" min="0" step="100"></label>
+    <label>Current CD APY (%)<input type="number" id="cdRate" value="3.50" min="0" max="20" step="0.01"></label>
+    <label>Months already held<input type="number" id="cdHeld" value="6" min="0" max="120" step="1"></label>
+    <label>Months left to maturity<input type="number" id="cdLeft" value="18" min="0" max="120" step="1"></label>
+    <label>Penalty (months of interest)<input type="number" id="cdPen" value="6" min="0" max="24" step="1"></label>
+    <label>APY you could move to (%)<input type="number" id="cdNew" value="4.50" min="0" max="20" step="0.01"></label>
+  </div>
+  <button type="button" id="cdGo" class="tool-btn">Calculate</button>
+
+  <div id="cdOut" class="tool-out"></div>
+  <p class="tool-note">Penalty is calculated the way most disclosures write it: a set number of months of
+  interest at the CD's own rate, charged whether or not you have earned that much. If earned interest is
+  smaller than the penalty, the difference comes out of principal — which federal rules permit. Check your
+  own disclosure for the exact penalty formula and any grace-period exception.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function money(n) {
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function run() {
+    var bal = parseFloat(el('cdBal').value) || 0;
+    var rate = (parseFloat(el('cdRate').value) || 0) / 100;
+    var held = parseInt(el('cdHeld').value, 10) || 0;
+    var left = parseInt(el('cdLeft').value, 10) || 0;
+    var penM = parseInt(el('cdPen').value, 10) || 0;
+    var next = (parseFloat(el('cdNew').value) || 0) / 100;
+
+    var earned = bal * (Math.pow(1 + rate, held / 12) - 1);
+    var penalty = bal * rate * (penM / 12);
+    var netNow = earned - penalty;
+
+    var stay = bal * (Math.pow(1 + rate, (held + left) / 12) - 1);
+    var moveBase = bal + netNow;
+    var move = netNow + moveBase * (Math.pow(1 + next, left / 12) - 1);
+    var diff = move - stay;
+
+    var verdict = diff > 0
+      ? '<strong class="tool-yes">Moving wins by ' + money(diff) + '</strong> over the remaining ' + left + ' months.'
+      : '<strong class="tool-no">Staying wins by ' + money(-diff) + '</strong> — the penalty is larger than the rate gain.';
+
+    var principalHit = netNow < 0
+      ? '<li>Breaking now costs ' + money(-netNow) + ' of your principal, because the penalty exceeds the interest earned so far.</li>'
+      : '<li>Interest kept after the penalty: ' + money(netNow) + '</li>';
+
+    el('cdOut').innerHTML =
+      '<p>' + verdict + '</p><ul>'
+      + '<li>Interest earned so far: ' + money(earned) + '</li>'
+      + '<li>Penalty charged: ' + money(penalty) + '</li>'
+      + principalHit
+      + '<li>Total if you stay to maturity: ' + money(stay) + '</li>'
+      + '<li>Total if you break and move: ' + money(move) + '</li></ul>';
+  }
+  el('cdGo').addEventListener('click', run);
+  ['cdBal', 'cdRate', 'cdHeld', 'cdLeft', 'cdPen', 'cdNew'].forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

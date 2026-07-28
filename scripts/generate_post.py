@@ -142,6 +142,32 @@ def get_existing_slugs():
     return slugs
 
 
+def get_living_titles():
+    """현재 살아 있는 글의 제목 전부.
+
+    v14(2026-07-28): 중복 판정 기준을 used_topics(누적 이력, 통합 후 실제와 어긋남)에서
+    '지금 사이트에 실제로 떠 있는 글'로 옮긴다. 123편을 29편 결정판으로 통합한 뒤
+    used_topics 에는 이미 사라진 제목 281개가 남아 있어, 그것만 보고 중복을 재던 방식은
+    새 글이 결정판과 같은 검색의도를 다시 파고드는 걸 막지 못했다.
+    """
+    posts_dir = os.path.join(get_repo_root(), "_posts")
+    titles = []
+    if not os.path.exists(posts_dir):
+        return titles
+    for filename in sorted(os.listdir(posts_dir)):
+        if not filename.endswith(".md"):
+            continue
+        try:
+            with open(os.path.join(posts_dir, filename), "r", encoding="utf-8") as f:
+                head = f.read(1200)
+        except OSError:
+            continue
+        m = re.search(r'^title:\s*"(.+?)"\s*$', head, re.M)
+        if m:
+            titles.append(m.group(1))
+    return titles
+
+
 def get_recent_posts_for_linking(limit=10):
     """Return list of dicts {title, slug, url} for internal linking context.
     url은 실제 permalink(/{BLOG}/:year/:month/:day/:title/) — slug만으로 링크하면 404 (permalink가 날짜 포함)."""
@@ -334,14 +360,21 @@ _TITLE_CLICHES = ("unlock", "discover", "boost", "maximize", "secrets", "ultimat
                   "essential guide", "game-changer", "revolutioniz")
 
 
-def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
+def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_attempts=7):
     """v8: GPT가 단일 니치(HYSA/CD/MMA) 안에서 설명형/비교형 고유 토픽 생성.
     카테고리 회전 + 패턴 회전 + 키워드 차단 + 의미 유사도 차단. 날조형 패턴 제거.
+
+    v14(2026-07-28): living_titles(현재 사이트에 떠 있는 글 전체)를 차단 기준으로 추가.
+    통합으로 남은 결정판들이 각 주제의 완결편이므로, 같은 검색의도를 다시 쓰면 안 된다.
     """
     client = OpenAI()
     year = datetime.datetime.now().year
+    living_titles = living_titles or []
     used_set = set(slugify(t) for t in used_topics[-200:]) | existing_slugs
-    used_list = "\n".join(f"- {t}" for t in used_topics[-30:]) if used_topics else "(none yet)"
+    # 살아 있는 글 전체를 먼저 보여주고, 과거 이력은 뒤에 덧붙인다(길면 잘림 → 살아있는 쪽이 우선).
+    _living = "\n".join(f"- {t}" for t in living_titles)
+    _recent = "\n".join(f"- {t}" for t in used_topics[-20:]) if used_topics else ""
+    used_list = (_living + ("\n" + _recent if _recent else "")) or "(none yet)"
 
     banned_keywords = _recent_keywords(used_topics, window=7, top_n=4)
     banned_str = ", ".join(banned_keywords) if banned_keywords else "(none yet)"
@@ -399,7 +432,10 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
                     "role": "user",
                     "content": (
                         f"Category: {category.replace('-', ' ')}\n\n"
-                        f"Already used titles (DO NOT repeat or rephrase these):\n{used_list}\n\n"
+                        "The titles below are already published on this site. Each one is the site's "
+                        "definitive answer to its search intent, so a new post must NOT re-answer any of "
+                        "them from a slightly different angle. Pick a question none of them resolves.\n"
+                        f"{used_list}\n\n"
                         "Generate one new unique title:"
                     ),
                 },
@@ -428,11 +464,13 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
         new_words = _title_words(title)
         worst_jaccard = 0.0
         # v12: 최근 30개 → 전체 이력 검사 (21일 지나면 같은 글이 다시 나오던 준중복 구멍 봉합)
-        for past in used_topics:
+        # v14: 살아 있는 글도 함께 검사하고 임계를 0.5 → 0.42 로 강화.
+        #      통합 전 실측에서 제목 Jaccard 0.5 미만인데도 같은 검색의도를 답하는 쌍이 다수였다.
+        for past in list(used_topics) + list(living_titles):
             j = _jaccard(new_words, _title_words(past))
             if j > worst_jaccard:
                 worst_jaccard = j
-        if worst_jaccard >= 0.5:
+        if worst_jaccard >= 0.42:
             last_reason = f"too similar (jaccard {worst_jaccard:.2f})"
             continue
 
@@ -441,6 +479,48 @@ def generate_unique_topic(used_topics, existing_slugs, max_attempts=7):
     # v12: fail-closed — 시도 소진 시 유사/중복 제목을 그대로 발행하던 fail-open 제거.
     # __main__ 의 per-post try/except 가 잡아 이 회차 발행만 건너뛴다.
     raise RuntimeError(f"unique topic generation failed after {max_attempts} attempts (last: {last_reason})")
+
+
+# v14 (2026-07-28): 본문에 실제로 쓰는 계산기를 붙인다.
+# 123편 전수 진단에서 "규칙 설명만 있고 독자가 자기 숫자로 판단할 방법이 없다"가 색인 거부의
+# 핵심이었다. 계산기는 _includes/tools/ 에 있는 정적 JS 라 외부 호출·비용이 없다.
+_TOOL_RULES = (
+    ("cd-penalty", (
+        "penalt", "early withdrawal", "cash out", "break a cd", "breaking a cd", "withdraw early",
+    ), "Enter your CD's balance, rate, months held, and the penalty from your disclosure to see "
+       "whether breaking it actually pays."),
+    ("ladder-builder", (
+        "ladder", "laddering", "rungs",
+    ), "Put your total amount and the number of rungs in below to see each rung's size, maturity, "
+       "and interest."),
+    ("apy-calculator", (
+        "apy", "compound", "interest earn", "how much", "yield", "savings account", "money market",
+        "returns", "earnings", "grow",
+    ), "Enter your own balance and APY below to see what the difference is worth over your time frame."),
+)
+
+
+def _pick_tool(title, category):
+    hay = f"{title} {category}".lower()
+    for tool, keys, lead in _TOOL_RULES:
+        if any(k in hay for k in keys):
+            return tool, lead
+    return None, None
+
+
+def inject_tool(content, title, category):
+    """주제에 맞는 계산기를 마지막 H2 직전에 삽입. 맞는 도구가 없으면 원본 그대로."""
+    tool, lead = _pick_tool(title, category)
+    if not tool:
+        return content
+    if "{% include tools/" in content:  # 이미 있으면 중복 삽입 금지
+        return content
+    block = f"\n{lead}\n\n{{% include tools/{tool}.html %}}\n"
+    heads = list(re.finditer(r"\n##\s", content))
+    if len(heads) >= 2:
+        pos = heads[-1].start()
+        return content[:pos] + block + content[pos:]
+    return content.rstrip() + "\n" + block
 
 
 def generate_post_content(title, category, recent_titles, min_words=1500):
@@ -524,18 +604,25 @@ def _build_structure_plan():
             "- Include a practical checklist section readers can follow in order — write your own natural "
             "heading for it (do NOT title it 'How to Compare X Yourself')."
         )
-    if random.random() < 0.5:
+    # v14: 실수/FAQ/워크드예시가 한 글에 동시에 붙어 'TL;DR+표+실수+FAQ' 4종 세트가
+    # 91/123편에서 반복됐다(양산 지문). 셋 중 최대 1개만 붙이고 나머지는 금지한다.
+    _extra = random.choice(["mistakes", "worked_example", "faq", "none"])
+    if _extra == "mistakes":
         parts.append(
             f"- Include a '## {random.choice(_MISTAKE_HEADINGS)}' section: 3 accurate misconceptions, "
             "each with a one-line 'Why it matters:' explanation."
         )
-    if random.random() < 0.45:
+    elif _extra == "worked_example":
         parts.append(
             "- Include ONE fully worked, clearly hypothetical numeric example (labeled 'for example, if you had...'), "
             "walking through the arithmetic step by step."
         )
-    if random.random() < 0.55:
+    elif _extra == "faq":
         parts.append(f"- Near the end, include '## {random.choice(_FAQ_HEADINGS)}' with 3-5 ### Q&A pairs, accurate and specific.")
+    if _extra != "faq":
+        parts.append("- Do NOT add a FAQ or 'Questions' section to this article.")
+    if _extra != "mistakes":
+        parts.append("- Do NOT add a 'Common Mistakes' / 'What People Get Wrong' section to this article.")
     parts.append(
         "- Close with a short conclusion and one concrete next step the reader can take today. "
         "Vary the closing style — do NOT open the final paragraph with 'In conclusion'."
@@ -736,10 +823,11 @@ def create_post():
     """Generate and save a new unique blog post."""
     used_topics = load_used_topics()
     existing_slugs = get_existing_slugs()
+    living_titles = get_living_titles()
     recent_posts = get_recent_posts_for_linking(10)
     recent_titles = [p["title"] for p in recent_posts]
 
-    title, category, slug = generate_unique_topic(used_topics, existing_slugs)
+    title, category, slug = generate_unique_topic(used_topics, existing_slugs, living_titles)
     print(f"Generating post: {title}")
     print(f"Category: {category}")
 
@@ -762,6 +850,7 @@ def create_post():
     # v12: 'Last reviewed ... by Kkuma Park' 자동 날인 제거 — 실제 검수 없이 봇이 찍는 가짜
     # 검수 스탬프는 정직성 결격(발행일은 레이아웃이 이미 표시). 실검수한 글만 수동 표기.
     content = _link_primary_sources(content)
+    content = inject_tool(content, title, category)
     description = generate_meta_description(title)
 
     # v7 (2026-05-08): 자동 핀 이미지 생성 + 본문 맨 위 markdown 이미지 삽입

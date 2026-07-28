@@ -1,0 +1,57 @@
+<div class="tool-card">
+  <h3 class="tool-title">CD ladder builder</h3>
+  <p class="tool-sub">Split an amount into rungs and see when each one frees up. Browser-only.</p>
+
+  <div class="tool-grid">
+    <label>Total to invest ($)<input type="number" id="ldTotal" value="25000" min="0" step="500"></label>
+    <label>Number of rungs<input type="number" id="ldRungs" value="5" min="2" max="10" step="1"></label>
+    <label>Months between rungs<input type="number" id="ldGap" value="12" min="1" max="24" step="1"></label>
+    <label>APY on the shortest rung (%)<input type="number" id="ldShort" value="4.00" min="0" max="20" step="0.01"></label>
+    <label>APY on the longest rung (%)<input type="number" id="ldLong" value="4.40" min="0" max="20" step="0.01"></label>
+  </div>
+  <button type="button" id="ldGo" class="tool-btn">Build ladder</button>
+
+  <table id="ldOut" class="tool-out">
+    <thead><tr><th>Rung</th><th>Term</th><th>Amount</th><th>APY used</th><th>Interest at maturity</th></tr></thead>
+    <tbody id="ldBody"></tbody>
+  </table>
+  <div id="ldSum"></div>
+  <p class="tool-note">Rungs are split evenly and the APY is interpolated between the two rates you enter,
+  so the table reflects your own quotes rather than any assumed market rate. Once the ladder is running,
+  each maturing rung is normally renewed into the longest term, which is what keeps one rung maturing
+  every cycle. Interest shown is simple maturity interest, before tax.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function money(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function run() {
+    var total = parseFloat(el('ldTotal').value) || 0;
+    var rungs = parseInt(el('ldRungs').value, 10) || 2;
+    var gap = parseInt(el('ldGap').value, 10) || 12;
+    var lo = (parseFloat(el('ldShort').value) || 0) / 100;
+    var hi = (parseFloat(el('ldLong').value) || 0) / 100;
+    if (rungs > 10) { rungs = 10; }
+
+    var per = total / rungs, rows = '', interest = 0;
+    for (var i = 0; i < rungs; i++) {
+      var months = gap * (i + 1);
+      var apy = rungs === 1 ? lo : lo + (hi - lo) * (i / (rungs - 1));
+      var gain = per * (Math.pow(1 + apy, months / 12) - 1);
+      interest += gain;
+      rows += '<tr><td>' + (i + 1) + '</td><td>' + months + ' months</td><td>' + money(per)
+            + '</td><td>' + (apy * 100).toFixed(2) + '%</td><td>' + money(gain) + '</td></tr>';
+    }
+    el('ldBody').innerHTML = rows;
+    el('ldSum').innerHTML = '<p>Total interest across the full ladder: <strong>' + money(interest)
+      + '</strong>. First rung frees up in ' + gap + ' months, then one every ' + gap + ' months after that.</p>';
+  }
+  el('ldGo').addEventListener('click', run);
+  ['ldTotal', 'ldRungs', 'ldGap', 'ldShort', 'ldLong'].forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>
