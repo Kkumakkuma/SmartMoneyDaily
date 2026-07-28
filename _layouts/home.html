@@ -11,6 +11,17 @@ layout: default
 
 <p style="font-size: 0.98em;"><a href="{{ '/topics/' | relative_url }}">Browse by topic &rarr;</a></p>
 
+<div class="tool-card" style="border-left-color:#2563eb;">
+  <h2 class="tool-title" style="margin-top:0;">Run the numbers yourself</h2>
+  <p class="tool-sub">Ten calculators, all in your browser. Nothing is sent anywhere or stored.</p>
+  <ul style="margin:0 0 12px; padding-left:20px; font-size:0.95em;">
+    {% for t in site.data.tools limit: 4 %}
+    <li><a href="{{ t.url | relative_url }}">{{ t.question }}</a></li>
+    {% endfor %}
+  </ul>
+  <p style="margin:0;"><a href="{{ '/tools/' | relative_url }}">See all ten calculators &rarr;</a></p>
+</div>
+
 <h2>Latest Articles</h2>
 
 <ul class="post-list">

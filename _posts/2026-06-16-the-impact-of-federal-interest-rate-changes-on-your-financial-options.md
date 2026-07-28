@@ -112,7 +112,7 @@ The honest version of this decision is not "will the Fed cut." It is "what would
 
 If your logged beta says your bank passes cuts through fast, the answer is usually no, and locking wins. If your bank has been stubborn about cutting, staying liquid may well win and you keep the flexibility for free.
 
-Our [cd ladder builder](/SmartMoneyDaily/tools/cd-ladder-calculator/) runs the same calculation on figures you enter.
+If neither answer feels clean, a ladder splits the difference — part locked, part free. The [cd ladder builder](/SmartMoneyDaily/tools/cd-ladder-calculator/) will size the rungs for a specific amount.
 
 Rung spacing and its trade-offs are covered in [how to build a CD ladder that beats one long CD](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 

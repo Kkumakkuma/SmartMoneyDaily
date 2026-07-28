@@ -8,15 +8,16 @@
     <label>CD APY, fixed (%)<input type="number" id="fxCd" value="3.85" min="0" max="20" step="0.01"></label>
     <label>Current savings or MMA APY (%)<input type="number" id="fxFlt" value="4.00" min="0" max="20" step="0.01"></label>
     <label>Rate move per quarter (percentage points)<input type="number" id="fxStep" value="0.25" min="0" max="5" step="0.05"></label>
-    <label>Months already elapsed at the floating rate<input type="number" id="fxHeld" value="0" min="0" max="120" step="1"></label>
+    <label>Months already spent floating (for the catch-up line only)<input type="number" id="fxHeld" value="0" min="0" max="120" step="1"></label>
   </div>
   <button type="button" id="fxGo" class="tool-btn">Calculate</button>
 
   <div id="fxOut" class="tool-out"></div>
   <p class="tool-note">The three paths are not forecasts. They draw out the assumption you typed in, and nothing
   guarantees that rates move by the same amount every quarter — in practice no one knows the path in advance.
-  Each quarter is compounded at that quarter's APY, while most banks compound daily, so the totals here can sit
-  a few dollars away from a statement. The asymmetry that matters is this: the CD rate is fixed by contract for
+  Each quarter is compounded at that quarter's APY, and because APY already contains the compounding
+  frequency, a bank that credits daily rather than quarterly does not change these totals. The last field does
+  not shift the three paths; it only feeds the separate catch-up line below them. The asymmetry that matters is this: the CD rate is fixed by contract for
   the full term, while the floating rate can be changed at any time, including between the quarters modeled
   here. The cost of breaking a CD early is not calculated on this page — use the CD early withdrawal penalty
   calculator for that. Taxes are not included.</p>

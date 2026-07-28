@@ -274,7 +274,10 @@
         if (g.rows[0].cap !== r.cap) { g.mixedCap = true; }
         if (g.rows[0].apy !== r.apy) { g.mixedApy = true; }
       }
-      if (r.cap > g.cap) { g.cap = r.cap; }
+      // 같은 은행·같은 소유범주 안에서 행마다 공동소유자/수익자 수가 다르면 실제 한도는
+      // 지분·수익자 구성에 따라 정해지며 이 입력만으로는 확정할 수 없다. 과대평가는
+      // 보장 밖 금액을 보장된 것으로 착각하게 만들므로, 가장 낮은 한도를 적용한다.
+      if (g.cap === 0 || r.cap < g.cap) { g.cap = r.cap; }
       g.rows.push(r);
       g.total += r.bal;
     }
@@ -333,7 +336,11 @@
         + (grp.mixedApy ? ' (at the highest rate in this group)' : '')
         + (headroom >= 0 ? ' — room for ' + money(headroom) + ' more today' : ' — ' + money(-headroom) + ' below what you hold now')
         + '</li>'
-        + (grp.mixedCap ? '<li>Rows in this group set different co-owner or beneficiary counts, so the highest limit was applied.</li>' : '')
+        + (grp.mixedCap ? '<li><strong>Check this group by hand.</strong> Its rows set different co-owner or '
+            + 'beneficiary counts, and the real limit depends on whose shares and which beneficiaries they are — '
+            + 'something a count alone cannot settle. The lowest limit among these rows was used here so the '
+            + 'figure is not overstated, which means your actual coverage may be higher. Confirm it with the '
+            + 'FDIC&rsquo;s EDIE estimator or your bank.</li>' : '')
         + '</ul>';
     }
 
