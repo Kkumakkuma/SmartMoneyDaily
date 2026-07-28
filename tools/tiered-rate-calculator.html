@@ -1,0 +1,113 @@
+---
+layout: tool
+title: "Tiered Rate Calculator: What Each Balance Tier Really Pays"
+permalink: /tools/tiered-rate-calculator/
+tool: tiered-rate-calculator
+description: "Enter a bank's balance tiers and APYs to see what the table pays under both tiering methods — the top rate on the whole balance, or each portion at its own rate."
+intro: "Enter your balance plus each tier's minimum and APY, and you get the yearly interest and the effective APY under both of the methods banks use to apply a tier table."
+---
+
+<p>A tier table looks like it settles what an account pays. It usually doesn't. The table lists balance
+thresholds with an APY beside each one, but never says whether reaching a threshold lifts your
+<em>entire</em> balance to that rate or only the dollars above it. Those two readings can be hundreds of
+dollars a year apart. The calculator runs both, so you can match the result to the
+sentence in your disclosure that decides which is yours.</p>
+
+<h2>Pulling the numbers off the disclosure, not the landing page</h2>
+
+<p><strong>Balance.</strong> Use what the account realistically holds through a full statement period,
+not the peak on payday. Tier assignment normally works off a balance measured across the
+period, so a level you only briefly reach overstates what you earn.</p>
+
+<p><strong>How the bank applies it.</strong> This is the one input you cannot infer from the rate table.
+In the disclosure, "the annual percentage yield applies to the entire balance" means the whole-balance
+option; "each portion of the balance earns the rate for that tier" means the split option. Both appear
+in the output whichever you choose.</p>
+
+<p><strong>Tier minimums and APYs.</strong> These belong to the truth-in-savings disclosure or rate
+sheet. Regulation DD (12 CFR Part 1030) requires a tiered-rate account's disclosure to give the annual
+percentage yield for each tier with the balance requirements attached to it, so the pairs exist in a
+document the bank has to hand you. A promotional page is not that document and usually shows only the
+top tier.</p>
+
+<p>Enter each tier's <em>minimum</em>, not its ceiling — the next tier's minimum becomes the current
+tier's upper bound, and the top tier runs uncapped. A row counts only when both fields are filled, so a
+threshold with a blank rate is dropped without warning. Leave rows four and five empty on a three-tier
+table. Order doesn't matter; tiers are sorted by minimum first, and two complete tiers are needed for
+any result.</p>
+
+<p><strong>Advertised headline APY.</strong> Optional — the figure from the banner or listing that got
+your attention. It adds a line showing how far your balance falls short of that rate, measured against
+whichever method you selected.</p>
+
+<h2>Tiering Method A versus Tiering Method B</h2>
+
+<p>The two options are not an invention of this site. Appendix A to Regulation DD names both: under Tiering Method A the institution pays the stated rate on the entire balance in the account;
+under Tiering Method B it pays that rate only on the portion of the balance falling within the tier.</p>
+
+<p>For the whole-balance method the calculator finds the highest tier minimum your balance reaches and
+multiplies the full balance by that tier's APY. Every dollar earns one rate. For the split method each
+tier takes a slice — the part of your balance between that tier's minimum and the next one's —
+multiplied by its own APY, and the slices are added. The effective APY underneath is total interest
+divided by balance, which is why it lands between the lowest and highest rate and matches neither.</p>
+
+<p>Interest is a plain annual figure, balance times APY, not a compounding projection. APY already
+carries the institution's own compounding, so multiplying by it once gives twelve months without
+counting compounding twice; the nominal interest rate through the same arithmetic would understate
+every tier. Our piece on <a href="/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/">how
+money market accounts are structured</a> covers where tiering tends to appear.</p>
+
+<h2>Walking a three-tier table through both methods</h2>
+
+<p>Suppose an account posts three tiers: 0.50% APY starting at $0, 3.00% APY starting at $10,000, and
+3.25% APY starting at $50,000. Suppose your balance is $26,000 and the offer was advertised at a 3.25%
+headline APY.</p>
+
+<p>The whole-balance method reaches the $10,000 tier but not the $50,000 tier, so 3.00% applies to all
+$26,000: $780.00 a year, an effective APY of 3.00%. The split method pays 0.50% on the first $10,000
+($50.00) and 3.00% on the $16,000 between $10,000 and $50,000 ($480.00), with nothing in the top tier —
+$530.00 a year, an effective APY of 2.04%.</p>
+
+<p>Same money, same table, $250.00 apart. Against the advertised 3.25%, the whole-balance reading falls
+$65.00 short over a year and the split reading falls $315.00 short, even though the bank quoted a rate
+it genuinely pays — just at a balance level this deposit never reaches.</p>
+
+<h2>What the arithmetic cannot see</h2>
+
+<p>The calculator will not tell you which method your bank uses. That comes from the disclosure, and
+guessing is the expensive part.</p>
+
+<p>It also assumes one steady balance. Many institutions drop the whole period to a lower tier if the
+balance dips below a threshold even once, and the balance computation method the disclosure states —
+daily balance, average daily balance — changes what "your balance" means.</p>
+
+<p>Qualification conditions sit outside the model. Reward checking accounts often condition the high
+tier on direct deposits, a count of debit card transactions, or electronic statements. Miss them and
+the tier table is irrelevant for that cycle, whatever the balance.</p>
+
+<p>One structure deserves care: accounts paying a high rate <em>up to</em> a cap and a low rate above
+it, where tiers descend rather than climb. The calculator accepts that table because it only sorts by
+minimum, but the whole-balance reading would apply the low rate to everything — almost never how those
+products are written. Capped-bonus accounts are split-method products.</p>
+
+<p>Finally, the output is one year of gross interest on today's terms: no deposits or withdrawals, no
+multi-year compounding, no tax, no monthly maintenance fee. Variable tier rates can also be repriced,
+and <a href="/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/">what
+happens to these accounts when rates move</a> is worth reading before treating any tier as settled.</p>
+
+<h2>Questions about tiered accounts</h2>
+
+<h3>If the disclosure is ambiguous, which method should I assume?</h3>
+<p>Assume the split method for planning, then ask the bank in writing. Where tier rates climb with
+balance it is the more conservative reading, so planning on it avoids a shortfall. The bank can point
+to the governing term in its disclosure.</p>
+
+<h3>Why does my effective APY match no rate on the table?</h3>
+<p>Under the split method it never will, except at an exact tier boundary. The effective figure is a
+balance-weighted blend of every tier your money passes through, so it sits between the lowest and
+highest rate that applies. That blend, not the headline tier rate, is what the account pays.</p>
+
+<h3>Can adding money to reach the next tier ever reduce my interest?</h3>
+<p>Not with a table whose rates rise as balances rise. It can happen with a capped-bonus structure under
+the whole-balance method, where crossing the cap moves every dollar to the lower rate. Enter your
+balance just below and just above the threshold and compare.</p>

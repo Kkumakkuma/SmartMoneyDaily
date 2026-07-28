@@ -7,6 +7,19 @@ description: "All SmartMoneyDaily guides grouped by topic: high-yield savings, C
 
 # Browse by Topic
 
+## Calculators
+
+Ten browser-based tools for the arithmetic behind these decisions — comparing two offers, pricing a CD
+penalty, checking insurance coverage, and seeing what a yield is worth after fees, tax, and inflation.
+
+<ul>
+  {% for t in site.data.tools %}
+  <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a> — {{ t.blurb }}</li>
+  {% endfor %}
+</ul>
+
+<p><a href="{{ '/tools/' | relative_url }}">What all of them assume, and where the inputs come from</a></p>
+
 {% assign cats = "high-yield-savings|cd-rates|money-market|fdic-insurance|savings-strategy|bank-comparison|interest-rates|emergency-fund" | split: "|" %}
 {% for cat in cats %}
 {% assign posts = site.categories[cat] %}

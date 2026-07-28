@@ -1,0 +1,84 @@
+# 계산기 목록 — 도구 허브(/tools/)와 각 도구 페이지, 관련 도구 목록이 전부 이 파일을 본다.
+# id 는 _includes/tools/<id>.html 파일명과 일치해야 한다.
+# post 는 그 계산기를 본문에 임베드한 글(도구당 1편). 같은 위젯을 여러 글에 반복하면
+# 구글이 보일러플레이트로 분류하므로 임베드는 한 곳으로 제한한다.
+
+- id: compound-interest
+  file: apy-calculator
+  title: Compound interest calculator
+  url: /tools/compound-interest-calculator/
+  blurb: What a balance grows to at a given APY, year by year.
+  question: How much will my savings actually earn?
+  post: /2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/
+
+- id: cd-penalty
+  file: cd-penalty
+  title: CD early withdrawal calculator
+  url: /tools/cd-early-withdrawal-calculator/
+  blurb: Whether breaking a CD to chase a higher rate leaves you ahead.
+  question: Should I break this CD?
+  post: /2026/05/25/what-happens-when-you-cash-out-a-cd-early/
+
+- id: cd-ladder
+  file: ladder-builder
+  title: CD ladder builder
+  url: /tools/cd-ladder-calculator/
+  blurb: Splits an amount into rungs and shows when each one frees up.
+  question: How do I split money across CD terms?
+  post: /2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/
+
+- id: two-offer
+  file: two-offer-comparison
+  title: Two-offer comparison calculator
+  url: /tools/two-offer-comparison-calculator/
+  blurb: Puts two accounts on one denominator after fees and tax.
+  question: Which of these two offers keeps more of my money?
+  post: /2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/
+
+- id: statement-apy
+  file: statement-apy-earned
+  title: Statement APY earned calculator
+  url: /tools/statement-apy-earned-calculator/
+  blurb: Works out the rate you actually received from one statement.
+  question: Am I really getting the rate they advertised?
+  post: /2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/
+
+- id: tiered-rate
+  file: tiered-rate-calculator
+  title: Tiered rate calculator
+  url: /tools/tiered-rate-calculator/
+  blurb: Shows what a tier table pays under each of the two methods banks use.
+  question: Which tier am I in, and what does it pay?
+  post: /2026/06/02/what-is-a-money-market-account-and-how-does-it-work/
+
+- id: after-tax-real
+  file: after-tax-real-return
+  title: After-tax and inflation-adjusted return calculator
+  url: /tools/after-tax-real-return-calculator/
+  blurb: What is left of a yield once tax and inflation are taken out.
+  question: Is my money actually growing?
+  post: /2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/
+
+- id: fee-break-even
+  file: fee-break-even
+  title: Account fee break-even calculator
+  url: /tools/bank-fee-break-even-calculator/
+  blurb: The balance below which a monthly fee turns the account into a loss.
+  question: Is this account's fee eating my interest?
+  post: /2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/
+
+- id: fix-or-float
+  file: fixed-vs-floating
+  title: Fix it or float it calculator
+  url: /tools/cd-vs-savings-calculator/
+  blurb: A locked CD against a variable account across three rate paths.
+  question: Lock the rate or stay liquid?
+  post: /2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/
+
+- id: fdic-coverage
+  file: fdic-coverage
+  title: FDIC coverage calculator
+  url: /tools/fdic-coverage-calculator/
+  blurb: Insured and uninsured amounts across banks, owners, and beneficiaries.
+  question: Is all of my money insured?
+  post: /2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/

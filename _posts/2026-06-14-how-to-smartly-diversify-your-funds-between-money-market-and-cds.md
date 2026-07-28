@@ -65,9 +65,7 @@ Once the goal bucket has real money in it, a single CD is rarely the best shape.
 
 The mechanics are simple. Divide the goal bucket into equal rungs, buy one at each term from the shortest to the longest you will accept, and when a rung matures, either spend it or roll it into a new long rung. You always have a maturity date coming up inside a year.
 
-Enter the goal-bucket total, the number of rungs you want, and your longest acceptable term below, and the builder splits the amount into rungs with their maturity dates.
-
-{% include tools/ladder-builder.html %}
+If you want to run this on your own balance, the [cd ladder builder](/SmartMoneyDaily/tools/cd-ladder-calculator/) does the arithmetic.
 
 A ladder is not automatically better than one term. When the deposit curve is flat or inverted — shorter terms quoted at or above longer terms — the long rungs pay you nothing extra for the extra lock-up, and a series of short CDs or even the savings account can win. Compare the actual quotes for each term before you commit to the shape; the trade-offs are worked through in [CD laddering](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 

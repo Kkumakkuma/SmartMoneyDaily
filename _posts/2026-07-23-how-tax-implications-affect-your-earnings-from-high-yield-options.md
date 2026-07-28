@@ -94,9 +94,7 @@ The conversion is one line:
 
 Combined marginal rate means federal plus state on your last dollar. It is an approximation — state tax interacts with your federal deduction — but it is close enough to rank accounts, which is all you need it for.
 
-To get the gross side of the equation, enter your balance, the quoted APY, and the compounding frequency below; then multiply the resulting annual interest by one minus your combined rate to see what survives.
-
-{% include tools/apy-calculator.html %}
+There is a [after-tax and inflation-adjusted return calculator](/SmartMoneyDaily/tools/after-tax-real-return-calculator/) on this site if you want to put your own numbers through it.
 
 Here is the same conversion laid out. Every figure assumes a 4.00% APY on a $25,000 balance held for a full year — substitute your own quote and rate.
 

@@ -92,7 +92,7 @@ Two clean fixes. Either fund the CD at a principal that still lands under the ca
 
 To check your own numbers, enter your opening balance, the APY on your disclosure, the compounding frequency, and the term below, then compare the ending balance to $250,000.
 
-{% include tools/apy-calculator.html %}
+{% include tools/fdic-coverage.html %}
 
 The same arithmetic applies to CD ladders, where several rungs mature into one account in the same window. If you run a ladder, check the combined landing balance on each maturity date rather than each rung in isolation; the [CD laddering guide](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) covers how to schedule those dates.
 

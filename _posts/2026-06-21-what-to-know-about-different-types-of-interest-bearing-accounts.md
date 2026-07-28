@@ -49,9 +49,7 @@ The advertised APY is almost always the top tier. Your APY is whatever your actu
 
 Rate movement also runs on different clocks. Policy decisions by the [Federal Reserve](https://www.federalreserve.gov/monetarypolicy.htm) flow through to deposit pricing, but each bank decides its own timing and its own amount, which is why two institutions can quote very different rates in the same week. The FDIC publishes monthly [national rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) for savings, money market, and CD products. Look that up before you decide whether an offer is good — it is the only free, official baseline you have.
 
-If you want to see what a given rate and compounding schedule actually produce, enter your balance, the quoted APY, and the compounding frequency below.
-
-{% include tools/apy-calculator.html %}
+To work this out with your actual balance, use the [tiered rate calculator](/SmartMoneyDaily/tools/tiered-rate-calculator/).
 
 One correction worth making, because the internet oversells it: compounding frequency matters far less than the rate. Take a $10,000 balance at a 4.00% nominal rate. Compounded daily it produces about $408 over a year; compounded monthly, about $407. That is roughly a 70-cent difference. Move from a 4.00% nominal rate to a 3.75% one and you give up about $26 on the same balance. Chase the rate. Treat the compounding schedule as a tiebreaker. The [full APY and compounding walkthrough](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers the formula and how banks post interest.
 

@@ -60,7 +60,7 @@ Two adjustments to the raw number. Interest is taxable in the year it is credite
 
 Run the calculator below twice — once with your current APY, once with the offered APY — and subtract. That difference is what you are deciding about.
 
-{% include tools/apy-calculator.html %}
+{% include tools/two-offer-comparison.html %}
 
 ## Step 3: Read the Offer Before You Believe It
 

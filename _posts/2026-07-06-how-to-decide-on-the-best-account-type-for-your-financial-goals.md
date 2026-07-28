@@ -70,9 +70,7 @@ Two structures dominate:
 
 One caution specific to this band: longer terms do not automatically carry higher rates. Depending on where the rate cycle sits, banks sometimes pay more on a 12-month CD than a 60-month one. Check the actual term-by-term rate sheet at each bank rather than assuming a rising line. The [Federal Reserve's monetary policy page](https://www.federalreserve.gov/monetarypolicy.htm) explains what drives the underlying direction; the bank's own disclosure tells you what it is paying today.
 
-To see what a given balance and rate produce by your target date, enter your starting amount, the APY you have been quoted, the compounding frequency, and the number of months until the goal:
-
-{% include tools/apy-calculator.html %}
+There is a [fix it or float it calculator](/SmartMoneyDaily/tools/cd-vs-savings-calculator/) on this site if you want to put your own numbers through it.
 
 ## Beyond Five Years: When Deposits Stop Being the Right Tool
 

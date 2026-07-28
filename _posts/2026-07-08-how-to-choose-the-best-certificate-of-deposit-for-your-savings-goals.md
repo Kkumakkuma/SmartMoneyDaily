@@ -72,9 +72,7 @@ Work an example with assumed numbers. Suppose you deposit $10,000 into a 3-year 
 
 Two offers with the same yield and different penalty schedules are not the same product. A 12-month CD carrying a 90-day penalty is materially more flexible than one carrying a 270-day penalty, and the flexibility is worth paying a little yield for whenever your cash-need date is uncertain.
 
-To see whether breaking a specific CD early is worth it, enter your balance, your CD's APY, how long you have held it, the months left, and the penalty in days below.
-
-{% include tools/cd-penalty.html %}
+If you want to run this on your own balance, the [cd early withdrawal calculator](/SmartMoneyDaily/tools/cd-early-withdrawal-calculator/) does the arithmetic.
 
 The full breakdown of what happens when you exit a certificate before maturity — including the situations where a bank must waive the penalty — is in the guide on [cashing out a CD early](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 

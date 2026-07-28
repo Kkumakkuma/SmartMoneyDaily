@@ -91,9 +91,7 @@ Assumptions, all hypothetical: $10,000, and two choices. Choice A is a single fi
 
 Two things fall out of that table. The lock does not need rates to fall in order to win — it wins in the flat case too, because it started higher. And the rolling strategy's win in the rising case is the smallest of the three gaps, while its loss in the falling case is the largest.
 
-These are illustrations, not predictions. To run the comparison on the quotes in front of you, enter your deposit, the APY for one term, the compounding frequency printed in the disclosure, and the number of years — then repeat for each term you are weighing.
-
-{% include tools/apy-calculator.html %}
+The [fix it or float it calculator](/SmartMoneyDaily/tools/cd-vs-savings-calculator/) will do this with your own figures.
 
 ## If Rates Rise After You Lock: Your Three Real Options
 

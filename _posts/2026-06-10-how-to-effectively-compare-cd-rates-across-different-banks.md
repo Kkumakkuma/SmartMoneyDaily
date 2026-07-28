@@ -118,9 +118,7 @@ Copy this into a note or spreadsheet and fill one column per offer. The last row
 
 Filling the "minimum to earn the APY" row separately from "minimum to open" catches the most common bait: an account you can open with a small deposit but which only pays the advertised yield at a much higher tier.
 
-To compute the final row, enter your deposit, each offer's APY, its compounding frequency, and the term length below, then record the ending balance for each column.
-
-{% include tools/apy-calculator.html %}
+To work this out with your actual balance, use the [two-offer comparison calculator](/SmartMoneyDaily/tools/two-offer-comparison-calculator/).
 
 ## Rate Traps That Survive a Careless Comparison
 

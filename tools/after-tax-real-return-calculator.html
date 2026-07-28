@@ -1,0 +1,72 @@
+---
+layout: tool
+title: "After-tax and inflation-adjusted return calculator"
+permalink: /tools/after-tax-real-return-calculator/
+tool: after-tax-real-return
+description: "Enter a balance, a quoted APY, your federal and state marginal tax rates, and an inflation assumption to see what the yield is worth after both come out."
+intro: "Put in a balance, an APY, your marginal tax rates and an inflation assumption; you get back the after-tax yield, the exact real return, and the dollar change in purchasing power over one year."
+---
+
+<h2>The gap between the rate quoted and the rate kept</h2>
+
+<p>A rate sheet describes gross interest. Interest from a savings account, money market account, or CD is ordinary income, reported on Form 1099-INT and taxed at the rate on your last dollar. What survives then has to buy goods at next year's prices.</p>
+
+<p>This calculator settles one narrow question over a one-year horizon: after those two deductions, is the balance gaining ground or losing it? It turns an advertised number into a kept number.</p>
+
+<h2>Filling in the eight fields</h2>
+
+<p><strong>Balance</strong> is the amount in the account. It scales the dollar lines only; the percentages come out the same at any balance.</p>
+
+<p><strong>APY</strong> comes from the account's Truth in Savings disclosure or rate sheet. Regulation DD (12 CFR Part 1030) requires the annual percentage yield in disclosures and rate advertising, usually beside a separate "interest rate" figure. Use the APY: the nominal rate ignores how often interest is credited and compounded, while the APY carries it. That is why the rate is applied once per year here rather than on a compounding schedule.</p>
+
+<p><strong>Federal and state marginal rates</strong> are the bracket rates on your next dollar for your filing status, not the average across your return. Interest stacks on your other ordinary income, so the top bracket is the one that bites. Fold city or county tax into the state field. Our overview of <a href="/SmartMoneyDaily/2026/07/23/how-tax-implications-affect-your-earnings-from-high-yield-options/">tax treatment on high-interest accounts</a> covers reporting.</p>
+
+<p><strong>Expected inflation</strong> is chosen, not looked up. The Bureau of Labor Statistics publishes the CPI-U series, but a past reading is a measurement, not a forecast. Run it twice, once low and once high, to see how much rests on that guess — the reasoning is in <a href="/SmartMoneyDaily/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/">evaluating inflation risk on savings balances</a>.</p>
+
+<p><strong>Tax-free yield and its type</strong> are optional: the published yield of a municipal fund or bond you are weighing against the account. A single-state fund held by a resident may be exempt from both federal and state tax; a national fund is generally federal-exempt only. The two settings divide by different denominators.</p>
+
+<p><strong>Treasury yield</strong> is also optional. Interest on Treasury bills and notes is exempt from state and local income tax under 31 U.S.C. § 3124, hence the separate field.</p>
+
+<h2>Multiply for the tax, divide for the inflation</h2>
+
+<p>The combined marginal rate is the federal and state entries added together. After-tax APY is the quoted APY times one minus that rate; interest after tax is balance times APY times the same factor.</p>
+
+<p>Inflation is handled differently. The real return is one plus the after-tax APY, divided by one plus inflation, minus one. Division rather than subtraction: your money grows by one factor while prices grow by another, and the ratio between them is the answer, not the distance.</p>
+
+<p>The subtraction shortcut is printed beside the exact figure, with a line saying whether it overstates, understates, or matches at the precision shown. The gap equals the after-tax yield minus inflation, times inflation over one plus inflation — nearly nothing when the two sit close, wider as they pull apart.</p>
+
+<p>The purchasing power line multiplies the balance by the exact real return: the change in what it buys over a year, in today's dollars.</p>
+
+<p>The optional comparisons invert that algebra. A tax-free yield is grossed up by dividing it by one minus the federal rate, or by one minus both rates when exempt from each, giving the taxable yield that has to be beaten. The Treasury line solves for the CD APY leaving equal after-tax dollars: the Treasury yield times one minus the federal rate, divided by one minus both. If the entered rates total 100% or more, both lines report undefined.</p>
+
+<h2>Reading a filled-in example</h2>
+
+<p>Suppose a $25,000 balance at a 4.00% APY, a 22% federal marginal rate, a 5% state rate, and an inflation assumption of 3.0% — illustrative inputs, not market figures.</p>
+
+<p>The combined rate is 27%, so the after-tax APY is 2.92%. Interest before tax is $1,000.00 and after tax $730.00. The exact real return is -0.08%, and purchasing power changes by -$19.42 over the year.</p>
+
+<p>Both halves are true at once. Seven hundred and thirty dollars genuinely arrived, and the balance still buys slightly less than before. Only the second figure says whether the account did its job.</p>
+
+<p>On the same assumptions, a 3.00% federal-exempt tax-free yield returns a 3.85% taxable-equivalent yield, and a 4.00% Treasury yield returns a 4.27% APY a CD would have to match. The account is ahead of neither.</p>
+
+<h2>What the result cannot tell you</h2>
+
+<p>This is a one-year snapshot with no reinvestment schedule. For a longer horizon, re-run it with next year's assumptions instead of reading a compounding path off this page.</p>
+
+<p>Adding the two tax rates together is the conventional approximation, and it slightly overstates the burden for taxpayers who itemize and deduct state tax within the SALT cap. The 3.8% net investment income tax is not applied for you — add it into the federal field if it reaches you. One flat rate covers the whole interest amount, so a payment straddling two brackets is not modeled. Tax-deferred accounts are handled only by zeroing both rates and reading the result as the accumulation phase.</p>
+
+<p>Nothing here checks whether the advertised APY is the one you were paid, whether fees are reversing the interest, or whether the balance sits inside FDIC coverage. Each has its own calculator on this site.</p>
+
+<h2>Three questions this raises</h2>
+
+<h3>My real return came out negative. Should I move the money?</h3>
+
+<p>It measures one account against prices, not against alternatives, so it cannot answer that. Cash held for an emergency fund or a near-term purchase is bought for certainty and access, and a slightly negative real return is often the price of both. The figure tells you when that price is higher than intended.</p>
+
+<h3>Should I enter my effective tax rate instead of my marginal rate?</h3>
+
+<p>No. An effective rate averages across all your income, including the parts taxed in lower brackets. Interest is layered on top of everything else, so the rate on the last dollar is the right one — an effective rate makes the after-tax yield look better than it is.</p>
+
+<h3>Why do the tax-free and Treasury comparisons use different formulas?</h3>
+
+<p>They point in opposite directions. The tax-free line grosses a yield up, converting an exempt yield into the taxable yield leaving the same amount, so it can be set against the APY. The Treasury line instead solves for the CD APY needed to match a security that escapes state tax but not federal, which is why the federal rate sits in both numerator and denominator.</p>

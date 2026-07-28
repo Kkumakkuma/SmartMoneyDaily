@@ -112,9 +112,7 @@ Three mechanisms do nearly all the work.
 
 **Recycle finished payments.** When a car loan or a course of childcare ends, keep the payment going — into savings. The household already lived without that money.
 
-To see how long your schedule takes and how much of the total the account contributes, enter your current balance, the APY on the account, your planned monthly transfer, and a number of years in the calculator below.
-
-{% include tools/apy-calculator.html %}
+The [compound interest calculator](/SmartMoneyDaily/tools/compound-interest-calculator/) will do this with your own figures.
 
 Continuing the example: $400 a month toward a $16,000 target is 40 months of contributions on its own. If the account pays 4.00% APY, compounding gets you there in roughly 38 months instead, and the balance at month 40 would be about $17,065 rather than $16,000. Interest helps, but it is not the lever — the transfer amount is. In that same example, doubling the monthly transfer to $800 reaches the target in about 20 months, roughly eighteen months sooner, while adding a full percentage point of APY at $400 a month moves the finish line by less than a month. If the mechanics of that conversion interest you, our guide to [APY and compounding](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) shows the formula behind the calculator.
 

@@ -1,0 +1,131 @@
+<div class="tool-card">
+  <h3 class="tool-title">Account fee break-even calculator</h3>
+  <p class="tool-sub">How much of your interest the fees take, and the balance below which the account loses money. Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Balance ($)<input type="number" id="feeBal" value="5000" min="0" step="100"></label>
+    <label>APY (%)<input type="number" id="feeApy" value="4.00" min="0" max="20" step="0.01"></label>
+    <label>Monthly maintenance fee ($)<input type="number" id="feeMonthly" value="5" min="0" step="0.5"></label>
+    <label>Per-item fee ($)<input type="number" id="feeItem" value="3" min="0" step="0.5"></label>
+    <label>Times that fee hits per month<input type="number" id="feeCount" value="0" min="0" max="99" step="1"></label>
+    <label>Other annual fee ($/yr)<input type="number" id="feeOther" value="0" min="0" step="5"></label>
+  </div>
+  <button type="button" id="feeGo" class="tool-btn">Calculate</button>
+
+  <div id="feeOut" class="tool-out"></div>
+  <p class="tool-note">Interest is figured as simple interest (balance &times; APY) so that it sits on the same
+  basis as the fees. Compounding daily for a year adds a few dollars, but it does not move the break-even
+  balance by an amount that changes the decision. The math also assumes the balance holds steady for the full
+  year; in practice each monthly fee comes out of principal, so the drag builds a little faster than shown.
+  Enter 0 for a waivable fee only if you are confident you will meet the waiver condition every cycle — miss
+  one month and that month is charged in full.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  var ids = ['feeBal', 'feeApy', 'feeMonthly', 'feeItem', 'feeCount', 'feeOther'];
+  function el(id) { return d.getElementById(id); }
+  function group(s) { return s.replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function money(n) {
+    return (n < 0 ? '-$' : '$') + group(Math.abs(n).toFixed(2));
+  }
+  function pct(n) { return (n * 100).toFixed(2) + '%'; }
+  function bps(n) {
+    var v = Math.round(n * 10000);
+    return group(String(Math.abs(v))) + ' bp';
+  }
+  function num(id) { return parseFloat(el(id).value) || 0; }
+
+  function run() {
+    var bal = num('feeBal');
+    var apy = num('feeApy') / 100;
+    var monthly = num('feeMonthly');
+    var item = num('feeItem');
+    var hits = num('feeCount');
+    var other = num('feeOther');
+
+    // 연 수수료 = 월 유지수수료 12회 + 건별 수수료 (건수 x 12) + 기타 연회비.
+    var maint = monthly * 12;
+    var perItem = item * hits * 12;
+    var fees = maint + perItem + other;
+
+    // 수수료와 같은 기준으로 두기 위해 이자는 단리(잔액 x APY)로 계산한다.
+    var gross = bal * apy;
+    var net = gross - fees;
+    var netApy = bal > 0 ? net / bal : null;
+    // 손익분기 잔액: 이 잔액에서 연이자가 연수수료와 같아진다.
+    var evenBal = apy > 0 ? fees / apy : null;
+    // 무료 계좌를 이기려면 더 줘야 하는 APY 프리미엄.
+    var premium = bal > 0 ? fees / bal : null;
+    // 수수료가 먹는 이자 개월수.
+    var months = gross > 0 ? (fees / gross) * 12 : null;
+
+    var verdict;
+    if (net > 0) {
+      verdict = '<strong class="tool-yes">You keep ' + money(net) + ' a year</strong> at a balance of '
+        + money(bal) + ' after the fees come out.';
+    } else if (net < 0) {
+      verdict = '<strong class="tool-no">This account costs you ' + money(-net) + ' a year</strong> at a balance of '
+        + money(bal) + ' — the fees run past the interest.';
+    } else {
+      verdict = '<strong>The fees exactly cancel the interest</strong> at a balance of ' + money(bal) + '.';
+    }
+
+    var parts = [];
+    if (maint !== 0) { parts.push(money(maint) + ' maintenance'); }
+    if (perItem !== 0) { parts.push(money(perItem) + ' per-item'); }
+    if (other !== 0) { parts.push(money(other) + ' other'); }
+    var feeLine = 'Fees for the year: ' + money(fees)
+      + (parts.length > 1 ? ' (' + parts.join(' + ') + ')' : '');
+
+    var netApyLine = netApy === null
+      ? 'Net APY after fees: not applicable at a zero balance — the stated rate is ' + pct(apy)
+      : 'Net APY after fees: ' + pct(netApy) + ' — the stated rate is ' + pct(apy);
+
+    var evenLine;
+    if (fees <= 0) {
+      evenLine = 'Break-even balance: none needed — with no fees, any balance comes out ahead.';
+    } else if (evenBal === null) {
+      evenLine = 'Break-even balance: none — at 0.00% APY there is no balance where the interest covers the fees.';
+    } else {
+      evenLine = 'Break-even balance: ' + money(evenBal)
+        + ' — below that the account is a net loss.';
+    }
+
+    var premiumLine;
+    if (premium === null) {
+      premiumLine = 'Extra APY needed to beat a fee-free account: not applicable at a zero balance.';
+    } else {
+      premiumLine = 'To match a fee-free account paying the same rate, this one would have to pay '
+        + pct(premium) + ' more (' + bps(premium) + ') at this balance.';
+    }
+
+    var monthsLine;
+    if (months === null) {
+      monthsLine = 'Months of interest the fees consume: not applicable — the account pays no interest.';
+    } else if (months >= 12) {
+      monthsLine = 'The fees consume ' + months.toFixed(1)
+        + ' months of interest — more than a full year of what this balance earns.';
+    } else {
+      monthsLine = 'The fees consume ' + months.toFixed(1) + ' months of interest out of every 12.';
+    }
+
+    el('feeOut').innerHTML =
+      '<p>' + verdict + '</p><ul>'
+      + '<li>Interest for the year: ' + money(gross) + ' at ' + pct(apy) + '</li>'
+      + '<li>' + feeLine + '</li>'
+      + '<li>What you actually keep: ' + money(net) + '</li>'
+      + '<li>' + netApyLine + '</li>'
+      + '<li>' + evenLine + '</li>'
+      + '<li>' + premiumLine + '</li>'
+      + '<li>' + monthsLine + '</li></ul>';
+  }
+
+  el('feeGo').addEventListener('click', run);
+  ids.forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

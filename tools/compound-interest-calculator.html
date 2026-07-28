@@ -1,0 +1,108 @@
+---
+layout: tool
+title: "Compound Interest Calculator: What a Savings Balance Becomes at a Given APY"
+permalink: /tools/compound-interest-calculator/
+tool: apy-calculator
+description: "Turn an APY into dollars. Enter a starting balance, an APY, an optional monthly deposit and a number of years, and see the balance and cumulative interest for each year."
+intro: "Enter a balance, the APY the bank quotes, anything you add each month, and how long you plan to leave it — the table returns the balance and the interest earned at the end of every year."
+---
+
+<p>A rate quoted as a percentage does not tell you how many dollars you end up with. This calculator turns
+an APY into a year-by-year table of what you put in, what the account paid you, and where the balance
+stands.</p>
+
+<h2>Filling in the four boxes</h2>
+
+<p><strong>Starting balance</strong> is what sits in the account today, or what you would open it with.
+The field accepts zero, the right entry if you are building the balance entirely from monthly deposits.</p>
+
+<p><strong>APY</strong> is the annual percentage yield, a disclosed figure rather than something to
+estimate. Under the Truth in Savings Act — Regulation DD,
+<a href="https://www.ecfr.gov/current/title-12/chapter-X/part-1030" rel="nofollow">12 CFR Part 1030</a>,
+for banks, and NCUA's 12 CFR Part 707 for federally insured credit unions — the institution must state the
+annual percentage yield in the account disclosures you receive before opening, and in any advertisement
+that mentions a rate. In that disclosure the APY sits beside a second, smaller number labelled the
+interest rate; use the APY. The field caps at 20%, since higher entries are nearly always typos.</p>
+
+<p><strong>Added each month</strong> is a recurring deposit — a split off a paycheck, a standing transfer
+from checking. It stays the same every month for the whole horizon; there is no escalation or pause.
+Leave it at zero to model a balance you simply park. <strong>Years</strong> runs from 1 to 30, and anything
+larger is clamped to 30 before the table is built.</p>
+
+<h2>Why the APY is not divided by twelve</h2>
+
+<p>The instinct is to take an APY of 4% and call it a third of a percent a month. This calculator avoids
+that step, and the reason is what APY means. A nominal interest rate is the per-period rate quoted before
+the institution's compounding is applied. The APY is the finished figure — what a dollar becomes over a
+year with that compounding already inside it. Regulation DD fixes how it is computed, in the formulas at
+Appendix A of Part 1030, so that one bank's number can be set against another's.</p>
+
+<p>Because the APY is already an annual result, the calculator works backwards from it. It solves for the
+monthly rate that, applied twelve times, reproduces the APY exactly: (1&nbsp;+&nbsp;APY) raised to the
+power of one-twelfth, minus one. Suppose the APY entered is 4.00%. The monthly step used is 0.327374%,
+not 0.333333%. Dividing by twelve and compounding those twelve months would grow the balance about 4.07%
+in a year — more than the 4.00% promised — and the overstatement compounds every year after.</p>
+
+<p>Inside each month the order is fixed: interest is applied to the balance first, then the deposit is
+added. A deposit made in the first month of a five-year run therefore earns for 59 months, not 60. That is
+the conservative convention, and worth knowing: a bank paying on your average daily balance credits
+slightly more when a transfer lands early in the month.</p>
+
+<h2>Reading the four columns</h2>
+
+<p>Both middle columns are cumulative, the detail most people misread. <em>You put in</em> is the
+starting balance plus every deposit through the end of that year, not that year's deposits alone.
+<em>Interest earned</em> is the balance minus everything you put in, so it is all interest since day one.
+To isolate a single year, subtract the previous row.</p>
+
+<p>Suppose $10,000 to open, an APY of 4.00%, $200 added each month, over five years. Year 1 closes with
+$12,400 put in, $443.69 of interest, and a balance of $12,843.69. Year 5 closes with $22,000 put in,
+$3,402.33 of cumulative interest, and a balance of $25,402.33. Year 4's cumulative interest is $2,475.62,
+so the fifth year alone paid $926.71 — more than double the first year's $443.69, on a rate
+that never moved. Nothing improved except the size of the balance carrying it.</p>
+
+<h2>Where the projection stops being reliable</h2>
+
+<p>Every figure is before tax. Interest on a deposit account is generally taxable as ordinary income in
+the year it is credited, and the institution reports it on Form 1099-INT. The <em>Interest earned</em>
+column is gross, so what you keep depends on your marginal rate. Our note on
+<a href="/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/">what an
+APY figure includes</a> covers where that distinction bites.</p>
+
+<p>The rate is held constant for the whole horizon. For a certificate of deposit inside its term that is
+fair, since the rate is contractually fixed. For a savings or money market account it is not: those APYs
+are variable and can be changed, so a 10-year run at today's quoted rate is an illustration, not a
+forecast. If that trade-off is the real question, the
+<a href="/SmartMoneyDaily/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/">comparison
+between locking a rate and staying liquid</a> is the better starting point.</p>
+
+<p>Three further gaps. Fees are absent — a monthly maintenance charge, or a minimum-balance condition you
+fall below, reduces every row. Withdrawals are absent too — the deposit field accepts nothing below zero.
+And the dollars are nominal, so a balance 20 years out will not buy what that figure buys today. One
+boundary to watch as the projection grows: FDIC deposit insurance covers up to $250,000 per depositor, per
+insured bank, for each account ownership category, and the table prints past that line without
+comment.</p>
+
+<h2>Three things people ask about this table</h2>
+
+<h3>Why isn't year 1's interest just my balance times the APY?</h3>
+
+<p>It is, when there are no deposits. Suppose $10,000 at 4.00% APY with the monthly addition set to zero:
+the first year ends at exactly $10,400. Add monthly deposits and each one has been in the account for only
+part of the year, so first-year interest lands below balance &times; APY. The gap closes as deposits
+accumulate into the balance being compounded.</p>
+
+<h3>My bank compounds daily. Does entering the APY still give the right answer?</h3>
+
+<p>For the annual figures, yes — that is what APY is built for. The institution's compounding frequency is
+already inside the APY it discloses, so twelve monthly steps here reproduce the same annual growth as a
+daily-compounding account at the same APY. With no monthly deposits the year-end balances match exactly.
+With deposits, the month-end timing above can shift the result slightly either way.</p>
+
+<h3>What do I enter for an account with a promotional rate?</h3>
+
+<p>The field takes one rate and the shortest horizon is one year, so a six-month introductory APY cannot
+be modelled directly. Bracket it instead: run the term at the promotional APY for an upper bound, run it
+again at the go-to APY for a lower bound, and read the real outcome as sitting between them. If the
+promotional period is a year or longer, chain two runs: the first run's year-end balance becomes the
+starting balance for a second at the go-to rate.</p>

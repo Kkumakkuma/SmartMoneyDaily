@@ -100,9 +100,7 @@ Numbers make the choice concrete. Assume $18,000 and a saver who makes about two
 
 On these assumptions the HYSA nets roughly double. Flip one input — say the MMA uses threshold pricing and waives its fee at $10,000 — and it earns $585 net, closing most of the gap while still handing you a checkbook. The lesson is not that one product wins; it is that the winner is decided by the tier method, the fee waiver threshold, and your transaction count, not by the product's name.
 
-Run your own version before you open anything. Enter your balance, the quoted APY, and the compounding frequency below to see what a full year produces, then subtract the annual fee by hand and compare the two net figures.
-
-{% include tools/apy-calculator.html %}
+Our [two-offer comparison calculator](/SmartMoneyDaily/tools/two-offer-comparison-calculator/) runs the same calculation on figures you enter.
 
 Do the subtraction on paper for both offers and put the two net numbers next to each other. That single comparison replaces every "which is better" article, including this one.
 

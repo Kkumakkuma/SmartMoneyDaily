@@ -1,0 +1,89 @@
+---
+layout: default
+title: "Savings and CD Calculators"
+permalink: /tools/
+description: "Ten calculators for deposit decisions — comparing offers, pricing a CD penalty, checking FDIC coverage, and finding what a yield is worth after fees, tax, and inflation."
+---
+
+<h1>Savings and CD Calculators</h1>
+
+<p>Every calculator here runs entirely in your browser. Nothing you type is sent anywhere, stored, or
+logged, and none of them asks for an email address. They exist because most deposit questions come down
+to arithmetic that is tedious by hand and easy to get subtly wrong.</p>
+
+<h2>Start from the decision, not the tool</h2>
+
+<p>Picking a calculator by name is the slow way in. Find the question you are actually asking:</p>
+
+<ul>
+{% for t in site.data.tools %}
+  <li><strong>{{ t.question }}</strong> &mdash; <a href="{{ t.url | relative_url }}">{{ t.title }}</a>: {{ t.blurb }}</li>
+{% endfor %}
+</ul>
+
+<h2>What every one of these assumes</h2>
+
+<p>A calculator is only as honest as the assumptions behind it, so here are the ones that run through all
+of them. Each tool repeats the assumptions specific to it directly under the inputs.</p>
+
+<p><strong>APY is not the same number as the interest rate.</strong> APY already contains the effect of
+compounding; the stated or nominal rate does not. Banks disclose both, and putting one where the other
+belongs is the single most common way these calculations go wrong. Where a tool needs the nominal rate
+&mdash; the early withdrawal calculator, because penalties are charged as simple interest at that rate
+&mdash; it converts your APY back rather than asking you to look up a second figure.</p>
+
+<p><strong>Your balance is treated as fixed unless the tool says otherwise.</strong> That is contractually
+true for a CD. For a savings or money market account it is a simplification: you will add and withdraw
+money, and the rate itself can change at any time without notice, because those rates are variable by
+design under <a href="https://www.consumerfinance.gov/rules-policy/regulations/1030/" rel="nofollow noopener">Regulation DD</a>.</p>
+
+<p><strong>Results are before tax unless tax is an input.</strong> Deposit interest is ordinary income in
+the year it is credited. A 4% yield is not 4% in your pocket, and the gap widens with your marginal rate.
+Only the after-tax calculator applies that adjustment.</p>
+
+<p><strong>Fee waivers are assumed to hold.</strong> If a monthly fee is waived by direct deposit or a
+minimum balance, entering zero assumes you meet that condition every single cycle. Miss one month and the
+fee applies in full for that month, which is exactly the case the fee break-even tool is built to price.</p>
+
+<p><strong>Rate paths are your assumption, not a forecast.</strong> Where a tool asks what happens if rates
+move, it is asking you to state a scenario. Nothing here predicts what the Federal Reserve will do, and
+neither does anyone else with reliable accuracy.</p>
+
+<h2>Where the numbers you need are written down</h2>
+
+<p>Most inputs come from one document. Under the Truth in Savings Act, banks and credit unions have to
+disclose the annual percentage yield, the compounding and crediting method, any minimum balance
+requirement, the fee schedule, and &mdash; for a CD &mdash; the early withdrawal penalty formula and
+whether it can reach your principal. That disclosure is given to you before the account opens and is
+available on request afterwards.</p>
+
+<p>Two figures are worth pulling from your statement rather than the marketing page: the interest actually
+credited for the period, and the average daily balance it was calculated on. Those two numbers, with the
+number of days in the statement period, tell you the yield you received rather than the one you were
+quoted. If those disagree by more than a rounding difference, the reason is usually a tier you dropped
+below or a fee that was charged.</p>
+
+<h2>What these tools deliberately do not do</h2>
+
+<p>None of them look up current rates. There is no live feed here, no ranked list of banks, and no
+affiliate links to accounts. Deposit rates change without notice and vary by state, balance tier, and
+relationship status, so any number this site published would be wrong for some readers on the day they
+read it. Instead the tools take the figures from the offer in front of you and tell you what they mean.</p>
+
+<p>They also do not give advice. A calculator can tell you that breaking a CD costs $169 and gains $144,
+which settles the arithmetic. Whether the flexibility is worth $25 to you is a judgment about your own
+circumstances that no formula reaches.</p>
+
+<h2>If you would rather read first</h2>
+
+<p>Each calculator sits inside an article that explains the decision in full &mdash; when the calculation
+matters, what the edge cases are, and what the regulations require. The tool pages link through to them,
+and the <a href="{{ '/topics/' | relative_url }}">topics index</a> lists everything by subject.</p>
+
+<div class="financial-disclaimer" style="background:#fff8f0;border-left:4px solid #d97706;padding:14px 18px;margin:28px 0;font-size:0.9em;color:#555;border-radius:6px;">
+  <strong>Disclaimer:</strong> These calculators are general educational tools, not personalized financial,
+  tax, or investment advice. Results depend entirely on the figures you enter and the assumptions listed
+  with each tool. Verify rates, fees, and account terms directly with the bank or credit union, and confirm
+  tax treatment with a qualified professional, before acting on any number here. See our
+  <a href="{{ '/disclaimer/' | relative_url }}">full disclaimer</a>.
+</div>

@@ -70,7 +70,7 @@ Two lessons fall out of that table. First, on a whole-balance structure, letting
 
 The fix is procedural, not clever: find the tier table on the rate sheet, locate the line your realistic *minimum* balance falls into, and confirm in writing which of the two methods the bank uses. To sanity-check the resulting number against your own deposit, plug your balance, the tier rate that actually applies to you, and the compounding frequency into the calculator below.
 
-{% include tools/apy-calculator.html %}
+{% include tools/tiered-rate-calculator.html %}
 
 For a fuller walkthrough of comparing two offers on tiers, minimums, and limits, see the companion piece on [choosing a money market account](/SmartMoneyDaily/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
 

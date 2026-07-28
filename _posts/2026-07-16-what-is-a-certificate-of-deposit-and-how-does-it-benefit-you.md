@@ -87,9 +87,7 @@ Rates change constantly and vary by institution, so no honest article can tell y
 
 On the five-year line, simple interest would give $2,000; compounding adds $166.53, and that gap widens each year. At 3.50% APY the same money would reach $11,876.86 instead — so half a percentage point is worth $289.67 over five years.
 
-To run this on your own deposit, enter your balance and the offered APY below, set the monthly contribution to zero, and set years to your term.
-
-{% include tools/apy-calculator.html %}
+To work this out with your actual balance, use the [compound interest calculator](/SmartMoneyDaily/tools/compound-interest-calculator/).
 
 The penalty side deserves the same treatment. Say that 12-month CD carries a penalty of 90 days of interest, and the nominal rate behind a 4.00% APY is about 3.92%. Ninety days on $10,000 is roughly 10,000 × 0.0392 × 90 ÷ 365 ≈ $96.66. Break at six months and you keep about $198 minus $97, or roughly $101. Break after 30 days, when only about $32 has accrued, and the penalty exceeds everything earned — the difference comes out of principal. Look for the sentence in your disclosure about the penalty reducing principal; that is exactly what it means, and it is why a CD is a poor home for money you might need next month. The break-even math is worked through in [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 

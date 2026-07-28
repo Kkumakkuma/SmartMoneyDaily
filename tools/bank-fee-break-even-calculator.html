@@ -1,0 +1,63 @@
+---
+layout: tool
+title: "Bank account fee break-even calculator"
+permalink: /tools/bank-fee-break-even-calculator/
+tool: fee-break-even
+description: "Work out what a monthly maintenance fee, per-item charges, and annual fees leave behind at your balance, and the balance below which the account is a net loss."
+intro: "Enter a balance, the account's APY, and the fees it charges — the calculator returns what you keep for the year, the net APY after fees, and the break-even balance."
+---
+
+<h2>The rate is only half the price of an account</h2>
+
+<p>Every deposit account has two prices. One is the rate it pays you; the other is the schedule of fees it charges you. Rate tables show the first and rarely the second, which is how an account with an attractive headline number hands back less over a year than a plainer one.</p>
+
+<p>This calculator puts both on the same annual footing and answers one question: at the balance you actually keep, does this account pay you or bill you?</p>
+
+<h2>Six inputs and where the bank discloses each one</h2>
+
+<p><strong>Balance.</strong> Use the amount you realistically hold, not what you intend to build toward. If it swings through the month, enter the low end — fee drag bites hardest at the bottom of the range.</p>
+
+<p><strong>APY.</strong> Take this from the rate sheet or account disclosure, not a marketing page. Regulation DD (12 CFR Part 1030) requires the institution to express the yield as an annual percentage yield, so the figure already folds in compounding frequency. Entering a nominal rate instead understates earnings and pushes the break-even balance the wrong way.</p>
+
+<p><strong>Monthly maintenance fee.</strong> The flat monthly charge for holding the account. It belongs to the schedule of fees the institution must give you before the account is opened (12 CFR 1030.4(a) and (b)(4)), which is also where waiver conditions are spelled out.</p>
+
+<p><strong>Per-item fee and how many times it hits per month.</strong> These two fields cover charges that scale with usage: excess-withdrawal fees, paper statement fees, out-of-network ATM charges, incoming wire fees. Amount and frequency are asked separately so the calculator can annualize them. For frequency, count from statements rather than guessing — Regulation DD requires the periodic statement to show the total dollar amount of fees imposed in that statement period, making back issues your most reliable source. On savings accounts, the six-transfer restriction that once sat in Regulation D (12 CFR 204.2(d)) was removed in 2020, but many institutions kept an excess-transaction fee under their own account terms. Our walk-through of <a href="/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/">the fees attached to high-yield accounts</a> covers which ones tend to be negotiable.</p>
+
+<p><strong>Other annual fee.</strong> Anything charged once a year or on an irregular cycle. This field takes dollars per year as entered, so convert first. It also suits a charge you expect only occasionally.</p>
+
+<h2>How the annualization works</h2>
+
+<p>Fees are totalled first: monthly maintenance multiplied by twelve, plus the per-item amount multiplied by its monthly frequency and then by twelve, plus the annual figure exactly as entered.</p>
+
+<p>Interest is then balance multiplied by APY — simple interest across one year, deliberately. The APY already expresses a full year of compounding at the stated rate, so multiplying it by the balance gives the year's earnings without applying compounding a second time. A one-year basis also puts interest on the same denominator as the fees, which are counted once per year as well.</p>
+
+<p>Every other line derives from those two figures. What you keep is interest minus fees. Net APY is that difference divided by the balance — the rate the account effectively behaves like once the fee schedule applies. The break-even balance is fees divided by APY: the balance where a year of interest exactly covers a year of fees. The APY premium is fees divided by balance, meaning the extra yield this account would need to match a fee-free one at your balance, shown in percent and basis points. Months of interest consumed is fees divided by interest, times twelve.</p>
+
+<h2>Reading the result with a worked example</h2>
+
+<p>Suppose a balance of $5,000 in an account paying 4.00% APY with a $5 monthly maintenance fee only. Fees for the year come to $60 and interest to $200. You keep $140, a net APY of 2.80% against a stated 4.00%. The break-even balance is $60 ÷ 0.04 = $1,500, and the fees consume 3.6 months of interest out of every 12. To beat a fee-free account paying the same rate, this one would have to pay 1.20% more — 120 basis points.</p>
+
+<p>Now suppose the same account also charges a $3 per-item fee twice a month. Annual fees rise to $132 while interest stays at $200, so what you keep falls to $68 and the net APY drops to 1.36%. The break-even balance moves to $3,300 and the fees consume 7.9 months of interest. The stated rate never moved.</p>
+
+<p>The break-even balance is the figure worth writing down: it depends only on the fee schedule and the rate, so above it the account earns and below it the account costs.</p>
+
+<h2>What this calculator will not tell you</h2>
+
+<p>It assumes the balance holds steady all year. In practice each monthly fee comes out of principal, shrinking the base that earns interest, so real drag builds slightly faster than shown.</p>
+
+<p>It does not model waiver logic. A fee waived for a minimum balance or a qualifying direct deposit is charged in full for any cycle where the condition fails, and the calculator cannot know how often that happens.</p>
+
+<p>It handles one account and one fixed rate. Variable rates, promotional rates that step down, and tiered structures are outside what a single APY field represents. Comparing two accounts is a separate problem — <a href="/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/">the case for switching accounts</a> also turns on transfer timing and interest lost during the move.</p>
+
+<p>It ignores tax. Interest is taxable income while a fee is simply money gone, so treat the net APY here as a pre-tax figure.</p>
+
+<h2>Three follow-up questions</h2>
+
+<h3>Why doesn't the break-even balance change when I change the balance?</h3>
+<p>Because it is fees divided by APY, and neither term contains your balance. Changing the balance moves what you keep, the net APY, and the required premium, but the break-even figure is a property of the account. Your balance only determines which side of that line you sit on.</p>
+
+<h3>My fee is waived with direct deposit. What should I enter?</h3>
+<p>Enter 0 in the monthly field only if the condition will be met in every cycle. If you expect to miss occasionally, leave the monthly field at 0 and put the expected cost into "Other annual fee" instead — two missed months at a $12 fee is $24 a year, and that is the honest input.</p>
+
+<h3>The net APY came out negative. Is that a bug?</h3>
+<p>No. Fees exceeded interest for the year, so at that balance the account behaves like a negative-yield product. The months-of-interest line will read above 12 in the same case, which is the same fact stated differently. Three responses exist: raise the balance above the break-even figure, get the fee removed, or move the money.</p>

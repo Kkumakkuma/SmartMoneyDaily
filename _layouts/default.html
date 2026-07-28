@@ -97,8 +97,12 @@
     gtag('js', new Date());
     gtag('config', 'G-5L40K3SBQT');
   </script>
-  <!-- Google AdSense -->
+  <!-- Google AdSense — 계산기 페이지는 제외한다. 자동광고가 입력 폼과 Calculate 버튼
+       사이에 삽입되면 독자가 광고를 도구의 일부로 오인하는 배치가 되어 정책 위반이다.
+       소유권 확인용 meta 태그(google-adsense-account)는 전 페이지에 그대로 둔다. -->
+  {% unless page.layout == 'tool' %}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5723595008598292" crossorigin="anonymous"></script>
+  {% endunless %}
 </head>
 <body>
   <header>
@@ -109,6 +113,8 @@
       </div>
       <nav class="main-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/tools/' | relative_url }}">Calculators</a>
+        <a href="{{ '/topics/' | relative_url }}">Topics</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>
         <a href="{{ '/privacy-policy/' | relative_url }}">Privacy</a>
@@ -126,6 +132,8 @@
     <div class="container">
       <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. Written by Kkuma Park. All rights reserved.</p>
       <nav>
+        <a href="{{ '/tools/' | relative_url }}">Calculators</a>
+        <a href="{{ '/topics/' | relative_url }}">Topics</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>
         <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>

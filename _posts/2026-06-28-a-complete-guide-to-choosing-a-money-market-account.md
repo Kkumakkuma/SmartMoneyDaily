@@ -118,9 +118,7 @@ Confusing an app's branding with a charter is one of the more expensive mistakes
 
 ## Put Your Real Tier Rate Into the Math
 
-Once you know which rate your balance actually earns, run it. Enter your balance, the tier rate that applies to you — not the headline — and the compounding frequency from the disclosure:
-
-{% include tools/apy-calculator.html %}
+Our [tiered rate calculator](/SmartMoneyDaily/tools/tiered-rate-calculator/) runs the same calculation on figures you enter.
 
 Run it twice: once with the top-tier rate you saw in the ad, once with the rate you will really get. The difference between those two numbers is the cost of not reading the tier table.
 

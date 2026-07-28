@@ -51,9 +51,7 @@ What you should check instead is whether that yield is being propped up:
 
 One more asymmetry. A fund's yield is backward-looking — it describes the last seven days. A bank APY is a forward quote the bank can change tomorrow. Neither is a promise about next month, but they are not the same kind of number, and a table that stacks them in one column without saying so is misleading you.
 
-To see what a few basis points are actually worth on your balance, enter your deposit amount, the effective yield you are comparing, and daily compounding below.
-
-{% include tools/apy-calculator.html %}
+To work this out with your actual balance, use the [after-tax and inflation-adjusted return calculator](/SmartMoneyDaily/tools/after-tax-real-return-calculator/).
 
 ## Not FDIC-Insured: What SIPC Covers and What It Does Not
 

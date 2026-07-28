@@ -1,0 +1,167 @@
+<div class="tool-card">
+  <h3 class="tool-title">Tiered rate calculator</h3>
+  <p class="tool-sub">Work out what a tiered rate table actually pays on your balance. Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Balance ($)<input type="number" id="trBal" value="26000" min="0" step="100"></label>
+    <label>How the bank applies it<select id="trMode">
+      <option value="whole" selected>Top rate on the whole balance</option>
+      <option value="split">Each portion earns its own rate</option>
+    </select></label>
+    <label>Tier 1 — minimum balance ($)<input type="number" id="trMin1" value="0" min="0" step="100"></label>
+    <label>Tier 1 — APY (%)<input type="number" id="trApy1" value="0.50" min="0" max="20" step="0.01"></label>
+    <label>Tier 2 — minimum balance ($)<input type="number" id="trMin2" value="10000" min="0" step="100"></label>
+    <label>Tier 2 — APY (%)<input type="number" id="trApy2" value="3.00" min="0" max="20" step="0.01"></label>
+    <label>Tier 3 — minimum balance ($)<input type="number" id="trMin3" value="50000" min="0" step="100"></label>
+    <label>Tier 3 — APY (%)<input type="number" id="trApy3" value="3.25" min="0" max="20" step="0.01"></label>
+    <label>Tier 4 — minimum balance ($), optional<input type="number" id="trMin4" value="" min="0" step="100"></label>
+    <label>Tier 4 — APY (%), optional<input type="number" id="trApy4" value="" min="0" max="20" step="0.01"></label>
+    <label>Tier 5 — minimum balance ($), optional<input type="number" id="trMin5" value="" min="0" step="100"></label>
+    <label>Tier 5 — APY (%), optional<input type="number" id="trApy5" value="" min="0" max="20" step="0.01"></label>
+    <label>Advertised headline APY (%), optional<input type="number" id="trHead" value="" min="0" max="20" step="0.01"></label>
+  </div>
+  <button type="button" id="trGo" class="tool-btn">Calculate</button>
+
+  <div id="trOut" class="tool-out"></div>
+  <p class="tool-note">Banks split into two camps on how a tier table is applied, and the only reliable way to
+  tell them apart is the wording of the disclosure: "the APY applies to the entire balance" means the top tier
+  you qualify for is paid on every dollar, while "each portion of the balance earns the rate for that tier"
+  means only the amount above each threshold earns the higher rate. Guessing costs hundreds of dollars a year
+  on the same balance, so both methods are shown side by side rather than one being picked for you. Interest
+  here is a simple annual figure (balance times APY) so the tiers compare on one basis — it is not a
+  compounding projection. Leave tier 4 and tier 5 blank if the table has only three tiers. Also check how the
+  bank measures the balance: at many banks a single dip below a threshold during the period drops the whole
+  period to the lower tier.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function money(n) {
+    if (!isFinite(n)) { n = 0; }
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function pct(x) { return (x * 100).toFixed(2) + '%'; }
+  function num(id) {
+    var raw = el(id).value;
+    if (raw === null || String(raw).trim() === '') { return null; }
+    var v = parseFloat(raw);
+    return isFinite(v) ? v : null;
+  }
+  var ROWS = [1, 2, 3, 4, 5];
+  var FIELDS = ['trBal', 'trHead'];
+  ROWS.forEach(function (i) { FIELDS.push('trMin' + i); FIELDS.push('trApy' + i); });
+
+  // 하한 오름차순 정렬. 상한은 다음 티어의 하한이고 최상위 티어는 무한대다.
+  function readTiers() {
+    var list = [];
+    ROWS.forEach(function (i) {
+      var lo = num('trMin' + i);
+      var rate = num('trApy' + i);
+      if (lo === null || rate === null) { return; }
+      list.push({ lo: Math.max(0, lo), apy: rate / 100 });
+    });
+    list.sort(function (a, b) { return a.lo - b.lo; });
+    return list;
+  }
+  function upper(list, i) { return (i + 1 < list.length) ? list[i + 1].lo : Infinity; }
+  function band(list, i) {
+    var hi = upper(list, i);
+    return hi === Infinity
+      ? money(list[i].lo) + ' and above'
+      : money(list[i].lo) + ' up to ' + money(hi);
+  }
+
+  function run() {
+    var out = el('trOut');
+    var bal = num('trBal');
+    if (bal === null || bal < 0) { bal = 0; }
+    var list = readTiers();
+    if (list.length < 2) {
+      out.innerHTML = '<p>Enter at least two tiers — a minimum balance and an APY for each.</p>';
+      return;
+    }
+
+    // Top rate on the whole balance: 잔액이 도달한 가장 높은 티어의 APY를 전액에 적용.
+    var top = -1;
+    for (var i = 0; i < list.length; i++) { if (list[i].lo <= bal) { top = i; } }
+    var wholeApy = top >= 0 ? list[top].apy : 0;
+    var wholeInt = bal * wholeApy;
+
+    // Each portion earns its own rate: 구간별 금액에 그 구간의 APY를 적용해 합산.
+    var splitInt = 0;
+    var parts = [];
+    for (i = 0; i < list.length; i++) {
+      var portion = Math.max(0, Math.min(bal, upper(list, i)) - list[i].lo);
+      var earned = portion * list[i].apy;
+      splitInt += earned;
+      if (portion > 0) {
+        parts.push('<li>' + band(list, i) + ' at ' + pct(list[i].apy) + ' — '
+          + money(portion) + ' earns ' + money(earned) + '</li>');
+      }
+    }
+    var splitApy = bal > 0 ? splitInt / bal : 0;
+
+    var isSplit = el('trMode').value === 'split';
+    var selName = isSplit ? 'Each portion earns its own rate' : 'Top rate on the whole balance';
+    var altName = isSplit ? 'Top rate on the whole balance' : 'Each portion earns its own rate';
+    var selInt = isSplit ? splitInt : wholeInt;
+    var altInt = isSplit ? wholeInt : splitInt;
+    var selApy = isSplit ? splitApy : wholeApy;
+    var altApy = isSplit ? wholeApy : splitApy;
+    var gap = wholeInt - splitInt;
+
+    var tierLine = top >= 0
+      ? '<li>Tier your balance reaches: ' + band(list, top) + ' at ' + pct(list[top].apy) + '</li>'
+      : '<li>Your balance is below the lowest tier minimum (' + money(list[0].lo)
+        + '), so no tier rate applies.</li>';
+
+    var head = '<p><strong>' + selName + ': ' + money(selInt) + ' a year</strong> on '
+      + money(bal) + ', an effective APY of ' + pct(selApy) + '.</p>';
+
+    var gapLine;
+    if (Math.abs(gap) < 0.005) {
+      gapLine = '<li>Both methods pay the same on this balance.</li>';
+    } else {
+      gapLine = '<li>Difference between the two methods: ' + money(Math.abs(gap))
+        + ' a year — the whole-balance method pays '
+        + (gap > 0 ? 'more' : 'less') + '.</li>';
+    }
+
+    var headline = num('trHead');
+    var headLine = '';
+    if (headline !== null && headline > 0) {
+      var shortfall = bal * (headline / 100 - selApy);
+      headLine = shortfall > 0.005
+        ? '<li><strong class="tool-no">' + money(shortfall) + ' a year short</strong> of the advertised '
+          + pct(headline / 100) + ' headline APY on this balance.</li>'
+        : '<li><strong class="tool-yes">At or above the advertised ' + pct(headline / 100)
+          + ' headline APY</strong> on this balance'
+          + (shortfall < -0.005 ? ', by ' + money(-shortfall) + ' a year' : '') + '.</li>';
+    }
+
+    var detail = parts.length
+      ? '<p>How the split method fills the tiers:</p><ul>' + parts.join('') + '</ul>'
+      : '';
+
+    out.innerHTML = head + '<ul>'
+      + tierLine
+      + '<li>' + selName + ' (selected): ' + money(selInt)
+      + ' a year, effective APY ' + pct(selApy) + '</li>'
+      + '<li>' + altName + ': ' + money(altInt)
+      + ' a year, effective APY ' + pct(altApy) + '</li>'
+      + gapLine
+      + headLine
+      + '</ul>' + detail;
+  }
+
+  el('trGo').addEventListener('click', run);
+  el('trMode').addEventListener('change', run);
+  FIELDS.forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

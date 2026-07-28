@@ -1,0 +1,381 @@
+<style>
+  .fdic-tool .tool-grid select { padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px;
+                                 font-size: 1em; width: 100%; box-sizing: border-box; background: #fff; }
+  .fdic-tool .tool-grid + .tool-grid { margin-top: 12px; }
+  .fdic-tool .tool-out h4 { margin: 16px 0 0; font-size: .95em; }
+  .fdic-tool input:disabled, .fdic-tool select:disabled { background: #eef2f7; color: #94a3b8; }
+</style>
+
+<div class="tool-card fdic-tool">
+  <h3 class="tool-title">FDIC coverage and interest overflow calculator</h3>
+  <p class="tool-sub">Groups your accounts the way the FDIC does and projects when interest pushes a balance past the limit. Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Projection horizon (months)<input type="number" id="fdHorizon" value="24" min="0" max="600" step="1"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow1">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName1" value="First National" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat1">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo1" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen1" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal1" value="245000" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy1" value="4.00" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow2">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName2" value="First National" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat2">
+      <option value="single">Single</option>
+      <option value="joint" selected>Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo2" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen2" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal2" value="400000" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy2" value="4.00" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow3">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName3" value="" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat3">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo3" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen3" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal3" value="0" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy3" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow4" style="display:none">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName4" value="" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat4">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo4" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen4" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal4" value="0" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy4" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow5" style="display:none">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName5" value="" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat5">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo5" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen5" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal5" value="0" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy5" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow6" style="display:none">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName6" value="" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat6">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo6" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen6" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal6" value="0" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy6" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow7" style="display:none">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName7" value="" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat7">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo7" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen7" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal7" value="0" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy7" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <div class="tool-grid" id="fdRow8" style="display:none">
+    <label>Bank name or FDIC cert #<input type="text" id="fdName8" value="" placeholder="Bank or cert #"></label>
+    <label>Ownership category<select id="fdCat8">
+      <option value="single" selected>Single</option>
+      <option value="joint">Joint</option>
+      <option value="retirement">Retirement (IRA)</option>
+      <option value="trust">Trust</option>
+      <option value="business">Business</option>
+    </select></label>
+    <label>Co-owners (Joint only)<input type="number" id="fdCo8" value="2" min="1" max="10" step="1"></label>
+    <label>Beneficiaries (Trust only)<input type="number" id="fdBen8" value="1" min="1" max="20" step="1"></label>
+    <label>Balance ($)<input type="number" id="fdBal8" value="0" min="0" step="1000"></label>
+    <label>APY (%)<input type="number" id="fdApy8" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+
+  <button type="button" id="fdAdd" class="tool-btn">Add another account</button>
+  <button type="button" id="fdGo" class="tool-btn">Calculate coverage</button>
+
+  <div id="fdOut" class="tool-out"></div>
+  <p class="tool-note">Coverage is counted per depositor, per insured bank, per ownership category, so
+  accounts are grouped by certificate number and category rather than by account. Group rows by FDIC
+  certificate number instead of brand — several online brands often share one charter, and one charter
+  means one $250,000 limit. Rows left unnamed are treated as separate institutions, so enter the same
+  name or certificate number on every row that shares a charter. The joint limit shown here holds only if
+  the co-owners hold equal shares and every joint account at that bank has the same co-owners; when the
+  co-owners differ from account to account, each person's $250,000 is spread across all of their joint
+  shares at that bank and this multiplication overstates coverage. Trust figures follow the rule effective
+  April 1, 2024: $250,000 per eligible beneficiary, up to five, capped at $1,250,000 per owner per bank.
+  This is a planning estimate, not a determination — the official tool is the FDIC's EDIE at edie.fdic.gov.
+  Interest that has accrued when a bank fails counts toward the limit, which is why the projection is here;
+  projected balances assume the APY you enter holds for the whole horizon.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  var MAX_ROWS = 8;
+  var STD = 250000;         // per depositor, per insured bank, per ownership category
+  var TRUST_CAP = 1250000;  // five or more eligible beneficiaries, per owner per bank
+  var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  var CATS = { single: 'Single', joint: 'Joint', retirement: 'Retirement (IRA)', trust: 'Trust', business: 'Business' };
+  var shown = 3;
+
+  function el(id) { return d.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return ESC[c]; }); }
+  function num(id, dflt) { var v = parseFloat(el(id).value); return isFinite(v) ? v : dflt; }
+  function money(n) {
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function pct(r) { return (r * 100).toFixed(2) + '%'; }
+  function mo(n) { return String(Math.round(n * 10) / 10); }
+
+  // 천장: Single/Retirement/Business = 250,000, Joint = 250,000 x 공동소유자 수,
+  // Trust = 250,000 x min(수익자 수, 5) 이고 소유자·은행당 1,250,000 이 상한.
+  function ceilingFor(cat, co, ben) {
+    if (cat === 'joint') {
+      var c = Math.round(co);
+      if (!(c >= 1)) { c = 1; }
+      return STD * c;
+    }
+    if (cat === 'trust') {
+      var b = Math.round(ben);
+      if (!(b >= 1)) { b = 1; }
+      if (b > 5) { b = 5; }
+      var lim = STD * b;
+      return lim > TRUST_CAP ? TRUST_CAP : lim;
+    }
+    return STD;
+  }
+
+  function syncRow(n) {
+    var cat = el('fdCat' + n).value;
+    el('fdCo' + n).disabled = (cat !== 'joint');
+    el('fdBen' + n).disabled = (cat !== 'trust');
+  }
+
+  function collect() {
+    var list = [];
+    for (var i = 1; i <= MAX_ROWS; i++) {
+      var bal = num('fdBal' + i, 0);
+      if (!(bal > 0)) { continue; }
+      var name = (el('fdName' + i).value || '').replace(/^\s+|\s+$/g, '');
+      var cat = el('fdCat' + i).value || 'single';
+      if (!CATS[cat]) { cat = 'single'; }
+      var apy = num('fdApy' + i, 0) / 100;
+      if (!(apy > 0)) { apy = 0; }
+      list.push({
+        row: i,
+        label: name || ('Account ' + i),
+        cat: cat,
+        apy: apy,
+        bal: bal,
+        // 그룹 키 = (은행 charter, 소유권 카테고리). 이름을 비워두면 합치지 않고 별개 은행으로 둔다.
+        key: (name ? name.toLowerCase() : 'unnamed-row-' + i) + '|' + cat,
+        cap: ceilingFor(cat, num('fdCo' + i, 2), num('fdBen' + i, 1))
+      });
+    }
+    return list;
+  }
+
+  // 예측 잔액 = B x (1 + APY)^(t/12)
+  function projected(rows, months) {
+    var s = 0;
+    for (var i = 0; i < rows.length; i++) {
+      s += rows[i].bal * Math.pow(1 + rows[i].apy, months / 12);
+    }
+    return s;
+  }
+
+  // 천장 돌파 개월 = 12 x ln(천장 / B) / ln(1 + APY).
+  // 한 그룹 안에 서로 다른 APY 가 섞이면 닫힌 해가 없으므로 같은 성장식을 이분법으로 푼다.
+  function monthsToCap(g) {
+    if (g.total >= g.cap) { return 0; }
+    var uniform = true, apy = g.rows[0].apy, top = 0, i;
+    for (i = 0; i < g.rows.length; i++) {
+      if (g.rows[i].apy !== apy) { uniform = false; }
+      if (g.rows[i].apy > top) { top = g.rows[i].apy; }
+    }
+    if (top <= 0) { return null; }
+    if (uniform) { return 12 * Math.log(g.cap / g.total) / Math.log(1 + apy); }
+    var lo = 0, hi = 1200;
+    if (projected(g.rows, hi) < g.cap) { return Infinity; }
+    for (i = 0; i < 80; i++) {
+      var mid = (lo + hi) / 2;
+      if (projected(g.rows, mid) < g.cap) { lo = mid; } else { hi = mid; }
+    }
+    return hi;
+  }
+
+  function run() {
+    var months = num('fdHorizon', 24);
+    if (!(months >= 0)) { months = 0; }
+    if (months > 600) { months = 600; }
+    var mLabel = mo(months);
+
+    var list = collect();
+    if (!list.length) {
+      el('fdOut').innerHTML = '<p>Enter a balance on at least one row to see coverage.</p>';
+      return;
+    }
+
+    var groups = {}, order = [], i;
+    for (i = 0; i < list.length; i++) {
+      var r = list[i];
+      var g = groups[r.key];
+      if (!g) {
+        g = { label: r.label, cat: r.cat, rows: [], total: 0, cap: 0, mixedCap: false, mixedApy: false };
+        groups[r.key] = g;
+        order.push(r.key);
+      }
+      if (g.rows.length) {
+        if (g.rows[0].cap !== r.cap) { g.mixedCap = true; }
+        if (g.rows[0].apy !== r.apy) { g.mixedApy = true; }
+      }
+      if (r.cap > g.cap) { g.cap = r.cap; }
+      g.rows.push(r);
+      g.total += r.bal;
+    }
+
+    var totalNow = 0, insuredNow = 0, uninsuredNow = 0, projTotal = 0, projUninsured = 0, blocks = '';
+
+    for (i = 0; i < order.length; i++) {
+      var grp = groups[order[i]];
+      var insured = Math.min(grp.total, grp.cap);
+      var uninsured = Math.max(0, grp.total - grp.cap);
+      totalNow += grp.total;
+      insuredNow += insured;
+      uninsuredNow += uninsured;
+
+      var pTotal = projected(grp.rows, months);
+      var pUninsured = Math.max(0, pTotal - grp.cap);
+      projTotal += pTotal;
+      projUninsured += pUninsured;
+
+      var top = 0, k;
+      for (k = 0; k < grp.rows.length; k++) { if (grp.rows[k].apy > top) { top = grp.rows[k].apy; } }
+      // 최대 안전 예치액 = 천장 / (1 + APY)^(t/12)
+      var maxSafe = grp.cap / Math.pow(1 + top, months / 12);
+      var headroom = maxSafe - grp.total;
+
+      var cross = monthsToCap(grp);
+      var crossLine;
+      if (cross === null) {
+        crossLine = 'No rate entered, so this balance is not projected to grow past the limit.';
+      } else if (cross === 0) {
+        crossLine = 'Already at or above the limit today.';
+      } else if (cross === Infinity) {
+        crossLine = 'Not projected to reach the limit within 100 years at these rates.';
+      } else {
+        crossLine = 'Interest carries this group past the limit in ' + mo(cross) + ' months'
+          + (cross <= months ? ' — inside the ' + mLabel + '-month horizon.' : ', after the ' + mLabel + '-month horizon.');
+      }
+
+      var detail = '';
+      if (grp.rows.length > 1) {
+        for (k = 0; k < grp.rows.length; k++) {
+          var rr = grp.rows[k];
+          detail += '<li>Row ' + rr.row + ': ' + money(rr.bal) + ' at ' + pct(rr.apy) + ' &rarr; '
+            + money(rr.bal * Math.pow(1 + rr.apy, months / 12)) + ' in ' + mLabel + ' months</li>';
+        }
+      }
+
+      blocks += '<h4>' + esc(grp.label) + ' &mdash; ' + CATS[grp.cat] + '</h4><ul>'
+        + '<li>Balance in this group: ' + money(grp.total) + ' against a limit of ' + money(grp.cap) + '</li>'
+        + '<li>Insured now: ' + money(insured) + ' &middot; uninsured now: ' + money(uninsured) + '</li>'
+        + detail
+        + '<li>Projected in ' + mLabel + ' months: ' + money(pTotal)
+        + ' &middot; uninsured then: ' + money(pUninsured) + '</li>'
+        + '<li>' + crossLine + '</li>'
+        + '<li>Largest balance that still fits under the limit after ' + mLabel + ' months: ' + money(maxSafe)
+        + (grp.mixedApy ? ' (at the highest rate in this group)' : '')
+        + (headroom >= 0 ? ' — room for ' + money(headroom) + ' more today' : ' — ' + money(-headroom) + ' below what you hold now')
+        + '</li>'
+        + (grp.mixedCap ? '<li>Rows in this group set different co-owner or beneficiary counts, so the highest limit was applied.</li>' : '')
+        + '</ul>';
+    }
+
+    var verdict;
+    if (uninsuredNow > 0) {
+      verdict = '<strong class="tool-no">' + money(uninsuredNow) + ' sits above the coverage limits today.</strong>';
+    } else if (projUninsured > 0) {
+      verdict = '<strong class="tool-no">Covered today, but ' + money(projUninsured)
+        + ' is projected to sit above the limits in ' + mLabel + ' months.</strong>';
+    } else {
+      verdict = '<strong class="tool-yes">Every balance stays within the coverage limits today and through the projection.</strong>';
+    }
+
+    el('fdOut').innerHTML = '<p>' + verdict + '</p><ul>'
+      + '<li>Total on deposit: ' + money(totalNow) + '</li>'
+      + '<li>Insured today: ' + money(insuredNow) + ' &middot; uninsured today: ' + money(uninsuredNow) + '</li>'
+      + '<li>Projected total in ' + mLabel + ' months: ' + money(projTotal)
+      + ' &middot; uninsured then: ' + money(projUninsured) + '</li>'
+      + '</ul>' + blocks;
+  }
+
+  for (var n = 1; n <= MAX_ROWS; n++) {
+    (function (idx) {
+      el('fdCat' + idx).addEventListener('change', function () { syncRow(idx); run(); });
+      ['fdName', 'fdCo', 'fdBen', 'fdBal', 'fdApy'].forEach(function (p) {
+        el(p + idx).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+      });
+      syncRow(idx);
+    })(n);
+  }
+  el('fdHorizon').addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  el('fdGo').addEventListener('click', run);
+  el('fdAdd').addEventListener('click', function () {
+    if (shown < MAX_ROWS) {
+      shown += 1;
+      el('fdRow' + shown).style.display = 'grid';
+    }
+    if (shown >= MAX_ROWS) {
+      el('fdAdd').disabled = true;
+      el('fdAdd').textContent = 'All 8 rows shown';
+    }
+  });
+  run();
+})();
+</script>

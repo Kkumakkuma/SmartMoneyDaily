@@ -57,9 +57,7 @@ Two consequences follow.
 
 Run the same check once a quarter and you will never be the last to know. The mechanics of APY, compounding frequency, and how banks credit interest are covered in full in [APY, Compounding, and What Your Savings Will Really Earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 
-Enter your balance, the APY on the disclosure, and the compounding frequency to see what a full year looks like before you commit — then re-enter the lower figure to see what a cut would cost you.
-
-{% include tools/apy-calculator.html %}
+The [account fee break-even calculator](/SmartMoneyDaily/tools/bank-fee-break-even-calculator/) will do this with your own figures.
 
 ## Transfer Limits, ACH Timing, and How Fast You Can Get Cash
 

@@ -1,0 +1,146 @@
+<div class="tool-card">
+  <h3 class="tool-title">Fix It or Float It Calculator</h3>
+  <p class="tool-sub">Lock the money into a CD, or leave it in savings? Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Amount ($)<input type="number" id="fxAmt" value="20000" min="0" step="100"></label>
+    <label>Horizon (months)<input type="number" id="fxTerm" value="12" min="1" max="120" step="1"></label>
+    <label>CD APY, fixed (%)<input type="number" id="fxCd" value="3.85" min="0" max="20" step="0.01"></label>
+    <label>Current savings or MMA APY (%)<input type="number" id="fxFlt" value="4.00" min="0" max="20" step="0.01"></label>
+    <label>Rate move per quarter (percentage points)<input type="number" id="fxStep" value="0.25" min="0" max="5" step="0.05"></label>
+    <label>Months already elapsed at the floating rate<input type="number" id="fxHeld" value="0" min="0" max="120" step="1"></label>
+  </div>
+  <button type="button" id="fxGo" class="tool-btn">Calculate</button>
+
+  <div id="fxOut" class="tool-out"></div>
+  <p class="tool-note">The three paths are not forecasts. They draw out the assumption you typed in, and nothing
+  guarantees that rates move by the same amount every quarter — in practice no one knows the path in advance.
+  Each quarter is compounded at that quarter's APY, while most banks compound daily, so the totals here can sit
+  a few dollars away from a statement. The asymmetry that matters is this: the CD rate is fixed by contract for
+  the full term, while the floating rate can be changed at any time, including between the quarters modeled
+  here. The cost of breaking a CD early is not calculated on this page — use the CD early withdrawal penalty
+  calculator for that. Taxes are not included.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function money(n) {
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function pct(r) { return (r * 100).toFixed(2) + '%'; }
+  function joinList(a) {
+    if (a.length === 1) { return a[0]; }
+    return a.slice(0, -1).join(', ') + ' or ' + a[a.length - 1];
+  }
+
+  // 변동 경로: 분기 q 마다 APY_q = max(0, APY_0 + q*delta), B_(q+1) = B_q * (1 + APY_q)^(3/12).
+  // 마지막 자투리 구간은 지수에 (잔여개월/12) 을 쓴다.
+  function floatInterest(P, months, apy0, delta) {
+    var B = P, rem = months, q = 0;
+    while (rem > 1e-9) {
+      var span = Math.min(3, rem);
+      var r = Math.max(0, apy0 + q * delta);
+      B = B * Math.pow(1 + r, span / 12);
+      rem -= span;
+      q += 1;
+    }
+    return B - P;
+  }
+  function finalRate(months, apy0, delta) {
+    var q = Math.max(1, Math.ceil(months / 3));
+    return Math.max(0, apy0 + (q - 1) * delta);
+  }
+
+  function run() {
+    var P = parseFloat(el('fxAmt').value) || 0;
+    var t = parseInt(el('fxTerm').value, 10) || 0;
+    var cdApy = (parseFloat(el('fxCd').value) || 0) / 100;
+    var fltApy = (parseFloat(el('fxFlt').value) || 0) / 100;
+    var step = (parseFloat(el('fxStep').value) || 0) / 100;
+    var held = parseInt(el('fxHeld').value, 10) || 0;
+    if (held < 0) { held = 0; }
+
+    if (t <= 0) {
+      el('fxOut').innerHTML = '<p>Enter a horizon of at least one month.</p>';
+      return;
+    }
+
+    var cdInt = P * (Math.pow(1 + cdApy, t / 12) - 1);
+
+    var move = (step * 100).toFixed(2);
+    var paths = [
+      {
+        key: 'rates hold',
+        label: 'Rates hold at ' + pct(fltApy),
+        delta: 0
+      },
+      {
+        key: 'rates fall',
+        label: 'Rates fall ' + move + ' pp a quarter (' + pct(fltApy) + ' &rarr; '
+          + pct(finalRate(t, fltApy, -step)) + ' by the last quarter)',
+        delta: -step
+      },
+      {
+        key: 'rates rise',
+        label: 'Rates rise ' + move + ' pp a quarter (' + pct(fltApy) + ' &rarr; '
+          + pct(finalRate(t, fltApy, step)) + ' by the last quarter)',
+        delta: step
+      }
+    ];
+
+    var wins = [], ties = [], losses = [], rows = '';
+    for (var i = 0; i < paths.length; i++) {
+      var pi = floatInterest(P, t, fltApy, paths[i].delta);
+      var gap = cdInt - pi;
+      var verdictBit;
+      if (gap > 0.005) { wins.push(paths[i].key); verdictBit = 'CD ahead by ' + money(gap); }
+      else if (gap < -0.005) { losses.push(paths[i].key); verdictBit = 'Floating ahead by ' + money(-gap); }
+      else { ties.push(paths[i].key); verdictBit = 'Level with the CD'; }
+      rows += '<li>' + paths[i].label + ': ' + money(pi) + ' interest &mdash; ending balance '
+        + money(P + pi) + '. ' + verdictBit + '.</li>';
+    }
+
+    var clauses = [];
+    if (wins.length) { clauses.push('ahead when ' + joinList(wins)); }
+    if (ties.length) { clauses.push('level when ' + joinList(ties)); }
+    if (losses.length) { clauses.push('behind when ' + joinList(losses)); }
+    var tone = wins.length === 3 ? ' class="tool-yes"' : (losses.length === 3 ? ' class="tool-no"' : '');
+    var verdict = '<strong' + tone + '>The CD comes out ' + clauses.join(', ') + '.</strong>';
+
+    var breakEven = '<p>Break-even: the floating account has to average ' + pct(cdApy)
+      + ' APY across the full ' + t + ' months to match the CD. That is the CD APY itself &mdash; the two are '
+      + 'the same number, not two separate results.</p>';
+
+    var catchUp = '';
+    if (held > 0) {
+      if (held >= t) {
+        catchUp = '<p>The months already elapsed reach the end of the horizon, so there is no remaining '
+          + 'period left to catch up in.</p>';
+      } else if (P <= 0) {
+        catchUp = '<p>Enter an amount above zero to see what the remaining months would have to average.</p>';
+      } else {
+        var m = t - held;
+        var heldInt = P * (Math.pow(1 + fltApy, held / 12) - 1);
+        var need = Math.pow((P + cdInt) / (P + heldInt), 12 / m) - 1;
+        catchUp = '<p>Already ' + held + ' months in at ' + pct(fltApy) + ', the floating account has earned '
+          + money(heldInt) + '. To finish the ' + t + ' months where the CD would, the remaining ' + m
+          + ' months have to average ' + pct(need) + ' APY.</p>';
+      }
+    }
+
+    el('fxOut').innerHTML = '<p>' + verdict + '</p>' + breakEven + '<ul>'
+      + '<li>CD fixed at ' + pct(cdApy) + ' for ' + t + ' months: ' + money(cdInt)
+      + ' interest &mdash; ending balance ' + money(P + cdInt) + '.</li>'
+      + rows + '</ul>' + catchUp;
+  }
+
+  el('fxGo').addEventListener('click', run);
+  ['fxAmt', 'fxTerm', 'fxCd', 'fxFlt', 'fxStep', 'fxHeld'].forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

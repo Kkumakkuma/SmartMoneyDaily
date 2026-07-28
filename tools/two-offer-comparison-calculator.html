@@ -1,0 +1,63 @@
+---
+layout: tool
+title: "Two-Offer Comparison Calculator: Which Account Actually Keeps More"
+permalink: /tools/two-offer-comparison-calculator/
+tool: two-offer-comparison
+description: "Enter a balance, a term, two APYs and each account's fees. The calculator returns net interest, ending balance, and the net APY each offer really pays after fees."
+intro: "Enter a balance, a holding period, and the two offers' rates and fees — the calculator returns net interest for each, the dollar gap between them before and after tax, and the APY the second offer would need to tie."
+---
+
+<p>Rate comparisons go wrong in one predictable way: the two numbers are not measuring the same thing. One is an APY, the other a nominal rate. One account charges a monthly fee, the other does not. The calculator above removes those differences by force — same balance, same months, same subtraction order — leaving only the dollar amount each offer puts in your hands.</p>
+
+<h2>Two rate sheets, one denominator</h2>
+
+<p><strong>Balance</strong> is what you would genuinely park there, not the promotional minimum. One rate applies to the whole balance, so a rate that kicks in above a threshold is not modeled.</p>
+
+<p><strong>Term in months</strong> is a decision horizon, not necessarily a contract: for a CD, the certificate's term; for savings or money market, how long you expect to leave the money alone.</p>
+
+<p><strong>Rate entry mode</strong> sets which rate you are typing. Regulation DD (12 CFR Part 1030) requires an annual percentage yield to be disclosed, and account disclosures typically print an "Interest Rate" line and an "Annual Percentage Yield" line separately. They are not the same number: the APY already contains the effect of compounding, the interest rate does not. Leave the selector on "APY as disclosed" and type the APY. Switch to nominal only when a rate sheet gives an interest rate and a compounding frequency but no APY — the compounding dropdowns then appear, and the tool shows the APY it derived.</p>
+
+<p><strong>Monthly maintenance fee</strong> comes from the schedule of fees, usually labeled monthly service charge. The temptation is to enter zero because the fee is waivable. Do that only if you will meet the waiver condition in every statement cycle — our note on <a href="/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/">fees in high-yield accounts</a> covers which conditions lapse most often.</p>
+
+<p><strong>Annual fee</strong> accepts a negative number, which is how you model an account-opening bonus. <strong>Combined marginal tax rate</strong> is your federal bracket plus your state's marginal rate on interest, as one figure.</p>
+
+<h2>The arithmetic behind the verdict</h2>
+
+<p>Interest for each offer is the balance multiplied by (1 + APY) raised to the power of months ÷ 12, minus one. Using the APY as the annual growth factor is why compounding frequency drops out in APY mode: the frequency is already inside the APY, and applying it twice would double-count. In nominal mode the conversion runs first — (1 + rate ÷ n) to the power of n, minus one, or e raised to the rate for continuous compounding — and everything downstream uses that APY.</p>
+
+<p>Fees are the monthly charge times months, plus the annual charge times months ÷ 12. Net interest is interest minus fees; ending balance is balance plus net interest.</p>
+
+<p>Net APY after fees converts that net figure back into an annual rate: one plus net interest ÷ balance, raised to the power of 12 ÷ months, minus one. That is the same shape as the general APY formula in Regulation DD Appendix A, which annualizes interest earned over the days in the term — here monthly, with fees already deducted. It is what makes a fee-charging account and a fee-free account comparable.</p>
+
+<p>The final line, the APY Offer B would need to match Offer A, asks what gross interest B must produce for its net interest to equal A's.</p>
+
+<h2>Reading the output, with a worked example</h2>
+
+<p>Suppose $25,000 for 18 months. Offer A discloses 4.40% APY with a $12 monthly maintenance fee; Offer B discloses 4.05% APY and no fees. Combined marginal tax rate: 24%.</p>
+
+<p>Offer A earns roughly $1,668 in interest, pays $216 in fees, and nets about $1,452 — a net APY near 3.84%. Offer B earns roughly $1,534, pays nothing, and holds its 4.05%. Offer B keeps about $82 more before tax.</p>
+
+<p>After tax the gap widens rather than narrows, to roughly $114. Tax shrinks A's interest advantage but leaves its fee disadvantage at full size, because fees are subtracted after tax here — an individual cannot deduct a bank maintenance fee against interest income.</p>
+
+<p>That asymmetry matters before you trust the headline. The bold verdict compares net interest <em>before</em> tax; the after-tax figure sits one list below it. When the higher-yielding offer is also the one charging fees, a high enough marginal rate can flip the winner between those two lines, and the banner does not re-check itself. Read both.</p>
+
+<p>The match line here reads 3.84%, meaning Offer B could fall that far and still tie. At this balance and term, a $12 monthly fee costs A about 0.56 percentage points of yield.</p>
+
+<h2>What this comparison cannot see</h2>
+
+<p>The math assumes the balance never moves and the APY never changes. For a fixed-rate CD both hold contractually. For savings or money market the second is an assumption, and a promotional rate that resets in three months makes this output meaningless by month four — see <a href="/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/">whether a switch is worth making</a>.</p>
+
+<p>Interest is assumed to stay in the account and compound; an account that pays interest out to linked checking grows more slowly than shown. The annual fee is spread smoothly across the term, so a six-month run charges half of it, while a real annual fee usually lands as a lump on one date. Fee waivers are all-or-nothing; there is no way to say "waived nine months out of twelve."</p>
+
+<p>Tax is one flat rate on interest: no state-by-state detail, no net investment income tax, no bracket crossing, no allocation across tax years. A bonus entered as a negative annual fee is treated purely as a negative fee, so the model does not tax it, though bank bonuses are generally reportable income. Nothing here prices liquidity, early withdrawal penalties, deposit insurance limits, or transfer speed.</p>
+
+<h2>Loose ends</h2>
+
+<h3>The disclosure lists an interest rate and an APY that differ. Which one do I enter?</h3>
+<p>The APY, with the mode selector on its default. Both describe the same account, but only the APY accounts for compounding, so only the APY compares cleanly across accounts. A nominal rate typed into the APY field overstates the result.</p>
+
+<h3>How do I model an account-opening bonus?</h3>
+<p>As a negative annual fee — but it is prorated across the term. For a one-time $300 bonus over 18 months, enter −300 × 12 ÷ 18, which is −200, so the prorated total comes back to $300. On a straight 12-month term the bonus goes in directly as a negative.</p>
+
+<h3>Why does net APY after fees look extreme on a short term?</h3>
+<p>Because it is annualized. A three-month term raises the net growth factor to the fourth power, scaling a $10 monthly fee as if it ran all year. That is the right way to hold a short offer against an annual quote, but it makes fee damage look dramatic — read the dollar figures alongside it.</p>

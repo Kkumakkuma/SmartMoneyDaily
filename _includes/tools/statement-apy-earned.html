@@ -1,0 +1,99 @@
+<div class="tool-card">
+  <h3 class="tool-title">Statement APY earned calculator</h3>
+  <p class="tool-sub">Work back from one statement to the rate you were actually paid. Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Interest posted this period ($)<input type="number" id="seInt" value="63.20" step="0.01"></label>
+    <label>Average daily balance ($)<input type="number" id="seBal" value="19000" min="0" step="100"></label>
+    <label>Days in the statement period<input type="number" id="seDays" value="31" min="1" max="366" step="1"></label>
+    <label>Fees charged this period ($)<input type="number" id="seFee" value="0" min="0" step="0.01"></label>
+    <label>APY you believe you are getting (%)<input type="number" id="seExp" value="0" min="0" max="20" step="0.01"></label>
+    <label>Days in the year<select id="seYear" style="padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1em; width: 100%; box-sizing: border-box; background: #fff;"><option value="365" selected>365</option><option value="366">366 (leap year)</option></select></label>
+  </div>
+  <button type="button" id="seGo" class="tool-btn">Calculate</button>
+
+  <div id="seOut" class="tool-out"></div>
+  <p class="tool-note">The denominator has to be the average daily balance for the period, not the closing
+  balance. Regulation DD (12 CFR 1030.7) permits only the daily balance or the average daily balance method
+  and prohibits ending balance, low balance and investable balance methods. The APY earned line uses the
+  formula in 12 CFR 1030 Appendix A, Part II; the simple annualized line is the shortcut most rate
+  comparisons quote, and it reads lower because it drops compounding. One statement is a single snapshot, so
+  if a large deposit or withdrawal landed mid-period, or the balance crossed a rate tier, do not judge the
+  account on that month alone. APY earned reports interest already paid while an advertised APY is
+  forward-looking, so a difference between the two is not by itself a violation.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function money(n) {
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function pct(n) { return (n * 100).toFixed(2) + '%'; }
+  function bps(n) { return (n * 10000).toFixed(1) + ' bp'; }
+
+  function run() {
+    var interest = parseFloat(el('seInt').value) || 0;
+    var bal = parseFloat(el('seBal').value) || 0;
+    var days = parseInt(el('seDays').value, 10) || 0;
+    var fee = parseFloat(el('seFee').value) || 0;
+    var expected = (parseFloat(el('seExp').value) || 0) / 100;
+    var yearDays = parseInt(el('seYear').value, 10) || 365;
+
+    if (bal <= 0 || days <= 0) {
+      el('seOut').innerHTML = '<p>Enter an average daily balance above zero and at least one day in the '
+        + 'statement period.</p>';
+      return;
+    }
+
+    var exponent = yearDays / days;
+    var periodRate = interest / bal;
+    var periodNet = (interest - fee) / bal;
+
+    // 단순 연환산: 기간수익률을 일수 비례로 늘린 값. 복리를 반영하지 않는다.
+    var simple = periodRate * exponent;
+    // APY Earned: 12 CFR 1030 Appendix A Part II 법정 공식.
+    var earned = (1 + periodRate) > 0 ? Math.pow(1 + periodRate, exponent) - 1 : null;
+    // 수수료 반영: 이자에서 수수료를 뺀 뒤 같은 공식을 적용한다.
+    var earnedNet = (1 + periodNet) > 0 ? Math.pow(1 + periodNet, exponent) - 1 : null;
+
+    var lines = '';
+    lines += '<li>Simple annualized rate: ' + pct(simple)
+      + ' — interest divided by balance, scaled to a ' + yearDays + '-day year, no compounding.</li>';
+    lines += '<li>APY earned: ' + (earned === null ? 'not defined for a loss this large' : pct(earned))
+      + ' — the Regulation DD figure.</li>';
+    lines += '<li>APY earned net of fees: '
+      + (earnedNet === null ? 'not defined for a loss this large' : pct(earnedNet))
+      + (fee > 0 ? ' — after ' + money(fee) + ' in fees charged this period.' : ' — no fees entered.')
+      + '</li>';
+
+    var headline;
+    if (expected > 0 && earnedNet !== null) {
+      var gap = expected - earnedNet;
+      var annual = bal * gap;
+      lines += '<li>Gap against the ' + pct(expected) + ' you expected: ' + bps(Math.abs(gap))
+        + (gap > 0 ? ' short.' : ' ahead.') + '</li>';
+      lines += '<li>What that gap is worth over a year on ' + money(bal) + ': ' + money(Math.abs(annual))
+        + (gap > 0 ? ' of interest you are not getting.' : ' of interest above what you expected.') + '</li>';
+      headline = gap > 0
+        ? '<strong class="tool-no">This statement came in ' + bps(gap) + ' below the APY you expected.</strong>'
+        : '<strong class="tool-yes">This statement came in ' + bps(-gap) + ' above the APY you expected.</strong>';
+    } else {
+      headline = earnedNet === null
+        ? '<strong class="tool-no">Fees exceeded the balance for this period.</strong>'
+        : '<strong>This statement worked out to an APY earned of ' + pct(earnedNet) + '.</strong>';
+    }
+
+    el('seOut').innerHTML = '<p>' + headline + '</p><ul>' + lines + '</ul>';
+  }
+
+  el('seGo').addEventListener('click', run);
+  el('seYear').addEventListener('change', run);
+  ['seInt', 'seBal', 'seDays', 'seFee', 'seExp'].forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

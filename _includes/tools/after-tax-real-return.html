@@ -1,0 +1,131 @@
+<div class="tool-card">
+  <h3 class="tool-title">After-tax and inflation-adjusted return calculator</h3>
+  <p class="tool-sub">What a quoted APY is actually worth once taxes and inflation come out. Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Balance ($)<input type="number" id="txBal" value="25000" min="0" step="100"></label>
+    <label>APY (%)<input type="number" id="txApy" value="4.00" min="0" max="20" step="0.01"></label>
+    <label>Federal marginal tax rate (%)<input type="number" id="txFed" value="22" min="0" max="60" step="0.1"></label>
+    <label>State marginal tax rate (%)<input type="number" id="txState" value="5" min="0" max="20" step="0.1"></label>
+    <label>Expected inflation rate (%)<input type="number" id="txInf" value="3.0" min="-10" max="30" step="0.1"></label>
+    <label>Tax-free yield to compare (%, optional)<input type="number" id="txTf" value="0" min="0" max="20" step="0.01"></label>
+    <label>Tax-free type<select id="txTfType">
+      <option value="fed">Federal-exempt only</option>
+      <option value="both">Federal and state exempt</option>
+    </select></label>
+    <label>Treasury yield to compare (%, optional)<input type="number" id="txTre" value="0" min="0" max="20" step="0.01"></label>
+  </div>
+  <button type="button" id="txGo" class="tool-btn">Calculate</button>
+
+  <div id="txOut" class="tool-out"></div>
+  <p class="tool-note">Adding the federal and state rates together is the standard approximation. If you itemize
+  and deduct state tax on your federal return, the SALT cap applies and your true combined burden is somewhat
+  lower. A marginal rate is the rate on your last dollar, not your average rate, and interest is taxed as
+  ordinary income. The 3.8% net investment income tax is not applied for you — if it applies to you, add it to
+  the federal rate field. The inflation figure is an assumption you are making, not a forecast. For a
+  tax-deferred account such as an IRA, set both tax rates to zero and read the result as the accumulation phase
+  only; tax at withdrawal is a separate calculation. The real return here divides by inflation rather than
+  subtracting it, which is the exact form; the subtraction shortcut is shown alongside it for reference and does
+  not agree with the exact figure. This is not tax or investment advice.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function num(id) { return parseFloat(el(id).value) || 0; }
+  function money(n) {
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function pct(x) { return (x * 100).toFixed(2) + '%'; }
+
+  function run() {
+    var bal = num('txBal');
+    var apy = num('txApy') / 100;
+    var fed = num('txFed') / 100;
+    var state = num('txState') / 100;
+    var inf = num('txInf') / 100;
+    var tfYield = num('txTf') / 100;
+    var tfBoth = el('txTfType').value === 'both';
+    var treas = num('txTre') / 100;
+
+    // 합산 한계세율은 연방 + 주 단순합 (업계 표준 근사).
+    var tau = fed + state;
+    var afterApy = apy * (1 - tau);
+    var preInt = bal * apy;
+    var afterInt = bal * apy * (1 - tau);
+
+    // 실질수익률은 Fisher 정확식: (1 + 세후APY) / (1 + 인플레) - 1.
+    // 근사식(세후APY - 인플레)은 참고로만 보여준다.
+    var priceLevel = 1 + inf;
+    var hasReal = priceLevel > 0;
+    var realExact = hasReal ? (1 + afterApy) / priceLevel - 1 : 0;
+    var realApprox = afterApy - inf;
+    var power = bal * realExact;
+
+    var headline = hasReal
+      ? (realExact >= 0
+          ? '<strong class="tool-yes">' + pct(apy) + ' APY is worth ' + pct(realExact)
+            + '</strong> after tax and inflation — you keep ground.'
+          : '<strong class="tool-no">' + pct(apy) + ' APY is worth ' + pct(realExact)
+            + '</strong> after tax and inflation — you lose ground.')
+      : '<strong class="tool-no">Enter an inflation rate above -100% to get a real return.</strong>';
+
+    var gap = realApprox - realExact;
+    var gapWord;
+    if (Math.abs(gap) < 0.000049) {
+      gapWord = 'matches the exact figure at this precision';
+    } else if (gap > 0) {
+      gapWord = 'overstates the exact figure by ' + pct(gap);
+    } else {
+      gapWord = 'understates the exact figure by ' + pct(-gap);
+    }
+
+    var rows = ''
+      + '<li>Combined marginal tax rate: ' + pct(tau) + '</li>'
+      + '<li>Interest before tax: ' + money(preInt) + '</li>'
+      + '<li>After-tax APY: ' + pct(afterApy) + ' — interest after tax ' + money(afterInt) + '</li>';
+
+    if (hasReal) {
+      rows += '<li>Real return after tax and inflation, exact: ' + pct(realExact) + '</li>'
+        + '<li>Shortcut for reference (after-tax APY minus inflation): ' + pct(realApprox)
+        + ' — it ' + gapWord + '</li>'
+        + '<li>Change in purchasing power after one year: ' + money(power) + '</li>';
+    }
+
+    // 비과세 상품 과세환산수익률 (TEY): 연방만 면제면 (1 - f), 연방·주 모두 면제면 (1 - f - s) 로 나눈다.
+    if (tfYield > 0) {
+      var tfDenom = tfBoth ? (1 - fed - state) : (1 - fed);
+      var tfLabel = tfBoth ? 'federal and state exempt' : 'federal exempt only';
+      if (tfDenom > 0) {
+        rows += '<li>Taxable-equivalent yield of the ' + pct(tfYield) + ' tax-free yield ('
+          + tfLabel + '): ' + pct(tfYield / tfDenom)
+          + ' — a taxable account has to beat that figure, not the ' + pct(tfYield) + '.</li>';
+      } else {
+        rows += '<li>Taxable-equivalent yield: not defined, because the rates you entered total 100% or more.</li>';
+      }
+    }
+
+    // 국채는 주·지방세 면제이므로, 같은 세후 결과를 내려면 CD 는 더 높은 APY 가 필요하다.
+    if (treas > 0) {
+      var tDenom = 1 - fed - state;
+      if (tDenom > 0) {
+        rows += '<li>APY a CD needs to match the ' + pct(treas)
+          + ' Treasury yield, which is exempt from state tax: ' + pct(treas * (1 - fed) / tDenom) + '</li>';
+      } else {
+        rows += '<li>Treasury-equivalent CD APY: not defined, because the rates you entered total 100% or more.</li>';
+      }
+    }
+
+    el('txOut').innerHTML = '<p>' + headline + '</p><ul>' + rows + '</ul>';
+  }
+
+  el('txGo').addEventListener('click', run);
+  el('txTfType').addEventListener('change', run);
+  ['txBal', 'txApy', 'txFed', 'txState', 'txInf', 'txTf', 'txTre'].forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

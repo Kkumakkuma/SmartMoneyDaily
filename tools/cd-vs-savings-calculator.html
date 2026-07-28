@@ -1,0 +1,120 @@
+---
+layout: tool
+title: "Fix It or Float It: CD vs. Savings Rate Calculator"
+permalink: /tools/cd-vs-savings-calculator/
+tool: fixed-vs-floating
+description: "Compare a fixed CD APY against a variable savings or money market rate across three rate paths, and see the average yield the floating side has to hit to match."
+intro: "Enter an amount, a horizon, a fixed CD APY, and the APY your savings or money market account pays right now — the calculator runs the floating side down three rate paths against the locked CD."
+---
+
+<p>A CD and a savings account both quote an APY, but only one is a promise: the CD rate is fixed by contract
+for the term, while the variable rate is whatever the bank pays today. This calculator holds the CD rate
+still and walks the variable rate down three assumed paths — flat, falling, rising — and reports which side
+ends with more interest under each.</p>
+
+<h2>Filling in the six boxes</h2>
+
+<p><strong>Amount</strong> is the deposit you would move, applied to both sides. <strong>Horizon
+(months)</strong> is compounded across its whole span on the CD side, so the model assumes the certificate is
+held to maturity — enter the term printed on it.</p>
+
+<p><strong>CD APY, fixed</strong> comes from the account disclosure the institution must give you before the
+account is opened; Regulation DD (12 CFR Part 1030) requires it to state the annual percentage yield using
+that term.</p>
+
+<p><strong>Current savings or MMA APY</strong> is the yield in effect on the variable account now, from the
+statement or the published rate table. Reg DD also requires a variable-rate disclosure to say the rate may
+change and how often — the sentence this page exists to price.</p>
+
+<p><strong>Rate move per quarter</strong> is in percentage points and is your assumption, not a forecast: at
+0.25 the paths step a quarter point each quarter, and at zero they collapse into one. <strong>Months already
+elapsed</strong> stays at zero for a fresh decision, and only drives a separate paragraph at the bottom.</p>
+
+<h2>Why every rate box asks for APY</h2>
+
+<p>APY already contains the compounding frequency, so a daily compounder and a quarterly compounder are
+comparable once both are stated as APY. A nominal rate is not. And since APY is defined over a full year, any
+other span follows from a fractional exponent — eighteen months is 18/12.</p>
+
+<h2>How the three paths are built</h2>
+
+<p>The CD side is one line of arithmetic: amount × (1 + CD APY) raised to months ÷ 12, minus the amount. A
+contractual rate has nothing to branch on.</p>
+
+<p>The floating side is cut into three-month blocks. The first uses the APY you entered; each later block
+adds the quarterly move — subtracted when rates fall, added when they rise, nothing on the flat path — and
+grows the balance by (1 + that quarter's APY) raised to 3/12. A horizon that is not a multiple of three ends
+in a stub: 14 months runs four quarters, then a two-month block at 2/12.</p>
+
+<p>Two details shape the labels. Rates are floored at zero, so a long falling path flattens at 0% rather than
+turning negative. And the rate named in a label is the one reached in the <em>final</em> quarter, not the
+path's average.</p>
+
+<h2>Reading the output, with assumed figures</h2>
+
+<p>The verdict lists which paths the CD wins, ties, and loses, with a half-cent tolerance so rounding is not
+reported as a difference. Below it sit a break-even sentence and four rows of interest and ending balance.</p>
+
+<p>For example, suppose $25,000 over an 18-month horizon, a CD at 4.00% APY, a savings account paying 4.20%
+APY today, and an assumed move of 0.25 percentage points a quarter.</p>
+
+<ul>
+  <li>CD: $1,514.90 of interest, ending at $26,514.90.</li>
+  <li>Rates hold at 4.20%: $1,591.42, ending at $26,591.42 — floating ahead by $76.52.</li>
+  <li>Rates fall to 2.95% by the last quarter: $1,352.20, ending at $26,352.20 — the CD ahead by $162.70.</li>
+  <li>Rates rise to 5.45% by the last quarter: $1,830.69, ending at $26,830.69 — floating ahead by $315.79.</li>
+</ul>
+
+<p>Under those assumptions the CD pays off only if rates fall: roughly $163 at stake on one side against $76
+to $316 on the other. That gap is the price of certainty.</p>
+
+<p>The break-even line in that run reads 4.00% — the CD APY itself, deliberately. Both sides use the same
+exponent, so they tie exactly when the floating account's average annualized yield equals the fixed rate. On
+the falling path the account starts above 4.00% and still loses, because the later quarters pull that average
+down.</p>
+
+<p>Suppose instead that 6 months have already elapsed at 4.20%. The extra paragraph reports $519.60 earned so
+far, and says the remaining 12 months must average 3.90% APY to match the CD — a bar below the CD rate,
+because the elapsed months already earned more.</p>
+
+<h2>Where the model stops</h2>
+
+<p>The three paths are not predictions; nothing requires rates to move by the same amount every quarter. The
+floating side also compounds quarterly while most deposit accounts compound daily, so totals can sit a few
+dollars from a statement.</p>
+
+<p>The asymmetry is what no calculator fixes. A bank can reprice a variable account on any business day,
+including mid-quarter; the CD rate cannot move until maturity. Even when floating wins on paper, the two
+results are not equally reliable.</p>
+
+<p>Early withdrawal penalties are not calculated — if the money might be needed early, see the
+<a href="{{ '/tools/cd-early-withdrawal-calculator/' | relative_url }}">CD early withdrawal calculator</a> and
+<a href="/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/">what happens when you cash
+out a CD early</a>. Taxes, promotional rates that expire, balance tiers, and monthly fees are all absent, and
+deposit insurance is not checked here.</p>
+
+<p>Liquidity is not scored either. A savings balance stays reachable while a CD is not, short of a penalty;
+the six-per-month transfer cap that 12 CFR 204.2 once imposed on savings deposits was removed in 2020. Where
+that matters, it outranks the table — see
+<a href="/SmartMoneyDaily/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/">how to
+choose between a high-yield savings account and a CD</a>.</p>
+
+<h2>Three follow-ups</h2>
+
+<h3>Does the horizon have to equal the CD term?</h3>
+
+<p>For the result to mean anything, yes. The CD figure compounds the fixed APY across the full horizon, which
+only holds if the certificate matures at that point. A longer horizon needs a reinvestment rate the tool does
+not model; a shorter one is an early withdrawal, with a penalty to subtract separately.</p>
+
+<h3>Why does break-even come back as the CD rate?</h3>
+
+<p>Because a required average yield and the fixed rate are the same quantity once both sides compound over
+the same number of months. Read it as a threshold for the whole period, not for today — matching the CD means
+averaging that rate through every quarter, including the ones after a cut.</p>
+
+<h3>What number belongs in the quarterly move box?</h3>
+
+<p>Run it more than once. Start at zero for the gap with no movement, then raise the step until the verdict
+flips. If a small step flips it, the decision is finely balanced and the certainty of a fixed rate
+carries more weight. If the verdict survives a large move, the exact number in that box stops mattering.</p>

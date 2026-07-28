@@ -87,7 +87,7 @@ That is a 28 basis point cut that arrived without an announcement. On a $25,000 
 
 To see what a difference of that size is worth on your own balance, enter your balance, the APY you backed out of the statement, and the number of months you expect to leave the money in place — then run it a second time with the older APY and compare the two totals.
 
-{% include tools/apy-calculator.html %}
+{% include tools/statement-apy-earned.html %}
 
 ## The Baseline You Are Comparing Against
 

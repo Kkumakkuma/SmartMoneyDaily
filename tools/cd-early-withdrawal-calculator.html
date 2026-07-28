@@ -1,0 +1,71 @@
+---
+layout: tool
+title: "CD Early Withdrawal Penalty Calculator"
+permalink: /tools/cd-early-withdrawal-calculator/
+tool: cd-penalty
+description: "Work out whether breaking a CD to chase a higher rate leaves you ahead after the penalty. Enter your rate, months left, and the penalty in days of interest."
+intro: "Enter your CD's deposit, rate, months left, the penalty in days of interest, and the rate you could move to — it returns both paths in dollars and says which one wins."
+---
+
+<p>A CD signed at last year's rates while better offers sit on the screen poses one bounded question: does the extra yield over the months you have left cover the penalty for getting out? The rate gap alone will not tell you. The penalty is charged once, up front, while the higher rate pays out gradually — so a wide gap with two months left loses, and a narrow one with two years left wins.</p>
+
+<h2>The trade this calculator prices</h2>
+
+<p>It builds two ledgers that end on the same day — your CD's original maturity date — and subtracts one from the other. The first is the interest the CD pays if you leave it alone. The second is the interest earned so far, minus the penalty, plus what the surviving money earns at the new rate over the months that remain. The shared end date is what makes it honest: 4.50% always beats 3.50% until the penalty and the calendar are priced in.</p>
+
+<h2>Six inputs, and which disclosure line each one comes from</h2>
+
+<p><strong>Amount in the CD</strong> is what you originally deposited, not today's balance with interest included. The tool derives accrued interest from the rate and months held, so entering the balance double-counts it.</p>
+
+<p><strong>Your CD's APY</strong> comes from the certificate or account disclosure, on the line pairing the interest rate with the annual percentage yield. Use the APY, not the interest rate beside it.</p>
+
+<p><strong>Months already held</strong> and <strong>months left to maturity</strong> come from the open and maturity dates on that same document. Together they set the original term: six held plus eighteen remaining is a two-year CD.</p>
+
+<p><strong>Penalty (days of interest)</strong> is the field people mis-enter. Regulation DD (12 CFR Part 1030) requires it in the disclosures for a time account, but banks usually word it in months. Convert at thirty days per month: three months is 90, six is 180, a year is 365.</p>
+
+<p><strong>APY you could move to</strong> is the posted yield on the target account. A promotional rate expiring before your CD would have matured makes the blended yield lower than the headline.</p>
+
+<h2>Why the penalty is computed from a rate you never see advertised</h2>
+
+<p>APY is a compounded measure — Appendix A to Part 1030 defines it as total interest over a 365-day year expressed against principal, compounding included. Penalties are not compounded: they are a fixed number of days of <em>simple</em> interest at the underlying nominal rate.</p>
+
+<p>So the calculator converts in both directions. Interest earned to date uses the APY compounded directly: principal times (1 + APY) raised to months held over twelve, minus one. The penalty runs the other way — it recovers the nominal rate behind your APY under daily compounding, 365 times the 365th root of (1 + APY) minus one, then charges principal times that rate times days over 365. Using the APY here would inflate the deduction, more so as rates rise.</p>
+
+<p>Two structural facts follow. The penalty depends only on principal, rate, and days — how long you have held the CD, and how long is left, do not move it. And because it is charged against principal rather than accrued interest, it can exceed that interest and reach into the deposit; the tool then reports the shortfall as a principal loss and compounds the reduced amount forward.</p>
+
+<h2>One set of assumed numbers, carried to the end</h2>
+
+<p>Suppose $10,000 in a 24-month CD at 3.50% APY. Six months have passed, eighteen remain, the disclosure states a 180-day penalty, and a competing account pays 4.50% APY. These are assumed figures, not observed market rates.</p>
+
+<ul>
+  <li>The nominal rate behind a 3.50% APY is 3.4403%.</li>
+  <li>Interest earned so far: $10,000 × (1.035<sup>0.5</sup> − 1) = <strong>$173.49</strong>.</li>
+  <li>Penalty: $10,000 × 0.034403 × 180 ÷ 365 = <strong>$169.66</strong>. Applying 3.50% flat instead would give $172.60 — the conversion is worth $2.94 here.</li>
+  <li>Interest kept after the penalty: $3.84.</li>
+  <li>Stay to maturity: $10,000 × (1.035<sup>2</sup> − 1) = <strong>$712.25</strong>, ending at $10,712.25.</li>
+  <li>Break and move: $3.84 + $10,003.84 × (1.045<sup>1.5</sup> − 1) = <strong>$686.64</strong>, ending at $10,686.64.</li>
+</ul>
+
+<p>Staying wins by $25.61: a full point of extra yield loses, because six months of interest is a heavy toll against eighteen months of a one-point advantage.</p>
+
+<p>The sensitivities teach more than the verdict. Change the penalty to 90 days and the same inputs flip: moving comes out $65.01 ahead. Leave it at 180 days but raise the alternative to 5.00% and moving wins by $51.18. Now reverse the clock — eighteen months held, six remaining — and staying wins by $121.81: the penalty is identical while the runway to recover it has shrunk. Months remaining is the dominant lever, not the rate gap. The mechanics are covered in <a href="/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/">what happens when you cash out a CD early</a>.</p>
+
+<h2>Where this comparison stops</h2>
+
+<p>The output is pre-tax. CD interest is ordinary income in the year it is credited; the penalty appears in Box 2 of Form 1099-INT and is generally deductible as an adjustment to income. Confirm your treatment with a tax professional.</p>
+
+<p>It also assumes the new APY holds for every remaining month — fair for another CD, optimistic for a savings or money market account, whose rate can be cut the week after you move. If that is the crux of your decision, <a href="/SmartMoneyDaily/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/">choosing between a high-yield savings account and a CD</a> covers it.</p>
+
+<p>Four limits remain. It models closing the CD in full, so partial withdrawals, minimum penalty floors, and flat-dollar penalties sit outside its formula. It assumes interest compounds inside the CD rather than being paid out monthly. Its horizon ends at your original maturity date, so if the better rate persists past it the result understates the case for moving. And it treats both accounts as equally safe — true only within the $250,000 standard FDIC limit per depositor, per insured bank, per ownership category.</p>
+
+<h3>My statement shows a balance that already includes interest. Which number goes in the first field?</h3>
+
+<p>The original deposit. The calculator computes accrued interest from the APY and months held, and charges the penalty against principal, so the accrued balance inflates both figures.</p>
+
+<h3>The penalty is larger than the interest I have earned. Can a bank really take part of my deposit?</h3>
+
+<p>Yes, and the tool shows it as a principal loss rather than clipping at zero. Regulation D's definition of a time deposit (12 CFR 204.2(c)(1)(i)) contemplates at least seven days' simple interest on funds withdrawn within six days of deposit; beyond that floor the penalty is a contract term set by your disclosure. Breaking a CD in its first months bites hardest, since the penalty is the same dollar amount whether you are one month in or twenty.</p>
+
+<h3>What if my CD matures soon anyway?</h3>
+
+<p>Run it, but read the renewal terms too. Many disclosures waive the penalty during a grace period after maturity, and some renew automatically into a new term at the prevailing rate if you do nothing. Neither behavior is modeled here — the calculator only compares holding to your stated maturity date against breaking today.</p>

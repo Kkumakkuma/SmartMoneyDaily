@@ -41,9 +41,7 @@ Now convert that into a wage. If moving the money takes you 45 minutes, the firs
 
 Two adjustments make the number more accurate. First, interest is taxable, so multiply the gap by (1 − your marginal rate) to see what you keep. Second, subtract any fee either account charges — a $5 monthly maintenance fee on the losing account is $60 a year, which changes the ranking on small balances all by itself.
 
-To run your own version with your actual balance, APYs, and compounding frequency, enter your starting balance, the posted APY, how often the bank compounds, and the number of years into the calculator below — then run it a second time with the other account's APY and subtract.
-
-{% include tools/apy-calculator.html %}
+To work this out with your actual balance, use the [two-offer comparison calculator](/SmartMoneyDaily/tools/two-offer-comparison-calculator/).
 
 If you want the mechanics behind why two accounts quoting the same nominal rate can produce different totals, the walkthrough in [APY, compounding, and what your savings will really earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers compounding frequency and posting dates in detail.
 

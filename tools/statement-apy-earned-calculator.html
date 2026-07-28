@@ -1,0 +1,122 @@
+---
+layout: tool
+title: "Statement APY Earned Calculator"
+permalink: /tools/statement-apy-earned-calculator/
+tool: statement-apy-earned
+description: "Enter the interest posted on one bank statement, the average daily balance, days in the period and any fees, and see the APY you were actually paid."
+intro: "Enter what one statement period actually paid — interest posted, average daily balance, days in the period, and any fees — and get back the annual percentage yield those figures work out to."
+---
+
+<p>A bank quotes an APY. Weeks later a statement arrives carrying a dollar figure. The two are not
+comparable on sight, and that is the gap this calculator closes: it takes the interest posted
+for one statement period and solves backward for the annual percentage yield it represents.</p>
+
+<p>Most savings calculators run forward — supply a rate, get a projected
+balance. This one runs backward, which is what you need when the question is whether an account paid
+what it said it would.</p>
+
+<h2>Four numbers from the statement, two from elsewhere</h2>
+
+<p><strong>Interest posted this period.</strong> Regulation DD requires institutions that send periodic
+statements to disclose the interest earned for that period (12 CFR 1030.6(a)(2)). Use
+the amount credited for that cycle, not a year-to-date total.</p>
+
+<p><strong>Average daily balance.</strong> The input that causes trouble, because Reg DD does not
+require it — section 1030.6(a) mandates the APY earned, the interest, the fees and the length of the
+period, never the denominator behind them. Many statements print an average balance anyway; if yours
+does not, sum the end-of-day balances and divide by the day count. Do not substitute
+the closing balance: 12 CFR 1030.7 permits only the daily balance or average daily balance method and
+prohibits ending balance, low balance and investable balance methods.</p>
+
+<p><strong>Days in the statement period.</strong> Also required — the day count, or the beginning and
+ending dates (1030.6(a)(4)). Whether the cycle ran 28, 30 or 31 days changes how
+hard the period gets stretched to a year.</p>
+
+<p><strong>Fees charged this period.</strong> Required as well, itemized by type (1030.6(a)(3)). Enter
+maintenance and activity charges that reduced what you kept; zero is valid.</p>
+
+<p>The last two inputs come from elsewhere. The APY you believe you are getting is the rate on the
+bank's disclosure page — optional, but supplying it turns the output into a comparison. The days-in-the-year selector, 365 or 366, only nudges the exponent; match what the institution states.</p>
+
+<h2>Why annualizing is not just multiplying by twelve</h2>
+
+<p>The calculator reduces the period to a plain ratio — interest divided by average daily balance —
+then scales it to a year with an exponent of days in the year over days in the period. A 31-day
+cycle in a 365-day year gives 11.774. Two lines come out of that exponent, and the difference between
+them is why APY exists separately from a nominal rate.</p>
+
+<p>The <strong>simple annualized rate</strong> multiplies the period ratio by the exponent: if this
+pace repeated all year with nothing reinvested, what fraction of the balance would it add up to? It
+ignores compounding, so it always reads lower.</p>
+
+<p>The <strong>APY earned</strong> line raises (1 + period ratio) to that exponent and subtracts 1 —
+the formula in 12 CFR Part 1030, Appendix A, Part II, the calculation the regulation assigns to the
+statement figure. It assumes credited interest stays put and earns alongside the principal, as a compounding account does.</p>
+
+<p>The <strong>net of fees</strong> line runs the same compounded formula after subtracting fees from
+interest. It is not a regulatory figure — Reg DD computes APY earned on interest and discloses fees
+separately — but an account either left you ahead or it did not. If fees exceed interest the line goes negative; if they exceed the average balance itself, the formula
+has no real result and the calculator says so instead of printing a number.</p>
+
+<h2>Reading the three rate lines against each other</h2>
+
+<p>Suppose a statement shows $63.20 of interest over a 31-day period, the average daily balance was
+$19,000, a $5.00 maintenance fee was charged, and the advertised rate was 4.00% APY, on a 365-day year. Those figures are assumed for illustration, not market rates:</p>
+
+<ul>
+  <li>Simple annualized rate: 3.92%</li>
+  <li>APY earned: 3.99%</li>
+  <li>APY earned net of the $5.00 fee: 3.67%</li>
+  <li>Gap against the 4.00% expected: 33.3 basis points short</li>
+  <li>What that gap is worth over a year on $19,000: $63.32</li>
+</ul>
+
+<p>The story is in the spread. Gross APY earned landed 1.3 basis points under the advertised 4.00%,
+near enough that the rate itself was honored. The entire 33.3 basis point shortfall came from the
+$5.00 fee. That is a different problem with a different fix: the account is not underpaying, it is
+charging, and the remedy is a waiver or a different account. Our note on
+<a href="/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/">identifying and avoiding common fees</a>
+covers where those charges hide.</p>
+
+<p>The gap is measured against the net-of-fees figure rather than the gross, so it reflects what
+you kept. The dollar amount below it is that gap times the average daily balance — a sense of scale,
+not a forecast.</p>
+
+<h2>What a single period cannot settle</h2>
+
+<p>A statement is one snapshot, and several things bend the rate it implies without anything being
+wrong.</p>
+
+<ul>
+  <li>A deposit or withdrawal mid-cycle can push the balance across a rate tier, leaving a blended APY
+  that matches neither tier.</li>
+  <li>A promotional rate that expired partway through does the same.</li>
+  <li>Some accounts credit interest quarterly, so a statement showing none may reflect the crediting
+  schedule, not the rate.</li>
+  <li>APY earned looks backward at money already paid, while an advertised APY looks forward and can
+  change at any time on a variable-rate account. A difference is not on its own a violation — see
+  <a href="/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/">how changing rates affect money market returns</a>.</li>
+  <li>Interest posts rounded to the cent, and on a small balance that rounding alone moves the implied
+  APY.</li>
+  <li>Nothing here touches taxes. This measures what the bank paid, not what you keep.</li>
+</ul>
+
+<p>One odd month is noise; a consistent shortfall across two or three statements is a finding.</p>
+
+<h2>Questions that come up when the numbers disagree</h2>
+
+<h3>Why does APY earned read higher than the simple annualized rate?</h3>
+<p>Compounding. The simple line assumes interest sits idle; APY earned assumes it starts earning. They diverge more as the rate rises and as the period shortens relative to the year, since a shorter
+period means a larger exponent.</p>
+
+<h3>My statement prints its own APY earned and it does not match. Which is right?</h3>
+<p>Usually both. The discrepancy is normally in the denominator or day count: confirm you
+used the true average daily balance rather than a closing or average collected figure, and that the
+days match the cycle dates. If a material difference survives, put the question to the bank in
+writing.</p>
+
+<h3>The result says I came in short. Did the bank do something wrong?</h3>
+<p>Not necessarily. A shortfall against an advertised rate is a reason to ask, not evidence of a
+breach. Tiers, mid-cycle balance swings, a variable rate that moved, and fees all produce legitimate
+gaps. Work out which applies before deciding the account is mispriced rather than simply wrong for
+your balance.</p>

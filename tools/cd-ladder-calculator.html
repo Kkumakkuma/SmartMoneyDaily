@@ -1,0 +1,61 @@
+---
+layout: tool
+title: "CD Ladder Builder: Splitting One Amount Across Several Terms"
+permalink: /tools/cd-ladder-calculator/
+tool: ladder-builder
+description: "Enter a total, a rung count, the spacing in months, and your shortest and longest APY quotes. The builder splits the money and shows what each rung earns by maturity."
+intro: "Put in one lump sum, a rung count, the months between maturities, and the two APY quotes at either end of your term list — the table returns the amount, term, yield, and interest at maturity for every rung."
+---
+
+<p>A ladder holds money at term rates without committing all of it to one maturity date. This builder handles the mechanical half of that plan: give it a lump sum and it returns the amount in each rung, the term, the yield credited to it, and the interest produced by the day that rung comes due.</p>
+
+<p>It describes the day the ladder is built — the split, the terms, the first cycle of maturities. It does not forecast renewals, because no one can quote a rate three years out. For the strategy behind the structure, see <a href="/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/">what you need to know about laddering certificates of deposit</a>.</p>
+
+<h2>The five fields and which disclosure they come from</h2>
+
+<p><strong>Total to invest</strong> is the money actually going into CDs, not your whole cash position. Anything you might need before the first maturity does not belong here.</p>
+
+<p><strong>Number of rungs</strong> accepts 2 through 10; the script clamps anything larger back down.</p>
+
+<p><strong>Months between rungs</strong> sets two things at once: the spacing of the maturities and the term of each rung. With a 12-month gap and five rungs, the terms are 12, 24, 36, 48, and 60 months. Read the institution's term list before choosing a gap — a 7-month gap produces 7, 14, and 21-month terms, and nothing guarantees those exist.</p>
+
+<p><strong>APY on the shortest rung</strong> and <strong>APY on the longest rung</strong> are your own quotes for the two ends of the ladder. Take them from the account disclosure rather than an advertisement. Regulation DD (12 CFR Part 1030) requires an institution to disclose, before the account is opened, the annual percentage yield and interest rate, the compounding and crediting frequency, the maturity date, the early withdrawal penalty, and the renewal policy. Those time-account items sit in 12 CFR 1030.4(b)(4); the APY definition is in Appendix A to Part 1030.</p>
+
+<h2>How the split and the yields are worked out</h2>
+
+<p>The money is divided evenly: total divided by rung count, with no rounding toward any minimum deposit. Rung one carries a term of one gap, rung two of two gaps, and so on.</p>
+
+<p>Yields are interpolated in a straight line. The first rung gets exactly the short APY, the last rung exactly the long APY, and the rest sit evenly along the line between them. Enter 4.00% and 4.40% across five rungs and the table reads 4.00, 4.10, 4.20, 4.30, 4.40. A real quote for a middle term that falls off that line leaves those rows off by the same distance.</p>
+
+<p>Interest for each rung is the rung amount multiplied by (1 + APY) raised to the term in months divided by 12, minus one. Only the APY is asked for, and that is deliberate. A nominal interest rate says nothing on its own, since the same rate compounded daily and compounded quarterly pay different amounts. The APY, as defined in Appendix A to Part 1030, already contains the compounding and is stated on a one-year basis, so raising it to a fraction of a year reverses that annualization and puts quotes with different compounding schedules on the same footing.</p>
+
+<p>One consequence is worth absorbing: a six-month rung does not pay half the annual yield. Suppose the quoted APY is 4.00%. Then 1.04 raised to the 0.5 power is 1.019804, so the rung earns 1.98% of its balance over those six months, not 2.00%.</p>
+
+<h2>Reading the table, with one worked case</h2>
+
+<p>Suppose the inputs are $25,000, five rungs, a 12-month gap, 4.00% on the shortest rung and 4.40% on the longest. Each rung takes $5,000, and the rows read: 12 months at 4.00% earning $200.00, 24 months at 4.10% earning $418.40, 36 months at 4.20% earning $656.83, 48 months at 4.30% earning $917.08, and 60 months at 4.40% earning $1,201.15. The summary reports $3,393.47 of total interest and notes the first rung freeing up in 12 months, one every 12 months after that. It sums unrounded values, so it can sit a cent off from adding the displayed column by hand.</p>
+
+<p>The total is a lifetime figure, not an annual one, and its pieces arrive on five dates spread across five years. Comparing it against a one-year return from a savings account will mislead you; the per-rung yields are the comparable numbers.</p>
+
+<h2>Where the model stops</h2>
+
+<p>It prices the build-out only. Once the ladder runs, each maturing rung is normally renewed into the longest term, which keeps one rung coming due every cycle — but the renewal rate is whatever the market offers that day, and the table does not guess it.</p>
+
+<p>Interest is shown before tax. CD interest is generally taxable as credited or accrued rather than in the year the CD matures, which matters for multi-year rungs; confirm your own treatment with a tax professional.</p>
+
+<p>No penalty is modeled. The point of the structure is to avoid breaking a CD, and if you break one the arithmetic changes — that case is covered in <a href="/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/">what happens when you cash out a CD early</a>.</p>
+
+<p>Three smaller gaps. The even split ignores minimum deposits, so a per-rung amount below the minimum for that term cannot be bought as shown. The term is months over 12 while banks compute on actual days over 365, which moves a long rung by a few cents. And the compounding assumes interest stays in the CD; take payouts monthly and the rung earns less than the table shows.</p>
+
+<p>Deposit insurance is not checked here at all. FDIC coverage is $250,000 per depositor, per insured bank, per ownership category, and rungs at one institution share that single limit rather than each getting their own.</p>
+
+<h2>Questions that come up while building one</h2>
+
+<h3>Do all the rungs have to sit at the same bank?</h3>
+<p>No. The builder only divides an amount and applies yields, so each rung can be bought wherever that term is priced best. Spreading rungs across institutions is also the usual way to keep a large ladder under the per-bank insurance limit.</p>
+
+<h3>Can money come back every three months instead of once a year?</h3>
+<p>Set the gap to 3. A four-rung ladder then runs 3, 6, 9, and 12 months, and the summary reports the first rung freeing up in three months. Check those short terms exist, and enter the APY quotes that actually apply to them.</p>
+
+<h3>Why is the rung count capped at 10?</h3>
+<p>The input maximum is 10 and the script forces anything higher back to it. Past that point each rung holds a slice small enough for minimum deposits to bind, and a dozen maturity dates buy little that a shorter gap would not.</p>

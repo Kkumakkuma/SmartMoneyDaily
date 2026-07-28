@@ -100,7 +100,7 @@ The result is that the savings account absorbs every surprise, so the CD never h
 
 Enter your balance, the APY you were quoted, the compounding frequency, and the number of months to see what each option would earn on identical inputs:
 
-{% include tools/apy-calculator.html %}
+{% include tools/fixed-vs-floating.html %}
 
 ## Head to Head on the Same $25,000
 

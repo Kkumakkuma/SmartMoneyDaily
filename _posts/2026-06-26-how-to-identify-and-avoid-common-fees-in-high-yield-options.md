@@ -114,7 +114,7 @@ Per-item fees deserve the same treatment. At the same assumed 4.00%, a $10,000 b
 
 To see what a balance compounds to over your holding period, enter it below with the net APY you just calculated rather than the advertised one, plus your compounding frequency:
 
-{% include tools/apy-calculator.html %}
+{% include tools/fee-break-even.html %}
 
 If the mechanics of APY and compounding frequency are the part you want nailed down, [how APY and compounding really work](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers the formula behind that box.
 

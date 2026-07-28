@@ -97,9 +97,7 @@ Assume you have $20,000 and two options:
 
 One early withdrawal wipes out more than a year of the rate advantage. That asymmetry is the whole argument. The upside of locking is modest and bounded; the downside of locking the wrong money is a multiple of it.
 
-To run the same comparison with your own balance, rate, and compounding frequency, enter your deposit amount, the quoted APY, and the number of months in the calculator below, then run it twice — once with the CD's fixed rate and once with your honest average estimate for the money market account.
-
-{% include tools/apy-calculator.html %}
+If you want to run this on your own balance, the [fix it or float it calculator](/SmartMoneyDaily/tools/cd-vs-savings-calculator/) does the arithmetic.
 
 Two adjustments before you trust the output. Interest on both accounts is ordinary income, so a higher bracket shrinks every gap above. And CD interest is taxable as it accrues, not at maturity, so a multi-year CD generates a 1099-INT each year even though you never touched the money — see [irs.gov](https://www.irs.gov/taxtopics/tc403).
 

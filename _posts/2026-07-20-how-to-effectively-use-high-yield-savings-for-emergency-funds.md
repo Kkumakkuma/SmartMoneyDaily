@@ -88,9 +88,7 @@ Once the fund is more than a month or two of expenses, splitting it by how fast 
 
 Worked through with an assumed $18,000 target: roughly $1,500 in Tier 1 so a bad Tuesday never requires a transfer, about $10,500 in high-yield savings as Tier 2, and about $6,000 in Tier 3 across two or three short CD rungs. Adjust the shares to your own life — a single earner with a high insurance deductible should push more into Tier 2, and anyone whose fund is under three months of expenses should skip Tier 3 entirely and keep it simple.
 
-To compare what a given slice earns in one account versus another, enter the balance, the APY each account quotes, and the compounding frequency below, then read the annual difference before you decide whether a move is worth the paperwork.
-
-{% include tools/apy-calculator.html %}
+The [account fee break-even calculator](/SmartMoneyDaily/tools/bank-fee-break-even-calculator/) will do this with your own figures.
 
 ## Withdrawal Rules: What Counts as an Emergency
 

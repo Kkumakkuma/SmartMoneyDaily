@@ -1,0 +1,173 @@
+<div class="tool-card">
+  <h3 class="tool-title">Two-Offer Comparison Calculator</h3>
+  <p class="tool-sub">Put two accounts side by side after fees and tax, in one pass. Runs in your browser only.</p>
+
+  <div class="tool-grid">
+    <label>Balance ($)<input type="number" id="toBal" value="10000" min="0" step="100"></label>
+    <label>Term (months)<input type="number" id="toTerm" value="12" min="1" max="600" step="1"></label>
+    <label>Rate entry mode<select id="toMode">
+      <option value="apy" selected>APY as disclosed</option>
+      <option value="nom">Nominal rate + compounding</option>
+    </select></label>
+
+    <label><span id="toLabA">Offer A — APY (%)</span><input type="number" id="toRateA" value="4.25" min="0" max="30" step="0.01"></label>
+    <label id="toWrapA">Offer A — compounding periods per year<select id="toCompA">
+      <option value="1">Annually (1)</option>
+      <option value="2">Semiannually (2)</option>
+      <option value="4">Quarterly (4)</option>
+      <option value="12" selected>Monthly (12)</option>
+      <option value="365">Daily (365)</option>
+      <option value="0">Continuous</option>
+    </select></label>
+    <label>Offer A — monthly maintenance fee ($)<input type="number" id="toFeeMA" value="0" min="0" step="1"></label>
+    <label>Offer A — annual fee ($/yr, negative = bonus)<input type="number" id="toFeeYA" value="0" step="1"></label>
+
+    <label><span id="toLabB">Offer B — APY (%)</span><input type="number" id="toRateB" value="3.80" min="0" max="30" step="0.01"></label>
+    <label id="toWrapB">Offer B — compounding periods per year<select id="toCompB">
+      <option value="1">Annually (1)</option>
+      <option value="2">Semiannually (2)</option>
+      <option value="4">Quarterly (4)</option>
+      <option value="12" selected>Monthly (12)</option>
+      <option value="365">Daily (365)</option>
+      <option value="0">Continuous</option>
+    </select></label>
+    <label>Offer B — monthly maintenance fee ($)<input type="number" id="toFeeMB" value="0" min="0" step="1"></label>
+    <label>Offer B — annual fee ($/yr, negative = bonus)<input type="number" id="toFeeYB" value="0" step="1"></label>
+
+    <label>Combined marginal tax rate (%)<input type="number" id="toTax" value="0" min="0" max="60" step="0.01"></label>
+  </div>
+  <button type="button" id="toGo" class="tool-btn">Compare</button>
+
+  <div id="toOut" class="tool-out"></div>
+  <p class="tool-note">Enter the APY the bank discloses, not a nominal rate. If a disclosure gives only a nominal
+  rate and a compounding frequency, switch the rate entry mode above — a nominal rate typed into an APY field
+  overstates the result. The math assumes the balance stays put for the whole term and that the APY does not
+  change. For a CD that is contractually true; for a savings or money market account it is an assumption, and
+  the rate can move at any time. Do not enter zero for a fee you can waive unless you are certain of meeting
+  the waiver condition — direct deposit, minimum balance — in every cycle. Tax here is an approximation:
+  interest is treated as ordinary income at a single combined marginal rate, with no state-by-state
+  differences and no NIIT. Fees are subtracted after tax, because an individual cannot deduct them. This is
+  not tax or investment advice.</p>
+</div>
+
+<script>
+(function () {
+  var d = document;
+  function el(id) { return d.getElementById(id); }
+  function num(id) { var v = parseFloat(el(id).value); return isFinite(v) ? v : 0; }
+  function money(n) {
+    var s = Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (n < 0 ? '-$' : '$') + s;
+  }
+  function pct(x) { return (x * 100).toFixed(2) + '%'; }
+
+  // 명목이율 -> APY. n = 연 복리횟수, n <= 0 이면 연속복리.
+  function toApy(rate, n) {
+    if (n <= 0) { return Math.exp(rate) - 1; }
+    return Math.pow(1 + rate / n, n) - 1;
+  }
+
+  // ((base)/P)^(12/t) - 1. base 가 0 이하이면 실수 거듭제곱이 정의되지 않으므로 null.
+  function annualize(base, p, t) {
+    if (p <= 0 || t <= 0 || base <= 0) { return null; }
+    return Math.pow(base / p, 12 / t) - 1;
+  }
+  function pctOrNa(x) { return x === null ? 'n/a' : pct(x); }
+
+  function offer(p, t, apy, feeM, feeY) {
+    var interest = p * (Math.pow(1 + apy, t / 12) - 1);
+    var fees = feeM * t + feeY * (t / 12);
+    var net = interest - fees;
+    return {
+      apy: apy,
+      interest: interest,
+      fees: fees,
+      net: net,
+      ending: p + net,
+      netApy: annualize(p + net, p, t)
+    };
+  }
+
+  function block(name, o) {
+    return '<p><strong>' + name + '</strong> — APY ' + pct(o.apy) + '</p><ul>'
+      + '<li>Total interest: ' + money(o.interest) + '</li>'
+      + '<li>Total fees: ' + money(o.fees) + '</li>'
+      + '<li>Net interest after fees: ' + money(o.net) + '</li>'
+      + '<li>Ending balance: ' + money(o.ending) + '</li>'
+      + '<li>Net APY after fees: ' + pctOrNa(o.netApy) + '</li></ul>';
+  }
+
+  function syncMode() {
+    var nominal = el('toMode').value === 'nom';
+    el('toWrapA').style.display = nominal ? '' : 'none';
+    el('toWrapB').style.display = nominal ? '' : 'none';
+    el('toLabA').textContent = nominal ? 'Offer A — nominal rate (%)' : 'Offer A — APY (%)';
+    el('toLabB').textContent = nominal ? 'Offer B — nominal rate (%)' : 'Offer B — APY (%)';
+  }
+
+  function run() {
+    syncMode();
+    var p = num('toBal');
+    var t = num('toTerm');
+    var nominal = el('toMode').value === 'nom';
+    var tau = num('toTax') / 100;
+
+    if (p <= 0 || t <= 0) {
+      el('toOut').innerHTML = '<p>Enter a balance above zero and a term of at least one month.</p>';
+      return;
+    }
+
+    var rawA = num('toRateA') / 100;
+    var rawB = num('toRateB') / 100;
+    var nA = parseFloat(el('toCompA').value);
+    var nB = parseFloat(el('toCompB').value);
+    var apyA = nominal ? toApy(rawA, nA) : rawA;
+    var apyB = nominal ? toApy(rawB, nB) : rawB;
+
+    var a = offer(p, t, apyA, num('toFeeMA'), num('toFeeYA'));
+    var b = offer(p, t, apyB, num('toFeeMB'), num('toFeeYB'));
+
+    var diffPre = a.net - b.net;
+    var diffPost = (a.interest - b.interest) * (1 - tau) - (a.fees - b.fees);
+    // B 가 A 와 동률이 되려면: B 의 순이자가 A 의 순이자와 같아야 하므로 B 수수료를 되더한다.
+    var matchApy = annualize(p + a.net + b.fees, p, t);
+
+    var verdict;
+    if (Math.abs(diffPre) < 0.005) {
+      verdict = '<strong>The two offers come out even</strong> over ' + t + ' months.';
+    } else if (diffPre > 0) {
+      verdict = '<strong class="tool-yes">Offer A keeps ' + money(diffPre) + ' more</strong> over ' + t + ' months.';
+    } else {
+      verdict = '<strong class="tool-no">Offer B keeps ' + money(-diffPre) + ' more</strong> over ' + t + ' months.';
+    }
+
+    var derived = '';
+    if (nominal) {
+      derived = '<ul><li>Offer A: ' + (rawA * 100).toFixed(2) + '% nominal '
+        + (nA <= 0 ? 'compounded continuously' : 'compounded ' + nA + ' times a year')
+        + ' works out to an APY of ' + pct(apyA) + '</li>'
+        + '<li>Offer B: ' + (rawB * 100).toFixed(2) + '% nominal '
+        + (nB <= 0 ? 'compounded continuously' : 'compounded ' + nB + ' times a year')
+        + ' works out to an APY of ' + pct(apyB) + '</li></ul>';
+    }
+
+    el('toOut').innerHTML =
+      '<p>' + verdict + '</p>'
+      + derived
+      + block('Offer A', a)
+      + block('Offer B', b)
+      + '<ul><li>Difference in net interest, before tax: ' + money(diffPre) + '</li>'
+      + '<li>Difference after tax at ' + pct(tau) + ': ' + money(diffPost) + '</li>'
+      + '<li>Offer B would need an APY of ' + pctOrNa(matchApy) + ' to match Offer A</li></ul>';
+  }
+
+  el('toGo').addEventListener('click', run);
+  el('toMode').addEventListener('change', run);
+  el('toCompA').addEventListener('change', run);
+  el('toCompB').addEventListener('change', run);
+  ['toBal', 'toTerm', 'toRateA', 'toFeeMA', 'toFeeYA', 'toRateB', 'toFeeMB', 'toFeeYB', 'toTax'].forEach(function (id) {
+    el(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') { run(); } });
+  });
+  run();
+})();
+</script>

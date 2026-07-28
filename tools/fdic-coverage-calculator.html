@@ -1,0 +1,67 @@
+---
+layout: tool
+title: "FDIC Coverage Calculator: What Is Insured, What Is Not, and When Interest Pushes You Over"
+permalink: /tools/fdic-coverage-calculator/
+tool: fdic-coverage
+description: "Group your accounts by bank and ownership category to see insured and uninsured amounts today, and the month accrued interest carries a balance past the limit."
+intro: "Enter each account's bank, ownership category, balance, and APY; the calculator sorts them into the buckets the FDIC actually uses and shows what is covered now and after interest."
+---
+
+<h2>Why coverage is a grouping problem, not an addition problem</h2>
+
+<p>The $250,000 figure is usually quoted as though it attaches to an account. It does not. Federal deposit insurance is counted per depositor, per insured bank, per ownership category. One person can hold well past $250,000 at one bank and be fully covered; another can hold three accounts each below $250,000 and still be exposed, because those three collapse into one bucket.</p>
+
+<p>The useful question is not how much sits at a bank, but whether any bucket holds more than its ceiling — today, and after the interest already scheduled to land.</p>
+
+<h2>Filling the grid: certificate number, category, balance, APY</h2>
+
+<p><strong>Bank name or FDIC cert #</strong> is the grouping key, and the likeliest source of a wrong answer. Rows with the same text merge into one institution; case and stray spaces are ignored, but "First National" and "First National Bank" count as two. Consumer brands frequently share a charter, and one charter carries one set of limits — two brand names create two ceilings where the law grants one. The certificate number settles it: it names the charter, not the brand, and is searchable in the FDIC's BankFind Suite. A blank row merges with nothing.</p>
+
+<p><strong>Ownership category</strong> offers Single, Joint, Retirement (IRA), Trust, and Business — each a separate bucket at the same bank. Category follows how the account is legally titled — take it from the signature card or the account title, not the nickname in online banking.</p>
+
+<p><strong>Co-owners</strong> is active only on Joint rows and <strong>Beneficiaries</strong> only on Trust rows; the greyed-out box has no effect. <strong>Balance</strong> is the current ledger balance including credited interest; rows left at zero are skipped. The <strong>projection horizon</strong> is in months, defaults to 24, caps at 600; the grid opens from three rows to eight.</p>
+
+<p><strong>APY</strong> is the annual percentage yield, not the nominal rate. Regulation DD (12 CFR Part 1030) requires institutions to disclose APY in account disclosures and on periodic statements, so it is already on your paperwork. It is also the cleaner input: a nominal rate needs a second field for compounding frequency, while APY carries compounding inside it. More in <a href="/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/">what APY means for a savings strategy</a>.</p>
+
+<h2>Two calculations under the hood: the ceiling and the compounding</h2>
+
+<p>Grouping runs first. Every row is keyed to the pair (institution, ownership category) and balances are summed inside each group. Insured is the lesser of group total and ceiling; uninsured is the remainder.</p>
+
+<p>The ceiling follows the category. Single, Retirement, and Business rows use $250,000 flat; a Joint row uses $250,000 times the co-owner count; a Trust row uses $250,000 per eligible beneficiary up to five, capped at $1,250,000 per owner per bank — the structure in effect since April 1, 2024. If rows in one group disagree on the count, the highest ceiling applies.</p>
+
+<p>Compounding runs second. Each row grows as balance × (1 + APY) raised to months ÷ 12, the fractional-year form of an effective annual yield. Rows grow individually and are then summed, so a group with two different rates is not averaged.</p>
+
+<p>The crossing month inverts that expression. Where every row in a group shares one APY there is a closed form: 12 × ln(ceiling ÷ current total) ÷ ln(1 + APY). Where rates differ, no closed form exists, so the tool bisects the same curve out to 1,200 months and reports no crossing within 100 years if there is none. A group already past its ceiling reports zero months.</p>
+
+<p>The last line runs it backwards: ceiling ÷ (1 + APY) raised to months ÷ 12 is the largest balance you could hold today and still fit at the horizon's end. Where rates are mixed, the highest in the group is used, understating that figure deliberately.</p>
+
+<h2>A worked case: covered today, over the line in two years</h2>
+
+<p>Suppose a 24-month horizon and two accounts at one bank: $245,000 single-ownership at 4.00% APY, and $400,000 joint with two co-owners, also 4.00%. These figures are assumptions, not quoted market rates.</p>
+
+<p>The rows do not combine, because the categories differ: $245,000 against a $250,000 ceiling, $400,000 against $500,000. Nothing of the $645,000 total is exposed today.</p>
+
+<p>Run it forward. The single balance becomes $245,000 × 1.04² = $264,992, which is $14,992 above the ceiling. The joint balance becomes $432,640, still under $500,000. The crossing month for the single bucket is 12 × ln(250,000 ÷ 245,000) ÷ ln(1.04) ≈ 6.2 months, so exposure starts before the first year ends. Inverted, the largest single-ownership balance that still fits after 24 months is $250,000 ÷ 1.04² ≈ $231,139 — roughly $13,861 below what is on deposit.</p>
+
+<p>Accrued interest counts toward the limit at the moment a bank fails, which is why the projection column exists: a balance parked just under $250,000 does not stay just under it.</p>
+
+<h2>Boundaries of this estimate</h2>
+
+<p>The grid models one depositor. Two spouses' separate IRAs at one bank, two distinct corporations, or trusts with different grantors each deserve their own $250,000 — but entered as same-bank rows in the same category they merge into one bucket, understating coverage. Run those separately.</p>
+
+<p>The joint multiplication holds only when co-owners have equal shares and every joint account at that bank has the same co-owners. Where the sets vary, each person's $250,000 spreads across all their joint interests, and multiplying overstates protection.</p>
+
+<p>The tool cannot tell which brands share a charter, does not check that an institution is insured at all, and ignores categories outside the five offered, such as government deposits or employee benefit plans. It assumes the APY holds for the whole horizon, which a variable rate will not. Credit union deposits fall under a parallel NCUA structure not modeled here.</p>
+
+<p>Everything runs in the browser and nothing is transmitted. This is a planning estimate; the authoritative calculation is the FDIC's EDIE tool at edie.fdic.gov. For the restructuring side, see <a href="/SmartMoneyDaily/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/">how to get funds fully covered by FDIC insurance</a>.</p>
+
+<h2>Questions this raises</h2>
+
+<h3>Is $250,000 per account or per bank?</h3>
+<p>Neither exactly — it is per depositor, per insured bank, per ownership category. Ten single-ownership accounts at one bank share one $250,000 ceiling; one single plus one joint account there get separate ceilings.</p>
+
+<h3>Two online brands turned out to share one charter — how do I enter that?</h3>
+<p>Put identical text in the name field on both rows — ideally the certificate number, not either brand name — and they merge into one bucket. Checking the certificate first is the highest-value step here, since a shared charter quietly halves assumed coverage.</p>
+
+<h3>What horizon should I set?</h3>
+<p>Match it to the next point you would realistically move money: a CD maturity, an annual review, an expected rate reset. Longer than that flags exposure you would have fixed anyway; shorter misses exposure that builds while you are not looking.</p>

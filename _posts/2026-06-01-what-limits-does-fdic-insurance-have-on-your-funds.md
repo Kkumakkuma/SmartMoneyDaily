@@ -112,9 +112,7 @@ The FDIC runs its own estimator, [EDIE](https://edie.fdic.gov/), which walks thr
 
 A balance parked just under the ceiling does not stay just under it. Interest posts, and on the day a bank fails the accrued interest counts toward your limit alongside principal. A CD is the clearest case: you fund it under the ceiling and it matures above the ceiling, with no action from you in between.
 
-To see when a given account crosses the line, put in the current balance, the account's APY, the compounding frequency, and the number of years, and read the ending balance — that projected figure, not today's number, is the one that has to stay under $250,000 in its category.
-
-{% include tools/apy-calculator.html %}
+To work this out with your actual balance, use the [fdic coverage calculator](/SmartMoneyDaily/tools/fdic-coverage-calculator/).
 
 If the projection lands above the ceiling, you have three ordinary options: have the interest paid out to an account at a different bank instead of compounding in place, fund the account at a level that leaves headroom for the full term, or plan to move the excess during the grace period after maturity. For a refresher on how terms and maturity dates work, see [how a CD works from funding day to renewal](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
 

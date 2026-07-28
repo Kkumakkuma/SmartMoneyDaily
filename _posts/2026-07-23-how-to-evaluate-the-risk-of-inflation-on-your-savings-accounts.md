@@ -77,7 +77,7 @@ That is the shape of the problem in a single table. A headline APY that comforta
 
 To try different balances, APYs, and compounding frequencies before you apply the tax and inflation steps by hand, enter your deposit, rate, and time horizon here:
 
-{% include tools/apy-calculator.html %}
+{% include tools/after-tax-real-return.html %}
 
 If the difference between rate and APY, or between daily and monthly compounding, is still fuzzy, the full breakdown lives in [APY, Compounding, and What Your Savings Will Really Earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 

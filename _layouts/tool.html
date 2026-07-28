@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% comment %}
+  계산기 페이지 전용 레이아웃.
+  - 면책 문구는 post.html 에만 있어서, 도구 페이지를 default 로 두면 숫자를 내놓는 페이지에
+    면책이 하나도 없게 된다. YMYL(금융) 사이트에서 그건 위험하므로 여기서 반드시 붙인다.
+  - 자동광고는 default.html 이 붙이는데, 입력 폼과 Calculate 버튼 사이에 광고가 끼면
+    사용자가 광고를 기능으로 오인하는 배치가 된다. 그건 애드센스 정책 위반이라
+    도구 페이지에서는 광고 스크립트를 싣지 않는다(`page.no_ads` 로 default 에서 차단).
+{% endcomment %}
+
+<article class="tool-page">
+  <h1>{{ page.title }}</h1>
+  {% if page.intro %}<p class="tool-intro">{{ page.intro }}</p>{% endif %}
+
+  {% if page.tool %}{% include tools/{{ page.tool }}.html %}{% endif %}
+
+  {{ content }}
+
+  {% comment %}
+    front matter 의 page.tool 은 include 파일명(tools.yml 의 file)이다. id 와 비교하면
+    id != file 인 항목(10개 중 8개)이 걸러지지 않아 각 페이지가 자기 자신을 "다른 계산기"로
+    링크한다. 반드시 file 끼리 비교할 것.
+  {% endcomment %}
+  {% assign others = site.data.tools | where_exp: "t", "t.file != page.tool" %}
+  {% if others.size > 0 %}
+  <section class="tool-more">
+    <h2>Other calculators on this site</h2>
+    <ul>
+      {% for t in others limit: 6 %}
+      <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a> — {{ t.blurb }}</li>
+      {% endfor %}
+    </ul>
+    <p><a href="{{ '/tools/' | relative_url }}">See how all of them fit together</a></p>
+  </section>
+  {% endif %}
+
+  <div class="financial-disclaimer" style="background:#fff8f0;border-left:4px solid #d97706;padding:14px 18px;margin:28px 0;font-size:0.9em;color:#555;border-radius:6px;">
+    <strong>Disclaimer:</strong> These calculators are general educational tools, not personalized
+    financial, tax, or investment advice. Every result depends on the figures you enter and on the
+    assumptions listed under each calculator. Rates, fees, and account terms change frequently &mdash;
+    verify current details directly with the bank or credit union, and confirm tax treatment with a
+    qualified professional, before acting on any number here. See our
+    <a href="{{ '/disclaimer/' | relative_url }}">full disclaimer</a>.
+  </div>
+</article>
