@@ -476,6 +476,68 @@ _TITLE_CLICHES = ("unlock", "discover", "boost", "maximize", "secrets", "ultimat
                   "essential guide", "game-changer", "revolutioniz")
 
 
+def _topic_api_call(client, category, year, used_list, banned_str, forced_hint, timely_block, temperature):
+    """제목 생성 GPT 호출 본체 (generate_unique_topic 이 attempt 단위 예외 흡수로 감싼다)."""
+    return _openai_retry(lambda: client.chat.completions.create(
+        model="gpt-4o-mini",
+        max_tokens=400,
+        temperature=temperature,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    f"You generate blog post titles for a blog focused narrowly on {BLOG_NICHE} in the United States.\n"
+                    "Generate clear, informational titles that match what people actually search when researching "
+                    "savings accounts, CDs, and money market accounts.\n\n"
+                    "Use a MIX of these explainer / comparison patterns (do NOT default to one):\n"
+                    "1. 'How does a [thing] work?'\n"
+                    "2. 'What is [thing] and how is it calculated?' (e.g., APY, FDIC coverage, compounding)\n"
+                    "3. '[Thing A] vs [Thing B]: which fits [situation]?' (e.g., HYSA vs money market account)\n"
+                    "4. 'How to compare [thing] without getting burned'\n"
+                    "5. 'Is a [thing] worth it right now?'\n"
+                    "6. 'Common mistakes with [thing] (and how to avoid them)'\n"
+                    "7. 'How [thing] is taxed' or 'What happens to [thing] when interest rates change'\n"
+                    "8. 'A beginner's guide to [thing]'\n"
+                    "9. 'What [current rate environment / a Fed pause or cut] means for [thing]' — "
+                    "timely angle, ONLY when the TIMELY CONTEXT below suggests it (no dates in the title).\n\n"
+                    "Rules:\n"
+                    "- Real, natural Google search phrasing (5-12 words).\n"
+                    "- Informational / decision intent — NOT fake 'I tried it for 30 days' angles.\n"
+                    "- Do NOT promise a specific current rate or dollar result in the title.\n"
+                    f"- Relevant to {year}, but do NOT bake a year number into most titles.\n"
+                    "- MUST be clearly different in topic AND angle from the used titles below.\n"
+                    "- Do NOT merely synonym-swap an existing title.\n"
+                    f"- BANNED keywords (over-represented recently, do not use any of these): {banned_str}.\n"
+                    f"{forced_hint}\n\n"
+                    "Reply with ONLY the title, nothing else."
+                ),
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Category: {category.replace('-', ' ')}\n\n"
+                    "The titles below are already published on this site. Each one is the site's "
+                    "definitive answer to its search intent, so a new post must NOT re-answer any of "
+                    "them from a slightly different angle. Pick a question none of them resolves.\n"
+                    f"{used_list}\n"
+                    f"{timely_block}\n"
+                    "Generate one new unique title:"
+                ),
+            },
+        ],
+    ))
+
+
+# v15.1: 후보가 하나도 안 모였을 때(전 시도 API 장애/슬러그 중복)의 마지막 로컬 폴백 —
+# 발행 스킵 금지 규칙상 GPT 없이도 제목을 만들어야 한다. 니치 안전 각도만 사용.
+_LOCAL_TITLE_TEMPLATES = (
+    "A practical checklist for choosing among {cat} options",
+    "Questions worth asking before you commit to a {cat} decision",
+    "How to double-check a {cat} offer before moving money",
+    "What to compare first when weighing {cat} choices",
+)
+
+
 def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_attempts=7,
                           news_headlines=None):
     """v8: GPT가 단일 니치(HYSA/CD/MMA) 안에서 설명형/비교형 고유 토픽 생성.
@@ -488,7 +550,11 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
     각도를 허용(강제 아님 — 살아있는 글과의 중복 검사는 동일하게 통과해야 함). 에버그린
     질문 공간이 34편으로 포화 상태라, 시의성 각도가 유일하게 계속 새로 생기는 주제 공급원.
     """
-    client = OpenAI()
+    try:
+        client = OpenAI()
+    except Exception as _e:
+        print(f"[topic] OpenAI client init failed ({_e}) — using local title fallback")
+        client = None
     year = datetime.datetime.now().year
     living_titles = living_titles or []
     news_headlines = news_headlines or []
@@ -518,7 +584,15 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
     slug = ""
     category = random.choice(CATEGORIES)
     last_reason = ""
-    for attempt in range(max_attempts):
+    # v15.1: 스킵 금지(쿠마님 규칙) — 정규 시도 소진 후 5회는 완화 기준(유사도 0.55, 금지어
+    # 해제)으로 더 시도하고, 그래도 안 되면 수집된 후보 중 유사도 최저를 발행한다.
+    candidates = []
+    total_attempts = max_attempts + 5
+    for attempt in range(total_attempts):
+        if client is None:
+            break
+        relaxed = attempt >= max_attempts
+        jaccard_limit = 0.55 if relaxed else 0.42
         category = _least_used_category(used_topics, CATEGORIES, window=30)
         temperature = 1.0 + 0.1 * attempt
 
@@ -530,54 +604,15 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
 
         forced_hint = ("\n" + "\n".join(hints)) if hints else ""
 
-        response = _openai_retry(lambda: client.chat.completions.create(
-            model="gpt-4o-mini",
-            max_tokens=400,
-            temperature=temperature,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        f"You generate blog post titles for a blog focused narrowly on {BLOG_NICHE} in the United States.\n"
-                        "Generate clear, informational titles that match what people actually search when researching "
-                        "savings accounts, CDs, and money market accounts.\n\n"
-                        "Use a MIX of these explainer / comparison patterns (do NOT default to one):\n"
-                        "1. 'How does a [thing] work?'\n"
-                        "2. 'What is [thing] and how is it calculated?' (e.g., APY, FDIC coverage, compounding)\n"
-                        "3. '[Thing A] vs [Thing B]: which fits [situation]?' (e.g., HYSA vs money market account)\n"
-                        "4. 'How to compare [thing] without getting burned'\n"
-                        "5. 'Is a [thing] worth it right now?'\n"
-                        "6. 'Common mistakes with [thing] (and how to avoid them)'\n"
-                        "7. 'How [thing] is taxed' or 'What happens to [thing] when interest rates change'\n"
-                        "8. 'A beginner's guide to [thing]'\n"
-                        "9. 'What [current rate environment / a Fed pause or cut] means for [thing]' — "
-                        "timely angle, ONLY when the TIMELY CONTEXT below suggests it (no dates in the title).\n\n"
-                        "Rules:\n"
-                        "- Real, natural Google search phrasing (5-12 words).\n"
-                        "- Informational / decision intent — NOT fake 'I tried it for 30 days' angles.\n"
-                        "- Do NOT promise a specific current rate or dollar result in the title.\n"
-                        f"- Relevant to {year}, but do NOT bake a year number into most titles.\n"
-                        "- MUST be clearly different in topic AND angle from the used titles below.\n"
-                        "- Do NOT merely synonym-swap an existing title.\n"
-                        f"- BANNED keywords (over-represented recently, do not use any of these): {banned_str}.\n"
-                        f"{forced_hint}\n\n"
-                        "Reply with ONLY the title, nothing else."
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": (
-                        f"Category: {category.replace('-', ' ')}\n\n"
-                        "The titles below are already published on this site. Each one is the site's "
-                        "definitive answer to its search intent, so a new post must NOT re-answer any of "
-                        "them from a slightly different angle. Pick a question none of them resolves.\n"
-                        f"{used_list}\n"
-                        f"{timely_block}\n"
-                        "Generate one new unique title:"
-                    ),
-                },
-            ],
-        ))
+        # v15.1: attempt 단위로 API 실패 흡수 — 한 시도의 예외가 발행 전체를 죽이지 않게
+        # (codex 높음: _openai_retry 최종 실패 시 폴백까지 못 가던 구멍)
+        try:
+            response = _topic_api_call(client, category, year, used_list, banned_str,
+                                       forced_hint, timely_block, temperature)
+        except Exception as _e:
+            last_reason = f"api error: {_e}"
+            print(f"[topic] attempt {attempt + 1} api error (continuing): {_e}")
+            continue
         title = response.choices[0].message.content.strip().strip('"').strip("'")
         slug = slugify(title)
         norm_slug = re.sub(r"-\d{2,3}$", "", slug)
@@ -587,11 +622,6 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
             continue
 
         title_lower = title.lower()
-        hit_banned = [bk for bk in banned_keywords if bk in title_lower]
-        if hit_banned:
-            last_reason = f"banned keyword used: {hit_banned[0]}"
-            continue
-
         # v12: 제목에도 AI 클리셰 가드 (메타에만 있던 검사를 제목까지 — 'Unlocking...' 통과 사고 재발 방지)
         hit_cliche = [c for c in _TITLE_CLICHES if c in title_lower]
         if hit_cliche:
@@ -607,15 +637,41 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
             j = _jaccard(new_words, _title_words(past))
             if j > worst_jaccard:
                 worst_jaccard = j
-        if worst_jaccard >= 0.42:
-            last_reason = f"too similar (jaccard {worst_jaccard:.2f})"
+
+        hit_banned = [bk for bk in banned_keywords if bk in title_lower]
+        # 슬러그 중복·클리셰만 아니면 폴백 후보로 수집 — 정렬은 유사도 우선, 금지어는
+        # 동률 보조 키 (codex: 페널티 합산은 '유사도 최저 발행' 정책과 어긋남)
+        candidates.append((worst_jaccard, 1 if hit_banned else 0, title, category, slug))
+
+        if hit_banned and not relaxed:
+            last_reason = f"banned keyword used: {hit_banned[0]}"
+            continue
+        if worst_jaccard >= jaccard_limit:
+            last_reason = f"too similar (jaccard {worst_jaccard:.2f} >= {jaccard_limit})"
             continue
 
         return title, category, slug
 
-    # v12: fail-closed — 시도 소진 시 유사/중복 제목을 그대로 발행하던 fail-open 제거.
-    # __main__ 의 per-post try/except 가 잡아 이 회차 발행만 건너뛴다.
-    raise RuntimeError(f"unique topic generation failed after {max_attempts} attempts (last: {last_reason})")
+    # v15.1: 스킵 금지 — 시도 전부 소진 시 수집된 후보 중 유사도 최저를 발행 (v12 의
+    # fail-closed RuntimeError 폐지, 쿠마님 "어떻게든 고쳐서 발행" 규칙).
+    if candidates:
+        candidates.sort(key=lambda c: (c[0], c[1]))
+        score, _banned_flag, title, category, slug = candidates[0]
+        print(f"[topic] all {total_attempts} attempts rejected — publishing best candidate "
+              f"(jaccard {score:.2f}): {title}")
+        return title, category, slug
+
+    # 후보 0개(전 시도 API 장애/슬러그 중복/클리셰) — GPT 없이 로컬 템플릿으로라도 발행.
+    print(f"[topic] no usable candidate in {total_attempts} attempts (last: {last_reason}) — local template fallback")
+    cat_words = category.replace("-", " ")
+    for tpl in _LOCAL_TITLE_TEMPLATES:
+        t = tpl.format(cat=cat_words)
+        s = slugify(t)
+        if re.sub(r"-\d{2,3}$", "", s) not in used_set:
+            return t, category, s
+    # 템플릿 4종까지 전부 소진(사실상 불가) — 월 이름으로 차별화해 무조건 반환
+    t = _LOCAL_TITLE_TEMPLATES[0].format(cat=cat_words) + " this " + datetime.datetime.now().strftime("%B")
+    return t, category, slugify(t)
 
 
 # v14 (2026-07-28): 본문에 실제로 쓰는 계산기를 붙인다.
@@ -1027,6 +1083,113 @@ _BODY_CLICHES = (
 )
 _PROMISSORY = ("guaranteed returns", "risk-free profit", "risk-free returns", "you will earn")
 
+# v15.1: 결정적 수리용 치환표 — GPT 재생성으로 못 잡은 문구를 코드로 직접 고쳐 발행한다
+# (발행 스킵 금지 규칙). 의미 보존 + YMYL 안전 표현으로만 치환.
+_CLICHE_FIXES = {
+    "in today's fast-paced world": "today",
+    "in the modern era": "today",
+    "have you ever wondered": "many savers ask",
+    "welcome to my blog": "",
+    "let's dive in": "here is how it works",
+    "delving into": "looking at",
+    "delve into": "look at",
+    "unlock the secrets": "understand the details",
+    "embark on a journey": "get started",
+    "treasure trove": "wealth",
+    "in the realm of": "in",
+    "tapestry of": "mix of",
+    "ever-evolving landscape": "changing market",
+    "navigate the world of": "understand",
+    "it is important to note that": "note that",
+    "it goes without saying": "clearly",
+    "needless to say": "clearly",
+}
+_PROMISSORY_FIXES = {
+    "guaranteed returns": "a fixed, contractual interest rate",
+    "risk-free profit": "steady interest",
+    "risk-free returns": "predictable interest",
+    "you will earn": "you can expect to earn",
+}
+
+
+def _repair_normalize(content, market_data):
+    """API 없이 도는 순수 문자열 수리 패스 — _deterministic_repair 본체이자, 분량 보강(API)
+    이후 재정규화에도 재사용한다 (codex: 보강 섹션이 새 위반을 넣을 수 있음)."""
+
+    def _sub_ci(text, bad, good):
+        def _r(m):
+            s = m.group(0)
+            if good and s[:1].isupper():
+                return good[0].upper() + good[1:]
+            return good
+        return re.sub(re.escape(bad), _r, text, flags=re.IGNORECASE)
+
+    for bad, good in list(_CLICHE_FIXES.items()) + list(_PROMISSORY_FIXES.items()):
+        if bad in content.lower():
+            content = _sub_ci(content, bad, good)
+    # 행 선두 들여쓰기(중첩 목록)는 보존 — 비선두 공백 연쇄만 축약 (codex)
+    content = re.sub(r"(?<=\S)[ \t]{2,}", " ", content)
+
+    content = re.sub(r"^#\s+.*\n?", "", content, flags=re.M)
+    content = re.sub(r"\n*^##\s+About the Author\b.*?(?=\n##\s|\Z)", "", content,
+                     flags=re.DOTALL | re.MULTILINE | re.IGNORECASE)
+
+    # 미검증 소수점 2자리 금리 → 근사 표현. 근사 수식어가 이미 있거나 범위(-) 직후면
+    # 'about' 생략 (codex: 'approximately about 4.2%' / '4.2%-about 4.8%' 방지)
+    allowed = {r for _, r in (market_data or {}).get("rates", [])}
+
+    def _round_rate(m):
+        num = m.group(1)
+        if num in allowed:
+            return m.group(0)
+        try:
+            rounded = f"{round(float(num), 1):g}%"
+        except ValueError:
+            return m.group(0)
+        prefix = m.string[max(0, m.start() - 16):m.start()].lower()
+        bare = prefix.endswith(("about ", "approximately ", "around ", "roughly ", "~", "-", "–"))
+        return rounded if bare else f"about {rounded}"
+
+    return re.sub(r"\b(\d{1,2}\.\d{2})\s*%", _round_rate, content)
+
+
+def _deterministic_repair(content, market_data, client=None, title=""):
+    """검증 실패 잔여 문제를 코드로 직접 수리 — '스킵 대신 발행' 규칙의 마지막 안전망.
+
+    validate_post_quality 의 모든 검사 항목에 1:1 대응하는 기계적 수리:
+    클리셰/약속성 문구 치환, H1·About 섹션 제거, 미검증 정밀 금리 근사화,
+    FDIC 귀속 문구 삽입, 분량·H2 부족 시 섹션 보강."""
+    content = _repair_normalize(content, market_data)
+
+    # FDIC 수치 인용 귀속 강제 삽입 (전체 기준일 부재 또는 인용 근처 FDIC 부재 시)
+    if market_data:
+        cited = [r for _, r in market_data["rates"] if re.search(rf"\b{re.escape(r)}%", content)]
+        if cited:
+            first = re.search(rf"\b{re.escape(cited[0])}%", content)
+            window = content[max(0, first.start() - 350):first.start() + 350]
+            if market_data["as_of"] not in content or "fdic" not in window.lower():
+                ins = f" (FDIC national average, as of {market_data['as_of']})"
+                if ins not in content:
+                    pos = first.end()
+                    content = content[:pos] + ins + content[pos:]
+
+    # 분량/H2 부족 → 유용한 섹션 보강 (최대 2회, client 있을 때만).
+    # _enforce_word_count 는 내부 try/except 로 실패 시 원문을 그대로 반환하므로 여기서
+    # 예외로 죽지 않는다. 보강이 새 위반을 넣을 수 있어 정규화 패스를 한 번 더 적용.
+    if client is not None:
+        expanded = False
+        for _ in range(2):
+            wc = len(content.split())
+            h2 = len(re.findall(r"^##\s", content, re.M))
+            if wc >= 600 and h2 >= 3:
+                break
+            content = _enforce_word_count(client, title, content, min_words=max(700, wc + 250))
+            expanded = True
+        if expanded:
+            content = _repair_normalize(content, market_data)
+
+    return content
+
 
 def validate_post_quality(content, market_data=None):
     """발행 전 결정적(비확률) 품질 검증. 실패 사유 리스트 반환 — 빈 리스트면 통과.
@@ -1063,7 +1226,7 @@ def validate_post_quality(content, market_data=None):
                 )
             else:
                 first = re.search(rf"\b{re.escape(cited[0])}%", content)
-                window = content[max(0, first.start() - 250):first.start() + 250]
+                window = content[max(0, first.start() - 350):first.start() + 350]
                 if "fdic" not in window.lower():
                     problems.append(
                         f"FDIC number {cited[0]}% cited without attributing FDIC near the citation "
@@ -1112,11 +1275,12 @@ def create_post():
     else:
         _min_words = random.randint(1900, 2300)
 
-    # v15: 품질 검증 + 수리 루프 — 실패 사유를 명시해 최대 2회 재생성, 그래도 실패면 이 회차
-    # 발행 스킵(fail-closed, __main__ 이 잡음). 불량 글을 그대로 올리는 것보다 하루 거르는 게 낫다.
+    # v15.1: 품질 검증 + 3단 수리 사다리 — 스킵 금지 (쿠마님 "어떻게든 고쳐서 발행" 규칙).
+    # ① 실패 사유 명시 재생성(2회) → ② 주제 자체를 교체해 재생성 → ③ 그래도 잔여 문제면
+    # 코드로 직접 수리(_deterministic_repair)해서 무조건 발행한다.
     content = None
     repair_notes = None
-    for v_attempt in range(3):
+    for v_attempt in range(4):
         content = generate_post_content(title, category, recent_titles, min_words=_min_words,
                                         market_data=market_data, news_headlines=news_heads,
                                         repair_notes=repair_notes)
@@ -1124,8 +1288,26 @@ def create_post():
         if not repair_notes:
             break
         print(f"[validate] attempt {v_attempt + 1} rejected: {repair_notes}")
-    else:
-        raise RuntimeError(f"quality validation failed after 3 attempts: {repair_notes}")
+        if v_attempt == 1:
+            # 같은 주제로 두 번 실패 — 주제가 실패를 유발하는 경우가 있어 주제를 교체
+            try:
+                title, category, slug = generate_unique_topic(
+                    used_topics + [title], existing_slugs, living_titles,
+                    news_headlines=news_heads)
+                repair_notes = None
+                print(f"[validate] switching topic → {title}")
+            except RuntimeError as _e:
+                print(f"[validate] topic switch unavailable ({_e}) — keep repairing current topic")
+    if repair_notes:
+        print(f"[repair] deterministic repair for: {repair_notes}")
+        try:
+            _repair_client = OpenAI()
+        except Exception:
+            _repair_client = None  # 클라이언트 초기화 실패해도 문자열 수리는 그대로 진행
+        content = _deterministic_repair(content, market_data, client=_repair_client, title=title)
+        residual = validate_post_quality(content, market_data)
+        if residual:
+            print(f"[repair] residual issues (publishing anyway per no-skip rule): {residual}")
 
     content = inject_internal_links(content, recent_posts, min_links=5, max_links=8)
     content = _resolve_bare_brackets(content, recent_posts)
@@ -1230,3 +1412,4 @@ if __name__ == "__main__":
 # v7_pin_patched 2026-05-08
 # v8_accuracy_rebuild 2026-05-23  (single niche HYSA/CD/MMA, no fabrication, 1st-party sources)
 # v15_market_signals 2026-08-02  (real FDIC national-rate data + news-driven timely topics + quality validate/repair loop)
+# v15.1_no_skip 2026-08-02  (never skip publishing: relaxed-retry + best-candidate topic fallback, deterministic content repair)
