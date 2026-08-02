@@ -11,7 +11,7 @@ redirect_from:
   - /2026/05/06/common-misconceptions-about-money-market-accounts-and-their-benefits/
 ---
 
-![Diagram comparing a money market account with savings, checking, and money market funds](/SmartMoneyDaily/assets/pin-images/2026-06-02-what-is-a-money-market-account-and-how-does-it-work.png)
+![Diagram comparing a money market account with savings, checking, and money market funds](/assets/pin-images/2026-06-02-what-is-a-money-market-account-and-how-does-it-work.png)
 
 > **Short answer:** A money market account is a deposit account at a bank or credit union. It pays interest like a savings account, and it usually lets you spend directly from it with checks or a debit card like a checking account. It carries the same federal deposit insurance as any other bank account — up to $250,000 per depositor, per insured institution, per ownership category. It is not a money market fund, and that distinction is the one that costs people money.
 
@@ -23,7 +23,7 @@ An MMA is a deposit account. You put money in, the bank owes you that money back
 
 What separates it from a plain savings account is the payment access. Most MMAs come with some combination of paper checks, a debit or ATM card, and online bill pay — features a savings account normally does not have. What separates it from a checking account is that it is built to hold a balance rather than to churn: banks often set transaction caps, minimum balances, and tiered rates that reward you for leaving money alone.
 
-The rate is variable. Unlike a certificate of deposit, nothing about your APY is locked. The bank can reprice the account, and the disclosure you sign says so in plain language. That flexibility cuts both directions and is worth understanding before you commit a large balance — see [why money market rates move and how fast yours follows](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/) for how repricing tends to play out.
+The rate is variable. Unlike a certificate of deposit, nothing about your APY is locked. The bank can reprice the account, and the disclosure you sign says so in plain language. That flexibility cuts both directions and is worth understanding before you commit a large balance — see [why money market rates move and how fast yours follows](/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/) for how repricing tends to play out.
 
 ## The Hybrid Part: Checks, Cards, and Transfer Rules
 
@@ -72,7 +72,7 @@ The fix is procedural, not clever: find the tier table on the rate sheet, locate
 
 {% include tools/tiered-rate-calculator.html %}
 
-For a fuller walkthrough of comparing two offers on tiers, minimums, and limits, see the companion piece on [choosing a money market account](/SmartMoneyDaily/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
+For a fuller walkthrough of comparing two offers on tiers, minimums, and limits, see the companion piece on [choosing a money market account](/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
 
 ## Money Market Account vs Money Market Fund: Only One Is Insured
 
@@ -82,7 +82,7 @@ A **money market account** is a deposit at a bank or credit union. If the instit
 
 A **money market fund** is a mutual fund that buys short-term debt. You own shares. It is a securities product, not a deposit, and it carries no federal deposit insurance. Brokerage account protection covers a failed broker, not investment losses. Fund shares are designed to hold a stable value, but "designed to" is not a guarantee, and funds can carry redemption terms that a bank account does not.
 
-If someone tells you their "money market" pays a great rate, the first question is where it is held — a bank, or a brokerage. The answer changes what protection you have. The [money market fund guide](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/) covers the fund side, including what to check on a fund fact sheet.
+If someone tells you their "money market" pays a great rate, the first question is where it is held — a bank, or a brokerage. The answer changes what protection you have. The [money market fund guide](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/) covers the fund side, including what to check on a fund fact sheet.
 
 ## Where Your Deposit Goes, and Why the Rate Moves
 
@@ -139,7 +139,7 @@ A plain high-yield savings account is usually the better default when you never 
 
 **"Money market accounts and money market funds are basically the same."** They are not. One is insured, one is not. Nothing else about the comparison matters until you have settled that.
 
-**"All money market accounts are insured."** Confirm the institution rather than assuming. Look up the bank in FDIC BankFind, or the credit union with the NCUA, and note that a fintech app is not itself a bank — it holds your money at a partner institution, and the coverage depends on that arrangement. The mechanics of that check are in [what FDIC insurance actually covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/).
+**"All money market accounts are insured."** Confirm the institution rather than assuming. Look up the bank in FDIC BankFind, or the credit union with the NCUA, and note that a fintech app is not itself a bank — it holds your money at a partner institution, and the coverage depends on that arrangement. The mechanics of that check are in [what FDIC insurance actually covers](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/).
 
 ## Frequently Asked Questions
 

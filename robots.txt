@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smartmoneydaily.github.io/sitemap.xml
+Sitemap: https://smartmoneydaily.github.io/sitemap-posts.xml

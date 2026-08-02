@@ -14,7 +14,7 @@ redirect_from:
   - /2026/05/31/how-much-should-you-actually-keep-in-an-emergency-fund/
 ---
 
-![Worksheet showing essential monthly expenses multiplied by a months-of-coverage factor to produce an emergency fund target](/SmartMoneyDaily/assets/pin-images/2026-05-09-emergency-fund-basics-how-much-should-you-really-save.png)
+![Worksheet showing essential monthly expenses multiplied by a months-of-coverage factor to produce an emergency fund target](/assets/pin-images/2026-05-09-emergency-fund-basics-how-much-should-you-really-save.png)
 
 > **Short answer:** Your target is essential monthly expenses multiplied by the number of months your situation actually requires. Start at three months, add one month for each risk factor that applies to you, and set two milestones — a starter fund of one month, then the full number.
 
@@ -64,7 +64,7 @@ Start at three months of coverage. Then walk the list below and add the months t
 | Both adults work for the same employer or in the same industry | +1 | One downturn hits both incomes |
 | Subtract: stable salaried job, dual income, no dependents | −0 to −1 | A three-month floor is defensible, but not less |
 
-Cap the result at twelve months. Beyond that, the money is better used somewhere with a return, because the odds of needing month thirteen of a cash reserve are low compared with what that cash gives up over years. If your score lands above twelve, treat the excess as a separate goal rather than emergency cash — and read our note on [what inflation does to a savings APY](/SmartMoneyDaily/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/) before parking an oversized balance in a deposit account indefinitely.
+Cap the result at twelve months. Beyond that, the money is better used somewhere with a return, because the odds of needing month thirteen of a cash reserve are low compared with what that cash gives up over years. If your score lands above twelve, treat the excess as a separate goal rather than emergency cash — and read our note on [what inflation does to a savings APY](/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/) before parking an oversized balance in a deposit account indefinitely.
 
 ## Your Target in Three Inputs
 
@@ -100,7 +100,7 @@ Treat these as separate projects, because they call for different behavior.
 | What it covers | Repairs, deductibles, one-off bills | Job loss, extended illness |
 | Where it lives | Any insured savings account you can reach fast | The account you actually optimized |
 
-Where to keep each one is a separate decision with its own trade-offs. We cover access speed, tiering, and the case for splitting the balance in [where to keep an emergency fund](/SmartMoneyDaily/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/), and the account features to verify before opening in our [high-yield savings checklist](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/). Whatever you choose, confirm the institution is an FDIC-insured bank at [fdic.gov](https://www.fdic.gov/resources/deposit-insurance) or an NCUA-insured credit union at [ncua.gov](https://ncua.gov/consumers/share-insurance-coverage) before the money goes in.
+Where to keep each one is a separate decision with its own trade-offs. We cover access speed, tiering, and the case for splitting the balance in [where to keep an emergency fund](/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/), and the account features to verify before opening in our [high-yield savings checklist](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/). Whatever you choose, confirm the institution is an FDIC-insured bank at [fdic.gov](https://www.fdic.gov/resources/deposit-insurance) or an NCUA-insured credit union at [ncua.gov](https://ncua.gov/consumers/share-insurance-coverage) before the money goes in.
 
 ## Filling It: Automation, Windfalls, and a Realistic Schedule
 
@@ -112,9 +112,9 @@ Three mechanisms do nearly all the work.
 
 **Recycle finished payments.** When a car loan or a course of childcare ends, keep the payment going — into savings. The household already lived without that money.
 
-The [compound interest calculator](/SmartMoneyDaily/tools/compound-interest-calculator/) will do this with your own figures.
+The [compound interest calculator](/tools/compound-interest-calculator/) will do this with your own figures.
 
-Continuing the example: $400 a month toward a $16,000 target is 40 months of contributions on its own. If the account pays 4.00% APY, compounding gets you there in roughly 38 months instead, and the balance at month 40 would be about $17,065 rather than $16,000. Interest helps, but it is not the lever — the transfer amount is. In that same example, doubling the monthly transfer to $800 reaches the target in about 20 months, roughly eighteen months sooner, while adding a full percentage point of APY at $400 a month moves the finish line by less than a month. If the mechanics of that conversion interest you, our guide to [APY and compounding](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) shows the formula behind the calculator.
+Continuing the example: $400 a month toward a $16,000 target is 40 months of contributions on its own. If the account pays 4.00% APY, compounding gets you there in roughly 38 months instead, and the balance at month 40 would be about $17,065 rather than $16,000. Interest helps, but it is not the lever — the transfer amount is. In that same example, doubling the monthly transfer to $800 reaches the target in about 20 months, roughly eighteen months sooner, while adding a full percentage point of APY at $400 a month moves the finish line by less than a month. If the mechanics of that conversion interest you, our guide to [APY and compounding](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) shows the formula behind the calculator.
 
 A caution on the schedule: build it around a transfer you can sustain in a mediocre month, not your best month. A $250 transfer you never cancel beats a $600 transfer you abandon in week six and then feel bad about.
 

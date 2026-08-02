@@ -24,9 +24,9 @@ CLICHE_PAT = re.compile(
     r"In today's fast-paced world|In the modern era|Have you ever wondered|Welcome to my blog|"
     r"Let's dive in|delve into|unlock the secrets|embark on a journey|in the realm of|tapestry of|"
     r"ever-evolving landscape|navigate the world of|treasure trove", re.I)
-# 내부 링크: /SmartMoneyDaily/YYYY/MM/DD/slug/ 형식 외의 상대링크 = 404 후보
+# 내부 링크: /YYYY/MM/DD/slug/ (또는 /assets/, /tools/) 형식 외의 상대링크 = 404 후보
 LINK_PAT = re.compile(r"\]\((/[^)]+)\)")
-GOOD_LINK_PAT = re.compile(r"^/SmartMoneyDaily/(?:\d{4}/\d{2}/\d{2}/[a-z0-9-]+/?|assets/)")
+GOOD_LINK_PAT = re.compile(r"^/(?:\d{4}/\d{2}/\d{2}/[a-z0-9-]+/?|assets/|tools/)")
 
 
 def tokens(text):

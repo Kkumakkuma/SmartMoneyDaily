@@ -7,7 +7,7 @@ description: "Discover the true cost of credit card interest in 2026 with real n
 tags: [credit-score, personal-finance, 2026]
 ---
 
-![How Much Does Credit Card Interest Really Cost You in 2026? Real Numbers From My Experience](/SmartMoneyDaily/assets/pin-images/2026-05-05-how-much-does-credit-card-interest-really-cost-you-in-2026-real-numbers-from-my-experience.png)
+![How Much Does Credit Card Interest Really Cost You in 2026? Real Numbers From My Experience](/assets/pin-images/2026-05-05-how-much-does-credit-card-interest-really-cost-you-in-2026-real-numbers-from-my-experience.png)
 
 In December 2025, I found myself staring at a $2,500 balance on one of my credit cards, and my heart sank. When I calculated the estimated interest charges — roughly $200 at a 19.99% APR — it became painfully clear: credit card debt could be my undoing. That moment sparked a deep dive into understanding not just the interest itself but how it piles up and what it really costs consumers like me. 
 

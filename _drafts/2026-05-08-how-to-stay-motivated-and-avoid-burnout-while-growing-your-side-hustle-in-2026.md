@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![How to Stay Motivated and Avoid Burnout While Growing Your Side Hustle in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-08-how-to-stay-motivated-and-avoid-burnout-while-growing-your-side-hustle-in-2026.png)
+![How to Stay Motivated and Avoid Burnout While Growing Your Side Hustle in 2026](/assets/pin-images/2026-05-08-how-to-stay-motivated-and-avoid-burnout-while-growing-your-side-hustle-in-2026.png)
 
 # How to Stay Motivated and Avoid Burnout While Growing Your Side Hustle in 2026
 

@@ -12,13 +12,13 @@ redirect_from:
   - /2026/06/20/understanding-fdic-insurance-coverage-for-your-savings-accounts/
 ---
 
-![Deposit accounts grouped by ownership category, showing how balances combine against a single insurance limit](/SmartMoneyDaily/assets/pin-images/2026-06-01-what-limits-does-fdic-insurance-have-on-your-funds.png)
+![Deposit accounts grouped by ownership category, showing how balances combine against a single insurance limit](/assets/pin-images/2026-06-01-what-limits-does-fdic-insurance-have-on-your-funds.png)
 
 > **Short answer:** The limit is $250,000 per depositor, per insured bank, per ownership category. Opening more accounts at the same bank in the same category does not add coverage — the balances are added together and measured against one $250,000 ceiling. Coverage multiplies only when the *category* changes, or the *bank charter* changes.
 
 Most people get the number right and the sentence wrong. They remember $250,000 and assume it applies to each account. It applies to each *bucket*, and a bucket is defined by two things you rarely think about when you open an account: whose name is on it and what legal category it falls into. Three savings accounts, a money market account, and two CDs in your name alone at one bank are one bucket, not six.
 
-This article is only about how the ceiling is calculated. If you want the broader question of which products are covered at all — and which ones look like deposits but are not — that belongs in [what FDIC insurance covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/). If your balances already exceed the ceiling and you want a layout that fixes it, see [how to insure more than $250,000](/SmartMoneyDaily/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/).
+This article is only about how the ceiling is calculated. If you want the broader question of which products are covered at all — and which ones look like deposits but are not — that belongs in [what FDIC insurance covers](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/). If your balances already exceed the ceiling and you want a layout that fixes it, see [how to insure more than $250,000](/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/).
 
 ## Per Depositor, Per Bank, Per Ownership Category, Decoded
 
@@ -112,9 +112,9 @@ The FDIC runs its own estimator, [EDIE](https://edie.fdic.gov/), which walks thr
 
 A balance parked just under the ceiling does not stay just under it. Interest posts, and on the day a bank fails the accrued interest counts toward your limit alongside principal. A CD is the clearest case: you fund it under the ceiling and it matures above the ceiling, with no action from you in between.
 
-To work this out with your actual balance, use the [fdic coverage calculator](/SmartMoneyDaily/tools/fdic-coverage-calculator/).
+To work this out with your actual balance, use the [fdic coverage calculator](/tools/fdic-coverage-calculator/).
 
-If the projection lands above the ceiling, you have three ordinary options: have the interest paid out to an account at a different bank instead of compounding in place, fund the account at a level that leaves headroom for the full term, or plan to move the excess during the grace period after maturity. For a refresher on how terms and maturity dates work, see [how a CD works from funding day to renewal](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
+If the projection lands above the ceiling, you have three ordinary options: have the interest paid out to an account at a different bank instead of compounding in place, fund the account at a level that leaves headroom for the full term, or plan to move the excess during the grace period after maturity. For a refresher on how terms and maturity dates work, see [how a CD works from funding day to renewal](/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
 
 ## What Happens to Deposits Above the Limit
 
@@ -124,7 +124,7 @@ When an insured bank fails, the FDIC pays the insured portion — usually by tra
 
 Two practical consequences. First, the uninsured slice is not just a risk of loss — it is a risk of your money being unavailable for an indefinite period, which matters enormously if that money was your emergency reserve. Second, the fact that regulators have sometimes protected uninsured depositors in particular failures is not a rule you can plan around. Plan around the limit.
 
-Note the contrast with products that are not deposits at all. A money market *fund* is not covered by deposit insurance under any structure, no matter how it is titled; its risk profile is a different subject, covered in [how money market funds work](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
+Note the contrast with products that are not deposits at all. A money market *fund* is not covered by deposit insurance under any structure, no matter how it is titled; its risk profile is a different subject, covered in [how money market funds work](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
 
 ## Titling Errors That Quietly Shrink Your Coverage
 

@@ -7,7 +7,7 @@ description: "Common misunderstandings about CD interest rates can lead to poor 
 tags: [cd-rates, deposit-accounts]
 ---
 
-![Common Misunderstandings About CD Interest Rates and Their Impact](/SmartMoneyDaily/assets/pin-images/2026-07-29-common-misunderstandings-about-cd-interest-rates-and-their-impact.png)
+![Common Misunderstandings About CD Interest Rates and Their Impact](/assets/pin-images/2026-07-29-common-misunderstandings-about-cd-interest-rates-and-their-impact.png)
 
 > **Bottom line:** Misunderstandings about CD interest rates can lead to poor financial decisions. For instance, it's commonly believed that all CDs offer the same rates, but rates can vary greatly based on factors like institution type and term length.
 
@@ -33,7 +33,7 @@ No, not all CDs are the same when it comes to interest rates. They can differ si
 
 - **APY Variability:** Rates can change weekly or even daily, depending on market conditions. Always check for the most current rates to make informed decisions.
 
-- **CD Types:** There are various types of CDs, such as traditional CDs, no-penalty CDs, and step-up CDs, each offering different rates and withdrawal options. Regularly consulting our guide "[What Is a Certificate of Deposit and How Does a CD Work?](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/)" can help clarify these distinctions.
+- **CD Types:** There are various types of CDs, such as traditional CDs, no-penalty CDs, and step-up CDs, each offering different rates and withdrawal options. Regularly consulting our guide "[What Is a Certificate of Deposit and How Does a CD Work?](/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/)" can help clarify these distinctions.
 
 ## How Does Inflation Impact CD Interest Rates?
 
@@ -41,7 +41,7 @@ Inflation is a crucial factor that can erode the purchasing power of your saving
 
 - **Real Return:** The "real return" of a CD is the nominal interest rate minus the inflation rate. If inflation rises above the rate of your CD, the actual buying power of your interest earnings diminishes. The [Consumer Financial Protection Bureau](https://www.consumerfinance.gov/) (CFPB) provides resources on how inflation can affect savings.
 
-- **Choosing the Right CD:** When selecting a CD, consider not only the APY but also the potential impact of inflation on your returns. Our article "[Real Return: What Inflation Does to Your Savings APY](/SmartMoneyDaily/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/)" offers further insights on this topic.
+- **Choosing the Right CD:** When selecting a CD, consider not only the APY but also the potential impact of inflation on your returns. Our article "[Real Return: What Inflation Does to Your Savings APY](/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/)" offers further insights on this topic.
 
 ## How Do Taxes Affect CD Interest Earnings?
 
@@ -49,13 +49,13 @@ Taxes can significantly influence your overall earnings from CDs. The interest e
 
 - **1099-INT Reporting:** Banks will typically issue a 1099-INT form for earned interest over a specific threshold, indicating that this income must be reported on your tax returns. Awareness of how taxes apply can lead to more strategic financial planning.
 
-- **After-Tax APY:** The concept of after-tax APY is critical when measuring the actual earnings of a CD investment. The effective yield after accounting for taxes may be lower than the nominal APY advertised. Our article "[Taxes on Savings Interest: 1099-INT and After-Tax APY](/SmartMoneyDaily/2026/07/23/how-tax-implications-affect-your-earnings-from-high-yield-options/)" can provide valuable strategies for more effective tax planning.
+- **After-Tax APY:** The concept of after-tax APY is critical when measuring the actual earnings of a CD investment. The effective yield after accounting for taxes may be lower than the nominal APY advertised. Our article "[Taxes on Savings Interest: 1099-INT and After-Tax APY](/2026/07/23/how-tax-implications-affect-your-earnings-from-high-yield-options/)" can provide valuable strategies for more effective tax planning.
 
 ## Comparative Overview of CD Characteristics
 
 Here’s a comparison table to help visualize key attributes of CDs compared to other savings vehicles:
 
-| Attribute               | CD                              | High-Yield Savings Account (HYSA) | [Money Market Account](/SmartMoneyDaily/2026/07/18/money-market-accounts-vs-cds-which-one-offers-better-flexibility/) (MMA)  |
+| Attribute               | CD                              | High-Yield Savings Account (HYSA) | [Money Market Account](/2026/07/18/money-market-accounts-vs-cds-which-one-offers-better-flexibility/) (MMA)  |
 |-------------------------|---------------------------------|-------------------------------------|-------------------------------|
 | Interest Rates          | Generally fixed                 | Variable, often lower than CDs     | Variable, competitive rates    |
 | Withdrawal Penalties    | Early withdrawal penalties may apply | Flexible, typically no penalty    | Check bank policy for limits   |
@@ -98,7 +98,7 @@ Investing in CDs can be a strategic part of your savings plan. By understanding 
 
 ## Further Reading
 
-- [What to Know About Promotional Rates and Your Financial Assets](/SmartMoneyDaily/2026/07/28/what-to-know-about-promotional-rates-and-your-financial-assets/)
-- [Where to Keep an Emergency Fund: HYSA, MMA, CD, or Cash](/SmartMoneyDaily/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/)
-- [HYSA vs CD: Which Should Hold Your Money Right Now?](/SmartMoneyDaily/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/)
+- [What to Know About Promotional Rates and Your Financial Assets](/2026/07/28/what-to-know-about-promotional-rates-and-your-financial-assets/)
+- [Where to Keep an Emergency Fund: HYSA, MMA, CD, or Cash](/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/)
+- [HYSA vs CD: Which Should Hold Your Money Right Now?](/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/)
 

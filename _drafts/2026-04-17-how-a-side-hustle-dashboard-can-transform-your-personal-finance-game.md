@@ -6,7 +6,7 @@ categories: [product-review]
 description: "Launch and manage your side hustles from one powerful dashboard."
 ---
 
-![How a Side Hustle Dashboard Can Transform Your Personal Finance Game](/SmartMoneyDaily/assets/pin-images/2026-04-17-how-a-side-hustle-dashboard-can-transform-your-personal-finance-game.png)
+![How a Side Hustle Dashboard Can Transform Your Personal Finance Game](/assets/pin-images/2026-04-17-how-a-side-hustle-dashboard-can-transform-your-personal-finance-game.png)
 
 # Mastering the Side Hustle: Your Guide to Better Management
 

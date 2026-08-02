@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![Navigating Financial Uncertainty: How to Create a Monthly Budget Planner for 2026](/SmartMoneyDaily/assets/pin-images/2026-04-28-navigating-financial-uncertainty-how-to-create-a-monthly-budget-planner-for-2026.png)
+![Navigating Financial Uncertainty: How to Create a Monthly Budget Planner for 2026](/assets/pin-images/2026-04-28-navigating-financial-uncertainty-how-to-create-a-monthly-budget-planner-for-2026.png)
 
 # Navigating Financial Uncertainty: How to Create a Monthly Budget Planner for 2026
 

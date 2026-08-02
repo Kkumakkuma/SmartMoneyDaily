@@ -12,7 +12,7 @@ redirect_from:
   - /2026/07/17/how-to-assess-if-a-cd-is-right-for-your-financial-needs/
 ---
 
-![Diagram of a certificate of deposit timeline from opening deposit through fixed term to maturity](/SmartMoneyDaily/assets/pin-images/2026-07-16-what-is-a-certificate-of-deposit-and-how-does-it-benefit-you.png)
+![Diagram of a certificate of deposit timeline from opening deposit through fixed term to maturity](/assets/pin-images/2026-07-16-what-is-a-certificate-of-deposit-and-how-does-it-benefit-you.png)
 
 > **Short answer:** A certificate of deposit is a deposit account you promise not to touch for a set number of days. In return, the bank fixes your rate for the entire term instead of changing it whenever it likes. Leave early and you pay a penalty measured in days of interest. That single trade — access for certainty — is the whole product.
 
@@ -24,7 +24,7 @@ A CD is a time deposit issued by a bank or credit union. You hand over a lump su
 
 That differs in kind from a savings account, whose rate is variable — the bank can reprice it any day, in either direction. A CD rate is contractual. It cannot be cut mid-term because deposits got cheaper for the bank, and you cannot raise it because a competitor started paying more. Both sides are stuck, on purpose.
 
-CDs at insured institutions carry the same protection as any other deposit: [FDIC](https://www.fdic.gov/resources/deposit-insurance) coverage at banks, [NCUA share insurance](https://ncua.gov/consumers/share-insurance-coverage) at credit unions, up to $250,000 per depositor, per insured institution, per ownership category. That limit is set by law and applies to principal plus accrued interest — easy to forget when a large CD sits near the line. If your balances are anywhere close, read [what FDIC insurance actually covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) before funding anything.
+CDs at insured institutions carry the same protection as any other deposit: [FDIC](https://www.fdic.gov/resources/deposit-insurance) coverage at banks, [NCUA share insurance](https://ncua.gov/consumers/share-insurance-coverage) at credit unions, up to $250,000 per depositor, per insured institution, per ownership category. That limit is set by law and applies to principal plus accrued interest — easy to forget when a large CD sits near the line. If your balances are anywhere close, read [what FDIC insurance actually covers](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) before funding anything.
 
 ## The Life of a CD: Funding Day, Term, Grace Period, Renewal
 
@@ -73,7 +73,7 @@ These products behave quite differently once you look past the rate.
 
 Two wrappers are worth naming. An **IRA CD** is an ordinary CD held inside a retirement account, so its tax treatment comes from the IRA. An **add-on CD** accepts further deposits during the term — rare, but worth asking about if you save in installments.
 
-Brokered CDs deserve extra care. You do not "break" one; you sell it, and what you receive is whatever the secondary market pays that day, which can be less than face value. A callable brokered CD can also be ended early by the issuer, typically once rates fall and it no longer wants to pay the old rate. Issuer-by-issuer comparison is covered in the guide to [what to check before you sign a CD](/SmartMoneyDaily/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/).
+Brokered CDs deserve extra care. You do not "break" one; you sell it, and what you receive is whatever the secondary market pays that day, which can be less than face value. A callable brokered CD can also be ended early by the issuer, typically once rates fall and it no longer wants to pay the old rate. Issuer-by-issuer comparison is covered in the guide to [what to check before you sign a CD](/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/).
 
 ## What a $10,000 Deposit Earns: Doing the Arithmetic
 
@@ -87,9 +87,9 @@ Rates change constantly and vary by institution, so no honest article can tell y
 
 On the five-year line, simple interest would give $2,000; compounding adds $166.53, and that gap widens each year. At 3.50% APY the same money would reach $11,876.86 instead — so half a percentage point is worth $289.67 over five years.
 
-To work this out with your actual balance, use the [compound interest calculator](/SmartMoneyDaily/tools/compound-interest-calculator/).
+To work this out with your actual balance, use the [compound interest calculator](/tools/compound-interest-calculator/).
 
-The penalty side deserves the same treatment. Say that 12-month CD carries a penalty of 90 days of interest, and the nominal rate behind a 4.00% APY is about 3.92%. Ninety days on $10,000 is roughly 10,000 × 0.0392 × 90 ÷ 365 ≈ $96.66. Break at six months and you keep about $198 minus $97, or roughly $101. Break after 30 days, when only about $32 has accrued, and the penalty exceeds everything earned — the difference comes out of principal. Look for the sentence in your disclosure about the penalty reducing principal; that is exactly what it means, and it is why a CD is a poor home for money you might need next month. The break-even math is worked through in [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+The penalty side deserves the same treatment. Say that 12-month CD carries a penalty of 90 days of interest, and the nominal rate behind a 4.00% APY is about 3.92%. Ninety days on $10,000 is roughly 10,000 × 0.0392 × 90 ÷ 365 ≈ $96.66. Break at six months and you keep about $198 minus $97, or roughly $101. Break after 30 days, when only about $32 has accrued, and the penalty exceeds everything earned — the difference comes out of principal. Look for the sentence in your disclosure about the penalty reducing principal; that is exactly what it means, and it is why a CD is a poor home for money you might need next month. The break-even math is worked through in [what cashing out a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 ## How a CD Differs From Savings, Money Market Accounts, and Treasuries
 
@@ -111,7 +111,7 @@ Two confusions are worth clearing up. The money market *account* is an insured b
 4. **How much would breaking it cost?** Take the penalty in days of interest, run the arithmetic above, and decide whether the number is survivable.
 5. **Are you inside your insurance limit there?** Principal plus interest at maturity has to stay under the coverage line for all of it to be protected.
 
-Two "no" answers at the top mean the money belongs in a savings or money market account for now. If the answer to the first is "some of it, at different times," a ladder fits better than one big CD — see [how to build a CD ladder](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
+Two "no" answers at the top mean the money belongs in a savings or money market account for now. If the answer to the first is "some of it, at different times," a ladder fits better than one big CD — see [how to build a CD ladder](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 
 ## Judging Whether a Rate Is Actually Good
 

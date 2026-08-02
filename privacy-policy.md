@@ -9,7 +9,7 @@ description: "How SmartMoneyDaily handles your information, cookies, and third-p
 
 _Last updated: April 19, 2026_
 
-This Privacy Policy describes how **SmartMoneyDaily** ("we", "us", or "the Site"), operated by Kkuma Park, collects, uses, and shares information when you visit https://kkumakkuma.github.io/SmartMoneyDaily.
+This Privacy Policy describes how **SmartMoneyDaily** ("we", "us", or "the Site"), operated by Kkuma Park, collects, uses, and shares information when you visit https://smartmoneydaily.github.io.
 
 By using this Site, you agree to the practices described below.
 

@@ -12,7 +12,7 @@ redirect_from:
   - /2026/07/23/how-to-secure-the-best-returns-from-certificate-of-deposit-options/
 ---
 
-![Five CD rungs maturing one year apart, with each matured rung rolling back into a new long-term CD at the top of the ladder](/SmartMoneyDaily/assets/pin-images/2026-07-09-what-you-need-to-know-about-laddering-certificates-of-deposit.png)
+![Five CD rungs maturing one year apart, with each matured rung rolling back into a new long-term CD at the top of the ladder](/assets/pin-images/2026-07-09-what-you-need-to-know-about-laddering-certificates-of-deposit.png)
 
 > **Short answer:** Split your deposit into equal rungs that mature one year apart, then roll every maturing rung into a new long-term CD. You get access to a slice of the money each year without paying a penalty, and after the first cycle every rung is earning a long-term rate. The trade-off is that during the first few years the ladder earns less than one long CD, and it always earns less if rates fall.
 
@@ -29,7 +29,7 @@ A ladder refuses to answer that question with one number. Instead of committing 
 Two things follow from that structure:
 
 - **You stop guessing the top of the rate cycle.** If rates rise after you build the ladder, the next rung matures within a year and gets reinvested at the new level. You are never fully locked into an old quote for five years.
-- **You stop paying penalties for ordinary life.** Most savers who break a CD do it because they mis-sized the term, not because of a disaster. A ladder gives you a scheduled exit so you rarely need an unscheduled one. If you do end up needing one, the cost is worth understanding first — see [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+- **You stop paying penalties for ordinary life.** Most savers who break a CD do it because they mis-sized the term, not because of a disaster. A ladder gives you a scheduled exit so you rarely need an unscheduled one. If you do end up needing one, the cost is worth understanding first — see [what cashing out a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 What a ladder does not do is manufacture yield. It is a liquidity structure with a yield side effect, and that distinction decides most of the arguments people have about it.
 
@@ -51,7 +51,7 @@ Each figure is principal × (1 + APY)^years. Rung 3, for example, is 5,000 × 1.
 
 Notice what the first year looks like: only $5,000 is available, and the blended return across the whole $25,000 is dragged toward the short end. The ladder is at its weakest right after you build it. It reaches full strength in year five, when every rung has been replaced by a five-year CD and one still matures annually.
 
-If you plan to shop each rung at a different institution rather than stacking them all at one bank, the mechanics of putting offers on a common denominator are covered in [how to compare CD rates across banks](/SmartMoneyDaily/2026/06/10/how-to-effectively-compare-cd-rates-across-different-banks/).
+If you plan to shop each rung at a different institution rather than stacking them all at one bank, the mechanics of putting offers on a common denominator are covered in [how to compare CD rates across banks](/2026/06/10/how-to-effectively-compare-cd-rates-across-different-banks/).
 
 ## Rolling the Ladder: The Only Job You Have Each Year
 
@@ -85,7 +85,7 @@ Three things fall out of that table, and none of them are the usual sales pitch.
 
 **The ladder is a compromise, and it prices like one.** In the flat path it trails the single CD by about $14 — effectively a rounding error for a structure that hands you $5,000 every year without a penalty. That $14 is the honest price of the liquidity.
 
-**A savings account can beat both when short rates sit above long rates.** The assumed rate sheet here is inverted: the one-year quote (4.00%) is above the five-year (3.80%). Under that shape, cash that stays liquid does well in flat and rising paths. If your bank's curve slopes the normal way — longer terms paying more — the ranking shifts back toward the CDs. Check the shape of the actual quotes before you decide, and see [short-term vs long-term CDs](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/) for how to read that curve.
+**A savings account can beat both when short rates sit above long rates.** The assumed rate sheet here is inverted: the one-year quote (4.00%) is above the five-year (3.80%). Under that shape, cash that stays liquid does well in flat and rising paths. If your bank's curve slopes the normal way — longer terms paying more — the ranking shifts back toward the CDs. Check the shape of the actual quotes before you decide, and see [short-term vs long-term CDs](/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/) for how to read that curve.
 
 ## When a Ladder Is the Wrong Tool
 
@@ -104,7 +104,7 @@ The five-year, five-rung version is a template, not a rule. Two variations cover
 
 **The barbell** skips the middle entirely: half in a short term, half at the longest term you're comfortable with, nothing in between. It gives you a near-term exit and a locked long rate without the bookkeeping of five separate maturities. The cost is that you have no rung maturing in years two through four, so a mid-horizon need still means a penalty.
 
-For choosing which specific offers fill each rung, the nine contract terms that decide what you actually keep are laid out in [how to choose a CD](/SmartMoneyDaily/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/).
+For choosing which specific offers fill each rung, the nine contract terms that decide what you actually keep are laid out in [how to choose a CD](/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/).
 
 ## Where the Ladder Lives: Taxable Account or IRA
 

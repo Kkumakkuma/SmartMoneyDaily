@@ -6,7 +6,7 @@ categories: [taxes]
 description: "Understanding Capital Gains Tax: A Simple Guide - Learn practical tips and strategies for your personal finances."
 ---
 
-![Understanding Capital Gains Tax: A Simple Guide](/SmartMoneyDaily/assets/pin-images/2026-04-08-understanding-capital-gains-tax-a-simple-guide.png)
+![Understanding Capital Gains Tax: A Simple Guide](/assets/pin-images/2026-04-08-understanding-capital-gains-tax-a-simple-guide.png)
 
 Understanding Capital Gains Tax: A Simple Guide
 

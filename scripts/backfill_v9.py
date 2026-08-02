@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """v9 backfill (2026-05-26): 이미 발행된 _posts 글 일괄 정정 (애드센스 재승인).
-- 내부링크 /slug/ → 실제 permalink /SmartMoneyDaily/Y/M/D/slug/ (기존 404 수정)
+- 내부링크 /slug/ → 실제 permalink /Y/M/D/slug/ (기존 404 수정)
 - About the Author 단락 → 고정 텍스트(1인칭 통일, Last reviewed=각 글 발행월)
 - frontmatter description에 양산 BANNED 단어가 있으면 generate_meta_description 재생성(키 필요)
 한 번만 돌리는 일회성. 변경된 파일만 다시 쓴다.
@@ -27,7 +27,7 @@ for path in glob.glob(os.path.join(POSTS, "*.md")):
     if not m:
         continue
     y, mo, d, slug = m.groups()
-    slug_to_url[slug] = f"/{BLOG}/{y}/{mo}/{d}/{slug}/"
+    slug_to_url[slug] = f"/{y}/{mo}/{d}/{slug}/"
     file_meta[path] = (y, mo, d, slug)
 
 

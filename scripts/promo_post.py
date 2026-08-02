@@ -169,7 +169,7 @@ def create_promo_post():
         _pin_filename = f"{_date_str_pin}-{_slug_pin}.png"
         _pin_path = os.path.join(_pin_dir, _pin_filename)
         _gen_pin(title, BLOG_NAME, "product-review", _pin_path)
-        _pin_url = f"/{BLOG_NAME}/assets/pin-images/{_pin_filename}"
+        _pin_url = f"/assets/pin-images/{_pin_filename}"
         post_content = f"![{title}]({_pin_url})\n\n" + post_content
         print(f"  pin image: {_pin_path}")
     except Exception as _e:

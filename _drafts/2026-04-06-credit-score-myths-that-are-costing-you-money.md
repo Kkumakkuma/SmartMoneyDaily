@@ -6,7 +6,7 @@ categories: [credit-score]
 description: "Credit Score Myths That Are Costing You Money - Learn practical tips and strategies for your personal finances."
 ---
 
-![Credit Score Myths That Are Costing You Money](/SmartMoneyDaily/assets/pin-images/2026-04-06-credit-score-myths-that-are-costing-you-money.png)
+![Credit Score Myths That Are Costing You Money](/assets/pin-images/2026-04-06-credit-score-myths-that-are-costing-you-money.png)
 
 Credit Score Myths That Are Costing You Money
 

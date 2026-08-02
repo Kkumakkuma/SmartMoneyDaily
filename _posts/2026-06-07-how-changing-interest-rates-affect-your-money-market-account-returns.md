@@ -10,7 +10,7 @@ redirect_from:
   - /2026/07/18/what-you-need-to-know-about-interest-rate-changes-in-money-market-accounts/
 ---
 
-![Statement lines showing monthly interest credited on a money market account, used to back out the effective rate](/SmartMoneyDaily/assets/pin-images/2026-06-07-how-changing-interest-rates-affect-your-money-market-account-returns.png)
+![Statement lines showing monthly interest credited on a money market account, used to back out the effective rate](/assets/pin-images/2026-06-07-how-changing-interest-rates-affect-your-money-market-account-returns.png)
 
 > **What to do:** Treat the APY on a money market account as a price your bank can change any day without notifying you. Once a quarter, back the rate you actually earned out of your own statement, compare it to the national average the FDIC publishes, and decide whether the gap is worth moving money over.
 
@@ -42,7 +42,7 @@ Before you fund an account, find these items in the disclosure and write down th
 - What are the balance tiers, and which rate applies at which balance?
 - Which balance computation method is used to accrue interest?
 
-If you want the mechanics of the account type itself rather than its pricing, start with [what a money market account is and how it works](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/).
+If you want the mechanics of the account type itself rather than its pricing, start with [what a money market account is and how it works](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/).
 
 ## Which Tier Moves First
 
@@ -56,7 +56,7 @@ Here is an assumed example — these are illustrative figures, not quoted offers
 | $10,000 – $49,999 | 2.50% | 2.20% | −30 bp |
 | $50,000 and above | 2.75% | 2.30% | −45 bp |
 
-A saver watching the advertised entry rate would conclude nothing changed. A saver with $60,000 in the account lost the most and was told the least. Tier structures also create a second problem: a withdrawal that drops you below a boundary can cut your rate on the entire balance, not just the portion below the line. Tier tables and blended-rate math belong to the selection stage, covered in [how to choose a money market account](/SmartMoneyDaily/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
+A saver watching the advertised entry rate would conclude nothing changed. A saver with $60,000 in the account lost the most and was told the least. Tier structures also create a second problem: a withdrawal that drops you below a boundary can cut your rate on the entire balance, not just the portion below the line. Tier tables and blended-rate math belong to the selection stage, covered in [how to choose a money market account](/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
 
 ## Promotional APYs and the Day the Window Closes
 
@@ -82,7 +82,7 @@ Work through an assumed example. Your average daily balance is $25,000 in both m
 That is a 28 basis point cut that arrived without an announcement. On a $25,000 balance it costs $70 over a full year. Three cautions on the arithmetic:
 
 - Use the **average daily balance**, not the closing balance. A large deposit late in the month makes the closing balance flatter the result badly.
-- The formula returns a nominal annual rate. The APY is a few basis points higher because of compounding, so compare it to a quoted APY with that small gap in mind. The relationship between the two is spelled out in [APY, compounding, and what your savings will really earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
+- The formula returns a nominal annual rate. The APY is a few basis points higher because of compounding, so compare it to a quoted APY with that small gap in mind. The relationship between the two is spelled out in [APY, compounding, and what your savings will really earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 - If the balance moved a lot between periods, the comparison is still valid, but check whether you crossed a tier boundary before blaming a repricing.
 
 To see what a difference of that size is worth on your own balance, enter your balance, the APY you backed out of the statement, and the number of months you expect to leave the money in place — then run it a second time with the older APY and compare the two totals.
@@ -110,7 +110,7 @@ Check the baseline before you check your emotions. A 20 basis point drop when th
 | 5 | Subtract any fees charged during the period | Statement fee lines and fee schedule | 2 min |
 | 6 | Confirm you are still above the tier and minimum-balance thresholds | Disclosure plus current balance | 1 min |
 
-Step 5 is the one people skip, and it is often larger than the rate change they are worried about. A monthly maintenance charge can erase a rate advantage entirely on a modest balance; the arithmetic is laid out in [the fees that quietly eat your savings interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+Step 5 is the one people skip, and it is often larger than the rate change they are worried about. A monthly maintenance charge can erase a rate advantage entirely on a modest balance; the arithmetic is laid out in [the fees that quietly eat your savings interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 Log the result in one line — date, effective rate, fees, national average. Four lines a year is enough to see a trend that no single statement reveals.
 

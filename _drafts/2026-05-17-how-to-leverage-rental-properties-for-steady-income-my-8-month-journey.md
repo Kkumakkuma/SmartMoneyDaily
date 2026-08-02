@@ -7,7 +7,7 @@ description: "Leverage rental properties for steady income in 8 months! Get tips
 tags: [real-estate, personal-finance, 2026]
 ---
 
-![How to Leverage Rental Properties for Steady Income: My 8-Month Journey](/SmartMoneyDaily/assets/pin-images/2026-05-17-how-to-leverage-rental-properties-for-steady-income-my-8-month-journey.png)
+![How to Leverage Rental Properties for Steady Income: My 8-Month Journey](/assets/pin-images/2026-05-17-how-to-leverage-rental-properties-for-steady-income-my-8-month-journey.png)
 
 > **Quick answer:** Leveraging rental properties can yield substantial steady income, potentially surpassing $5,000 monthly based on location and property type. My 8-month journey saw me invest in a duplex yielding a 10% cash-on-cash return, demonstrating the financial benefits of real estate investments.
 

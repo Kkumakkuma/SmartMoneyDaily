@@ -1,7 +1,7 @@
 title: SmartMoneyDaily
 description: "Plain-English guides to high-yield savings accounts, CDs, and money market accounts."
-url: "https://kkumakkuma.github.io"
-baseurl: "/SmartMoneyDaily"
+url: "https://smartmoneydaily.github.io"
+baseurl: ""
 permalink: /:year/:month/:day/:title/
 paginate: 12
 paginate_path: "/page/:num/"
@@ -35,3 +35,8 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+
+include:
+  - ads.txt
+  - robots.txt
+  - 3edb9ac60100921ec4665d794fb30755.txt

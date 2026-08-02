@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Tackle Unexpected Expenses with a Monthly Budget Planner in 2026](/SmartMoneyDaily/assets/pin-images/2026-04-30-how-to-tackle-unexpected-expenses-with-a-monthly-budget-planner-in-2026.png)
+![How to Tackle Unexpected Expenses with a Monthly Budget Planner in 2026](/assets/pin-images/2026-04-30-how-to-tackle-unexpected-expenses-with-a-monthly-budget-planner-in-2026.png)
 
 # How to Tackle Unexpected Expenses with a Monthly Budget Planner in 2026
 

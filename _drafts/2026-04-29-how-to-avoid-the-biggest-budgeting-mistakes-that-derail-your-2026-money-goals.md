@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Avoid the Biggest Budgeting Mistakes That Derail Your 2026 Money Goals](/SmartMoneyDaily/assets/pin-images/2026-04-29-how-to-avoid-the-biggest-budgeting-mistakes-that-derail-your-2026-money-goals.png)
+![How to Avoid the Biggest Budgeting Mistakes That Derail Your 2026 Money Goals](/assets/pin-images/2026-04-29-how-to-avoid-the-biggest-budgeting-mistakes-that-derail-your-2026-money-goals.png)
 
 # How to Avoid the Biggest Budgeting Mistakes That Derail Your 2026 Money Goals
 

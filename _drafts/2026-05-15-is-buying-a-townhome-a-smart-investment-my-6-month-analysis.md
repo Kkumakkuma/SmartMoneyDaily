@@ -7,7 +7,7 @@ description: "Is buying a townhome a smart investment? Cut costs with these 6 cr
 tags: [real-estate, personal-finance, 2026]
 ---
 
-![Is Buying a Townhome a Smart Investment? My 6-Month Analysis [2026 Guide]](/SmartMoneyDaily/assets/pin-images/2026-05-15-is-buying-a-townhome-a-smart-investment-my-6-month-analysis.png)
+![Is Buying a Townhome a Smart Investment? My 6-Month Analysis [2026 Guide]](/assets/pin-images/2026-05-15-is-buying-a-townhome-a-smart-investment-my-6-month-analysis.png)
 
 > **Quick answer:** Buying a townhome can be a smart investment if you're looking for a low-maintenance property that offers a blend of affordability and location. In 2026, the average cost of a townhome in the U.S. is around $365,000, appealing to many first-time buyers.
 

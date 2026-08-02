@@ -12,7 +12,7 @@ redirect_from:
   - /2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/
 ---
 
-![Deposit accounts sorted into insured and uninsured columns under a $250,000 coverage marker](/SmartMoneyDaily/assets/pin-images/2026-05-29-what-is-fdic-insurance-and-how-does-it-protect-your-money.png)
+![Deposit accounts sorted into insured and uninsured columns under a $250,000 coverage marker](/assets/pin-images/2026-05-29-what-is-fdic-insurance-and-how-does-it-protect-your-money.png)
 
 > **Short answer:** [FDIC](https://www.fdic.gov/resources/deposit-insurance/) insurance is a federal guarantee on bank deposits. If an insured bank fails, the FDIC covers your balances — principal plus interest accrued to the closing date — up to $250,000 per depositor, per insured bank, per ownership category. Checking, savings, money market deposit accounts, and CDs are deposits. Stocks, bonds, mutual funds, money market funds, annuities, and crypto are not, even when you bought them inside the same bank's app.
 
@@ -28,7 +28,7 @@ The Federal Deposit Insurance Corporation was created in 1933, after a run of fa
 
 **It insures deposits, not institutions and not customers.** The FDIC does not promise your bank survives — only that if the bank is closed, your deposit balance is covered to the limit. That is why one bank can sell you two products side by side where one is covered and one is not.
 
-**It is measured three ways at once.** The limit is $250,000 *per depositor*, *per insured bank*, *per ownership category*. Balances in the same category at the same bank are added together; separate categories get their own limits. The full arithmetic lives in [how the $250,000 cap is really calculated](/SmartMoneyDaily/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/).
+**It is measured three ways at once.** The limit is $250,000 *per depositor*, *per insured bank*, *per ownership category*. Balances in the same category at the same bank are added together; separate categories get their own limits. The full arithmetic lives in [how the $250,000 cap is really calculated](/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/).
 
 Just as important is what it was never built to do. It does not reimburse a bad investment, a fraudulent transfer, a monthly fee that ate your interest, or a rate cut you missed. Those are real ways to lose money, and none of them trigger coverage.
 
@@ -62,13 +62,13 @@ Most confusion clears once you sort products into three buckets instead of two. 
 
 Two rows need their own explanation.
 
-**Money market account vs money market fund.** Nearly identical names, opposite coverage. An *account* is a bank deposit with tiered rates and some check or card access, and it is insured. A *fund* is a mutual fund holding short-term paper: no FDIC coverage, a share price that can move, and possible redemption restrictions, all covered in [where the risk hides in money market funds](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/). If the statement says "fund," stop assuming insurance.
+**Money market account vs money market fund.** Nearly identical names, opposite coverage. An *account* is a bank deposit with tiered rates and some check or card access, and it is insured. A *fund* is a mutual fund holding short-term paper: no FDIC coverage, a share price that can move, and possible redemption restrictions, all covered in [where the risk hides in money market funds](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/). If the statement says "fund," stop assuming insurance.
 
 **Treasuries.** Listed as not covered, which reads like a warning but is not one. Treasury securities are direct obligations of the U.S. government, so no bank sits in the middle needing insurance. You can buy them at [TreasuryDirect](https://www.treasurydirect.gov/).
 
 ## Are CDs Insured When a Bank Fails? Yes, With One Condition
 
-A CD bought directly from an insured bank is a deposit like any other. Coverage includes principal plus interest accrued to the closing date, under the same per-category limit. Term length changes nothing: a five-year CD is not less insured than savings, only less liquid. If you are still deciding whether a CD fits, start with [what a CD is and how one works](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
+A CD bought directly from an insured bank is a deposit like any other. Coverage includes principal plus interest accrued to the closing date, under the same per-category limit. Term length changes nothing: a five-year CD is not less insured than savings, only less liquid. If you are still deciding whether a CD fits, start with [what a CD is and how one works](/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
 
 Brokered CDs differ in one way. You buy through a brokerage, but a bank issues the CD, and coverage rides on that bank. Two things must be true: the issuing bank is FDIC-insured, and the records identify you as the owner so coverage passes through to you rather than stopping at the broker. Your trade confirmation names the issuing bank — check that name, not the brokerage's.
 
@@ -139,7 +139,7 @@ Two habits make any resolution easier. Keep statements and CD confirmations, whi
 
 **"My money market account is a money market fund."** Different products, opposite coverage. Read the product name on your statement.
 
-**"Four accounts at one bank means $1,000,000 of coverage."** Same category at the same bank means balances are added, not multiplied. Going above the limit takes separate categories or separate banks — mechanics in [how to insure more than $250,000](/SmartMoneyDaily/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/).
+**"Four accounts at one bank means $1,000,000 of coverage."** Same category at the same bank means balances are added, not multiplied. Going above the limit takes separate categories or separate banks — mechanics in [how to insure more than $250,000](/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/).
 
 **"FDIC insurance covers fraud."** It does not. Unauthorized transfers run through error-resolution rules and your bank's dispute process.
 

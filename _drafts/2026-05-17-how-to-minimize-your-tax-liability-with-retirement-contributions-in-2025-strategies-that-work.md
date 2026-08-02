@@ -7,7 +7,7 @@ description: "Minimize your tax liability with retirement contributions in 2025.
 tags: [taxes, personal-finance, 2026]
 ---
 
-![How to Minimize Your Tax Liability with Retirement Contributions in 2025: Strategies That Work](/SmartMoneyDaily/assets/pin-images/2026-05-17-how-to-minimize-your-tax-liability-with-retirement-contributions-in-2025-strategies-that-work.png)
+![How to Minimize Your Tax Liability with Retirement Contributions in 2025: Strategies That Work](/assets/pin-images/2026-05-17-how-to-minimize-your-tax-liability-with-retirement-contributions-in-2025-strategies-that-work.png)
 
 > **Quick answer:** In 2025, maximizing retirement contributions can significantly reduce your tax liability. Contributing to accounts like a 401(k) or an IRA allows you to deduct contributions, lowering your taxable income. The contribution limits for a 401(k) are set at $22,500 and an additional $7,500 for those aged 50 and above.
 

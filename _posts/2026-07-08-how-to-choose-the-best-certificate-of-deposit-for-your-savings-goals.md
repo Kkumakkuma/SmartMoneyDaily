@@ -12,13 +12,13 @@ redirect_from:
   - /2026/07/03/how-to-evaluate-your-cd-options-for-long-term-gains/
 ---
 
-![A CD offer sheet being checked line by line before signing, with the penalty and renewal clauses marked](/SmartMoneyDaily/assets/pin-images/2026-07-08-how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals.png)
+![A CD offer sheet being checked line by line before signing, with the penalty and renewal clauses marked](/assets/pin-images/2026-07-08-how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals.png)
 
 > **What to do:** Pick the term first, from the date you will need the cash. Then compare offers on nine contract terms — APY and compounding, term length, minimum deposit, early withdrawal penalty formula, renewal and grace period, funding window, add-on rules, insurance, and where the CD is held. The offer that wins on rate alone loses often enough that the rate should be the last thing you look at, not the first.
 
 Two CDs can advertise a similar yield and hand you very different amounts of money. The difference sits in clauses most savers never read: how the penalty is calculated, how many days you get to react at maturity, how long the quoted rate is actually locked, and whether the certificate is held at the bank or in a brokerage account with a call feature attached. This is a checklist for reading an offer before you fund it.
 
-If you are still deciding whether a CD is the right product at all, start with [what a certificate of deposit is and how one works](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/) and come back here to compare offers.
+If you are still deciding whether a CD is the right product at all, start with [what a certificate of deposit is and how one works](/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/) and come back here to compare offers.
 
 ## Start With the Money, Not the Rate
 
@@ -62,7 +62,7 @@ Three things break that comparison in practice:
 
 **Relationship conditions.** A yield may require a linked checking account, a direct deposit, or a minimum household balance. If you cannot meet the condition for the whole term, price the offer at the non-relationship yield instead.
 
-For a step-by-step method of putting every offer on the same denominator, see [how to compare CD rates across banks](/SmartMoneyDaily/2026/06/10/how-to-effectively-compare-cd-rates-across-different-banks/). The FDIC publishes monthly national deposit rates by product and term; look those up before you decide whether an offer is genuinely above market or just above the rate at your current bank.
+For a step-by-step method of putting every offer on the same denominator, see [how to compare CD rates across banks](/2026/06/10/how-to-effectively-compare-cd-rates-across-different-banks/). The FDIC publishes monthly national deposit rates by product and term; look those up before you decide whether an offer is genuinely above market or just above the rate at your current bank.
 
 ## Penalty Math: How Many Days of Interest Are at Risk
 
@@ -72,9 +72,9 @@ Work an example with assumed numbers. Suppose you deposit $10,000 into a 3-year 
 
 Two offers with the same yield and different penalty schedules are not the same product. A 12-month CD carrying a 90-day penalty is materially more flexible than one carrying a 270-day penalty, and the flexibility is worth paying a little yield for whenever your cash-need date is uncertain.
 
-If you want to run this on your own balance, the [cd early withdrawal calculator](/SmartMoneyDaily/tools/cd-early-withdrawal-calculator/) does the arithmetic.
+If you want to run this on your own balance, the [cd early withdrawal calculator](/tools/cd-early-withdrawal-calculator/) does the arithmetic.
 
-The full breakdown of what happens when you exit a certificate before maturity — including the situations where a bank must waive the penalty — is in the guide on [cashing out a CD early](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+The full breakdown of what happens when you exit a certificate before maturity — including the situations where a bank must waive the penalty — is in the guide on [cashing out a CD early](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 ## Auto-Renewal and the Grace Period Trap
 
@@ -155,6 +155,6 @@ The three-weight lines are deliberate. Yield, term fit, and insurance are where 
 
 **What if I need only part of the money?** Some certificates permit partial withdrawals, with the penalty applied to the amount withdrawn. Many do not. If partial access matters, make it a screening question rather than a hopeful assumption.
 
-**Should I wait for better rates?** That is a term-length question rather than a wait-or-act question. The trade-off between locking now and staying short is worked through in the guide on [choosing a short-term or long-term CD](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/).
+**Should I wait for better rates?** That is a term-length question rather than a wait-or-act question. The trade-off between locking now and staying short is worked through in the guide on [choosing a short-term or long-term CD](/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/).
 
 Pick your maturity date first, pull the disclosure for each offer that fits it, and run the nine lines. It takes about twenty minutes per offer, and it is the only part of CD shopping that changes what you keep. Look up the [FDIC's monthly national rates](https://www.fdic.gov/national-rates-and-rate-caps) as your baseline before you decide any offer is competitive.

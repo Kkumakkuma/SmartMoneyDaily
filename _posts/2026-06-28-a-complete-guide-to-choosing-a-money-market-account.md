@@ -11,13 +11,13 @@ redirect_from:
   - /2026/06/30/how-to-effectively-use-money-market-accounts-in-your-savings-plan/
 ---
 
-![Tiered money market rate table shown beside a two-column checklist for comparing offers](/SmartMoneyDaily/assets/pin-images/2026-06-28-a-complete-guide-to-choosing-a-money-market-account.png)
+![Tiered money market rate table shown beside a two-column checklist for comparing offers](/assets/pin-images/2026-06-28-a-complete-guide-to-choosing-a-money-market-account.png)
 
 > **Short answer:** Pick a money market account by three things in this order — the tier your balance actually lands in, the transaction limits your monthly habits will run into, and the fee schedule. The advertised APY is the last thing to compare, because it is usually the top-tier rate and most people never earn it.
 
 Two money market accounts can advertise the same rate and pay you very different amounts. The difference is almost never the rate itself. It is which slice of your balance the rate applies to, whether you keep the minimum every single day of the cycle, and how many transfers you make before the bank starts charging per item.
 
-This guide is about picking one. If you are still deciding whether a money market account is the right product at all, start with [what a money market account is and how it works](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/) and come back here.
+This guide is about picking one. If you are still deciding whether a money market account is the right product at all, start with [what a money market account is and how it works](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/) and come back here.
 
 ## Start With How You Will Use the Cash, Not the Headline APY
 
@@ -104,7 +104,7 @@ Use your actual transaction count from the last three statements, not an estimat
 
 Check-writing and a debit card are what separate a money market account from a plain savings account — but "offers checks" covers a wide range. Confirm: whether checks are free or ordered at a cost, whether there is a per-check fee, whether the debit card comes automatically, and which ATM network you get. An account with a small in-network footprint and no out-of-network reimbursement quietly charges you every time you need cash away from home.
 
-If none of these features matter to you, a money market account may be the wrong shape entirely. Compare against the checklist in [what to check before opening a high-yield savings account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) before you commit.
+If none of these features matter to you, a money market account may be the wrong shape entirely. Compare against the checklist in [what to check before opening a high-yield savings account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) before you commit.
 
 ## Insurance Check: Bank, Credit Union, or Fintech Partner
 
@@ -118,7 +118,7 @@ Confusing an app's branding with a charter is one of the more expensive mistakes
 
 ## Put Your Real Tier Rate Into the Math
 
-Our [tiered rate calculator](/SmartMoneyDaily/tools/tiered-rate-calculator/) runs the same calculation on figures you enter.
+Our [tiered rate calculator](/tools/tiered-rate-calculator/) runs the same calculation on figures you enter.
 
 Run it twice: once with the top-tier rate you saw in the ad, once with the rate you will really get. The difference between those two numbers is the cost of not reading the tier table.
 
@@ -165,7 +165,7 @@ The fee schedule is a separate document from the rate sheet, and it is where the
 - **Outgoing wire and expedited transfer fees**, which matter if this is where your emergency cash lives.
 - **Stop-payment and check reorder fees**, if you plan to use the check-writing feature.
 
-For a fuller walkthrough of converting each of these into an annual dollar figure, see [the fees that quietly eat your savings interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+For a fuller walkthrough of converting each of these into an annual dollar figure, see [the fees that quietly eat your savings interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 ## Choosing an MMA: Questions to Settle First
 
@@ -176,13 +176,13 @@ The FDIC publishes national deposit rate data monthly. Look it up and use it as 
 No. Compare the rate that applies to *your* balance under *that bank's* tiering method, then subtract fees you will realistically pay. An account with a lower headline and whole-balance tiering can beat a higher headline with split-rate tiering at the same deposit.
 
 **Can I lose money in a money market account?**
-The principal in an insured deposit account is protected up to the coverage limits. Fees can exceed interest at low balances, which is a loss in practical terms. Money market *funds* are a different product with no deposit insurance — see [how money market funds work and where the risk hides](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
+The principal in an insured deposit account is protected up to the coverage limits. Fees can exceed interest at low balances, which is a loss in practical terms. Money market *funds* are a different product with no deposit insurance — see [how money market funds work and where the risk hides](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
 
 **What happens if my balance falls below the minimum?**
 Depending on the disclosure, one or more of: the monthly fee is charged, your rate drops to a lower tier, or both. Some accounts also stop paying interest entirely below a floor balance.
 
 **Will my rate stay where it is?**
-No. Money market rates are variable and the bank can reprice them. Set a calendar reminder to re-check yours quarterly — [why money market rates move and how fast yours follows](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/) covers how to spot a change on your statement.
+No. Money market rates are variable and the bank can reprice them. Set a calendar reminder to re-check yours quarterly — [why money market rates move and how fast yours follows](/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/) covers how to spot a change on your statement.
 
 ## Narrowing It Down to One Account
 

@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![How to Track and Optimize Your Side Hustle Earnings for Maximum Profitability in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-05-how-to-track-and-optimize-your-side-hustle-earnings-for-maximum-profitability-in-2026.png)
+![How to Track and Optimize Your Side Hustle Earnings for Maximum Profitability in 2026](/assets/pin-images/2026-05-05-how-to-track-and-optimize-your-side-hustle-earnings-for-maximum-profitability-in-2026.png)
 
 # How to Track and Optimize Your Side Hustle Earnings for Maximum Profitability in 2026
 

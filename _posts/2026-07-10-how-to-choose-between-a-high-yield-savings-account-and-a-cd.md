@@ -13,7 +13,7 @@ redirect_from:
   - /2026/07/04/high-yield-savings-accounts-vs-cds-which-is-right-for-you/
 ---
 
-![Side-by-side comparison of a flexible savings account and a fixed-term certificate of deposit](/SmartMoneyDaily/assets/pin-images/2026-07-10-how-to-choose-between-a-high-yield-savings-account-and-a-cd.png)
+![Side-by-side comparison of a flexible savings account and a fixed-term certificate of deposit](/assets/pin-images/2026-07-10-how-to-choose-between-a-high-yield-savings-account-and-a-cd.png)
 
 > **Short answer:** Use a high-yield savings account when you do not know the date you will spend the money. Use a CD when you do know that date, it is far enough out to earn something meaningful, and nothing plausible could force you into the money before then. The rate gap between the two decides very little compared with that one question.
 
@@ -47,7 +47,7 @@ Two disclosure points make this comparison possible at all. Under the Truth in S
 
 For a neutral baseline, the FDIC publishes [monthly national rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) by product and term. Look those up before you decide anything, and treat any offer as "above" or "below" the published average rather than trusting a marketing adjective. Where both quotes sit relative to the same published baseline tells you more than the raw gap between them.
 
-Watch for promotional windows on the savings side. A headline APY that applies for an introductory period, or only up to a balance cap, is not the rate you will average. The [checklist for opening a high-yield savings account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) covers where those conditions appear in the disclosure.
+Watch for promotional windows on the savings side. A headline APY that applies for an introductory period, or only up to a balance cap, is not the rate you will average. The [checklist for opening a high-yield savings account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) covers where those conditions appear in the disclosure.
 
 ## Access: Withdrawals, Transfers, and Penalties
 
@@ -64,7 +64,7 @@ Here is why that phrasing matters. Assume a 12-month CD of $25,000 at 4.00% APY,
 - Break it at month four and you have earned about $1,000 × 120 ÷ 365 = **$328.77**. You keep about $82.
 - Break it at month two and you have earned about **$164.38**. The penalty is larger than the interest, so the difference comes out of your $25,000 principal.
 
-Banks are permitted to take the shortfall from principal, and many disclosures state that outright. That is the single most expensive misunderstanding in this comparison; the [full breakdown of early withdrawal costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/) walks through the break-even math for other terms.
+Banks are permitted to take the shortfall from principal, and many disclosures state that outright. That is the single most expensive misunderstanding in this comparison; the [full breakdown of early withdrawal costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/) walks through the break-even math for other terms.
 
 ## Which Wins if Rates Fall, Rise, or Stay Flat
 
@@ -83,7 +83,7 @@ The asymmetry matters: cuts tend to reach variable deposit accounts quickly, whi
 - **Under 6 months.** Savings account, with almost no exceptions. Penalty schedules on short CDs can consume most of the interest, and the yield difference over a few months is small in dollar terms.
 - **6 to 12 months.** Either works. Lean toward a CD only if the date is contractual — a tax bill, a closing, a tuition due date — and toward savings if it is an intention.
 - **12 to 36 months.** This is where locking starts to pay for itself, because a full year or more of a fixed rate is enough to matter even if you eventually break the CD partway.
-- **Beyond 36 months.** Long terms are a bet on rates falling and staying down. If you want the term without the single-date commitment, split the money into staggered maturities instead; [CD laddering](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) exists specifically to blunt this trade-off.
+- **Beyond 36 months.** Long terms are a bet on rates falling and staying down. If you want the term without the single-date commitment, split the money into staggered maturities instead; [CD laddering](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) exists specifically to blunt this trade-off.
 
 ## Split Strategies: Core in Savings, Surplus in CDs
 
@@ -127,7 +127,7 @@ Answer in order and stop at the first one that resolves.
 4. **Does the CD's APY beat what the savings account will plausibly average over the term?** Compute the gap and ask whether one or two rate cuts would erase it. If the CD is already lower, you are paying for certainty rather than yield — which is legitimate, but should be a decision, not an accident.
 5. **If rates rise the month after you lock, will you leave it alone?** No → shorten the term or split the money, because breaking a CD out of frustration is how savers turn a small opportunity cost into a real loss.
 
-If you reach the end of the list without hitting a stop, the CD is the right home for that particular dollar. For money attached to a specific life goal rather than a general balance, the [account-by-goal matcher](/SmartMoneyDaily/2026/07/06/how-to-decide-on-the-best-account-type-for-your-financial-goals/) narrows the term choice further.
+If you reach the end of the list without hitting a stop, the CD is the right home for that particular dollar. For money attached to a specific life goal rather than a general balance, the [account-by-goal matcher](/2026/07/06/how-to-decide-on-the-best-account-type-for-your-financial-goals/) narrows the term choice further.
 
 ## Where Savers Get This Choice Wrong
 
@@ -162,7 +162,7 @@ It is a middle option: a fixed rate with an early exit after an initial holding 
 
 ## Further Reading
 
-- [What Happens When You Cash Out a CD Early](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
-- [What to Consider When Opening a High-Yield Savings Account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/)
-- [What You Need to Know About Laddering Certificates of Deposit](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/)
-- [Which Savings Account Fits Your Goal and Timeline?](/SmartMoneyDaily/2026/07/06/how-to-decide-on-the-best-account-type-for-your-financial-goals/)
+- [What Happens When You Cash Out a CD Early](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
+- [What to Consider When Opening a High-Yield Savings Account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/)
+- [What You Need to Know About Laddering Certificates of Deposit](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/)
+- [Which Savings Account Fits Your Goal and Timeline?](/2026/07/06/how-to-decide-on-the-best-account-type-for-your-financial-goals/)

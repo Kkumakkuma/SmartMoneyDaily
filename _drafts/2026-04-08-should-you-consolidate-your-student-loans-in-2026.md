@@ -6,7 +6,7 @@ categories: [debt]
 description: "Should You Consolidate Your Student Loans in 2026 - Learn practical tips and strategies for your personal finances."
 ---
 
-![Should You Consolidate Your Student Loans in 2026](/SmartMoneyDaily/assets/pin-images/2026-04-08-should-you-consolidate-your-student-loans-in-2026.png)
+![Should You Consolidate Your Student Loans in 2026](/assets/pin-images/2026-04-08-should-you-consolidate-your-student-loans-in-2026.png)
 
 Should You Consolidate Your Student Loans in 2026? 
 

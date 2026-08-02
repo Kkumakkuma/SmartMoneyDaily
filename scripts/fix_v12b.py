@@ -30,7 +30,7 @@ def build_title_map():
         s = io.open(p, encoding="utf-8").read()
         tm = re.search(r'(?m)^title:\s*"(.+?)"\s*$', s)
         if tm:
-            m[norm_title(tm.group(1))] = "/SmartMoneyDaily" + permalink_of(os.path.basename(p))
+            m[norm_title(tm.group(1))] = permalink_of(os.path.basename(p))
     # 프루닝된 글 제목 → keeper URL
     drafts = os.path.join(ROOT, "_drafts")
     for fname, keeper in PRUNE.items():
@@ -39,7 +39,7 @@ def build_title_map():
             s = io.open(p, encoding="utf-8").read()
             tm = re.search(r'(?m)^title:\s*"(.+?)"\s*$', s)
             if tm:
-                m[norm_title(tm.group(1))] = "/SmartMoneyDaily" + permalink_of(keeper)
+                m[norm_title(tm.group(1))] = permalink_of(keeper)
     return m
 
 

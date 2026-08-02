@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Improve Your Financial Health by Enhancing Expense Tracking in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-16-how-to-improve-your-financial-health-by-enhancing-expense-tracking-in-2026.png)
+![How to Improve Your Financial Health by Enhancing Expense Tracking in 2026](/assets/pin-images/2026-05-16-how-to-improve-your-financial-health-by-enhancing-expense-tracking-in-2026.png)
 
 # How to Improve Your Financial Health by Enhancing Expense Tracking in 2026
 

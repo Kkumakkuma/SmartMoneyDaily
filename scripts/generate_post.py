@@ -180,7 +180,7 @@ def get_recent_posts_for_linking(limit=10):
             if not m:
                 continue
             y, mo, d, slug = m.groups()
-            url = f"/{BLOG_NAME}/{y}/{mo}/{d}/{slug}/"
+            url = f"/{y}/{mo}/{d}/{slug}/"
             filepath = os.path.join(posts_dir, filename)
             with open(filepath, "r", encoding="utf-8") as f:
                 for line in f:
@@ -865,7 +865,7 @@ def create_post():
         _pin_filename = f"{_date_str}-{slug}.png"
         _pin_path = os.path.join(_pin_dir, _pin_filename)
         _gen_pin(title, BLOG_NAME, category, _pin_path)
-        _pin_url = f"/{BLOG_NAME}/assets/pin-images/{_pin_filename}"
+        _pin_url = f"/assets/pin-images/{_pin_filename}"
         content = f"![{title}]({_pin_url})\n\n" + content
         print(f"  pin image: {_pin_path}")
     except Exception as _e:

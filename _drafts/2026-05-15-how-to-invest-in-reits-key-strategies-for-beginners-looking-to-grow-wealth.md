@@ -7,7 +7,7 @@ description: "Invest in REITs with these 5 key strategies to boost your wealth t
 tags: [investing, personal-finance, 2026]
 ---
 
-![How to Invest in REITs: Key Strategies for Beginners Looking to Grow Wealth](/SmartMoneyDaily/assets/pin-images/2026-05-15-how-to-invest-in-reits-key-strategies-for-beginners-looking-to-grow-wealth.png)
+![How to Invest in REITs: Key Strategies for Beginners Looking to Grow Wealth](/assets/pin-images/2026-05-15-how-to-invest-in-reits-key-strategies-for-beginners-looking-to-grow-wealth.png)
 
 > **Quick answer:** Investing in Real Estate Investment Trusts (REITs) can be a powerful way to grow wealth, particularly for beginners. By allocating as little as $500, investors can gain exposure to real estate markets, often yielding average returns of 8-12% annually.
 

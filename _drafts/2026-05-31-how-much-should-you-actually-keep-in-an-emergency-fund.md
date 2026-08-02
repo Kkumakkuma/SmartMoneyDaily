@@ -7,7 +7,7 @@ description: "How much should you actually keep in an emergency fund? This post 
 tags: [emergency-fund, high-yield-savings-accounts, 2026]
 ---
 
-![How Much Should You Actually Keep in an Emergency Fund?](/SmartMoneyDaily/assets/pin-images/2026-05-31-how-much-should-you-actually-keep-in-an-emergency-fund.png)
+![How Much Should You Actually Keep in an Emergency Fund?](/assets/pin-images/2026-05-31-how-much-should-you-actually-keep-in-an-emergency-fund.png)
 
 > **Quick answer:** Aim to keep three to six months' worth of living expenses in an emergency fund. This range helps cover unexpected expenses, providing financial security without locking away funds for too long.
 
@@ -128,10 +128,10 @@ Knowing when to dip into your emergency fund is just as crucial as building it. 
 In contrast, it's advisable to avoid using your emergency fund for non-urgent matters like vacations, consumer spending, or planned expenses that can be budgeted for. Establishing clear guidelines for when to access your emergency fund can help maintain its integrity and purpose, ensuring it provides the intended financial security when truly needed.
 ## Further Reading
 
-- [What is FDIC Insurance and How Does It Protect Your Money?](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
-- [How to Build an Effective Emergency Fund Using High-Yield Options](/SmartMoneyDaily/2026/05/28/how-to-build-an-effective-emergency-fund-using-high-yield-options/)
-- [How Is a Certificate of Deposit Insured Against Bank Failures?](/SmartMoneyDaily/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)
-- [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/SmartMoneyDaily/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
-- [What Happens When You Cash Out a CD Early?](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
+- [What is FDIC Insurance and How Does It Protect Your Money?](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
+- [How to Build an Effective Emergency Fund Using High-Yield Options](/2026/05/28/how-to-build-an-effective-emergency-fund-using-high-yield-options/)
+- [How Is a Certificate of Deposit Insured Against Bank Failures?](/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)
+- [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
+- [What Happens When You Cash Out a CD Early?](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
 
 *Last reviewed: May 2026 by Kkuma Park.*

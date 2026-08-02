@@ -6,7 +6,7 @@ categories: [insurance]
 description: "Home Insurance Guide: What Is and Isn't Covered - Learn practical tips and strategies for your personal finances."
 ---
 
-![Home Insurance Guide: What Is and Isn't Covered](/SmartMoneyDaily/assets/pin-images/2026-04-07-home-insurance-guide-what-is-and-isnt-covered.png)
+![Home Insurance Guide: What Is and Isn't Covered](/assets/pin-images/2026-04-07-home-insurance-guide-what-is-and-isnt-covered.png)
 
 Home Insurance Guide: What Is and Isn't Covered
 

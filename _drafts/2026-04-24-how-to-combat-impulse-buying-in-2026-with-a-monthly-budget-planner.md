@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Combat Impulse Buying in 2026 with a Monthly Budget Planner](/SmartMoneyDaily/assets/pin-images/2026-04-24-how-to-combat-impulse-buying-in-2026-with-a-monthly-budget-planner.png)
+![How to Combat Impulse Buying in 2026 with a Monthly Budget Planner](/assets/pin-images/2026-04-24-how-to-combat-impulse-buying-in-2026-with-a-monthly-budget-planner.png)
 
 # How to Combat Impulse Buying in 2026 with a Monthly Budget Planner
 

@@ -7,7 +7,7 @@ description: "What you need to know about CD penalties and fees includes underst
 tags: [cd-rates, high-yield-savings-accounts, 2026]
 ---
 
-![What You Need to Know About CD Penalties and Fees](/SmartMoneyDaily/assets/pin-images/2026-06-05-what-you-need-to-know-about-cd-penalties-and-fees.png)
+![What You Need to Know About CD Penalties and Fees](/assets/pin-images/2026-06-05-what-you-need-to-know-about-cd-penalties-and-fees.png)
 
 > **Quick answer:** Certificates of deposit (CDs) typically impose penalties for early withdrawal, usually a percentage of the interest earned or a specified number of months' interest. Understanding these penalties can help you choose the right account for your savings goals.
 
@@ -37,7 +37,7 @@ Beyond early withdrawal penalties, CDs can also have various fees that may reduc
 - **Closing Fees:** There may be fees assessed if you wish to close your CD before maturity, though this is less common.
 - **Inactivity Fees:** If there's no activity on your account, certain institutions may charge fees to keep it open.
 
-Understanding the fee structure is essential, so be sure to check the terms before opening a CD. For further details on financial products, refer to “[How to Choose the Right Interest-Earning Option for Your Goals](/SmartMoneyDaily/2026/06/04/how-to-choose-the-right-interest-earning-option-for-your-goals/).”
+Understanding the fee structure is essential, so be sure to check the terms before opening a CD. For further details on financial products, refer to “[How to Choose the Right Interest-Earning Option for Your Goals](/2026/06/04/how-to-choose-the-right-interest-earning-option-for-your-goals/).”
 
 ### How Do Different Institutions Handle CD Penalties?
 
@@ -46,7 +46,7 @@ Different financial institutions have varying policies regarding CD penalties, i
 - **Online Banks:** Often offer higher interest rates and may have more flexible withdrawal policies. Their penalties can still be significant but usually favor saving over penalties.
 - **Traditional Banks and Credit Unions:** May impose stricter penalties, particularly if they rely more on CD deposits than online competitors. 
 
-Analyzing multiple institutions' policies can help you secure the best deal. If you want to maximize your savings strategies, consult "[Is Your Savings Strategy Aligning with Current Interest Trends?](/SmartMoneyDaily/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/)"
+Analyzing multiple institutions' policies can help you secure the best deal. If you want to maximize your savings strategies, consult "[Is Your Savings Strategy Aligning with Current Interest Trends?](/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/)"
 
 ## How Are CD Penalties Calculated?
 
@@ -69,14 +69,14 @@ When comparing CDs, consider these crucial elements:
 - **Minimum Deposit Requirements:** Different banks will have various minimum thresholds, impacting how much you can invest.
 - **Insurance Coverage:** Ensure your bank is insured by the FDIC, which protects deposits up to $250,000 per depositor.
 
-This approach can help ensure you select a CD that aligns best with your financial strategy. For more insights on building your financial strategy, see “[How to Build an Effective Emergency Fund Using High-Yield Options](/SmartMoneyDaily/2026/05/28/how-to-build-an-effective-emergency-fund-using-high-yield-options/).”
+This approach can help ensure you select a CD that aligns best with your financial strategy. For more insights on building your financial strategy, see “[How to Build an Effective Emergency Fund Using High-Yield Options](/2026/05/28/how-to-build-an-effective-emergency-fund-using-high-yield-options/).”
 
 ### What Should You Do If You Need to Withdraw Early?
 
 If you find yourself needing to withdraw funds from your CD before its maturity, assess your options carefully:
 
 - **Understand the Penalties:** Familiarize yourself with what penalties you’ll incur upon early withdrawal.
-- **Consider Alternative Accounts:** Sometimes it’s worth moving to a more flexible savings option like a high-yield savings account or a money market account, especially for emergencies. For related guidance, read “[How to Avoid Common Pitfalls with High-Yield Savings Accounts](/SmartMoneyDaily/2026/06/04/how-to-avoid-common-pitfalls-with-high-yield-savings-accounts/).”
+- **Consider Alternative Accounts:** Sometimes it’s worth moving to a more flexible savings option like a high-yield savings account or a money market account, especially for emergencies. For related guidance, read “[How to Avoid Common Pitfalls with High-Yield Savings Accounts](/2026/06/04/how-to-avoid-common-pitfalls-with-high-yield-savings-accounts/).”
 - **Negotiate with Your Bank:** Some banks may offer flexibility on penalties if you negotiate. It never hurts to ask, especially if you’re a long-standing customer.
 
 ## How to Compare CD Penalties and Fees Yourself
@@ -143,8 +143,8 @@ To avoid pitfalls associated with maturity and grace periods, consider the follo
 - **Be proactive:** Contact your bank before the maturity date if you have questions or want to discuss your options regarding penalties and fees.
 ## Further Reading
 
-- [How to Choose Between High-Yield Savings and Cash Reserves for Emergencies](/SmartMoneyDaily/2026/06/04/how-to-choose-between-high-yield-savings-and-cash-reserves-for-emergencies/)
-- [A Beginner's Guide to Money Market Accounts: Key Factors to Consider](/SmartMoneyDaily/2026/06/03/a-beginners-guide-to-money-market-accounts-key-factors-to-consider/)
-- [What Is a Money Market Account and How Does It Work?](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/)
+- [How to Choose Between High-Yield Savings and Cash Reserves for Emergencies](/2026/06/04/how-to-choose-between-high-yield-savings-and-cash-reserves-for-emergencies/)
+- [A Beginner's Guide to Money Market Accounts: Key Factors to Consider](/2026/06/03/a-beginners-guide-to-money-market-accounts-key-factors-to-consider/)
+- [What Is a Money Market Account and How Does It Work?](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/)
 
 *Last reviewed: June 2026 by Kkuma Park.*

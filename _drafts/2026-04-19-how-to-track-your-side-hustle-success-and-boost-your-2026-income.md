@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![How to Track Your Side Hustle Success and Boost Your 2026 Income](/SmartMoneyDaily/assets/pin-images/2026-04-19-how-to-track-your-side-hustle-success-and-boost-your-2026-income.png)
+![How to Track Your Side Hustle Success and Boost Your 2026 Income](/assets/pin-images/2026-04-19-how-to-track-your-side-hustle-success-and-boost-your-2026-income.png)
 
 # How to Track Your Side Hustle Success and Boost Your 2026 Income
 

@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Build a Monthly Budget That Adapts to Inflation and Increasing Expenses in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-13-how-to-build-a-monthly-budget-that-adapts-to-inflation-and-increasing-expenses-in-2026.png)
+![How to Build a Monthly Budget That Adapts to Inflation and Increasing Expenses in 2026](/assets/pin-images/2026-05-13-how-to-build-a-monthly-budget-that-adapts-to-inflation-and-increasing-expenses-in-2026.png)
 
 # How to Build a Monthly Budget That Adapts to Inflation and Increasing Expenses in 2026
 

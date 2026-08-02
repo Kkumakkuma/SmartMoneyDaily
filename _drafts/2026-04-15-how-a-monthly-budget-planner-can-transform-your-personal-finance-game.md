@@ -6,7 +6,7 @@ categories: [product-review]
 description: "Take control of your finances with our beautifully designed Notion budget planner."
 ---
 
-![How a Monthly Budget Planner Can Transform Your Personal Finance Game](/SmartMoneyDaily/assets/pin-images/2026-04-15-how-a-monthly-budget-planner-can-transform-your-personal-finance-game.png)
+![How a Monthly Budget Planner Can Transform Your Personal Finance Game](/assets/pin-images/2026-04-15-how-a-monthly-budget-planner-can-transform-your-personal-finance-game.png)
 
 # Taming the Financial Beast: Your Guide to Budgeting Success
 

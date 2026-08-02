@@ -6,7 +6,7 @@ categories: [taxes]
 description: "Tax Deductions You Might Be Missing in 2026 - Learn practical tips and strategies for your personal finances."
 ---
 
-![Tax Deductions You Might Be Missing in 2026](/SmartMoneyDaily/assets/pin-images/2026-04-16-tax-deductions-you-might-be-missing-in-2026-932.png)
+![Tax Deductions You Might Be Missing in 2026](/assets/pin-images/2026-04-16-tax-deductions-you-might-be-missing-in-2026-932.png)
 
 Tax Deductions You Might Be Missing in 2026
 

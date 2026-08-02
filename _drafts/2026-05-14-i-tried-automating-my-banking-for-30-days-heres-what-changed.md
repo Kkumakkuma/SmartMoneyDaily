@@ -7,7 +7,7 @@ description: "I tried automating my banking for 30 days—here’s what changed!
 tags: [banking, personal-finance, 2026]
 ---
 
-![I Tried Automating My Banking for 30 Days - Here’s What Changed [2026 Guide]](/SmartMoneyDaily/assets/pin-images/2026-05-14-i-tried-automating-my-banking-for-30-days-heres-what-changed.png)
+![I Tried Automating My Banking for 30 Days - Here’s What Changed [2026 Guide]](/assets/pin-images/2026-05-14-i-tried-automating-my-banking-for-30-days-heres-what-changed.png)
 
 > **Quick answer:** I automated my banking for 30 days, achieving a 20% reduction in my monthly expenses and saving around $150 in late fees. Automation streamlined my budgeting and bill payments, providing peace of mind and financial clarity. 
 

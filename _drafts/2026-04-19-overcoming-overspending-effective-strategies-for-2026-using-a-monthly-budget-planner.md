@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![Overcoming Overspending: Effective Strategies for 2026 Using a Monthly Budget Planner](/SmartMoneyDaily/assets/pin-images/2026-04-19-overcoming-overspending-effective-strategies-for-2026-using-a-monthly-budget-planner.png)
+![Overcoming Overspending: Effective Strategies for 2026 Using a Monthly Budget Planner](/assets/pin-images/2026-04-19-overcoming-overspending-effective-strategies-for-2026-using-a-monthly-budget-planner.png)
 
 # Overcoming Overspending: Effective Strategies for 2026 Using a Monthly Budget Planner
 

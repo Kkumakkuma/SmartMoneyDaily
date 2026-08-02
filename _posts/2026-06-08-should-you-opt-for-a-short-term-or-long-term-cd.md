@@ -13,7 +13,7 @@ redirect_from:
   - /2026/06/30/how-interest-rate-trends-affect-your-certificate-of-deposit-choices/
 ---
 
-![A savings timeline split into a short maturity within one year and a multi-year locked term](/SmartMoneyDaily/assets/pin-images/2026-06-08-should-you-opt-for-a-short-term-or-long-term-cd.png)
+![A savings timeline split into a short maturity within one year and a multi-year locked term](/assets/pin-images/2026-06-08-should-you-opt-for-a-short-term-or-long-term-cd.png)
 
 > **Short answer:** Set the term by the date you need the money, then let the rate curve decide whether stretching longer is worth it. If a five-year quote pays only a little more than a one-year quote, you are not being paid enough to commit — stay short. If the longer term pays meaningfully more and your cash-need date is genuinely far away, locking is what a CD is for.
 
@@ -27,7 +27,7 @@ Before you look at a single offer, answer one question: on what date does this m
 - **A fuzzy date** ("sometime next year, maybe") means any term you pick has a real chance of colliding with the need.
 - **No date at all** — this is your emergency cash — means the money should not be in a term deposit in the first place. Liquidity is the whole point of that balance, and a CD sells liquidity in exchange for yield.
 
-Only after the date is settled does the rate matter. A CD that pays more but matures two months after you need the cash is not a better deal; it is a penalty waiting to happen. If you are still deciding whether a CD belongs in the plan at all, start with [what a certificate of deposit is and how one works](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
+Only after the date is settled does the rate matter. A CD that pays more but matures two months after you need the cash is not a better deal; it is a penalty waiting to happen. If you are still deciding whether a CD belongs in the plan at all, start with [what a certificate of deposit is and how one works](/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
 
 ## What a Longer Term Actually Buys: Rate Certainty
 
@@ -75,7 +75,7 @@ Put every term you are considering on one line and compute the premium per addit
 
 For example, suppose a bank quotes 4.00% APY at 12 months and 4.20% APY at 60 months. That is 0.20 percentage points for four additional years of commitment — 0.05 points per year. On $25,000 that premium is worth roughly $12.50 a year, in exchange for giving up any say over the money until 2031. Now suppose the 60-month quote were 4.80% instead. Same math gives 0.20 points per extra year, four times the compensation, and the lock starts to look like a purchase rather than a concession.
 
-Do this with quotes you collect yourself, and use the FDIC's [national rates and rate caps](https://www.fdic.gov/resources/bankers/national-rates/) publication as the baseline — it is issued monthly by product and term, which answers "is this offer good, or does it only look good next to my current bank?" Compare offers on the same term and the same dollar amount; the mechanics are in [how to compare CD rates across banks](/SmartMoneyDaily/2026/06/10/how-to-effectively-compare-cd-rates-across-different-banks/).
+Do this with quotes you collect yourself, and use the FDIC's [national rates and rate caps](https://www.fdic.gov/resources/bankers/national-rates/) publication as the baseline — it is issued monthly by product and term, which answers "is this offer good, or does it only look good next to my current bank?" Compare offers on the same term and the same dollar amount; the mechanics are in [how to compare CD rates across banks](/2026/06/10/how-to-effectively-compare-cd-rates-across-different-banks/).
 
 When the curve is flat or inverted — long terms paying the same or less than short ones — the market is telling you it will not pay for your commitment. Take the short term and reassess at maturity.
 
@@ -91,7 +91,7 @@ Assumptions, all hypothetical: $10,000, and two choices. Choice A is a single fi
 
 Two things fall out of that table. The lock does not need rates to fall in order to win — it wins in the flat case too, because it started higher. And the rolling strategy's win in the rising case is the smallest of the three gaps, while its loss in the falling case is the largest.
 
-The [fix it or float it calculator](/SmartMoneyDaily/tools/cd-vs-savings-calculator/) will do this with your own figures.
+The [fix it or float it calculator](/tools/cd-vs-savings-calculator/) will do this with your own figures.
 
 ## If Rates Rise After You Lock: Your Three Real Options
 
@@ -105,7 +105,7 @@ Your existing CD keeps paying its contract rate. Nothing about it is "worth less
 
 Suppose your CD pays 4.00% APY, the disclosure sets the penalty at 180 days of interest, and a comparable new CD pays 4.75%. Then (180 ÷ 365 × 0.04) ÷ 0.0075 = 0.0197 ÷ 0.0075 ≈ **2.6 years**. If more than about two years and eight months remain on your term, moving is worth the penalty; if less remains, it is not. On $10,000 the penalty in that example is roughly $197 and the rate advantage is about $75 a year, which is the same answer expressed in dollars.
 
-Check your own disclosure for the penalty days and whether the penalty is charged on the contract rate or the current rate, then read [what breaking a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/) before you call the bank.
+Check your own disclosure for the penalty days and whether the penalty is charged on the contract rate or the current rate, then read [what breaking a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/) before you call the bank.
 
 **3. Add new money at the new rate.** Often the best answer: direct your next deposits into today's terms and let the old CD run to maturity.
 
@@ -113,7 +113,7 @@ Check your own disclosure for the penalty days and whether the penalty is charge
 
 This is the scenario the long term was purchased for, and it is quiet — nothing happens, which is the point. New CDs and savings accounts reprice down, your contract does not, and the gap between your rate and the market shows up as a growing advantage every month.
 
-Two housekeeping items still apply. Watch the maturity date: renewal happens at whatever the bank pays then, and the grace period stated in your disclosure is the only window in which you can move the money without a penalty. And do not treat a falling market as a reason to extend everything at once — that is a forecast again. Splitting money across maturities, which is what [CD laddering](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) does, turns the term question into a schedule.
+Two housekeeping items still apply. Watch the maturity date: renewal happens at whatever the bank pays then, and the grace period stated in your disclosure is the only window in which you can move the money without a penalty. And do not treat a falling market as a reason to extend everything at once — that is a forecast again. Splitting money across maturities, which is what [CD laddering](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) does, turns the term question into a schedule.
 
 ## Term Picker: Match a Maturity to Your Cash-Need Date
 

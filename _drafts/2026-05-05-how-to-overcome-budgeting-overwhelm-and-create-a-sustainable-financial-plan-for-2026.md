@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Overcome Budgeting Overwhelm and Create a Sustainable Financial Plan for 2026](/SmartMoneyDaily/assets/pin-images/2026-05-05-how-to-overcome-budgeting-overwhelm-and-create-a-sustainable-financial-plan-for-2026.png)
+![How to Overcome Budgeting Overwhelm and Create a Sustainable Financial Plan for 2026](/assets/pin-images/2026-05-05-how-to-overcome-budgeting-overwhelm-and-create-a-sustainable-financial-plan-for-2026.png)
 
 # How to Overcome Budgeting Overwhelm and Create a Sustainable Financial Plan for 2026
 

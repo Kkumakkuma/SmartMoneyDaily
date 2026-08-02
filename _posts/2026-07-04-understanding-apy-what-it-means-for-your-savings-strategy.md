@@ -14,7 +14,7 @@ redirect_from:
   - /2026/07/09/how-to-easily-track-interest-earnings-across-different-savings-options/
 ---
 
-![A savings balance rising in monthly steps as each interest payment starts earning interest of its own](/SmartMoneyDaily/assets/pin-images/2026-07-04-understanding-apy-what-it-means-for-your-savings-strategy.png)
+![A savings balance rising in monthly steps as each interest payment starts earning interest of its own](/assets/pin-images/2026-07-04-understanding-apy-what-it-means-for-your-savings-strategy.png)
 
 > **Short answer:** APY is the interest rate with compounding already folded in, which makes it the only number that compares two deposit accounts fairly. Balance × APY gives you a usable one-year estimate. Everything below is about the places that shortcut breaks — contributions, promo windows, mid-month deposits, fees, and tax — and how to verify what the bank actually paid you.
 
@@ -77,7 +77,7 @@ Suppose $10,000, held for one year:
 
 Across three very different products the spread is $50 on $10,000 — half a percent of the balance. That is the honest scale of the decision for most savers, and it is why liquidity and fee terms usually deserve more weight than the last few basis points.
 
-Two structural differences matter more than the numbers above. A CD's APY is fixed for the term, so it is the only one of the three that cannot be cut out from under you. A money market account often prices in tiers, meaning the advertised APY may apply only above a balance threshold — the mechanics of that are covered in [what a money market account is and how it works](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/). Savings APYs are variable by design and can be repriced without notice.
+Two structural differences matter more than the numbers above. A CD's APY is fixed for the term, so it is the only one of the three that cannot be cut out from under you. A money market account often prices in tiers, meaning the advertised APY may apply only above a balance threshold — the mechanics of that are covered in [what a money market account is and how it works](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/). Savings APYs are variable by design and can be repriced without notice.
 
 For the current baseline on any of these, the FDIC publishes [national rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) each month. Look it up before you compare offers so you know whether a quoted APY is genuinely above average or just above your current bank.
 
@@ -113,11 +113,11 @@ You paid in $22,000 of that. Interest supplied $3,402.34. The same $10,000 left 
 
 Three things sit between the calculator's output and your actual result.
 
-**Fees behave like negative APY.** A $5 monthly maintenance fee is $60 a year. On a $10,000 balance that is 0.60 percentage points off your yield — larger than most rate differences you would switch banks over. On a $1,000 balance it is 6.00 points, which can take a high-yield account below zero. Where those charges hide and how to get them waived is covered in [the fees that quietly eat your savings interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+**Fees behave like negative APY.** A $5 monthly maintenance fee is $60 a year. On a $10,000 balance that is 0.60 percentage points off your yield — larger than most rate differences you would switch banks over. On a $1,000 balance it is 6.00 points, which can take a high-yield account below zero. Where those charges hide and how to get them waived is covered in [the fees that quietly eat your savings interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 **Interest is ordinary income.** After-tax yield is roughly `APY x (1 - your marginal rate)`. Assuming a combined marginal rate of 25%, a 4.00% APY nets about 3.00%. The IRS explains what has to be reported in [Topic 403, Interest Received](https://www.irs.gov/taxtopics/tc403); your actual bracket comes from your return, not from an estimate.
 
-**Inflation decides whether you gained anything.** Nominal growth and real growth are different questions, and subtracting one from the other is a rough cut rather than the correct formula. That calculation gets its own treatment in [what inflation does to your savings APY](/SmartMoneyDaily/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/).
+**Inflation decides whether you gained anything.** Nominal growth and real growth are different questions, and subtracting one from the other is a rough cut rather than the correct formula. That calculation gets its own treatment in [what inflation does to your savings APY](/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/).
 
 ## Where APY Estimates Go Wrong
 
@@ -168,7 +168,7 @@ For rate direction generally, the [Federal Reserve's monetary policy page](https
 
 **Why is my posted interest lower than balance × APY ÷ 12?** Most often because your balance was not at that level for the full cycle, or the rate changed, or a fee was netted out. Recompute using average balance for the cycle rather than the closing balance.
 
-**Can my APY change after I open the account?** On savings and money market accounts, yes — those rates are variable and the disclosure permits repricing. A CD's rate is fixed for its term. If a variable rate matters to your plan, the [pre-opening checks for a high-yield savings account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) cover what to verify in the account agreement.
+**Can my APY change after I open the account?** On savings and money market accounts, yes — those rates are variable and the disclosure permits repricing. A CD's rate is fixed for its term. If a variable rate matters to your plan, the [pre-opening checks for a high-yield savings account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) cover what to verify in the account agreement.
 
 **Do I owe tax on interest if no form arrives?** Yes. The reporting threshold governs whether the bank must send a form, not whether the income is taxable.
 

@@ -9,7 +9,7 @@ redirect_from:
   - /2026/06/12/how-to-evaluate-the-impact-of-inflation-on-your-high-yield-options/
 ---
 
-![Chart concept showing a savings balance rising in dollars while its purchasing power falls](/SmartMoneyDaily/assets/pin-images/2026-07-23-how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts.png)
+![Chart concept showing a savings balance rising in dollars while its purchasing power falls](/assets/pin-images/2026-07-23-how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts.png)
 
 > **Short answer:** Your savings grows in real terms only when its APY, after tax, beats the inflation rate you personally face. Use `(1 + APY) ÷ (1 + inflation) − 1` instead of plain subtraction, take tax out before you deflate, and check the gap once a quarter. A negative real return is not automatically a reason to move money — some balances are supposed to lose a little purchasing power in exchange for being spendable tomorrow morning.
 
@@ -46,7 +46,7 @@ Even the exact formula is only as good as the two inputs, and both inputs are sh
 
 **CPI is backward-looking; your APY is forward-looking.** The index you read this month describes prices that have already moved. The APY on a variable account describes what the bank intends to pay going forward, and it can change before the next index release. Comparing the two is always slightly out of phase.
 
-**Tax comes out of the nominal number, not the real one.** The IRS treats bank interest as ordinary income in the year it is credited (see [IRS Topic No. 403](https://www.irs.gov/taxtopics/tc403)). You are taxed on the full nominal interest even in a year when your real return was negative. That is the quiet part of inflation risk: you can lose purchasing power and still owe tax on the loss-making gain. The mechanics of that, including 1099-INT timing and after-tax APY by bracket, are covered in [Taxes on Savings Interest](/SmartMoneyDaily/2026/07/23/how-tax-implications-affect-your-earnings-from-high-yield-options/).
+**Tax comes out of the nominal number, not the real one.** The IRS treats bank interest as ordinary income in the year it is credited (see [IRS Topic No. 403](https://www.irs.gov/taxtopics/tc403)). You are taxed on the full nominal interest even in a year when your real return was negative. That is the quiet part of inflation risk: you can lose purchasing power and still owe tax on the loss-making gain. The mechanics of that, including 1099-INT timing and after-tax APY by bracket, are covered in [Taxes on Savings Interest](/2026/07/23/how-tax-implications-affect-your-earnings-from-high-yield-options/).
 
 **Your balance is not static.** The formula assumes one deposit sitting still for a year. Money added in month eight earned partial-year interest against a full year of price changes.
 
@@ -79,7 +79,7 @@ To try different balances, APYs, and compounding frequencies before you apply th
 
 {% include tools/after-tax-real-return.html %}
 
-If the difference between rate and APY, or between daily and monthly compounding, is still fuzzy, the full breakdown lives in [APY, Compounding, and What Your Savings Will Really Earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
+If the difference between rate and APY, or between daily and monthly compounding, is still fuzzy, the full breakdown lives in [APY, Compounding, and What Your Savings Will Really Earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 
 ## The Trapped-Rate Problem: Locked CDs When Inflation Rises
 
@@ -92,9 +92,9 @@ The mistake is treating this as permanent. It is not — it is priced. Breaking 
 3. Subtract the penalty from the replacement figure.
 4. Move only if step 3 still wins by a margin worth the paperwork.
 
-Two structural points matter more than the market view. First, a penalty can reach into principal when a CD is broken early in its term, because the interest earned so far may be smaller than the days of interest the penalty demands. Second, the deposit curve is not always upward sloping — sometimes shorter terms carry the better rate, which removes much of the reward for locking long. Choosing a term against that backdrop is its own decision, walked through in [Short-Term vs Long-Term CD](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/).
+Two structural points matter more than the market view. First, a penalty can reach into principal when a CD is broken early in its term, because the interest earned so far may be smaller than the days of interest the penalty demands. Second, the deposit curve is not always upward sloping — sometimes shorter terms carry the better rate, which removes much of the reward for locking long. Choosing a term against that backdrop is its own decision, walked through in [Short-Term vs Long-Term CD](/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/).
 
-The structural answer to trapped-rate risk is a ladder rather than a forecast. When a portion of your money matures every few months, rising prices reach a repricing opportunity soon, and falling rates only affect one rung at a time. The construction details are in [CD Laddering](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
+The structural answer to trapped-rate risk is a ladder rather than a forecast. When a portion of your money matures every few months, rising prices reach a repricing opportunity soon, and falling rates only affect one rung at a time. The construction details are in [CD Laddering](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 
 ## The Other Direction: Variable Accounts When Inflation Falls
 
@@ -167,7 +167,7 @@ Fifteen minutes, four times a year, using the same worksheet each time:
 - **Check whether any CD is inside its grace period.** A maturing certificate that auto-renews into a low rate is a bigger leak than a fractional APY difference.
 - **Decide once, in writing.** Stay, split, or move — and if you move, note the reason so next quarter's review can tell whether it worked.
 
-If a review keeps producing "move," the problem is probably account selection rather than inflation. The checklist for that is in [High-Yield Savings Accounts: What to Check Before Opening](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/), and the [CFPB's guide to bank accounts](https://www.consumerfinance.gov/consumer-tools/bank-accounts/) covers the disclosure documents you should be reading before signing anything.
+If a review keeps producing "move," the problem is probably account selection rather than inflation. The checklist for that is in [High-Yield Savings Accounts: What to Check Before Opening](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/), and the [CFPB's guide to bank accounts](https://www.consumerfinance.gov/consumer-tools/bank-accounts/) covers the disclosure documents you should be reading before signing anything.
 
 ## Inflation and Savings: Questions Worth Asking
 

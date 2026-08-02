@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![Eliminating Hidden Expenses: Strategies to Boost Your 2026 Budgeting Success](/SmartMoneyDaily/assets/pin-images/2026-04-30-eliminating-hidden-expenses-strategies-to-boost-your-2026-budgeting-success.png)
+![Eliminating Hidden Expenses: Strategies to Boost Your 2026 Budgeting Success](/assets/pin-images/2026-04-30-eliminating-hidden-expenses-strategies-to-boost-your-2026-budgeting-success.png)
 
 # Eliminating Hidden Expenses: Strategies to Boost Your 2026 Budgeting Success
 

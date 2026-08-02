@@ -7,7 +7,7 @@ description: "Discover if using a mortgage broker is worth it in 2026! Read my 6
 tags: [real-estate, personal-finance, 2026]
 ---
 
-![Is Using a Mortgage Broker Worth It in 2026? My 6-Month Review](/SmartMoneyDaily/assets/pin-images/2026-05-04-is-using-a-mortgage-broker-worth-it-in-2026-my-6-month-review.png)
+![Is Using a Mortgage Broker Worth It in 2026? My 6-Month Review](/assets/pin-images/2026-05-04-is-using-a-mortgage-broker-worth-it-in-2026-my-6-month-review.png)
 
 I’ll never forget the feeling as I watched $3,200 in closing costs pile up when I bought my first home in January 2025. I remember thinking, “Could a mortgage broker have saved me from this?” Fast forward to 2026, after six months of digging deep into the ins and outs of using mortgage brokers, the answer isn’t as straightforward as I thought. I tested the waters by working with two different brokers and using an online lender for comparison, to find out whether the service was worth the potential fees, or if going solo would have been better.
 

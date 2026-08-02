@@ -7,7 +7,7 @@ description: "Building an effective emergency fund can be simplified with high-y
 tags: [savings-strategy, high-yield-savings-accounts, 2026]
 ---
 
-![How to Build an Effective Emergency Fund Using High-Yield Options](/SmartMoneyDaily/assets/pin-images/2026-05-28-how-to-build-an-effective-emergency-fund-using-high-yield-options.png)
+![How to Build an Effective Emergency Fund Using High-Yield Options](/assets/pin-images/2026-05-28-how-to-build-an-effective-emergency-fund-using-high-yield-options.png)
 
 > **Quick answer:** An effective emergency fund should ideally cover three to six months of living expenses. High-yield savings accounts, CDs, and money market accounts offer varying levels of accessibility and interest, making them suitable options for storing these funds.
 
@@ -125,10 +125,10 @@ Inflation can significantly erode the purchasing power of your savings over time
 To ensure your emergency fund retains its value, aim for higher interest rates that outpace inflation. With high-yield accounts, you not only increase your principal but also position your savings to counteract inflation, keeping your fund effective over the long term. Regularly review and adjust your savings strategy and consider reinvesting portions of your fund into higher-yielding options if necessary, ensuring you account for inflation to maintain your financial resilience.
 ## Further Reading
 
-- [How Is a Certificate of Deposit Insured Against Bank Failures?](/SmartMoneyDaily/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)
-- [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/SmartMoneyDaily/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
-- [What Happens When You Cash Out a CD Early?](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
-- [How to Find the Best Savings Accounts for Your Financial Goals](/SmartMoneyDaily/2026/05/25/how-to-find-the-best-savings-accounts-for-your-financial-goals/)
-- [A Beginner's Guide to Understanding CD Terms and Conditions](/SmartMoneyDaily/2026/05/25/a-beginners-guide-to-understanding-cd-terms-and-conditions/)
+- [How Is a Certificate of Deposit Insured Against Bank Failures?](/2026/05/27/how-is-a-certificate-of-deposit-insured-against-bank-failures/)
+- [Understanding the Trade-Offs Between High-Yield Savings Accounts and CDs](/2026/05/26/understanding-the-trade-offs-between-high-yield-savings-accounts-and-cds/)
+- [What Happens When You Cash Out a CD Early?](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/)
+- [How to Find the Best Savings Accounts for Your Financial Goals](/2026/05/25/how-to-find-the-best-savings-accounts-for-your-financial-goals/)
+- [A Beginner's Guide to Understanding CD Terms and Conditions](/2026/05/25/a-beginners-guide-to-understanding-cd-terms-and-conditions/)
 
 *Last reviewed: May 2026 by Kkuma Park.*

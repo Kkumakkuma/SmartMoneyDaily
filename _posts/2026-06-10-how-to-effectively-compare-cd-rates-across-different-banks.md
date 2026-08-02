@@ -12,7 +12,7 @@ redirect_from:
   - /2026/06/27/what-factors-influence-the-return-on-your-cd-investment/
 ---
 
-![Worksheet layout for comparing two CD offers on the same deposit, term length, and APY basis](/SmartMoneyDaily/assets/pin-images/2026-06-10-how-to-effectively-compare-cd-rates-across-different-banks.png)
+![Worksheet layout for comparing two CD offers on the same deposit, term length, and APY basis](/assets/pin-images/2026-06-10-how-to-effectively-compare-cd-rates-across-different-banks.png)
 
 > **Short answer:** Compare offers on one line — same deposit, same number of days, APY instead of the nominal rate — and judge them by the dollars you would hold on the maturity date after penalties, fees, and tax. Banks quote different rates in the same week because each one is funding a different balance sheet, not because one is more generous than the other.
 
@@ -24,7 +24,7 @@ Deposit pricing is set institution by institution, not handed down from a centra
 
 That is why a small credit union can beat a national bank on a 13-month special while trailing badly on every other term, and why the ranking of "best rates" reshuffles constantly. You are not looking at a market consensus. You are looking at dozens of separate funding decisions that happen to be printed on the same comparison page.
 
-The practical consequence: never assume that the institution that won last time still wins. And never assume the headline rate is the whole offer — it is one field in a contract with a dozen fields, which is the subject of a separate walkthrough on [the nine terms to check before you sign a CD](/SmartMoneyDaily/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/).
+The practical consequence: never assume that the institution that won last time still wins. And never assume the headline rate is the whole offer — it is one field in a contract with a dozen fields, which is the subject of a separate walkthrough on [the nine terms to check before you sign a CD](/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/).
 
 ## The Three Drivers Behind Any Quote
 
@@ -61,7 +61,7 @@ where *r* is the nominal annual rate and *n* is the number of compounding period
 
 For example, suppose a bank quotes a 4.00% nominal rate compounded daily. Then n = 365, and the APY works out to about 4.081%. The same 4.00% compounded annually is exactly 4.00% APY. On a $10,000 deposit held one year, that is roughly $408 versus $400 — small, but it is free money you get by reading one extra line.
 
-Two rules follow. If an advertisement shows a rate without an APY, treat the offer as incomplete and find the disclosure before you fund anything. And if you want to see how frequency, balance, and time interact across account types, the mechanics are worked through in detail in the guide to [APY, compounding, and what your savings will really earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
+Two rules follow. If an advertisement shows a rate without an APY, treat the offer as incomplete and find the disclosure before you fund anything. And if you want to see how frequency, balance, and time interact across account types, the mechanics are worked through in detail in the guide to [APY, compounding, and what your savings will really earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 
 ## Converting Odd Terms Back to an Annual Basis
 
@@ -118,7 +118,7 @@ Copy this into a note or spreadsheet and fill one column per offer. The last row
 
 Filling the "minimum to earn the APY" row separately from "minimum to open" catches the most common bait: an account you can open with a small deposit but which only pays the advertised yield at a much higher tier.
 
-To work this out with your actual balance, use the [two-offer comparison calculator](/SmartMoneyDaily/tools/two-offer-comparison-calculator/).
+To work this out with your actual balance, use the [two-offer comparison calculator](/tools/two-offer-comparison-calculator/).
 
 ## Rate Traps That Survive a Careless Comparison
 
@@ -127,13 +127,13 @@ To work this out with your actual balance, use the [two-offer comparison calcula
 - **Tier cliffs.** The headline number applies to a balance band you are not in. Find the tier table and locate your own balance in it.
 - **"Up to" language.** This usually signals the top of a tier structure or a step-up schedule. Ask what the first-day rate is.
 - **New-money-only rules.** Funds already at the institution are excluded, so a transfer from your existing savings there does not qualify.
-- **Unattractive default renewals.** A 13-month special that rolls into a standard 12-month product at whatever the bank posts that day. Put the maturity date in your calendar the day you open it — the grace period is short, and what to do inside it is covered in the piece on [cashing out a CD early](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+- **Unattractive default renewals.** A 13-month special that rolls into a standard 12-month product at whatever the bank posts that day. Put the maturity date in your calendar the day you open it — the grace period is short, and what to do inside it is covered in the piece on [cashing out a CD early](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 ## How Penalties, Fees, and Tax Shrink the Winner's Margin
 
 Rate differences between competitive offers are usually small. The costs attached to the account are not, so they decide more comparisons than the rate does.
 
-**The penalty dominates if there is any chance you break the CD.** Suppose a $10,000 one-year CD at 4.00% APY carries a penalty of 180 days' simple interest at the nominal rate. That penalty is $10,000 × 0.04 × 180/365 ≈ $197. Now suppose you chose that CD over a competing offer because it paid 0.15 percentage points more — worth about $15 over the year on the same deposit. One early exit erases roughly thirteen years of that advantage. If your cash-need date is uncertain, the penalty schedule and the term length matter far more than the rate, which is the argument laid out in the comparison of [short-term versus long-term CDs](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/).
+**The penalty dominates if there is any chance you break the CD.** Suppose a $10,000 one-year CD at 4.00% APY carries a penalty of 180 days' simple interest at the nominal rate. That penalty is $10,000 × 0.04 × 180/365 ≈ $197. Now suppose you chose that CD over a competing offer because it paid 0.15 percentage points more — worth about $15 over the year on the same deposit. One early exit erases roughly thirteen years of that advantage. If your cash-need date is uncertain, the penalty schedule and the term length matter far more than the rate, which is the argument laid out in the comparison of [short-term versus long-term CDs](/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/).
 
 **Fees are rarer on CDs than on other deposit accounts, but not absent.** Check the fee schedule for paper statement charges, wire fees on the outgoing maturity payment, and any account service fee that applies when the CD is your only relationship with the institution.
 

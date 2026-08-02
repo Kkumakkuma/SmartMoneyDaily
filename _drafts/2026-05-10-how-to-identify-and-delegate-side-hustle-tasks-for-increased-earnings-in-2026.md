@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![How to Identify and Delegate Side Hustle Tasks for Increased Earnings in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-10-how-to-identify-and-delegate-side-hustle-tasks-for-increased-earnings-in-2026.png)
+![How to Identify and Delegate Side Hustle Tasks for Increased Earnings in 2026](/assets/pin-images/2026-05-10-how-to-identify-and-delegate-side-hustle-tasks-for-increased-earnings-in-2026.png)
 
 # How to Identify and Delegate Side Hustle Tasks for Increased Earnings in 2026
 

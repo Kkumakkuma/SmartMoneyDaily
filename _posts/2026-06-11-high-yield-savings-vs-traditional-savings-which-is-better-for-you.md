@@ -9,7 +9,7 @@ redirect_from:
   - /2026/07/13/how-to-decide-between-high-yield-accounts-and-traditional-options/
 ---
 
-![Two savings account statements side by side, one from an online high-yield bank and one from a branch bank, with the annual interest lines circled](/SmartMoneyDaily/assets/pin-images/2026-06-11-high-yield-savings-vs-traditional-savings-which-is-better-for-you.png)
+![Two savings account statements side by side, one from an online high-yield bank and one from a branch bank, with the annual interest lines circled](/assets/pin-images/2026-06-11-high-yield-savings-vs-traditional-savings-which-is-better-for-you.png)
 
 > **Short answer:** Both account types are the same product with the same insurance. The only meaningful difference is the rate, and the rate difference is worth doing arithmetic on. Look up your current bank's posted APY, look up a high-yield account's posted APY, multiply the difference by your balance, and if that number is bigger than the value of walking into a branch, move the money.
 
@@ -41,9 +41,9 @@ Now convert that into a wage. If moving the money takes you 45 minutes, the firs
 
 Two adjustments make the number more accurate. First, interest is taxable, so multiply the gap by (1 − your marginal rate) to see what you keep. Second, subtract any fee either account charges — a $5 monthly maintenance fee on the losing account is $60 a year, which changes the ranking on small balances all by itself.
 
-To work this out with your actual balance, use the [two-offer comparison calculator](/SmartMoneyDaily/tools/two-offer-comparison-calculator/).
+To work this out with your actual balance, use the [two-offer comparison calculator](/tools/two-offer-comparison-calculator/).
 
-If you want the mechanics behind why two accounts quoting the same nominal rate can produce different totals, the walkthrough in [APY, compounding, and what your savings will really earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers compounding frequency and posting dates in detail.
+If you want the mechanics behind why two accounts quoting the same nominal rate can produce different totals, the walkthrough in [APY, compounding, and what your savings will really earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers compounding frequency and posting dates in detail.
 
 ## Access and Speed: Branch Cash vs ACH Transfer Windows
 
@@ -73,7 +73,7 @@ Branch savings accounts more often carry a monthly maintenance fee with waiver c
 
 Online high-yield accounts more often carry no monthly fee and instead charge for edge cases: outgoing wires, paper statements, excess withdrawals, and sometimes early account closure. Some also require a minimum to earn the advertised rate even when there is no minimum to open — a different thing entirely, and worth reading twice.
 
-Both sides publish this in the same place. Under the Truth in Savings Act and its implementing rule, [12 CFR Part 1030](https://www.consumerfinance.gov/rules-policy/regulations/1030/), a bank must disclose the APY, the rate, minimum balance requirements, and the fees that may be imposed, before you open the account. Ask for the account disclosure and the fee schedule as separate documents and read the fee schedule first. A fuller map of where each charge hides is in the [guide to the fees that quietly eat your savings interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+Both sides publish this in the same place. Under the Truth in Savings Act and its implementing rule, [12 CFR Part 1030](https://www.consumerfinance.gov/rules-policy/regulations/1030/), a bank must disclose the APY, the rate, minimum balance requirements, and the fees that may be imposed, before you open the account. Ask for the account disclosure and the fee schedule as separate documents and read the fee schedule first. A fuller map of where each charge hides is in the [guide to the fees that quietly eat your savings interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 ## Safety: Identical Insurance, Different Branding
 
@@ -86,7 +86,7 @@ What you should verify is that the institution holding your money is actually an
 1. Search the bank's legal name in FDIC BankFind, or the credit union in NCUA's research tool, and confirm it appears with an active certificate or charter number.
 2. If the product is offered by an app or a fintech brand rather than a bank, find the disclosure naming the bank that actually holds the deposits. The brand on the app is frequently not the insured institution, and coverage depends on the bank behind it and on the records being kept correctly.
 
-The mechanics of what insurance covers, what it excludes, and how the limit is computed are laid out in [what FDIC insurance actually covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/).
+The mechanics of what insurance covers, what it excludes, and how the limit is computed are laid out in [what FDIC insurance actually covers](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/).
 
 ## When Staying With Your Big Bank Is the Right Call
 
@@ -123,7 +123,7 @@ The trigger approach matters more than the one-time decision. Rates on both side
 6. **Move the bulk (5 minutes).** Leave a buffer in checking sized to your real monthly bills, not to your comfort level.
 7. **Redirect the automation (10 minutes).** Point recurring savings transfers at the new account. Leave direct deposit going to checking — routing your paycheck into a savings account creates a transfer step every time you need to spend.
 
-Do not close the old account on day one. Let one full statement cycle pass to catch any automatic debit you forgot, then close it or leave it at whatever balance keeps a fee waived. The checklist in [what to check before opening a high-yield savings account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) covers the pre-opening verification in more depth.
+Do not close the old account on day one. Let one full statement cycle pass to catch any automatic debit you forgot, then close it or leave it at whatever balance keeps a fee waived. The checklist in [what to check before opening a high-yield savings account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) covers the pre-opening verification in more depth.
 
 ## What Does Not Change After You Switch
 

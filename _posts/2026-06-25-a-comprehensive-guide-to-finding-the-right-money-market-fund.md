@@ -11,7 +11,7 @@ redirect_from:
   - /2026/04/11/is-a-money-market-fund-the-right-choice-for-your-emergency-fund/
 ---
 
-![Diagram contrasting a money market mutual fund with an insured bank deposit account](/SmartMoneyDaily/assets/pin-images/2026-06-25-a-comprehensive-guide-to-finding-the-right-money-market-fund.png)
+![Diagram contrasting a money market mutual fund with an insured bank deposit account](/assets/pin-images/2026-06-25-a-comprehensive-guide-to-finding-the-right-money-market-fund.png)
 
 > **Short answer:** A money market fund is a mutual fund that holds short-term debt and tries to keep its share price at $1. It is regulated by the SEC, not insured by the FDIC, and its quoted yield already reflects fund expenses. It is a reasonable place for cash you will not need within 48 hours. It is a poor place for the money you would grab in a genuine emergency.
 
@@ -51,13 +51,13 @@ What you should check instead is whether that yield is being propped up:
 
 One more asymmetry. A fund's yield is backward-looking — it describes the last seven days. A bank APY is a forward quote the bank can change tomorrow. Neither is a promise about next month, but they are not the same kind of number, and a table that stacks them in one column without saying so is misleading you.
 
-To work this out with your actual balance, use the [after-tax and inflation-adjusted return calculator](/SmartMoneyDaily/tools/after-tax-real-return-calculator/).
+To work this out with your actual balance, use the [after-tax and inflation-adjusted return calculator](/tools/after-tax-real-return-calculator/).
 
 ## Not FDIC-Insured: What SIPC Covers and What It Does Not
 
 This is the section to read twice.
 
-Money market funds are **not** covered by [FDIC deposit insurance](https://www.fdic.gov/resources/deposit-insurance), and not by [NCUA share insurance](https://ncua.gov/consumers/share-insurance-coverage) either. Those programs cover deposits — checking, savings, money market *accounts*, and CDs — at insured banks and credit unions, up to $250,000 per depositor, per insured institution, per ownership category. A mutual fund share is not a deposit, so it is outside that system entirely. If you want the mechanics of what insurance actually covers, the [FDIC insurance guide](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) walks through the covered and excluded product list.
+Money market funds are **not** covered by [FDIC deposit insurance](https://www.fdic.gov/resources/deposit-insurance), and not by [NCUA share insurance](https://ncua.gov/consumers/share-insurance-coverage) either. Those programs cover deposits — checking, savings, money market *accounts*, and CDs — at insured banks and credit unions, up to $250,000 per depositor, per insured institution, per ownership category. A mutual fund share is not a deposit, so it is outside that system entirely. If you want the mechanics of what insurance actually covers, the [FDIC insurance guide](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) walks through the covered and excluded product list.
 
 What you get instead is SIPC protection, and it protects against a different failure. SIPC steps in when the *brokerage* holding your account fails and customer assets go missing. It works to restore your securities and cash positions. It does not insure the value of what you own. If the brokerage is fine and the fund itself loses money, SIPC pays nothing. That distinction — custodian failure versus investment loss — is the whole point.
 
@@ -99,7 +99,7 @@ Weekends and holidays stretch every step. Compare that to a money market account
 | Tax form | Form 1099-DIV | Form 1099-INT |
 | Where to verify it | Fund prospectus and fact sheet | The bank's Truth in Savings disclosure and fee schedule |
 
-If the right column is what you actually want, start with [how a money market account works](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/) rather than shopping funds.
+If the right column is what you actually want, start with [how a money market account works](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/) rather than shopping funds.
 
 ## Taxes: The Form Is Different, and So Is the Treatment
 
@@ -122,7 +122,7 @@ The workable arrangement is tiered:
 - **Tier 2, the next two to four months.** A high-yield savings account or money market account at an insured institution. Slower, still guaranteed.
 - **Tier 3, anything beyond a full target.** A government money market fund is defensible here, where the money is a reserve rather than a first response.
 
-Sizing that target is its own exercise — the [emergency fund sizing guide](/SmartMoneyDaily/2026/05/09/emergency-fund-basics-how-much-should-you-really-save/) works through essential-expense counting, and [where to keep an emergency fund](/SmartMoneyDaily/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/) compares access speeds across account types.
+Sizing that target is its own exercise — the [emergency fund sizing guide](/2026/05/09/emergency-fund-basics-how-much-should-you-really-save/) works through essential-expense counting, and [where to keep an emergency fund](/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/) compares access speeds across account types.
 
 ## Reading a Fund Fact Sheet in Five Minutes
 

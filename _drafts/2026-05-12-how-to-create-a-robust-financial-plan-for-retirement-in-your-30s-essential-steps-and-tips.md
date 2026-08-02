@@ -7,7 +7,7 @@ description: "Create a robust financial plan for retirement in your 30s with the
 tags: [financial-planning, personal-finance, 2026]
 ---
 
-![How to Create a Robust Financial Plan for Retirement in Your 30s: Essential Steps and Tips](/SmartMoneyDaily/assets/pin-images/2026-05-12-how-to-create-a-robust-financial-plan-for-retirement-in-your-30s-essential-steps-and-tips.png)
+![How to Create a Robust Financial Plan for Retirement in Your 30s: Essential Steps and Tips](/assets/pin-images/2026-05-12-how-to-create-a-robust-financial-plan-for-retirement-in-your-30s-essential-steps-and-tips.png)
 
 > **Quick answer:** Creating a robust financial plan for retirement in your 30s involves setting realistic savings goals, understanding investment options, and leveraging employer-sponsored retirement plans. Aim to save at least 15% of your income annually. Start early, as even a modest investment of $200 monthly can grow to over $137,000 by the time you're 65, assuming a 7% annual return.
 

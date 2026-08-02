@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Tackle Overspending and Stick to Your Monthly Budget in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-21-how-to-tackle-overspending-and-stick-to-your-monthly-budget-in-2026.png)
+![How to Tackle Overspending and Stick to Your Monthly Budget in 2026](/assets/pin-images/2026-05-21-how-to-tackle-overspending-and-stick-to-your-monthly-budget-in-2026.png)
 
 # How to Tackle Overspending and Stick to Your Monthly Budget in 2026
 

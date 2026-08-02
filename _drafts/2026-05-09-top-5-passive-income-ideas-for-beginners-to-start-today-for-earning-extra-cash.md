@@ -7,7 +7,7 @@ description: "Unlock 5 passive income ideas for beginners right now and boost yo
 tags: [passive-income, personal-finance, 2026]
 ---
 
-![Top 5 Passive Income Ideas for Beginners to Start Today for Earning Extra Cash](/SmartMoneyDaily/assets/pin-images/2026-05-09-top-5-passive-income-ideas-for-beginners-to-start-today-for-earning-extra-cash.png)
+![Top 5 Passive Income Ideas for Beginners to Start Today for Earning Extra Cash](/assets/pin-images/2026-05-09-top-5-passive-income-ideas-for-beginners-to-start-today-for-earning-extra-cash.png)
 
 > **Quick answer:** Beginners can start earning extra cash through passive income with options like investing in dividend stocks, real estate crowdfunding, or even starting a blog. For instance, I generated a steady income of $150 monthly from a blog by following effective strategies, which took consistent effort but yielded significant results.
 

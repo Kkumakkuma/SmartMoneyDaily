@@ -6,7 +6,7 @@ categories: [saving-money]
 description: "How to Save Money on Groceries Without Coupons - Learn practical tips and strategies for your personal finances."
 ---
 
-![How to Save Money on Groceries Without Coupons](/SmartMoneyDaily/assets/pin-images/2026-04-09-how-to-save-money-on-groceries-without-coupons.png)
+![How to Save Money on Groceries Without Coupons](/assets/pin-images/2026-04-09-how-to-save-money-on-groceries-without-coupons.png)
 
 How to Save Money on Groceries Without Coupons
 

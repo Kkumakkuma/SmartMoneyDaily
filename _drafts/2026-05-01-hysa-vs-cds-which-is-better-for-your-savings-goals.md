@@ -7,7 +7,7 @@ description: "HYSAs stay liquid with variable rates; CDs lock a fixed rate for a
 tags: [bank-comparison, high-yield-savings-accounts, 2026]
 ---
 
-![HYSA vs CDs: Which is Better for Your Savings Goals?](/SmartMoneyDaily/assets/pin-images/2026-05-01-hysa-vs-cds-which-is-better-for-your-savings-goals.png)
+![HYSA vs CDs: Which is Better for Your Savings Goals?](/assets/pin-images/2026-05-01-hysa-vs-cds-which-is-better-for-your-savings-goals.png)
 
 > **Quick answer:** Choosing between a high-yield savings account (HYSA) and a certificate of deposit (CD) depends on your savings goals. HYSAs generally allow greater liquidity and flexibility, while CDs tend to offer higher fixed rates for longer terms. 
 

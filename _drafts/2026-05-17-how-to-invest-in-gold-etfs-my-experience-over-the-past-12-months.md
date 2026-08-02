@@ -7,7 +7,7 @@ description: "Invest in Gold ETFs with 5 easy strategies to boost your portfolio
 tags: [investing, personal-finance, 2026]
 ---
 
-![How to Invest in Gold ETFs: My Experience Over the Past 12 Months [2026 Guide]](/SmartMoneyDaily/assets/pin-images/2026-05-17-how-to-invest-in-gold-etfs-my-experience-over-the-past-12-months.png)
+![How to Invest in Gold ETFs: My Experience Over the Past 12 Months [2026 Guide]](/assets/pin-images/2026-05-17-how-to-invest-in-gold-etfs-my-experience-over-the-past-12-months.png)
 
 > **Quick answer:** Investing in gold ETFs can be a smart way to gain exposure to gold without dealing with the hassles of physical storage. In my experience over the past year, I allocated $5,000 and saw average annual returns of about 10% from leading ETFs like SPDR Gold Shares (GLD).
 

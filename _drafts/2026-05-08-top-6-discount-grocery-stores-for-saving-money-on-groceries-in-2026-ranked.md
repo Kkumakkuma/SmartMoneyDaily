@@ -7,7 +7,7 @@ description: "Save big at the top 6 discount grocery stores for 2026. Cut your g
 tags: [saving-money, personal-finance, 2026]
 ---
 
-![Top 6 Discount Grocery Stores for Saving Money on Groceries in 2026 (Ranked)](/SmartMoneyDaily/assets/pin-images/2026-05-08-top-6-discount-grocery-stores-for-saving-money-on-groceries-in-2026-ranked.png)
+![Top 6 Discount Grocery Stores for Saving Money on Groceries in 2026 (Ranked)](/assets/pin-images/2026-05-08-top-6-discount-grocery-stores-for-saving-money-on-groceries-in-2026-ranked.png)
 
 > **Quick answer:** The top discount grocery stores for saving money in 2026 are Aldi, Lidl, Costco, Walmart, Trader Joe's, and WinCo. Shopping at these stores can save you up to 30% on your grocery bill compared to traditional supermarkets.
 

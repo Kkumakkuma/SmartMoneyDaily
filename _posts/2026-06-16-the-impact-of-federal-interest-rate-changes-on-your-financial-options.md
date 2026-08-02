@@ -12,7 +12,7 @@ redirect_from:
   - /2026/06/15/how-do-interest-rates-impact-your-high-yield-savings-account/
 ---
 
-![Diagram showing how a Federal Reserve policy rate change travels through banks to savings, money market, and CD yields](/SmartMoneyDaily/assets/pin-images/2026-06-16-the-impact-of-federal-interest-rate-changes-on-your-financial-options.png)
+![Diagram showing how a Federal Reserve policy rate change travels through banks to savings, money market, and CD yields](/assets/pin-images/2026-06-16-the-impact-of-federal-interest-rate-changes-on-your-financial-options.png)
 
 > **Short answer:** The Fed does not set your APY. It sets the rate banks pay each other, and each bank then decides how much of that move to hand you, and when. Variable accounts (savings, money market) can change at any time with no advance notice. A CD you already own does not change at all. So the only two questions that matter are: how much of the last move did *your* bank actually pass through, and is your money in the right container for the phase the cycle is in.
 
@@ -51,7 +51,7 @@ One row per FOMC decision. A note app is enough.
 | Beta | APY change ÷ policy change | Your arithmetic |
 | National average | FDIC's published deposit rate average | fdic.gov national rates page |
 
-The last column is the reality check. The [FDIC publishes national average deposit rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) on a regular schedule — look up the current figure and its as-of date yourself rather than trusting any number quoted secondhand. If your account has drifted toward that average while the banks you shopped last year have not, yours has stopped competing and is counting on your inertia. That is the cue to consider [whether it is time to switch banks for a higher rate](/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/).
+The last column is the reality check. The [FDIC publishes national average deposit rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) on a regular schedule — look up the current figure and its as-of date yourself rather than trusting any number quoted secondhand. If your account has drifted toward that average while the banks you shopped last year have not, yours has stopped competing and is counting on your inertia. That is the cue to consider [whether it is time to switch banks for a higher rate](/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/).
 
 ## The Notice Rule Most Savers Have Backwards
 
@@ -73,13 +73,13 @@ Credit unions differ slightly: they pay **dividends** declared by the board rath
 | New CD | Fixed at the rate posted the day you open | Reprices for new money; the term structure often moves before the policy rate does | Timing, term length, whether you ladder |
 | Branch checking / legacy savings | Often near-zero, rarely repriced | Frequently doesn't move | Whether you leave a balance there |
 
-Money market tiers deserve a second look at a cycle turn. A bank that would rather not advertise a cut can leave the headline APY alone and raise the balance required to earn it — the disclosed rate stays flat while your actual yield falls. Those mechanics are covered in [why money market rates move and how fast yours follows](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/).
+Money market tiers deserve a second look at a cycle turn. A bank that would rather not advertise a cut can leave the headline APY alone and raise the balance required to earn it — the disclosed rate stays flat while your actual yield falls. Those mechanics are covered in [why money market rates move and how fast yours follows](/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/).
 
 ## Why the CD You Already Own Never Changes
 
 A CD is a contract. You agreed to leave the money for a term; the bank agreed to a rate for that term. Rates moving afterward does not entitle the bank to renegotiate, and it does not entitle you to either. That symmetry is the whole product — and it means a CD opened at the wrong point in the cycle stays wrong for its entire term. A five-year CD opened on the way *up* watches better offers appear for years. One opened near the peak keeps paying a rate the market has stopped offering, which is exactly the point.
 
-If rates rise sharply after you lock, you can break the CD — but the early withdrawal penalty is the toll, usually quoted in months of interest. Compare that penalty in dollars against the extra interest a new rate would earn over the remaining term; the full calculation is in [what a CD early withdrawal penalty actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/). Breaking a CD with a few months left is usually pointless. Breaking one with three years left can be clearly worth it.
+If rates rise sharply after you lock, you can break the CD — but the early withdrawal penalty is the toll, usually quoted in months of interest. Compare that penalty in dollars against the extra interest a new rate would earn over the remaining term; the full calculation is in [what a CD early withdrawal penalty actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/). Breaking a CD with a few months left is usually pointless. Breaking one with three years left can be clearly worth it.
 
 ## Reading Your Bank's CD Curve Before a Meeting
 
@@ -112,9 +112,9 @@ The honest version of this decision is not "will the Fed cut." It is "what would
 
 If your logged beta says your bank passes cuts through fast, the answer is usually no, and locking wins. If your bank has been stubborn about cutting, staying liquid may well win and you keep the flexibility for free.
 
-If neither answer feels clean, a ladder splits the difference — part locked, part free. The [cd ladder builder](/SmartMoneyDaily/tools/cd-ladder-calculator/) will size the rungs for a specific amount.
+If neither answer feels clean, a ladder splits the difference — part locked, part free. The [cd ladder builder](/tools/cd-ladder-calculator/) will size the rungs for a specific amount.
 
-Rung spacing and its trade-offs are covered in [how to build a CD ladder that beats one long CD](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
+Rung spacing and its trade-offs are covered in [how to build a CD ladder that beats one long CD](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 
 ## Signals Worth Watching, Noise Worth Ignoring
 

@@ -292,7 +292,7 @@ def generate_pin(title: str, blog_name: str, category: str, output_path: str) ->
 
     # 5. 하단 브랜드 푸터
     brand_font = _font("regular", 28)
-    brand_text = f"kkumakkuma.github.io / {blog_name}"
+    brand_text = "smartmoneydaily.github.io"
     bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
     bw = bbox[2] - bbox[0]
     draw.text(

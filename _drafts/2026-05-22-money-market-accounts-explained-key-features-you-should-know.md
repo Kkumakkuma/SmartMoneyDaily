@@ -7,7 +7,7 @@ description: "Money market accounts explained: 5 key features to boost your savi
 tags: [money-market, high-yield-savings-accounts, 2026]
 ---
 
-![Money Market Accounts Explained: Key Features You Should Know](/SmartMoneyDaily/assets/pin-images/2026-05-22-money-market-accounts-explained-key-features-you-should-know.png)
+![Money Market Accounts Explained: Key Features You Should Know](/assets/pin-images/2026-05-22-money-market-accounts-explained-key-features-you-should-know.png)
 
 > **Quick answer:** A money market account (MMA) typically combines the benefits of a savings account with the features of a checking account, offering competitive interest rates and limited check-writing capabilities. They usually come with higher minimum balance requirements and are insured up to $250,000 by the FDIC or NCUA.
 

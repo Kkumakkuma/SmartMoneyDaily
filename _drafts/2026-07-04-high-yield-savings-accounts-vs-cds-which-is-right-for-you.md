@@ -7,7 +7,7 @@ description: "High-yield savings accounts vs CDs can impact your savings strateg
 tags: [bank-comparison, high-yield-savings-accounts, 2026]
 ---
 
-![High-Yield Savings Accounts vs CDs: Which is Right for You?](/SmartMoneyDaily/assets/pin-images/2026-07-04-high-yield-savings-accounts-vs-cds-which-is-right-for-you.png)
+![High-Yield Savings Accounts vs CDs: Which is Right for You?](/assets/pin-images/2026-07-04-high-yield-savings-accounts-vs-cds-which-is-right-for-you.png)
 
 > **Quick answer:** High-yield savings accounts (HYSAs) provide more flexibility and liquidity, while certificates of deposit (CDs) offer fixed interest rates for a predetermined period. The right choice depends on your financial goals and whether you prioritize access to funds or higher interest rates. 
 
@@ -113,7 +113,7 @@ Interest earned from both HYSAs and CDs is generally subject to federal income t
 
 Deciding between a high-yield savings account and a certificate of deposit hinges on your financial needs and goals. If you value liquidity and accessibility, HYSAs are the way to go. However, if you are inclined to secure a fixed return and can commit to not accessing your funds for a certain period, a CD could be the better choice. 
 
-Start by determining your financial goals and researching the current interest rates and options available. This proactive approach can set you on the path to making a decision that aligns with your savings strategy. For more guidance, refer to our articles like *[How to Evaluate Your CD Options for Long-Term Gains](/SmartMoneyDaily/2026/07/03/how-to-evaluate-your-cd-options-for-long-term-gains/)* and *[Why You Should Consider Diversifying with Different Account Types](/SmartMoneyDaily/2026/07/02/why-you-should-consider-diversifying-with-different-account-types/)*.
+Start by determining your financial goals and researching the current interest rates and options available. This proactive approach can set you on the path to making a decision that aligns with your savings strategy. For more guidance, refer to our articles like *[How to Evaluate Your CD Options for Long-Term Gains](/2026/07/03/how-to-evaluate-your-cd-options-for-long-term-gains/)* and *[Why You Should Consider Diversifying with Different Account Types](/2026/07/02/why-you-should-consider-diversifying-with-different-account-types/)*.
 
 ## How to Use Laddering Strategies with CDs
 
@@ -143,8 +143,8 @@ By using a CD laddering strategy, you can effectively balance the need for savin
 
 ## Further Reading
 
-- [Common Myths About High-Yield Savings and How to Dispel Them](/SmartMoneyDaily/2026/07/03/common-myths-about-high-yield-savings-and-how-to-dispel-them/)
-- [Is it Time to Switch to a Higher Interest Option?](/SmartMoneyDaily/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/)
-- [How to Diversify Your Financial Portfolio with Interest-Bearing Accounts](/SmartMoneyDaily/2026/07/01/how-to-diversify-your-financial-portfolio-with-interest-bearing-accounts/)
+- [Common Myths About High-Yield Savings and How to Dispel Them](/2026/07/03/common-myths-about-high-yield-savings-and-how-to-dispel-them/)
+- [Is it Time to Switch to a Higher Interest Option?](/2026/07/02/is-it-time-to-switch-to-a-higher-interest-option/)
+- [How to Diversify Your Financial Portfolio with Interest-Bearing Accounts](/2026/07/01/how-to-diversify-your-financial-portfolio-with-interest-bearing-accounts/)
 
 *Last reviewed: July 2026 by Kkuma Park.*

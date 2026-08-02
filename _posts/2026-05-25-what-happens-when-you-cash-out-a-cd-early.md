@@ -14,7 +14,7 @@ redirect_from:
   - /2026/07/15/common-pitfalls-when-choosing-a-certificate-of-deposit-option/
 ---
 
-![A certificate of deposit closed before its maturity date, with a slice of the interest deducted as a penalty](/SmartMoneyDaily/assets/pin-images/2026-05-25-what-happens-when-you-cash-out-a-cd-early.png)
+![A certificate of deposit closed before its maturity date, with a slice of the interest deducted as a penalty](/assets/pin-images/2026-05-25-what-happens-when-you-cash-out-a-cd-early.png)
 
 > **Short answer:** Breaking a CD before maturity costs a fixed number of days of interest, written into your account agreement as something like "90 days' interest" or "365 days' interest." It is not a percentage of your balance and it is not a flat fee. If the penalty is larger than the interest you have earned so far, the difference comes out of your principal, and that is legal.
 
@@ -48,7 +48,7 @@ Penalty language is short and easy to misread. Here is what the common wordings 
 | "No penalty after the first six days" (no-penalty CD) | Withdrawal is free after the federal minimum holding window, but usually all-or-nothing | Product disclosure for that specific CD |
 | "Interest is credited at maturity" | You may have no credited interest to absorb a penalty, so principal takes the whole hit | Disclosure, "Compounding and Crediting" |
 
-Two lines cause most of the surprises: "whichever is greater," which makes the headline day count meaningless late in a long term, and the discretion clause, which makes an early withdrawal a request rather than a right. Both belong on your checklist alongside the rate; our guide to [the terms to check before signing a CD](/SmartMoneyDaily/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/) covers the rest.
+Two lines cause most of the surprises: "whichever is greater," which makes the headline day count meaningless late in a long term, and the discretion clause, which makes an early withdrawal a request rather than a right. Both belong on your checklist alongside the rate; our guide to [the terms to check before signing a CD](/2026/07/08/how-to-choose-the-best-certificate-of-deposit-for-your-savings-goals/) covers the rest.
 
 ## When the Penalty Eats Principal
 
@@ -122,7 +122,7 @@ A no-penalty CD, sometimes marketed as a liquid CD, lets you close the account a
 - Withdrawal is usually all-or-nothing. You close the account and take the full balance; partial withdrawals are often not permitted.
 - Terms cluster at the short end, so a no-penalty CD is rarely a substitute for a multi-year lock.
 
-The honest comparison is not "no-penalty CD versus traditional CD." It is "no-penalty CD versus a [high-yield savings account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/)." The CD's advantage is a rate fixed for the term; the savings account's advantage is unlimited partial access. If you might need part of the money, the savings account usually wins on structure alone.
+The honest comparison is not "no-penalty CD versus traditional CD." It is "no-penalty CD versus a [high-yield savings account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/)." The CD's advantage is a rate fixed for the term; the savings account's advantage is unlimited partial access. If you might need part of the money, the savings account usually wins on structure alone.
 
 ## Alternatives to Breaking the CD
 
@@ -132,7 +132,7 @@ Before you close anything, check whether the cash can come from somewhere cheape
 2. **Withdraw accrued interest only.** Where the disclosure permits interest withdrawals, taking earned interest usually carries no penalty. It is a small amount, but it is free.
 3. **Break the smallest piece.** If you hold several CDs, close the one with the shortest remaining term and the smallest penalty rather than the largest balance.
 4. **Take a partial withdrawal.** Where allowed, the penalty applies only to the amount withdrawn. Ask before you close the whole account.
-5. **Wait for a maturity already coming.** If a rung matures in six weeks, bridging six weeks is cheaper than any penalty. That is the practical argument for [building a CD ladder](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) instead of one lump-sum term.
+5. **Wait for a maturity already coming.** If a rung matures in six weeks, bridging six weeks is cheaper than any penalty. That is the practical argument for [building a CD ladder](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) instead of one lump-sum term.
 
 ## The Situations That Force People to Break a CD
 
@@ -144,7 +144,7 @@ Almost every early withdrawal traces back to a decision made at opening, not to 
 - **Not knowing the penalty was days-of-interest based.** People who assume a small flat fee behave differently from people who know a year of interest is at stake.
 - **Ignoring taxes on interest already credited.** Interest is taxable in the year it is credited even if you later forfeit some of it to a penalty, so a mid-term break can produce a tax bill on money you did not keep.
 
-The fix for all five is the same: write the maturity date, the grace period, and the penalty formula into a calendar the day you open the account. If you want a fuller walkthrough of the product itself, start with [how a CD works from funding day to renewal](/SmartMoneyDaily/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
+The fix for all five is the same: write the maturity date, the grace period, and the penalty formula into a calendar the day you open the account. If you want a fuller walkthrough of the product itself, start with [how a CD works from funding day to renewal](/2026/07/16/what-is-a-certificate-of-deposit-and-how-does-it-benefit-you/).
 
 ## Use the Grace Period Instead
 

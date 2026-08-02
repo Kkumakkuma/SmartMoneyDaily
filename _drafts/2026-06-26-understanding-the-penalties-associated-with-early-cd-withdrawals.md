@@ -7,7 +7,7 @@ description: "Early CD withdrawals can lead to significant penalties. This post 
 tags: [cd-rates, high-yield-savings-accounts, 2026]
 ---
 
-![Understanding the Penalties Associated with Early CD Withdrawals](/SmartMoneyDaily/assets/pin-images/2026-06-26-understanding-the-penalties-associated-with-early-cd-withdrawals.png)
+![Understanding the Penalties Associated with Early CD Withdrawals](/assets/pin-images/2026-06-26-understanding-the-penalties-associated-with-early-cd-withdrawals.png)
 
 > **Quick answer:** Early withdrawals from CDs often incur penalties that can range from a few months’ worth of interest to a fixed percentage of the deposit. Understanding these penalties can help you make informed decisions about your savings strategy.
 
@@ -144,10 +144,10 @@ Implementing these strategies can help you navigate the challenges of early with
 
 ## Further Reading
 
-- [A Comprehensive Guide to Finding the Right Money Market Fund!](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/)
-- [A Beginner's Guide to Building an Emergency Fund with Smart Banking Options](/SmartMoneyDaily/2026/06/25/a-beginners-guide-to-building-an-emergency-fund-with-smart-banking-options/)
-- [How to Choose the Right Savings Account for Your Short-Term Goals](/SmartMoneyDaily/2026/06/24/how-to-choose-the-right-savings-account-for-your-short-term-goals/)
-- [How to Avoid Hidden Fees with High-Yield Savings and Money Market Funds](/SmartMoneyDaily/2026/06/24/how-to-avoid-hidden-fees-with-high-yield-savings-and-money-market-funds/)
-- [What You Should Know About Penalties for Early CD Withdrawals](/SmartMoneyDaily/2026/06/23/what-you-should-know-about-penalties-for-early-cd-withdrawals/)
+- [A Comprehensive Guide to Finding the Right Money Market Fund!](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/)
+- [A Beginner's Guide to Building an Emergency Fund with Smart Banking Options](/2026/06/25/a-beginners-guide-to-building-an-emergency-fund-with-smart-banking-options/)
+- [How to Choose the Right Savings Account for Your Short-Term Goals](/2026/06/24/how-to-choose-the-right-savings-account-for-your-short-term-goals/)
+- [How to Avoid Hidden Fees with High-Yield Savings and Money Market Funds](/2026/06/24/how-to-avoid-hidden-fees-with-high-yield-savings-and-money-market-funds/)
+- [What You Should Know About Penalties for Early CD Withdrawals](/2026/06/23/what-you-should-know-about-penalties-for-early-cd-withdrawals/)
 
 *Last reviewed: June 2026 by Kkuma Park.*

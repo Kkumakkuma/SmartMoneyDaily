@@ -6,7 +6,7 @@ categories: [passive-income]
 description: "Dividend Investing for Beginners: Complete Guide - Learn practical tips and strategies for your personal finances."
 ---
 
-![Dividend Investing for Beginners: Complete Guide](/SmartMoneyDaily/assets/pin-images/2026-04-06-dividend-investing-for-beginners-complete-guide.png)
+![Dividend Investing for Beginners: Complete Guide](/assets/pin-images/2026-04-06-dividend-investing-for-beginners-complete-guide.png)
 
 Dividend Investing for Beginners: Complete Guide
 

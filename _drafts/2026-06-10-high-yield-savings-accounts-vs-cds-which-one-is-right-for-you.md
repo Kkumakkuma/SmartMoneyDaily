@@ -7,7 +7,7 @@ description: "High-yield savings accounts vs CDs: which one suits your financial
 tags: [bank-comparison, high-yield-savings-accounts, 2026]
 ---
 
-![High-Yield Savings Accounts vs CDs: Which One is Right for You?](/SmartMoneyDaily/assets/pin-images/2026-06-10-high-yield-savings-accounts-vs-cds-which-one-is-right-for-you.png)
+![High-Yield Savings Accounts vs CDs: Which One is Right for You?](/assets/pin-images/2026-06-10-high-yield-savings-accounts-vs-cds-which-one-is-right-for-you.png)
 
 > **Quick answer:** Both high-yield savings accounts (HYSAs) and certificates of deposit (CDs) can be effective savings tools, but they serve different purposes. HYSAs offer more liquidity, while CDs typically provide higher interest rates for long-term deposits.
 
@@ -25,7 +25,7 @@ HYSAs generally have no monthly maintenance fees, and you can typically withdraw
 - **Higher interest rates**: HYSAs usually offer interest rates well above the national average, translating into better returns on savings.
 - **FDIC Insurance**: As with traditional savings accounts, deposits in HYSAs are insured by the FDIC up to $250,000 per depositor, per insured bank.
 
-For more on HYSAs, see my article on "[Common Factors to Weigh When Choosing Between CDs and High-Yield Options](/SmartMoneyDaily/2026/06/07/common-factors-to-weigh-when-choosing-between-cds-and-high-yield-options/)."
+For more on HYSAs, see my article on "[Common Factors to Weigh When Choosing Between CDs and High-Yield Options](/2026/06/07/common-factors-to-weigh-when-choosing-between-cds-and-high-yield-options/)."
 
 ## What Is a Certificate of Deposit (CD)?
 
@@ -39,7 +39,7 @@ When you open a CD, you agree to leave your money in the account for a certain l
 - **Predictability**: You know exactly how much interest you will earn, making it easier to plan savings.
 - **FDIC Insurance**: Similar to HYSAs, CDs are also insured by the FDIC up to $250,000 per depositor, per insured bank.
 
-Learn more about how CDs can fit into [your savings strategy](/SmartMoneyDaily/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/) in "[How to Get the Most Out of Your Certificate of Deposit](/SmartMoneyDaily/2026/06/08/how-to-get-the-most-out-of-your-certificate-of-deposit/)."
+Learn more about how CDs can fit into [your savings strategy](/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/) in "[How to Get the Most Out of Your Certificate of Deposit](/2026/06/08/how-to-get-the-most-out-of-your-certificate-of-deposit/)."
 
 ## How Do High-Yield Savings Accounts and CDs Compare?
 
@@ -60,7 +60,7 @@ When deciding between HYSAs and CDs, it's essential to understand the key differ
 4. **Understand liquidity needs**: Consider how often you may need to access your funds and if a fixed commitment suits your financial situation.
 5. **Consider inflation**: Take into account how interest rates may change in response to inflation and economic conditions.
 
-If you're interested in more in-depth examples and discussions around financial products like CDs, check out "[Should You Opt for a Short-Term or Long-Term CD?](/SmartMoneyDaily/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/)"
+If you're interested in more in-depth examples and discussions around financial products like CDs, check out "[Should You Opt for a Short-Term or Long-Term CD?](/2026/06/08/should-you-opt-for-a-short-term-or-long-term-cd/)"
 
 ## Common Mistakes
 
@@ -120,8 +120,8 @@ Assessing these factors can help align your choice of account with your overall 
 
 ## Further Reading
 
-- [What to Know About Upfront Fees for Money Market Accounts](/SmartMoneyDaily/2026/06/09/what-to-know-about-upfront-fees-for-money-market-accounts/)
-- [Understanding Money Market Accounts: Benefits and Drawbacks Explained](/SmartMoneyDaily/2026/06/09/understanding-money-market-accounts-benefits-and-drawbacks-explained/)
-- [How Changing Interest Rates Affect Your Money Market Account Returns](/SmartMoneyDaily/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/)
+- [What to Know About Upfront Fees for Money Market Accounts](/2026/06/09/what-to-know-about-upfront-fees-for-money-market-accounts/)
+- [Understanding Money Market Accounts: Benefits and Drawbacks Explained](/2026/06/09/understanding-money-market-accounts-benefits-and-drawbacks-explained/)
+- [How Changing Interest Rates Affect Your Money Market Account Returns](/2026/06/07/how-changing-interest-rates-affect-your-money-market-account-returns/)
 
 *Last reviewed: June 2026 by Kkuma Park.*

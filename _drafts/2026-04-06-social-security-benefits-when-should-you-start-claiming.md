@@ -6,7 +6,7 @@ categories: [retirement]
 description: "Social Security Benefits: When Should You Start Claiming - Learn practical tips and strategies for your personal finances."
 ---
 
-![Social Security Benefits: When Should You Start Claiming](/SmartMoneyDaily/assets/pin-images/2026-04-06-social-security-benefits-when-should-you-start-claiming.png)
+![Social Security Benefits: When Should You Start Claiming](/assets/pin-images/2026-04-06-social-security-benefits-when-should-you-start-claiming.png)
 
 Social Security Benefits: When Should You Start Claiming
 

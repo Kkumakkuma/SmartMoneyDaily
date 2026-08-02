@@ -12,11 +12,11 @@ redirect_from:
   - /2026/06/16/how-to-safely-use-your-emergency-fund-in-a-savings-strategy/
 ---
 
-![An emergency fund split across a savings account, a money market account, a short CD, and a small cash envelope](/SmartMoneyDaily/assets/pin-images/2026-07-20-how-to-effectively-use-high-yield-savings-for-emergency-funds.png)
+![An emergency fund split across a savings account, a money market account, a short CD, and a small cash envelope](/assets/pin-images/2026-07-20-how-to-effectively-use-high-yield-savings-for-emergency-funds.png)
 
 > **Short answer:** Put the emergency fund in a high-yield savings account at a federally insured bank or credit union. Add a money market account only if you need to pay someone directly by check or card. Use no-penalty or short CDs for the back portion of a large fund, never for the front. Keep a small amount of physical cash for an outage, not for storage.
 
-Sizing the fund and placing the fund are two different problems, and mixing them is why so many people end up with the right number in the wrong account. If you are still working out how many months to cover, start with [how big your emergency fund should be](/SmartMoneyDaily/2026/05/09/emergency-fund-basics-how-much-should-you-really-save/) and come back. This page assumes you have a target number and one question left: where does it live so that it is both safe and reachable on the day you need it?
+Sizing the fund and placing the fund are two different problems, and mixing them is why so many people end up with the right number in the wrong account. If you are still working out how many months to cover, start with [how big your emergency fund should be](/2026/05/09/emergency-fund-basics-how-much-should-you-really-save/) and come back. This page assumes you have a target number and one question left: where does it live so that it is both safe and reachable on the day you need it?
 
 ## Three Rules an Emergency Account Has to Pass
 
@@ -49,7 +49,7 @@ A high-yield savings account clears all three rules and asks for nothing in retu
 
 The dollars involved are worth being concrete about. Suppose you hold $15,000 and the account pays 4.00% APY. Over a year, before tax, that is roughly $600. Suppose instead it sits in a legacy savings account paying 0.40%. That is roughly $60. The $540 difference is not a rounding error, and it is earned by filling in an application once. Those figures are illustrative, not a quote: the FDIC publishes monthly national deposit rate data, and your bank's rate sheet is a public document, so you can compare a real offer against a real baseline before deciding anything.
 
-Before funding one, work through the disclosure items in [what to check before opening a high-yield savings account](/SmartMoneyDaily/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) — particularly whether the advertised rate applies to your whole balance and who the actual chartered bank is.
+Before funding one, work through the disclosure items in [what to check before opening a high-yield savings account](/2026/06/15/what-to-consider-when-opening-a-high-yield-savings-account/) — particularly whether the advertised rate applies to your whole balance and who the actual chartered bank is.
 
 That last point matters for app-based accounts. Some fintech products are not banks; they place deposits with one or more partner banks, and insurance depends on those banks and on the records being maintained correctly. Look up the named partner bank in the FDIC's [BankFind Suite](https://banks.data.fdic.gov/bankfind-suite/bankfind) and confirm the certificate exists. If a product will not tell you plainly which insured institution holds the money, that is your answer.
 
@@ -57,13 +57,13 @@ That last point matters for app-based accounts. Some fintech products are not ba
 
 A money market account is a deposit account with payment features bolted on: limited check writing, sometimes a debit card, sometimes ATM access. Insurance works exactly the same way as savings. What you are buying is the ability to hand money directly to a contractor, a hospital billing desk, or a landlord without waiting on an ACH transfer.
 
-The trade-offs are minimums and tiers. Many MMAs set an opening minimum, an ongoing balance requirement to avoid a monthly fee, and a tiered rate schedule where the advertised APY applies only above a certain balance. If your fund sits near a tier boundary, the rate you actually receive can be materially lower than the headline. The mechanics of tiers are covered in [what a money market account is and how it works](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/).
+The trade-offs are minimums and tiers. Many MMAs set an opening minimum, an ongoing balance requirement to avoid a monthly fee, and a tiered rate schedule where the advertised APY applies only above a certain balance. If your fund sits near a tier boundary, the rate you actually receive can be materially lower than the headline. The mechanics of tiers are covered in [what a money market account is and how it works](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/).
 
 One naming trap deserves a flat statement: a money market *account* is a bank deposit and is insured; a money market *fund* is a securities product and is not covered by deposit insurance, no matter how stable its share price has been. Funds also settle on a trade timetable rather than a transfer timetable. That combination makes them a poor first-line emergency account even when the yield looks attractive.
 
 ## CDs for the Back Half Only
 
-CDs pay a fixed rate because you promise not to touch the money, and the promise is enforced with an early withdrawal penalty stated in days of interest — commonly some number of days' worth of what the CD would have earned. When the CD has not yet earned that much interest, the penalty can dip into principal, which is permitted and disclosed. The arithmetic for deciding whether breaking one is still worth it is laid out in [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+CDs pay a fixed rate because you promise not to touch the money, and the promise is enforced with an early withdrawal penalty stated in days of interest — commonly some number of days' worth of what the CD would have earned. When the CD has not yet earned that much interest, the penalty can dip into principal, which is permitted and disclosed. The arithmetic for deciding whether breaking one is still worth it is laid out in [what cashing out a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 That is why a CD never holds the front of an emergency fund. It can reasonably hold the back:
 
@@ -88,7 +88,7 @@ Once the fund is more than a month or two of expenses, splitting it by how fast 
 
 Worked through with an assumed $18,000 target: roughly $1,500 in Tier 1 so a bad Tuesday never requires a transfer, about $10,500 in high-yield savings as Tier 2, and about $6,000 in Tier 3 across two or three short CD rungs. Adjust the shares to your own life — a single earner with a high insurance deductible should push more into Tier 2, and anyone whose fund is under three months of expenses should skip Tier 3 entirely and keep it simple.
 
-Before you settle on where Tier 2 lives, check that the account is not charging back part of what it pays. The [account fee break-even calculator](/SmartMoneyDaily/tools/bank-fee-break-even-calculator/) shows the balance below which a monthly fee turns the account into a loss.
+Before you settle on where Tier 2 lives, check that the account is not charging back part of what it pays. The [account fee break-even calculator](/tools/bank-fee-break-even-calculator/) shows the balance below which a monthly fee turns the account into a loss.
 
 ## Withdrawal Rules: What Counts as an Emergency
 

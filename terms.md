@@ -9,7 +9,7 @@ description: "The terms under which you may use SmartMoneyDaily."
 
 _Last updated: April 19, 2026_
 
-By accessing or using **SmartMoneyDaily** (https://kkumakkuma.github.io/SmartMoneyDaily), you agree to be bound by the following terms. If you do not agree, please do not use the Site.
+By accessing or using **SmartMoneyDaily** (https://smartmoneydaily.github.io), you agree to be bound by the following terms. If you do not agree, please do not use the Site.
 
 ## 1. Use of the Site
 

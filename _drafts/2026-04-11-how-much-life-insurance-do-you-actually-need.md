@@ -6,7 +6,7 @@ categories: [insurance]
 description: "How Much Life Insurance Do You Actually Need - Learn practical tips and strategies for your personal finances."
 ---
 
-![How Much Life Insurance Do You Actually Need](/SmartMoneyDaily/assets/pin-images/2026-04-11-how-much-life-insurance-do-you-actually-need.png)
+![How Much Life Insurance Do You Actually Need](/assets/pin-images/2026-04-11-how-much-life-insurance-do-you-actually-need.png)
 
 How Much Life Insurance Do You Actually Need
 

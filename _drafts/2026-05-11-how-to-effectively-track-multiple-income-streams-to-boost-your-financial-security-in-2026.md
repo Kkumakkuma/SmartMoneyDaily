@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![How to Effectively Track Multiple Income Streams to Boost Your Financial Security in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-11-how-to-effectively-track-multiple-income-streams-to-boost-your-financial-security-in-2026.png)
+![How to Effectively Track Multiple Income Streams to Boost Your Financial Security in 2026](/assets/pin-images/2026-05-11-how-to-effectively-track-multiple-income-streams-to-boost-your-financial-security-in-2026.png)
 
 # How to Effectively Track Multiple Income Streams to Boost Your Financial Security in 2026
 

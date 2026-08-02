@@ -9,7 +9,7 @@ redirect_from:
   - /2026/06/28/what-are-the-tax-implications-of-certificates-of-deposit/
 ---
 
-![Diagram showing savings interest passing through a tax form to a smaller after-tax amount](/SmartMoneyDaily/assets/pin-images/2026-07-23-how-tax-implications-affect-your-earnings-from-high-yield-options.png)
+![Diagram showing savings interest passing through a tax form to a smaller after-tax amount](/assets/pin-images/2026-07-23-how-tax-implications-affect-your-earnings-from-high-yield-options.png)
 
 > **Short answer:** Interest from savings accounts, money market accounts, and CDs is ordinary income, taxed at your marginal rate in the year the bank credits it or makes it available to you. The number that matters for planning is not the advertised APY but the APY multiplied by one minus your combined federal and state marginal rate.
 
@@ -72,7 +72,7 @@ Worked example, with assumed figures. Suppose you hold a 3-year CD of $20,000 pa
 - Box 1 shows about $933; Box 2 shows about $394
 - Net taxable effect: roughly $539 of income after the Schedule 1 adjustment
 
-Note that the two amounts are calculated on different bases — the credited interest reflects your actual holding period, the penalty reflects a fixed number of days. That is why a penalty can exceed the interest you have earned on a CD broken early in its term, which is how a penalty reaches into principal. The mechanics of that, including how to run the break-even before you decide, are covered in [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+Note that the two amounts are calculated on different bases — the credited interest reflects your actual holding period, the penalty reflects a fixed number of days. That is why a penalty can exceed the interest you have earned on a CD broken early in its term, which is how a penalty reaches into principal. The mechanics of that, including how to run the break-even before you decide, are covered in [what cashing out a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 ## State Tax: Where Treasuries and Municipal Funds Break the Pattern
 
@@ -82,7 +82,7 @@ Bank deposit interest — savings, money market accounts, CDs — is generally t
 
 You can turn this into a number instead of a vibe. Assume a federal marginal rate of 24% and a state rate of 6%. A Treasury paying 4.00% keeps 4.00% × (1 − 0.24) = 3.04% after tax. For a bank CD to match that, it must clear 3.04% ÷ (1 − 0.30) ≈ **4.34%**. So in that scenario a CD needs roughly 34 basis points of headline advantage just to tie. In a state with no income tax, the gap disappears entirely and the comparison goes back to the raw APYs.
 
-Run that arithmetic with your own rates before concluding a CD beats a Treasury. Rules for individual securities are on [treasurydirect.gov](https://www.treasurydirect.gov/), and fund-level pass-through percentages come from the fund company's year-end tax documents — the same documents worth checking when you are [evaluating a money market fund](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
+Run that arithmetic with your own rates before concluding a CD beats a Treasury. Rules for individual securities are on [treasurydirect.gov](https://www.treasurydirect.gov/), and fund-level pass-through percentages come from the fund company's year-end tax documents — the same documents worth checking when you are [evaluating a money market fund](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
 
 One naming point that trips people up: money market **funds** distribute dividends, not interest, and report on Form 1099-DIV. Money market **accounts** at a bank pay interest and report on Form 1099-INT. Same-sounding products, different forms, different insurance.
 
@@ -94,7 +94,7 @@ The conversion is one line:
 
 Combined marginal rate means federal plus state on your last dollar. It is an approximation — state tax interacts with your federal deduction — but it is close enough to rank accounts, which is all you need it for.
 
-There is a [after-tax and inflation-adjusted return calculator](/SmartMoneyDaily/tools/after-tax-real-return-calculator/) on this site if you want to put your own numbers through it.
+There is a [after-tax and inflation-adjusted return calculator](/tools/after-tax-real-return-calculator/) on this site if you want to put your own numbers through it.
 
 Here is the same conversion laid out. Every figure assumes a 4.00% APY on a $25,000 balance held for a full year — substitute your own quote and rate.
 
@@ -108,7 +108,7 @@ Here is the same conversion laid out. Every figure assumes a 4.00% APY on a $25,
 | 35% | 2.60% | $650 |
 | 40% | 2.40% | $600 |
 
-Two readings of that table are useful. The first: the spread between the best and worst rate you were shopping is often smaller than the spread taxes create, so an hour spent confirming account structure usually beats an hour spent chasing 10 basis points. The second: after-tax is still not the end of the line. Subtract inflation and you get the real return, which is the only figure that tells you whether your purchasing power grew — the method for that is in [what inflation does to your savings APY](/SmartMoneyDaily/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/). If you want to double-check the gross figure the calculator produces, the compounding math behind it is broken down in [how APY and compounding actually work](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
+Two readings of that table are useful. The first: the spread between the best and worst rate you were shopping is often smaller than the spread taxes create, so an hour spent confirming account structure usually beats an hour spent chasing 10 basis points. The second: after-tax is still not the end of the line. Subtract inflation and you get the real return, which is the only figure that tells you whether your purchasing power grew — the method for that is in [what inflation does to your savings APY](/2026/07/23/how-to-evaluate-the-risk-of-inflation-on-your-savings-accounts/). If you want to double-check the gross figure the calculator produces, the compounding math behind it is broken down in [how APY and compounding actually work](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 
 ## Tax-Advantaged Places to Hold Cash, and Their Limits
 

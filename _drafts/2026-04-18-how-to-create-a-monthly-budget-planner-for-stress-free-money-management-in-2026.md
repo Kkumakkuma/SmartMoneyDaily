@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![How to Create a Monthly Budget Planner for Stress-Free Money Management in 2026](/SmartMoneyDaily/assets/pin-images/2026-04-18-how-to-create-a-monthly-budget-planner-for-stress-free-money-management-in-2026.png)
+![How to Create a Monthly Budget Planner for Stress-Free Money Management in 2026](/assets/pin-images/2026-04-18-how-to-create-a-monthly-budget-planner-for-stress-free-money-management-in-2026.png)
 
 # How to Create a Monthly Budget Planner for Stress-Free Money Management in 2026
 

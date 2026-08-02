@@ -7,7 +7,7 @@ description: "Understand capital gains taxes for your real estate sales in 2026.
 tags: [taxes, personal-finance, 2026]
 ---
 
-![What Are Capital Gains Taxes and How to Calculate Them for Your Real Estate Sales?](/SmartMoneyDaily/assets/pin-images/2026-05-22-what-are-capital-gains-taxes-and-how-to-calculate-them-for-your-real-estate-sales.png)
+![What Are Capital Gains Taxes and How to Calculate Them for Your Real Estate Sales?](/assets/pin-images/2026-05-22-what-are-capital-gains-taxes-and-how-to-calculate-them-for-your-real-estate-sales.png)
 
 > **Quick answer:** Capital gains taxes apply to profits earned from selling real estate, and calculating them requires identifying your basis, the selling price, and how long you owned the property. For example, if I sold a property for $300,000 with an original basis of $200,000, my capital gain would be $100,000, which is taxable.
 

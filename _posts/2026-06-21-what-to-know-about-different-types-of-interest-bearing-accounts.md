@@ -12,7 +12,7 @@ redirect_from:
   - /2026/06/29/the-best-savings-strategies-for-maximizing-account-benefits/
 ---
 
-![Four deposit product types compared side by side across rate, access, and insurance features](/SmartMoneyDaily/assets/pin-images/2026-06-21-what-to-know-about-different-types-of-interest-bearing-accounts.png)
+![Four deposit product types compared side by side across rate, access, and insurance features](/assets/pin-images/2026-06-21-what-to-know-about-different-types-of-interest-bearing-accounts.png)
 
 > **Short answer:** A high-yield savings account pays a variable rate with same-day access. A CD pays a fixed rate but locks the money for a term. A money market account pays a tiered variable rate and lets you spend from it directly. A money market *fund* is not a bank account at all — it is a securities investment, and no deposit insurance stands behind it. Everything else is detail.
 
@@ -49,9 +49,9 @@ The advertised APY is almost always the top tier. Your APY is whatever your actu
 
 Rate movement also runs on different clocks. Policy decisions by the [Federal Reserve](https://www.federalreserve.gov/monetarypolicy.htm) flow through to deposit pricing, but each bank decides its own timing and its own amount, which is why two institutions can quote very different rates in the same week. The FDIC publishes monthly [national rates and rate caps](https://www.fdic.gov/national-rates-and-rate-caps) for savings, money market, and CD products. Look that up before you decide whether an offer is good — it is the only free, official baseline you have.
 
-To work this out with your actual balance, use the [tiered rate calculator](/SmartMoneyDaily/tools/tiered-rate-calculator/).
+To work this out with your actual balance, use the [tiered rate calculator](/tools/tiered-rate-calculator/).
 
-One correction worth making, because the internet oversells it: compounding frequency matters far less than the rate. Take a $10,000 balance at a 4.00% nominal rate. Compounded daily it produces about $408 over a year; compounded monthly, about $407. That is roughly a 70-cent difference. Move from a 4.00% nominal rate to a 3.75% one and you give up about $26 on the same balance. Chase the rate. Treat the compounding schedule as a tiebreaker. The [full APY and compounding walkthrough](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers the formula and how banks post interest.
+One correction worth making, because the internet oversells it: compounding frequency matters far less than the rate. Take a $10,000 balance at a 4.00% nominal rate. Compounded daily it produces about $408 over a year; compounded monthly, about $407. That is roughly a 70-cent difference. Move from a 4.00% nominal rate to a 3.75% one and you give up about $26 on the same balance. Chase the rate. Treat the compounding schedule as a tiebreaker. The [full APY and compounding walkthrough](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers the formula and how banks post interest.
 
 ## Access and Liquidity: What "Getting Your Money" Actually Means
 
@@ -72,7 +72,7 @@ Deposits at an FDIC-member bank are insured up to $250,000 per depositor, per in
 
 Money market funds are not insured by either agency. They are held in a brokerage account, and SIPC protection applies to the failure of the brokerage firm and missing customer assets — it does not protect you from the fund's holdings losing value. A fund that seeks to maintain a stable share price is not promising one. Read the prospectus for what the fund holds and what liquidity provisions apply under stress.
 
-The middle case that trips people up is the fintech app. Many savings apps are not banks. They pass deposits to one or more partner banks, and coverage depends on that arrangement working exactly as described. Before funding, find the named partner institution in the account terms and confirm the charter yourself. The [deposit insurance guide](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) walks through the verification steps and what falls outside coverage.
+The middle case that trips people up is the fintech app. Many savings apps are not banks. They pass deposits to one or more partner banks, and coverage depends on that arrangement working exactly as described. Before funding, find the named partner institution in the account terms and confirm the charter yourself. The [deposit insurance guide](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) walks through the verification steps and what falls outside coverage.
 
 ## Costs: Fees, Minimums, Penalties, Expense Ratios
 
@@ -135,10 +135,10 @@ Deposit accounts are covered by the Truth in Savings Act, implemented in [12 CFR
 
 | If your question is… | Go here |
 |---|---|
-| "What will this balance actually earn, and how do I check the bank's math?" | [APY, compounding, and what your savings will really earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) |
-| "Is my money safe, and how do I verify the institution?" | [What FDIC insurance actually covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) |
-| "Should I use a money market fund instead of a bank account?" | [How money market funds work and where risk hides](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/) |
-| "I know my goal and my timeline — just tell me which account" | [Which savings account fits your goal and timeline](/SmartMoneyDaily/2026/07/06/how-to-decide-on-the-best-account-type-for-your-financial-goals/) |
+| "What will this balance actually earn, and how do I check the bank's math?" | [APY, compounding, and what your savings will really earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) |
+| "Is my money safe, and how do I verify the institution?" | [What FDIC insurance actually covers](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) |
+| "Should I use a money market fund instead of a bank account?" | [How money market funds work and where risk hides](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/) |
+| "I know my goal and my timeline — just tell me which account" | [Which savings account fits your goal and timeline](/2026/07/06/how-to-decide-on-the-best-account-type-for-your-financial-goals/) |
 
 ## Account Types: The Confusions Worth Clearing Up
 

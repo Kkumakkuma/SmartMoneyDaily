@@ -10,11 +10,11 @@ redirect_from:
   - /2026/07/18/how-to-make-sure-your-high-yield-savings-is-fully-protected-by-fdic-insurance/
 ---
 
-![Bank deposits divided across separate charters and ownership categories so each slice stays under the insurance cap](/SmartMoneyDaily/assets/pin-images/2026-06-12-how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance.png)
+![Bank deposits divided across separate charters and ownership categories so each slice stays under the insurance cap](/assets/pin-images/2026-06-12-how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance.png)
 
 > **What to do:** Deposit insurance is capped at $250,000 per depositor, per insured bank, per ownership category. To cover more, you add banks with separate charters, add ownership categories at one bank, hand the splitting to a deposit network, or move part of the balance into Treasuries. Anything above the ceiling is an unsecured claim against a failed bank, so the fix has to happen before there is a problem, not after.
 
-This is the execution guide. If you are still working out what the cap covers and how the categories are counted, read [what FDIC insurance actually covers](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) and [how the $250,000 limit is calculated](/SmartMoneyDaily/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/) first. What follows assumes you already know the rule and now need a layout for the money.
+This is the execution guide. If you are still working out what the cap covers and how the categories are counted, read [what FDIC insurance actually covers](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/) and [how the $250,000 limit is calculated](/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/) first. What follows assumes you already know the rule and now need a layout for the money.
 
 ## When You Cross the Line: Balances That Trigger a Rework
 
@@ -73,7 +73,7 @@ Above roughly a million dollars, splitting deposits across charters becomes a ch
 
 Treasury bills, notes, and bonds are direct obligations of the U.S. government. They are not FDIC-insured and do not need to be — there is no per-account cap, because the protection comes from the issuer rather than an insurance fund. You can buy them without a broker at [TreasuryDirect](https://www.treasurydirect.gov/). The trade-offs are real: your money is committed until maturity unless you sell in the secondary market at whatever price it fetches that day, and state income tax treatment of Treasury interest differs from bank interest.
 
-Government money market funds are the other common landing spot, and they are a different animal entirely. A fund is a security, not a deposit. It is not FDIC-insured, its value can move, and brokerage account protection covers custody failure rather than investment loss. If that is where a chunk of your cash is headed, read [how money market funds work and where their risk hides](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/) before you treat the balance as equivalent to a savings account.
+Government money market funds are the other common landing spot, and they are a different animal entirely. A fund is a security, not a deposit. It is not FDIC-insured, its value can move, and brokerage account protection covers custody failure rather than investment loss. If that is where a chunk of your cash is headed, read [how money market funds work and where their risk hides](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/) before you treat the balance as equivalent to a savings account.
 
 | Route | Coverage source | Effort to set up | Ongoing maintenance | Watch out for |
 |---|---|---|---|---|
@@ -94,7 +94,7 @@ To check your own numbers, enter your opening balance, the APY on your disclosur
 
 {% include tools/fdic-coverage.html %}
 
-The same arithmetic applies to CD ladders, where several rungs mature into one account in the same window. If you run a ladder, check the combined landing balance on each maturity date rather than each rung in isolation; the [CD laddering guide](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) covers how to schedule those dates.
+The same arithmetic applies to CD ladders, where several rungs mature into one account in the same window. If you run a ladder, check the combined landing balance on each maturity date rather than each rung in isolation; the [CD laddering guide](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/) covers how to schedule those dates.
 
 ## A Quarterly Coverage Audit You Can Run in 15 Minutes
 
@@ -141,6 +141,6 @@ Pick the route by how much maintenance you will genuinely do, not by which one h
 
 ## Further Reading
 
-- [What Is FDIC Insurance and What Does It Actually Cover?](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
-- [FDIC Limits: How the $250,000 Cap Is Really Calculated](/SmartMoneyDaily/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/)
-- [Money Market Funds: How They Work and Where Risk Hides](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/)
+- [What Is FDIC Insurance and What Does It Actually Cover?](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/)
+- [FDIC Limits: How the $250,000 Cap Is Really Calculated](/2026/06/01/what-limits-does-fdic-insurance-have-on-your-funds/)
+- [Money Market Funds: How They Work and Where Risk Hides](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/)

@@ -12,7 +12,7 @@ redirect_from:
   - /2026/07/26/evaluating-the-true-cost-of-using-money-market-accounts/
 ---
 
-![A savings balance shrinking as monthly account charges are deducted from the interest it earns](/SmartMoneyDaily/assets/pin-images/2026-06-26-how-to-identify-and-avoid-common-fees-in-high-yield-options.png)
+![A savings balance shrinking as monthly account charges are deducted from the interest it earns](/assets/pin-images/2026-06-26-how-to-identify-and-avoid-common-fees-in-high-yield-options.png)
 
 > **Short answer:** On most balances under about $25,000, one monthly maintenance fee costs more than the entire rate gap between a good account and a mediocre one. Pull the fee schedule before you compare APYs, calculate your net APY after costs, and audit what you already hold — the fee you pay today is easier to remove than the extra tenth of a point you are hunting.
 
@@ -67,13 +67,13 @@ Money market accounts collect more fee types than plain savings for a structural
 
 MMAs also add a cost that is not labeled a fee at all: **tier pricing**. The advertised APY often applies only above a balance threshold. Drop below it and two things can happen in one statement cycle — your rate steps down a tier, and a below-minimum fee is assessed. The rate cut is the larger loss and the one that never appears as a line item.
 
-The transaction-limit story is widely misunderstood too. The Federal Reserve removed the six-per-month transfer limit from Regulation D in 2020, documented on its [reserve requirements page](https://www.federalreserve.gov/monetarypolicy/reservereq.htm). Any six-transfer cap you still face is your bank's own policy, not federal law, so it varies by institution and is a fair thing to ask about before you open. If your transfer pattern is heavier than the cap, choose a different account rather than pay per-item charges every month. Tier tables and limit rules are covered in [how to choose a money market account](/SmartMoneyDaily/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
+The transaction-limit story is widely misunderstood too. The Federal Reserve removed the six-per-month transfer limit from Regulation D in 2020, documented on its [reserve requirements page](https://www.federalreserve.gov/monetarypolicy/reservereq.htm). Any six-transfer cap you still face is your bank's own policy, not federal law, so it varies by institution and is a fair thing to ask about before you open. If your transfer pattern is heavier than the cap, choose a different account rather than pay per-item charges every month. Tier tables and limit rules are covered in [how to choose a money market account](/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
 
 ## CD Costs That Are Not Called Fees
 
 A CD usually has no monthly maintenance fee, which makes it look free. Its costs are real; they are just event-driven.
 
-- **The early withdrawal penalty.** Written as a number of days' interest rather than a percentage, and applied whether or not you have earned that much yet. Break a CD early in its term and the penalty can reach into principal — permitted, and disclosed. The break-even math is in [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+- **The early withdrawal penalty.** Written as a number of days' interest rather than a percentage, and applied whether or not you have earned that much yet. Break a CD early in its term and the penalty can reach into principal — permitted, and disclosed. The break-even math is in [what cashing out a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 - **Auto-renewal into a worse rate.** Nothing is charged. Let the grace period pass and you are repriced into whatever the bank offers that day, for another full term. Over a long CD that gap dwarfs any maintenance fee you were avoiding.
 - **Brokered CD exit costs.** A brokered CD cannot be redeemed early at the bank. Selling means the secondary market — a markdown or commission plus whatever price it fetches that day. Some also carry a call feature, letting the issuer end it early on its own terms.
 - **Funding costs.** Wiring money in to hit a rate deadline is a fee like any other. An ACH transfer started a few days earlier is free.
@@ -90,7 +90,7 @@ Three things to check on the fact sheet or prospectus:
 - **Fee waivers with an end date.** Sponsors sometimes waive part of the expense ratio temporarily; the prospectus states when the waiver expires.
 - **Settlement timing.** Redeeming shares is not the same as withdrawing from a bank account, and the delay is a cost when the money is needed today.
 
-The difference that matters most: fund shares are not FDIC-insured. Deposit insurance covers accounts at insured banks, and you can confirm any institution's status in [FDIC BankFind](https://banks.data.fdic.gov/bankfind-suite/bankfind) or the [NCUA's share insurance material](https://ncua.gov/consumers/share-insurance-coverage) for credit unions. What that changes is covered in the [guide to money market funds](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
+The difference that matters most: fund shares are not FDIC-insured. Deposit insurance covers accounts at insured banks, and you can confirm any institution's status in [FDIC BankFind](https://banks.data.fdic.gov/bankfind-suite/bankfind) or the [NCUA's share insurance material](https://ncua.gov/consumers/share-insurance-coverage) for credit unions. What that changes is covered in the [guide to money market funds](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
 
 ## Net APY: The Only Fee Math You Need
 
@@ -116,7 +116,7 @@ To see what a balance compounds to over your holding period, enter it below with
 
 {% include tools/fee-break-even.html %}
 
-If the mechanics of APY and compounding frequency are the part you want nailed down, [how APY and compounding really work](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers the formula behind that box.
+If the mechanics of APY and compounding frequency are the part you want nailed down, [how APY and compounding really work](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) covers the formula behind that box.
 
 ## Getting a Fee Waived or Refunded
 

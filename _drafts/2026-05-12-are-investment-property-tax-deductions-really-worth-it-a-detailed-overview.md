@@ -7,7 +7,7 @@ description: "Investment property tax deductions can save you $5,000 or more thi
 tags: [taxes, personal-finance, 2026]
 ---
 
-![Are Investment Property Tax Deductions Really Worth It? A Detailed Overview](/SmartMoneyDaily/assets/pin-images/2026-05-12-are-investment-property-tax-deductions-really-worth-it-a-detailed-overview.png)
+![Are Investment Property Tax Deductions Really Worth It? A Detailed Overview](/assets/pin-images/2026-05-12-are-investment-property-tax-deductions-really-worth-it-a-detailed-overview.png)
 
 > **Quick answer:** Investment property tax deductions can significantly reduce your taxable income, potentially saving you thousands of dollars each year. On average, homeowners can claim about $15,000 to $30,000 in deductions annually, depending on various factors like property value and expenses.
 

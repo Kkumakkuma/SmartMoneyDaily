@@ -13,13 +13,13 @@ redirect_from:
   - /2026/06/04/how-to-choose-the-right-interest-earning-option-for-your-goals/
 ---
 
-![Timeline showing how a goal's target date maps to savings, no-penalty CDs, term CDs, or a CD ladder](/SmartMoneyDaily/assets/pin-images/2026-07-06-how-to-decide-on-the-best-account-type-for-your-financial-goals.png)
+![Timeline showing how a goal's target date maps to savings, no-penalty CDs, term CDs, or a CD ladder](/assets/pin-images/2026-07-06-how-to-decide-on-the-best-account-type-for-your-financial-goals.png)
 
 > **Short answer:** Pick the account by the date you need the money, not by which rate looks highest. Under six months, keep it liquid in a savings or money market account. Six to 24 months, use a savings account or a CD that matures on or before your date. Two to five years with a firm date, a term CD or a ladder pays for the lock-up. Past five years, deposits stop being the right tool for the growth part of the goal.
 
 Most people pick a deposit account the wrong way around: rate comparison pages first, highest number wins, then they talk themselves into whatever terms come attached. The result is money locked for 36 months when the goal is 14 months away, or a down payment sitting in checking for two years earning close to nothing.
 
-Reverse the order. Fix the date, fix the amount, decide how firm that date really is, and look at rates last. This guide handles that mapping. For how each product works underneath — compounding, withdrawal rules, insurance mechanics — see [HYSA vs CD vs Money Market: How Each Account Type Works](/SmartMoneyDaily/2026/06/21/what-to-know-about-different-types-of-interest-bearing-accounts/).
+Reverse the order. Fix the date, fix the amount, decide how firm that date really is, and look at rates last. This guide handles that mapping. For how each product works underneath — compounding, withdrawal rules, insurance mechanics — see [HYSA vs CD vs Money Market: How Each Account Type Works](/2026/06/21/what-to-know-about-different-types-of-interest-bearing-accounts/).
 
 ## Start With the Date, Not the Rate
 
@@ -66,11 +66,11 @@ Two structures dominate:
 
 **A single term CD** matched to the date. Simplest option when the whole amount is needed at once and the date is firm.
 
-**A CD ladder** when the money will be spent in installments, or when the date is firm but you dislike committing every dollar to one rate. Split the balance across staggered maturities so a portion comes due each year. Each maturity is a decision point: spend it, or roll it into a new term at whatever rates exist then. Full mechanics are in [CD Laddering: Build a Ladder That Beats One Long CD](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
+**A CD ladder** when the money will be spent in installments, or when the date is firm but you dislike committing every dollar to one rate. Split the balance across staggered maturities so a portion comes due each year. Each maturity is a decision point: spend it, or roll it into a new term at whatever rates exist then. Full mechanics are in [CD Laddering: Build a Ladder That Beats One Long CD](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 
 One caution specific to this band: longer terms do not automatically carry higher rates. Depending on where the rate cycle sits, banks sometimes pay more on a 12-month CD than a 60-month one. Check the actual term-by-term rate sheet at each bank rather than assuming a rising line. The [Federal Reserve's monetary policy page](https://www.federalreserve.gov/monetarypolicy.htm) explains what drives the underlying direction; the bank's own disclosure tells you what it is paying today.
 
-There is a [fix it or float it calculator](/SmartMoneyDaily/tools/cd-vs-savings-calculator/) on this site if you want to put your own numbers through it.
+There is a [fix it or float it calculator](/tools/cd-vs-savings-calculator/) on this site if you want to put your own numbers through it.
 
 ## Beyond Five Years: When Deposits Stop Being the Right Tool
 
@@ -84,7 +84,7 @@ Keeping long-horizon money in deposits anyway, because losing principal is unacc
 
 The timeline sets the default. These three override it.
 
-**The emergency fund comes first.** Goal money and emergency money are not the same money. If your emergency reserve is not funded, locking a goal into a CD means the next unexpected bill breaks that CD. Settle the reserve first — [Where to Keep an Emergency Fund](/SmartMoneyDaily/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/) covers where it should sit — and treat everything above it as goal money.
+**The emergency fund comes first.** Goal money and emergency money are not the same money. If your emergency reserve is not funded, locking a goal into a CD means the next unexpected bill breaks that CD. Settle the reserve first — [Where to Keep an Emergency Fund](/2026/07/20/how-to-effectively-use-high-yield-savings-for-emergency-funds/) covers where it should sit — and treat everything above it as goal money.
 
 **You cannot usually add to a CD.** A standard CD takes one deposit at opening. If you are still building the balance with monthly contributions, a CD is structurally wrong for the contributions themselves. Accumulate in savings, then move completed chunks into terms as they finish. Some banks offer add-on CDs; that is a product feature to verify in writing, not to assume.
 
@@ -135,7 +135,7 @@ Dates move. The reassessment rules are short.
 
 **The date moved earlier and the money is in savings.** No action required. This is what you paid for by staying liquid.
 
-**The date moved earlier and the money is in a CD.** Run the break-even before you break anything. Suppose $20,000 sits in a 3-year CD at 4.00% with a penalty of 180 days of interest, and you are 18 months in. Interest accrued so far is roughly $1,212. The penalty runs about $20,000 × 4.00% × 0.5 = $400, leaving roughly $812. Had that money stayed in savings at 3.50% for the same 18 months, it would have earned about $1,059. Breaking early leaves you roughly $247 behind the liquid option — the penalty erased the CD's advantage and then some. The mechanics of that calculation, including how penalties can cut into principal on very short holdings, are in [Cashing Out a CD Early: What the Penalty Actually Costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+**The date moved earlier and the money is in a CD.** Run the break-even before you break anything. Suppose $20,000 sits in a 3-year CD at 4.00% with a penalty of 180 days of interest, and you are 18 months in. Interest accrued so far is roughly $1,212. The penalty runs about $20,000 × 4.00% × 0.5 = $400, leaving roughly $812. Had that money stayed in savings at 3.50% for the same 18 months, it would have earned about $1,059. Breaking early leaves you roughly $247 behind the liquid option — the penalty erased the CD's advantage and then some. The mechanics of that calculation, including how penalties can cut into principal on very short holdings, are in [Cashing Out a CD Early: What the Penalty Actually Costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 Sometimes breaking is still correct — if you need the money, you need it. The calculation tells you the price, not the answer.
 

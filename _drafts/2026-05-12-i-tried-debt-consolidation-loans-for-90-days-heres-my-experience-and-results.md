@@ -7,7 +7,7 @@ description: "I tried debt consolidation loans for 90 days and saved $3,000 this
 tags: [debt, personal-finance, 2026]
 ---
 
-![I Tried Debt Consolidation Loans for 90 Days – Here’s My Experience and Results](/SmartMoneyDaily/assets/pin-images/2026-05-12-i-tried-debt-consolidation-loans-for-90-days-heres-my-experience-and-results.png)
+![I Tried Debt Consolidation Loans for 90 Days – Here’s My Experience and Results](/assets/pin-images/2026-05-12-i-tried-debt-consolidation-loans-for-90-days-heres-my-experience-and-results.png)
 
 > **Quick answer:** I tried debt consolidation loans for 90 days to manage my $22,500 in credit card debt. I discovered that using a loan with a lower interest rate saved me around $1,125 in interest payments during that time, making it a compelling option for those struggling with high-interest debt.
 

@@ -7,7 +7,7 @@ description: "Boost your credit score by 100 points in 3 months with these 5 pro
 tags: [credit-score, personal-finance, 2026]
 ---
 
-![How to Increase Your Credit Score By 100 Points in 3 Months: What I Did](/SmartMoneyDaily/assets/pin-images/2026-05-13-how-to-increase-your-credit-score-by-100-points-in-3-months-what-i-did.png)
+![How to Increase Your Credit Score By 100 Points in 3 Months: What I Did](/assets/pin-images/2026-05-13-how-to-increase-your-credit-score-by-100-points-in-3-months-what-i-did.png)
 
 > **Quick answer:** You can increase your credit score by 100 points in three months by following targeted strategies like paying down debt, disputing inaccuracies, and establishing positive credit history. For instance, using methods I implemented, I raised my score from 610 to 710 during this period.
 

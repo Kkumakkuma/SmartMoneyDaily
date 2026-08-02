@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![How to Efficiently Manage Your Side Hustle Earnings Amid Rising Costs in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-19-how-to-efficiently-manage-your-side-hustle-earnings-amid-rising-costs-in-2026.png)
+![How to Efficiently Manage Your Side Hustle Earnings Amid Rising Costs in 2026](/assets/pin-images/2026-05-19-how-to-efficiently-manage-your-side-hustle-earnings-amid-rising-costs-in-2026.png)
 
 # How to Efficiently Manage Your Side Hustle Earnings Amid Rising Costs in 2026
 

@@ -12,7 +12,7 @@ redirect_from:
   - /2026/06/04/how-to-avoid-common-pitfalls-with-high-yield-savings-accounts/
 ---
 
-![Checklist of account terms a saver reviews before funding a high-yield savings account](/SmartMoneyDaily/assets/pin-images/2026-06-15-what-to-consider-when-opening-a-high-yield-savings-account.png)
+![Checklist of account terms a saver reviews before funding a high-yield savings account](/assets/pin-images/2026-06-15-what-to-consider-when-opening-a-high-yield-savings-account.png)
 
 > **Short answer:** Before you fund a high-yield savings account, confirm eight things in writing — the APY and whether it is variable, the compounding and crediting schedule, balance tiers, any promotional window, the monthly fee and its waiver, the minimums to open and to earn the headline rate, the transfer limits and excess-transaction fee, and the name of the insured institution holding the deposit. Everything else is marketing.
 
@@ -24,7 +24,7 @@ The practical consequence is that two accounts advertised with the same headline
 
 Banks that pay above-average rates are usually buying deposits. Online-only institutions and credit unions carry lower branch overhead, and some of that difference reaches the depositor. Institutions with dense branch networks and large existing deposit bases have less reason to compete on rate, because their funding is already there.
 
-That has two implications you can act on. First, the gap between a competitive account and a legacy account at a large bank is usually wide enough to matter on any balance you would keep for more than a few months — we work that gap out in dollars in [High-Yield vs Traditional Savings: The Real Dollar Gap](/SmartMoneyDaily/2026/06/11/high-yield-savings-vs-traditional-savings-which-is-better-for-you/). Second, "high-yield" describes the pricing strategy on the day you read it, not a promise. The rate is almost always variable.
+That has two implications you can act on. First, the gap between a competitive account and a legacy account at a large bank is usually wide enough to matter on any balance you would keep for more than a few months — we work that gap out in dollars in [High-Yield vs Traditional Savings: The Real Dollar Gap](/2026/06/11/high-yield-savings-vs-traditional-savings-which-is-better-for-you/). Second, "high-yield" describes the pricing strategy on the day you read it, not a promise. The rate is almost always variable.
 
 For a reference point rather than a target, the FDIC publishes a [monthly national deposit rate](https://www.fdic.gov/national-rates-and-rate-caps) for savings and other deposit products. Look it up before you compare offers, and treat any account you are considering as a spread above or below that published average. That is a judgment you make with current data, not one this page can make for you.
 
@@ -43,7 +43,7 @@ Print the disclosure or save the PDF. Then find each of these eight items and wr
 | 7 | Transfer and withdrawal limits, excess-transaction fee | Account agreement | Per-item fees on routine transfers |
 | 8 | The insured institution and its charter | Bank's FDIC certificate or NCUA charter | Coverage you assumed you had |
 
-Items 5 and 7 do more damage than most savers expect, because a fee is a certainty while a rate advantage is only an estimate. That trade-off is worked through in [The Fees That Quietly Eat Your Savings Interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+Items 5 and 7 do more damage than most savers expect, because a fee is a certainty while a rate advantage is only an estimate. That trade-off is worked through in [The Fees That Quietly Eat Your Savings Interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 ## Variable APY: How Fast the Rate Can Move After You Open
 
@@ -55,9 +55,9 @@ Two consequences follow.
 
 **A cut may arrive without an email.** The way to detect one is arithmetic on your own statement. Take the interest credited for the period, divide by your average daily balance for that period, and annualize it. Suppose a statement shows $63.20 of interest on an average balance of $19,000 for a 31-day month. That is 63.20 ÷ 19,000 = 0.003326 for the month; multiplied by 365/31 gives roughly 3.92% on an annualized basis. Compare that to what you believe you signed up for. If the gap is real, the rate moved.
 
-Run the same check once a quarter and you will never be the last to know. The mechanics of APY, compounding frequency, and how banks credit interest are covered in full in [APY, Compounding, and What Your Savings Will Really Earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
+Run the same check once a quarter and you will never be the last to know. The mechanics of APY, compounding frequency, and how banks credit interest are covered in full in [APY, Compounding, and What Your Savings Will Really Earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/).
 
-The [account fee break-even calculator](/SmartMoneyDaily/tools/bank-fee-break-even-calculator/) will do this with your own figures.
+The [account fee break-even calculator](/tools/bank-fee-break-even-calculator/) will do this with your own figures.
 
 ## Transfer Limits, ACH Timing, and How Fast You Can Get Cash
 
@@ -90,7 +90,7 @@ Before funding a non-bank savings product, do this:
 3. Check whether you already hold money at any of those banks directly. Balances at the same charter are added together for coverage purposes; two brand names on one charter do not double anything.
 4. Confirm whether balances can be moved between partner banks without your instruction, and whether you can opt a bank out.
 
-The full mechanics of ownership categories and per-bank aggregation are in [What Is FDIC Insurance and What Does It Actually Cover?](/SmartMoneyDaily/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/).
+The full mechanics of ownership categories and per-bank aggregation are in [What Is FDIC Insurance and What Does It Actually Cover?](/2026/05/29/what-is-fdic-insurance-and-how-does-it-protect-your-money/).
 
 ## Five Habits That Add Real Dollars
 

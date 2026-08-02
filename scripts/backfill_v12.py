@@ -36,11 +36,11 @@ EXACT_FIXES = {
     "Traditional savings accounts typically allow six withdrawals per month without fees, while some money market accounts might permit only a few.":
         "Some banks still cap fee-free withdrawals at a set monthly number — a leftover of the suspended federal Regulation D rule that is now purely bank policy — and the cap varies by institution.",
     # 6/10 글: 중첩 브래킷 링크
-    "As I covered in [Is [Your Savings Strategy Aligning](/SmartMoneyDaily/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/) with Current Interest Trends?], understanding":
-        "As covered in [Is Your Savings Strategy Aligning with Current Interest Trends?](/SmartMoneyDaily/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/), understanding",
+    "As I covered in [Is [Your Savings Strategy Aligning](/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/) with Current Interest Trends?], understanding":
+        "As covered in [Is Your Savings Strategy Aligning with Current Interest Trends?](/2026/06/04/is-your-savings-strategy-aligning-with-current-interest-trends/), understanding",
     # 6/27 글: 링크 안 된 생 대괄호 참조 (대상 글은 실존 — 실링크로 전환)
     "As I covered in [How to Identify and Avoid Common Fees in High-Yield Options], it’s":
-        "As covered in [How to Identify and Avoid Common Fees in High-Yield Options](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/), it’s",
+        "As covered in [How to Identify and Avoid Common Fees in High-Yield Options](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/), it’s",
     # 3/27 글: 렌더 안 되는 LaTeX → 일반 텍스트 수식
     r"\[ \text{APY} = \left(1 + \frac{r}{n}\right) ^ n - 1 \]":
         "`APY = (1 + r/n)^n - 1`",

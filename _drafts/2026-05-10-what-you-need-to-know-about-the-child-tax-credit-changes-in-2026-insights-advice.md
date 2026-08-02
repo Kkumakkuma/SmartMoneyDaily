@@ -7,7 +7,7 @@ description: "Get ready for the Child Tax Credit changes in 2026! Save up to $3,
 tags: [taxes, personal-finance, 2026]
 ---
 
-![What You Need to Know About the Child Tax Credit Changes in 2026: Insights & Advice](/SmartMoneyDaily/assets/pin-images/2026-05-10-what-you-need-to-know-about-the-child-tax-credit-changes-in-2026-insights-advice.png)
+![What You Need to Know About the Child Tax Credit Changes in 2026: Insights & Advice](/assets/pin-images/2026-05-10-what-you-need-to-know-about-the-child-tax-credit-changes-in-2026-insights-advice.png)
 
 > **Quick answer:** In 2026, the Child Tax Credit will undergo significant changes, including a reduction in the maximum credit amount to $2,000 per qualifying child. Families will also face altered eligibility and potentially tighter refund parameters, which may impact millions of American households looking for financial support.
 

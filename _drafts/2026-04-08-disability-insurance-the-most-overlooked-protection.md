@@ -6,7 +6,7 @@ categories: [insurance]
 description: "Disability Insurance: The Most Overlooked Protection - Learn practical tips and strategies for your personal finances."
 ---
 
-![Disability Insurance: The Most Overlooked Protection](/SmartMoneyDaily/assets/pin-images/2026-04-08-disability-insurance-the-most-overlooked-protection.png)
+![Disability Insurance: The Most Overlooked Protection](/assets/pin-images/2026-04-08-disability-insurance-the-most-overlooked-protection.png)
 
 Disability Insurance: The Most Overlooked Protection
 

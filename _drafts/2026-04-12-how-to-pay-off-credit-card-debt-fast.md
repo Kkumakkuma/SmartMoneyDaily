@@ -6,7 +6,7 @@ categories: [debt]
 description: "How to Pay Off Credit Card Debt Fast - Learn practical tips and strategies for your personal finances."
 ---
 
-![How to Pay Off Credit Card Debt Fast](/SmartMoneyDaily/assets/pin-images/2026-04-12-how-to-pay-off-credit-card-debt-fast.png)
+![How to Pay Off Credit Card Debt Fast](/assets/pin-images/2026-04-12-how-to-pay-off-credit-card-debt-fast.png)
 
 How to Pay Off Credit Card Debt Fast
 

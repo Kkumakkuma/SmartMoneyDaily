@@ -7,7 +7,7 @@ description: "Launch and manage your side hustles from one powerful dashboard."
 tags: [product-review, personal-finance]
 ---
 
-![Achieve Your Financial Goals: Overcoming Side Hustle Burnout in 2026](/SmartMoneyDaily/assets/pin-images/2026-05-07-achieve-your-financial-goals-overcoming-side-hustle-burnout-in-2026.png)
+![Achieve Your Financial Goals: Overcoming Side Hustle Burnout in 2026](/assets/pin-images/2026-05-07-achieve-your-financial-goals-overcoming-side-hustle-burnout-in-2026.png)
 
 # Achieve Your Financial Goals: Overcoming Side Hustle Burnout in 2026
 

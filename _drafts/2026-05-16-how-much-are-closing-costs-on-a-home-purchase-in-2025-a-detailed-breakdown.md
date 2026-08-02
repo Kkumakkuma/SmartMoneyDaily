@@ -7,7 +7,7 @@ description: "Closing costs on a home purchase in 2025 can be up to $8,000. Save
 tags: [real-estate, personal-finance, 2026]
 ---
 
-![How Much Are Closing Costs on a Home Purchase in 2025? A Detailed Breakdown](/SmartMoneyDaily/assets/pin-images/2026-05-16-how-much-are-closing-costs-on-a-home-purchase-in-2025-a-detailed-breakdown.png)
+![How Much Are Closing Costs on a Home Purchase in 2025? A Detailed Breakdown](/assets/pin-images/2026-05-16-how-much-are-closing-costs-on-a-home-purchase-in-2025-a-detailed-breakdown.png)
 
 > **Quick answer:** Closing costs for buying a home in 2025 typically range from 2% to 5% of the purchase price, with the average being around $7,500 for a $300,000 home. Expect to pay fees for origination, appraisal, title insurance, and other services that can add up quickly, so it's essential to budget accordingly.
 

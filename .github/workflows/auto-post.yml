@@ -208,14 +208,14 @@ jobs:
               m = re.match(r"_posts/(\d{4})-(\d{2})-(\d{2})-(.+)\.md$", line.strip())
               if m:
                   yyyy, mm, dd, slug = m.groups()
-                  urls.append(f"https://kkumakkuma.github.io/{repo}/{yyyy}/{mm}/{dd}/{slug}/")
+                  urls.append(f"https://smartmoneydaily.github.io/{yyyy}/{mm}/{dd}/{slug}/")
           if not urls:
               print("IndexNow: no new URLs in last hour")
               raise SystemExit(0)
           payload = {
-              "host": "kkumakkuma.github.io",
+              "host": "smartmoneydaily.github.io",
               "key": "3edb9ac60100921ec4665d794fb30755",
-              "keyLocation": "https://kkumakkuma.github.io/3edb9ac60100921ec4665d794fb30755.txt",
+              "keyLocation": "https://smartmoneydaily.github.io/3edb9ac60100921ec4665d794fb30755.txt",
               "urlList": urls,
           }
           req = urllib.request.Request(
@@ -309,8 +309,8 @@ jobs:
               if not m:
                   continue
               yyyy, mm, dd, slug = m.groups()
-              page_url = f"https://kkumakkuma.github.io/{repo}/{yyyy}/{mm}/{dd}/{slug}/"
-              pin_image = f"https://kkumakkuma.github.io/{repo}/assets/pin-images/{yyyy}-{mm}-{dd}-{slug}.png"
+              page_url = f"https://smartmoneydaily.github.io/{yyyy}/{mm}/{dd}/{slug}/"
+              pin_image = f"https://smartmoneydaily.github.io/assets/pin-images/{yyyy}-{mm}-{dd}-{slug}.png"
               try:
                   with open(post_path, encoding="utf-8") as f:
                       content = f.read()

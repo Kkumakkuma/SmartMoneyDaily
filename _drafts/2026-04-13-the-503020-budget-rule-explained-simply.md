@@ -6,7 +6,7 @@ categories: [saving-money]
 description: "The 50/30/20 Budget Rule Explained Simply - Learn practical tips and strategies for your personal finances."
 ---
 
-![The 50/30/20 Budget Rule Explained Simply](/SmartMoneyDaily/assets/pin-images/2026-04-13-the-503020-budget-rule-explained-simply.png)
+![The 50/30/20 Budget Rule Explained Simply](/assets/pin-images/2026-04-13-the-503020-budget-rule-explained-simply.png)
 
 The 50/30/20 Budget Rule Explained Simply
 

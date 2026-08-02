@@ -10,11 +10,11 @@ redirect_from:
   - /2026/07/17/what-to-know-before-opening-a-cd-or-money-market-fund/
 ---
 
-![Split comparison of an open-access money market account and a locked-term certificate of deposit](/SmartMoneyDaily/assets/pin-images/2026-07-18-money-market-accounts-vs-cds-which-one-offers-better-flexibility.png)
+![Split comparison of an open-access money market account and a locked-term certificate of deposit](/assets/pin-images/2026-07-18-money-market-accounts-vs-cds-which-one-offers-better-flexibility.png)
 
 > **Short answer:** If you know the date you need the money, a CD that matures on or before that date is usually the better deal. If you do not know the date, a money market account is worth whatever rate you give up, because the early withdrawal penalty is the price of guessing wrong.
 
-This is a single decision: one pile of money, two places it can sit. Dividing a larger balance across account types is a separate question, handled in [how to split cash across savings, money market, and CDs](/SmartMoneyDaily/2026/06/14/how-to-smartly-diversify-your-funds-between-money-market-and-cds/). Here the job is to pick one of two and to know what the wrong pick costs.
+This is a single decision: one pile of money, two places it can sit. Dividing a larger balance across account types is a separate question, handled in [how to split cash across savings, money market, and CDs](/2026/06/14/how-to-smartly-diversify-your-funds-between-money-market-and-cds/). Here the job is to pick one of two and to know what the wrong pick costs.
 
 ## Locked Rate vs Open Access: What You Are Actually Trading
 
@@ -35,7 +35,7 @@ Two things break it:
 - **The deposit curve is not always upward sloping.** There are stretches when short CDs are priced near or above long ones, and stretches when a promotional MMA rate sits above the CD rates on the same rate sheet. Look at the actual numbers the week you are deciding.
 - **You are comparing a fixed number to an average, not to today's number.** The CD's APY is what you get for the whole term. The MMA's APY is what you get until the bank changes it. The honest comparison is the CD rate against your best estimate of the MMA's *average* rate across the same months — not against the headline it shows today.
 
-A second trap sits on the MMA side. If the account is tiered, the advertised APY may belong to a tier you are not in, and funding a CD out of the MMA can drop the remaining balance below a threshold. Check the tier table before you move anything; the mechanics are in [what a money market account is and how it works](/SmartMoneyDaily/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/).
+A second trap sits on the MMA side. If the account is tiered, the advertised APY may belong to a tier you are not in, and funding a CD out of the MMA can drop the remaining balance below a threshold. Check the tier table before you move anything; the mechanics are in [what a money market account is and how it works](/2026/06/02/what-is-a-money-market-account-and-how-does-it-work/).
 
 ## Withdrawal Rules Side by Side
 
@@ -52,7 +52,7 @@ A second trap sits on the MMA side. If the account is tiered, the advertised APY
 
 On the MMA side, the six-per-month transfer cap people remember came from Regulation D, and the [Federal Reserve](https://www.federalreserve.gov/monetarypolicy.htm) removed that requirement in 2020. Banks could keep their own limits, and many did. So "how many withdrawals can I make" is no longer a federal number you can look up — it is a line in your account agreement, and it differs between banks that look identical on a comparison page.
 
-On the CD side, the penalty is almost always written as a number of days of interest, not as a percentage of your balance. That matters, because if you break the CD early enough, the days of interest owed can exceed the interest you have actually earned, and the shortfall comes out of principal. The full breakdown of how those clauses are written lives in [what happens when you cash out a CD early](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+On the CD side, the penalty is almost always written as a number of days of interest, not as a percentage of your balance. That matters, because if you break the CD early enough, the days of interest owed can exceed the interest you have actually earned, and the shortfall comes out of principal. The full breakdown of how those clauses are written lives in [what happens when you cash out a CD early](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 ## If It Is a Money Market Fund Instead: Three Extra Differences
 
@@ -62,7 +62,7 @@ People use "money market" for two products that are not close cousins. If the of
 2. **The yield is not a promise.** A fund quotes a 7-day yield that moves as its holdings turn over, and the expense ratio comes out before you see it. A bank's APY is what the bank owes you until it changes the rate; a fund's yield is a recent measurement.
 3. **Cash is not instant.** Redemptions follow the fund's cutoff time and settlement schedule, which the prospectus states. Money market funds are governed by SEC Rule 2a-7, and the provisions on liquidity fees have been revised more than once, so read the current prospectus rather than an old summary.
 
-For the full treatment, including how to read a fund fact sheet, see [how money market funds work and where risk hides](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/). For the rest of this article, "money market" means the insured deposit account.
+For the full treatment, including how to read a fund fact sheet, see [how money market funds work and where risk hides](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/). For the rest of this article, "money market" means the insured deposit account.
 
 ## Matching a Known Spend Date to a Maturity
 
@@ -97,7 +97,7 @@ Assume you have $20,000 and two options:
 
 One early withdrawal wipes out more than a year of the rate advantage. That asymmetry is the whole argument. The upside of locking is modest and bounded; the downside of locking the wrong money is a multiple of it.
 
-If you want to run this on your own balance, the [fix it or float it calculator](/SmartMoneyDaily/tools/cd-vs-savings-calculator/) does the arithmetic.
+If you want to run this on your own balance, the [fix it or float it calculator](/tools/cd-vs-savings-calculator/) does the arithmetic.
 
 Two adjustments before you trust the output. Interest on both accounts is ordinary income, so a higher bracket shrinks every gap above. And CD interest is taxable as it accrues, not at maturity, so a multi-year CD generates a 1099-INT each year even though you never touched the money — see [irs.gov](https://www.irs.gov/taxtopics/tc403).
 

@@ -9,7 +9,7 @@ redirect_from:
   - /2026/06/19/money-market-accounts-vs-high-yield-savings-which-is-better-for-your-savings-strategy/
 ---
 
-![Split comparison of a high-yield savings account and a money market account, showing transfer-only access on one side and check and debit access on the other](/SmartMoneyDaily/assets/pin-images/2026-06-23-how-to-choose-between-a-high-yield-savings-account-and-a-money-market-account.png)
+![Split comparison of a high-yield savings account and a money market account, showing transfer-only access on one side and check and debit access on the other](/assets/pin-images/2026-06-23-how-to-choose-between-a-high-yield-savings-account-and-a-money-market-account.png)
 
 > **Short answer:** Choose the money market account if you need to pay someone directly out of the account — a check, a debit card, an ATM withdrawal. Choose the high-yield savings account if the money just sits and compounds. Rate quotes move constantly and are a poor way to tell the two products apart. The way cash leaves the account is permanent, and that is the axis to decide on.
 
@@ -42,7 +42,7 @@ The gap widens as you climb. At an assumed $26,000, threshold pricing pays 4.25%
 
 Tier tables also create cliffs. If the second tier starts at $10,000 and you drift to $9,900 after a bill, your rate can drop for the whole statement cycle even though you were $100 short for three days. Banks compute this on either the daily balance or the average daily balance method, and the disclosure names which. If it is average daily balance, a single large mid-month withdrawal can pull you under a tier you were above almost all month. HYSAs with one flat rate have no such cliff, which is a real advantage for balances that swing.
 
-For the mechanics of how a tier table converts into what actually posts to your account, see the full walkthrough in [how to choose a money market account](/SmartMoneyDaily/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
+For the mechanics of how a tier table converts into what actually posts to your account, see the full walkthrough in [how to choose a money market account](/2026/06/28/a-complete-guide-to-choosing-a-money-market-account/).
 
 ## Checks, Debit Cards, and ATM Access
 
@@ -80,7 +80,7 @@ MMAs are more likely to carry all three; HYSAs from online banks more often carr
 
 Fees beat rate differences almost every time, and the arithmetic is blunt. An assumed $12 monthly maintenance fee is $144 a year. On an $18,000 balance, that is 0.80% of your money — you would need 80 basis points of extra APY just to break even against a free account. Below roughly $3,600, a $144 annual fee wipes out every dollar of interest an assumed 4.00% APY would produce ($144 ÷ 0.04 = $3,600). A saver comparing 4.10% against 3.95% while ignoring a maintenance fee is optimizing the wrong number by an order of magnitude.
 
-Watch these line items on both product types: monthly maintenance, below-minimum fee, excess transaction fee, outgoing wire, paper statement, dormancy, and (on MMAs) check reorder and out-of-network ATM charges. Truth in Savings, codified at 12 CFR Part 1030, requires the institution to disclose the fees that may be imposed before you open the account, so the document exists — request it if the website buries it. The full hunt is mapped out in [the fees that quietly eat your savings interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+Watch these line items on both product types: monthly maintenance, below-minimum fee, excess transaction fee, outgoing wire, paper statement, dormancy, and (on MMAs) check reorder and out-of-network ATM charges. Truth in Savings, codified at 12 CFR Part 1030, requires the institution to disclose the fees that may be imposed before you open the account, so the document exists — request it if the website buries it. The full hunt is mapped out in [the fees that quietly eat your savings interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 ## Insurance Is Identical; the Wrapper Might Not Be
 
@@ -100,7 +100,7 @@ Numbers make the choice concrete. Assume $18,000 and a saver who makes about two
 
 On these assumptions the HYSA nets roughly double. Flip one input — say the MMA uses threshold pricing and waives its fee at $10,000 — and it earns $585 net, closing most of the gap while still handing you a checkbook. The lesson is not that one product wins; it is that the winner is decided by the tier method, the fee waiver threshold, and your transaction count, not by the product's name.
 
-Our [two-offer comparison calculator](/SmartMoneyDaily/tools/two-offer-comparison-calculator/) runs the same calculation on figures you enter.
+Our [two-offer comparison calculator](/tools/two-offer-comparison-calculator/) runs the same calculation on figures you enter.
 
 Do the subtraction on paper for both offers and put the two net numbers next to each other. That single comparison replaces every "which is better" article, including this one.
 
@@ -118,7 +118,7 @@ Two more that fall outside the table: if your balance is small and you are tryin
 
 Holding one of each is a legitimate setup, not indecision. A common split: the HYSA holds the untouchable reserve, and the MMA holds the money you actually pay bills out of. Each account is then judged on the job it does — the HYSA on rate and the MMA on access — instead of forcing one account to be good at both.
 
-Keeping them at the same institution makes instant internal transfers possible; keeping them at different institutions adds a one-to-three-day ACH delay, which some savers treat as a feature. Size the reserve piece before you split anything, and if CDs are also in the mix, the allocation logic is worked out in [how to split cash across savings, money market, and CDs](/SmartMoneyDaily/2026/06/14/how-to-smartly-diversify-your-funds-between-money-market-and-cds/).
+Keeping them at the same institution makes instant internal transfers possible; keeping them at different institutions adds a one-to-three-day ACH delay, which some savers treat as a feature. Size the reserve piece before you split anything, and if CDs are also in the mix, the allocation logic is worked out in [how to split cash across savings, money market, and CDs](/2026/06/14/how-to-smartly-diversify-your-funds-between-money-market-and-cds/).
 
 ## Savings or Money Market: The Sticking Points
 
@@ -135,7 +135,7 @@ Not in insurance terms — coverage is identical. The added risk is practical: m
 Not as a federal rule. The Federal Reserve removed the six-per-month cap from Regulation D in 2020. Individual banks may still enforce their own caps and excess transaction fees on either product, so read the disclosure rather than assuming.
 
 **Should I switch if my current account's rate drops?**
-Only after the arithmetic clears the cost. Compute the annual dollar gain on your actual balance, weigh it against the hours of moving direct deposits and autopays, and confirm the new institution's charter before funding it. When you also want the higher yield of a locked term, the trade-off is laid out in [HYSA vs CD](/SmartMoneyDaily/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/).
+Only after the arithmetic clears the cost. Compute the annual dollar gain on your actual balance, weigh it against the hours of moving direct deposits and autopays, and confirm the new institution's charter before funding it. When you also want the higher yield of a locked term, the trade-off is laid out in [HYSA vs CD](/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/).
 
 **What if I picked wrong?**
 Little is lost. Neither product locks your money for a term, so moving between them costs a transfer and some paperwork. The expensive mistake is not the initial pick — it is leaving a balance in a fee-charging, low-tier account for two years without opening the disclosure.

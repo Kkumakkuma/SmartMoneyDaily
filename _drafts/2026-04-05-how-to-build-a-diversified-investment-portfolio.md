@@ -6,7 +6,7 @@ categories: [investing]
 description: "How to Build a Diversified Investment Portfolio - Learn practical tips and strategies for your personal finances."
 ---
 
-![How to Build a Diversified Investment Portfolio](/SmartMoneyDaily/assets/pin-images/2026-04-05-how-to-build-a-diversified-investment-portfolio.png)
+![How to Build a Diversified Investment Portfolio](/assets/pin-images/2026-04-05-how-to-build-a-diversified-investment-portfolio.png)
 
 How to Build a Diversified Investment Portfolio
 

@@ -12,7 +12,7 @@ redirect_from:
   - /2026/07/02/why-you-should-consider-diversifying-with-different-account-types/
 ---
 
-![Cash divided into three labeled buckets feeding a savings account, a money market account, and a row of CD rungs](/SmartMoneyDaily/assets/pin-images/2026-06-14-how-to-smartly-diversify-your-funds-between-money-market-and-cds.png)
+![Cash divided into three labeled buckets feeding a savings account, a money market account, and a row of CD rungs](/assets/pin-images/2026-06-14-how-to-smartly-diversify-your-funds-between-money-market-and-cds.png)
 
 > **Short answer:** Split your cash by *when you will need it*, not by which account advertises the highest rate. Money you might spend within 30 days stays in checking or high-yield savings. The emergency reserve belongs somewhere you can reach in a day or two without a penalty. Only money with a known date more than a year out belongs in CDs. Set the dollar amounts first; pick the institutions second.
 
@@ -42,7 +42,7 @@ Three numbers set the entire allocation: your monthly essential outflow, your em
 
 **Buffer = one month of essential outflows, plus any balance you must hold to avoid a monthly fee.** Essentials means housing, utilities, food, transportation, insurance, minimum debt payments, childcare, and prescriptions — the list that does not shrink when your income does. If a money market account waives its maintenance fee above a stated balance, that balance becomes your floor, because paying a fee to earn interest is a losing trade.
 
-**Reserve = monthly essentials × your target months.** Three to six months is a starting range, not an answer; a single-income household with variable pay and a high insurance deductible needs more months than a dual-income household with stable salaries. Work through the multipliers in [How Big Should Your Emergency Fund Be?](/SmartMoneyDaily/2026/05/09/emergency-fund-basics-how-much-should-you-really-save/) before you commit a number here.
+**Reserve = monthly essentials × your target months.** Three to six months is a starting range, not an answer; a single-income household with variable pay and a high insurance deductible needs more months than a dual-income household with stable salaries. Work through the multipliers in [How Big Should Your Emergency Fund Be?](/2026/05/09/emergency-fund-basics-how-much-should-you-really-save/) before you commit a number here.
 
 **Goal bucket = total cash − buffer − reserve, but only the part with a date.** If what is left over has no date attached, it is not goal money. It is either an over-large reserve or money that belongs in a long-term investment account, which is a different decision entirely.
 
@@ -65,15 +65,15 @@ Once the goal bucket has real money in it, a single CD is rarely the best shape.
 
 The mechanics are simple. Divide the goal bucket into equal rungs, buy one at each term from the shortest to the longest you will accept, and when a rung matures, either spend it or roll it into a new long rung. You always have a maturity date coming up inside a year.
 
-If you want to run this on your own balance, the [cd ladder builder](/SmartMoneyDaily/tools/cd-ladder-calculator/) does the arithmetic.
+If you want to run this on your own balance, the [cd ladder builder](/tools/cd-ladder-calculator/) does the arithmetic.
 
-A ladder is not automatically better than one term. When the deposit curve is flat or inverted — shorter terms quoted at or above longer terms — the long rungs pay you nothing extra for the extra lock-up, and a series of short CDs or even the savings account can win. Compare the actual quotes for each term before you commit to the shape; the trade-offs are worked through in [CD laddering](/SmartMoneyDaily/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
+A ladder is not automatically better than one term. When the deposit curve is flat or inverted — shorter terms quoted at or above longer terms — the long rungs pay you nothing extra for the extra lock-up, and a series of short CDs or even the savings account can win. Compare the actual quotes for each term before you commit to the shape; the trade-offs are worked through in [CD laddering](/2026/07/09/what-you-need-to-know-about-laddering-certificates-of-deposit/).
 
 ## Where Money Market Funds and Treasuries Fit
 
 Above roughly six figures of goal money, deposits stop being the only sensible container.
 
-Money market funds hold short-term debt and pay a yield that moves with the market rather than with a bank's pricing committee. They are not deposits, they carry no FDIC coverage, and the prospectus governs how and when you get paid, including any liquidity fee or redemption provisions. They can be a reasonable home for goal money at a brokerage where you already hold cash. What they are not is an emergency account. The full comparison, including how a fund's expense ratio eats into the quoted yield, is in [money market funds and where risk hides](/SmartMoneyDaily/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
+Money market funds hold short-term debt and pay a yield that moves with the market rather than with a bank's pricing committee. They are not deposits, they carry no FDIC coverage, and the prospectus governs how and when you get paid, including any liquidity fee or redemption provisions. They can be a reasonable home for goal money at a brokerage where you already hold cash. What they are not is an emergency account. The full comparison, including how a fund's expense ratio eats into the quoted yield, is in [money market funds and where risk hides](/2026/06/25/a-comprehensive-guide-to-finding-the-right-money-market-fund/).
 
 Treasury bills, notes, and I bonds are obligations of the federal government rather than insured bank deposits — a different form of protection, not a weaker one. Their interest is also exempt from state and local income tax, which matters more the higher your state rate. Terms, purchase limits, and redemption rules are published at [TreasuryDirect](https://www.treasurydirect.gov/).
 
@@ -81,7 +81,7 @@ Treasury bills, notes, and I bonds are obligations of the federal government rat
 
 Allocation and insurance are the same conversation once your cash gets large. The FDIC insures deposits up to $250,000 per depositor, per insured bank, per ownership category; the [NCUA](https://ncua.gov/consumers/share-insurance-coverage) provides equivalent share insurance at federally insured credit unions. Balances across your savings, money market account, and CDs at one bank are added together inside an ownership category — they are not separately insured because they are different products.
 
-Two practical consequences. First, confirm the institution is actually insured, and confirm which charter holds your money, using [FDIC BankFind](https://www.fdic.gov/resources/deposit-insurance). Brands that look independent sometimes sit on a shared charter, and shared charter means shared limit. Second, if a plan pushes any single charter past the cap, the split across institutions is not optional — it is part of the design. [How to insure more than $250,000](/SmartMoneyDaily/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/) walks through the routes.
+Two practical consequences. First, confirm the institution is actually insured, and confirm which charter holds your money, using [FDIC BankFind](https://www.fdic.gov/resources/deposit-insurance). Brands that look independent sometimes sit on a shared charter, and shared charter means shared limit. Second, if a plan pushes any single charter past the cap, the split across institutions is not optional — it is part of the design. [How to insure more than $250,000](/2026/06/12/how-to-ensure-your-funds-are-fully-covered-by-fdic-insurance/) walks through the routes.
 
 ## Two Worked Plans
 

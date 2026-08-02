@@ -7,7 +7,7 @@ description: "The Pros and Cons of Dividend Stocks: Boost your passive income wi
 tags: [investing, personal-finance, 2026]
 ---
 
-![The Pros and Cons of Dividend Stocks: Are They a Smart Investment for Passive Income?](/SmartMoneyDaily/assets/pin-images/2026-05-22-the-pros-and-cons-of-dividend-stocks-are-they-a-smart-investment-for-passive-income.png)
+![The Pros and Cons of Dividend Stocks: Are They a Smart Investment for Passive Income?](/assets/pin-images/2026-05-22-the-pros-and-cons-of-dividend-stocks-are-they-a-smart-investment-for-passive-income.png)
 
 > **Quick answer:** Dividend stocks can provide a reliable source of passive income, but they come with risks. In 2023, the average dividend yield for S&P 500 companies was about 1.5%. Investing in them can be smart for income-focused investors, but understanding the pros and cons is crucial.
 

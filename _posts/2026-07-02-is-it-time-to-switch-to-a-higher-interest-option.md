@@ -12,7 +12,7 @@ redirect_from:
   - /2026/07/16/how-to-safely-navigate-bank-offers-for-savings-products/
 ---
 
-![Two savings account offers laid side by side with a calculator, representing a switch decision](/SmartMoneyDaily/assets/pin-images/2026-07-02-is-it-time-to-switch-to-a-higher-interest-option.png)
+![Two savings account offers laid side by side with a calculator, representing a switch decision](/assets/pin-images/2026-07-02-is-it-time-to-switch-to-a-higher-interest-option.png)
 
 > **Short answer:** Move when the extra interest over the next twelve months clearly beats the cost of moving. Multiply your balance by the difference in APY between the two accounts. If that number is smaller than a couple of hours of your time, stay put and re-check in six months. If it is a few hundred dollars or more, the move is usually worth one afternoon.
 
@@ -33,7 +33,7 @@ Your calculated figure can sit below the advertised APY for several ordinary rea
 
 Once you know your real rate, you need a benchmark. The FDIC publishes monthly national deposit rate averages alongside its [deposit insurance resources](https://www.fdic.gov/resources/deposit-insurance); look up the current figure for your account type rather than relying on a number quoted in an article. Then pull the posted APY from three or four institutions you would genuinely consider. Three data points are enough to tell whether you are behind, level, or comfortably ahead.
 
-If the arithmetic behind APY, compounding frequency, and posted interest is fuzzy, work through [APY, compounding, and what your savings will really earn](/SmartMoneyDaily/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) first, then come back to this decision.
+If the arithmetic behind APY, compounding frequency, and posted interest is fuzzy, work through [APY, compounding, and what your savings will really earn](/2026/07/04/understanding-apy-what-it-means-for-your-savings-strategy/) first, then come back to this decision.
 
 ## Step 2: Convert the Rate Gap Into Dollars
 
@@ -56,7 +56,7 @@ A written rule keeps you from re-litigating this every time you see an ad:
 - **One to four hours of your time:** move only if the account also fixes something else you dislike, such as a monthly fee, a transfer limit, or a clunky app.
 - **More than four hours of your time:** move, and stop debating it.
 
-Two adjustments to the raw number. Interest is taxable in the year it is credited, so the real gain is smaller than the table suggests: in a 22% bracket, a $250 difference is worth about $195. And if any of the money sits in a CD, the gap first has to clear the early-withdrawal penalty — a separate calculation covered in [what cashing out a CD early actually costs](/SmartMoneyDaily/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
+Two adjustments to the raw number. Interest is taxable in the year it is credited, so the real gain is smaller than the table suggests: in a 22% bracket, a $250 difference is worth about $195. And if any of the money sits in a CD, the gap first has to clear the early-withdrawal penalty — a separate calculation covered in [what cashing out a CD early actually costs](/2026/05/25/what-happens-when-you-cash-out-a-cd-early/).
 
 Run the calculator below twice — once with your current APY, once with the offered APY — and subtract. That difference is what you are deciding about.
 
@@ -81,7 +81,7 @@ A headline APY is one clause in a document. The clauses that decide what you kee
 
 Two things worth knowing about bonuses. The advertising rules in 12 CFR Part 1030 require an ad that mentions a bonus to also state the APY, the time requirement, the minimum balance needed to earn it, and when it will be paid — so if an offer is vague on any of those, the details exist somewhere and you should ask for them. And a cash bonus is taxable income, generally reported on a year-end information return; the IRS covers the reporting on its [Form 1099-INT page](https://www.irs.gov/forms-pubs/about-form-1099-int). Value it after tax.
 
-Check the fee schedule with the same care. A modest monthly maintenance fee can consume the entire interest advantage on a small balance, which is why fees decide these comparisons more often than rates do. The full inventory is in [the fees that quietly eat your savings interest](/SmartMoneyDaily/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
+Check the fee schedule with the same care. A modest monthly maintenance fee can consume the entire interest advantage on a small balance, which is why fees decide these comparisons more often than rates do. The full inventory is in [the fees that quietly eat your savings interest](/2026/06/26/how-to-identify-and-avoid-common-fees-in-high-yield-options/).
 
 ## Step 4: Verify the Institution Before You Send Money
 
@@ -116,7 +116,7 @@ Keeping it makes sense when the old bank gives you something the new one cannot:
 
 Close it when it charges a monthly fee you can no longer avoid, or when tracking it costs more attention than it is worth. Do it in writing, get written confirmation, and check the following month's statement for a straggling fee.
 
-The safety question is settled either way. An online bank and a branch bank with the same charter status carry the same insurance — the difference is overhead, not risk, which is the argument laid out in [high-yield versus traditional savings](/SmartMoneyDaily/2026/06/11/high-yield-savings-vs-traditional-savings-which-is-better-for-you/).
+The safety question is settled either way. An online bank and a branch bank with the same charter status carry the same insurance — the difference is overhead, not risk, which is the argument laid out in [high-yield versus traditional savings](/2026/06/11/high-yield-savings-vs-traditional-savings-which-is-better-for-you/).
 
 ## The Two-Reviews-a-Year Rule
 

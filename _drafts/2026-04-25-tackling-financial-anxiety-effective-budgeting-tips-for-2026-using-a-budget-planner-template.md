@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![Tackling Financial Anxiety: Effective Budgeting Tips for 2026 Using a Budget Planner Template](/SmartMoneyDaily/assets/pin-images/2026-04-25-tackling-financial-anxiety-effective-budgeting-tips-for-2026-using-a-budget-planner-template.png)
+![Tackling Financial Anxiety: Effective Budgeting Tips for 2026 Using a Budget Planner Template](/assets/pin-images/2026-04-25-tackling-financial-anxiety-effective-budgeting-tips-for-2026-using-a-budget-planner-template.png)
 
 # Tackling Financial Anxiety: Effective Budgeting Tips for 2026 Using a Budget Planner Template
 

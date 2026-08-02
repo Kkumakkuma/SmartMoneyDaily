@@ -7,7 +7,7 @@ description: "Building an effective emergency fund using CDs and money market fu
 tags: [emergency-fund, high-yield-savings-accounts, 2026]
 ---
 
-![How to Build an Effective Emergency Fund with CDs and Money Market Funds](/SmartMoneyDaily/assets/pin-images/2026-07-12-how-to-build-an-effective-emergency-fund-with-cds-and-money-market-funds.png)
+![How to Build an Effective Emergency Fund with CDs and Money Market Funds](/assets/pin-images/2026-07-12-how-to-build-an-effective-emergency-fund-with-cds-and-money-market-funds.png)
 
 > **Quick answer:** An effective emergency fund should cover three to six months of living expenses. Use a mix of high-yield savings accounts, CDs, and money market funds to build it, ensuring liquidity and potential earnings. 
 
@@ -69,7 +69,7 @@ When considering how to build your emergency fund, take the following steps:
 1. **Assess your emergency fund target**: Calculate three to six months of living expenses as your goal.
 2. **Research current rates**: Use resources like the FDIC’s national average deposit rates to compare options.
 3. **Evaluate liquidity needs**: Decide how quickly you may need to access your funds.
-4. **Investigate fees**: For example, refer to “[A Beginner's Guide to Understanding Money Market Account Fees and Features](/SmartMoneyDaily/2026/07/11/a-beginners-guide-to-understanding-money-market-account-fees-and-features/)” to get a comprehensive understanding of any potential fees associated with these accounts.
+4. **Investigate fees**: For example, refer to “[A Beginner's Guide to Understanding Money Market Account Fees and Features](/2026/07/11/a-beginners-guide-to-understanding-money-market-account-fees-and-features/)” to get a comprehensive understanding of any potential fees associated with these accounts.
 
 ## Common Mistakes 
 
@@ -80,7 +80,7 @@ Why it matters: Mixing account types helps balance access to funds and the poten
 Why it matters: Inadequate funds can lead to increased financial stress during emergencies, making it essential to have enough savings.
 
 ### Mistake 3: Ignoring Interest Rates
-Why it matters: Rates can significantly affect your emergency fund’s growth; you should compare current offers as discussed in “[How to Find the Best Interest Rates for Your Financial Needs](/SmartMoneyDaily/2026/07/12/how-to-find-the-best-interest-rates-for-your-financial-needs/).”
+Why it matters: Rates can significantly affect your emergency fund’s growth; you should compare current offers as discussed in “[How to Find the Best Interest Rates for Your Financial Needs](/2026/07/12/how-to-find-the-best-interest-rates-for-your-financial-needs/).”
 
 ## Frequently Asked Questions
 
@@ -97,7 +97,7 @@ While it's primarily for unexpected costs, some people might dip into it for sig
 If you experience a change in income, you may need to adjust your emergency fund to reflect your new expenses.
 
 ### How do interest rates affect my emergency fund growth?
-Higher interest rates can yield more earnings on your savings, making your emergency fund grow faster. Keep an eye on rate changes as discussed in articles like “[How to Easily Track Interest Earnings Across Different Savings Options](/SmartMoneyDaily/2026/07/09/how-to-easily-track-interest-earnings-across-different-savings-options/).”
+Higher interest rates can yield more earnings on your savings, making your emergency fund grow faster. Keep an eye on rate changes as discussed in articles like “[How to Easily Track Interest Earnings Across Different Savings Options](/2026/07/09/how-to-easily-track-interest-earnings-across-different-savings-options/).”
 
 In conclusion, building a robust emergency fund using CDs and money market funds involves understanding your options and strategically allocating your savings. Begin with a HYSA for immediate access, balance with CD investments for fixed returns, and utilize money market funds for liquidity. Start today by calculating your emergency fund goal and exploring current offers that align with your financial needs.
 
@@ -118,8 +118,8 @@ As part of your financial strategy, it’s wise to regularly review your account
 
 ## Further Reading
 
-- [The Top Considerations for Choosing the Right CD Today](/SmartMoneyDaily/2026/07/11/the-top-considerations-for-choosing-the-right-cd-today/)
-- [How to Choose Between a High-Yield Savings Account and a CD](/SmartMoneyDaily/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/)
-- [How Does a Money Market Fund Work and What Are Its Benefits?](/SmartMoneyDaily/2026/07/10/how-does-a-money-market-fund-work-and-what-are-its-benefits/)
+- [The Top Considerations for Choosing the Right CD Today](/2026/07/11/the-top-considerations-for-choosing-the-right-cd-today/)
+- [How to Choose Between a High-Yield Savings Account and a CD](/2026/07/10/how-to-choose-between-a-high-yield-savings-account-and-a-cd/)
+- [How Does a Money Market Fund Work and What Are Its Benefits?](/2026/07/10/how-does-a-money-market-fund-work-and-what-are-its-benefits/)
 
 *Last reviewed: July 2026 by Kkuma Park.*

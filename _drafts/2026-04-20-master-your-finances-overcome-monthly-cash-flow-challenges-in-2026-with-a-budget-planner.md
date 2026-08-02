@@ -7,7 +7,7 @@ description: "Take control of your finances with our beautifully designed Notion
 tags: [product-review, personal-finance]
 ---
 
-![Master Your Finances: Overcome Monthly Cash Flow Challenges in 2026 with a Budget Planner](/SmartMoneyDaily/assets/pin-images/2026-04-20-master-your-finances-overcome-monthly-cash-flow-challenges-in-2026-with-a-budget-planner.png)
+![Master Your Finances: Overcome Monthly Cash Flow Challenges in 2026 with a Budget Planner](/assets/pin-images/2026-04-20-master-your-finances-overcome-monthly-cash-flow-challenges-in-2026-with-a-budget-planner.png)
 
 # Master Your Finances: Overcome Monthly Cash Flow Challenges in 2026 with a Budget Planner
 
