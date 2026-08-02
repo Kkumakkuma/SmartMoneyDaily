@@ -574,19 +574,17 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
     category = random.choice(CATEGORIES)
     last_reason = ""
     # v15.2: 스킵 금지 + 품질 불변(쿠마님 규칙 2개 동시 충족) — 기준을 낮추는 대신 시도
-    # 강도를 올린다: 정규 7회(mini, 0.42) → 완화 5회(mini, 0.50·금지어 허용) → 승급 3회
-    # (gpt-4o, 0.50). 발행 가능한 최악 후보도 유사도 0.55 미만이어야 한다(그 위는 raise —
-    # 같은 날 다음 cron 슬롯이 이어받아 재도전하므로 '포기'가 아니라 '지연'이다).
+    # 횟수를 올린다: 정규 7회(0.42) → 완화 8회(0.50·금지어 허용). 전부 gpt-4o-mini —
+    # 상위 모델 승급은 쿠마님 "돈 쓰지 말 것" 지시로 제거(v15.3). 발행 가능한 최악 후보도
+    # 유사도 0.55 미만이어야 한다(그 위는 raise — 같은 날 다음 cron 슬롯이 이어받아
+    # 재도전하므로 '포기'가 아니라 '지연'이다).
     candidates = []
-    total_attempts = max_attempts + 5 + 3
+    total_attempts = max_attempts + 8
     for attempt in range(total_attempts):
         relaxed = attempt >= max_attempts
-        escalated = attempt >= max_attempts + 5
         jaccard_limit = 0.50 if relaxed else 0.42
-        topic_model = "gpt-4o" if escalated else "gpt-4o-mini"
         category = _least_used_category(used_topics, CATEGORIES, window=30)
-        # 승급(gpt-4o) 구간은 고온 샘플링이 모델 품질 이점을 상쇄하므로 1.2 고정 (codex)
-        temperature = 1.2 if escalated else 1.0 + 0.1 * min(attempt, 9)
+        temperature = 1.0 + 0.1 * min(attempt, 9)
 
         hints = []
         if forced_pattern:
@@ -600,10 +598,10 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
         # (codex 높음: _openai_retry 최종 실패 시 폴백까지 못 가던 구멍)
         try:
             response = _topic_api_call(client, category, year, used_list, banned_str,
-                                       forced_hint, timely_block, temperature, model=topic_model)
+                                       forced_hint, timely_block, temperature)
         except Exception as _e:
             last_reason = f"api error: {_e}"
-            print(f"[topic] attempt {attempt + 1} ({topic_model}) api error (continuing): {_e}")
+            print(f"[topic] attempt {attempt + 1} api error (continuing): {_e}")
             continue
         title = response.choices[0].message.content.strip().strip('"').strip("'")
         slug = slugify(title)
@@ -655,7 +653,7 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
             return title, category, slug
         last_reason = f"best candidate jaccard {score:.2f} >= 0.55 quality cap"
 
-    # 여기 도달 = 15회(4o 승급 포함)가 전부 실패 — 사실상 API 장애 수준. 저품질 발행 대신
+    # 여기 도달 = 15회가 전부 실패 — 사실상 API 장애 수준. 저품질 발행 대신
     # raise → exit 1 → Actions retry(3회) + 같은 날 남은 cron 슬롯이 이어받아 재도전.
     raise RuntimeError(f"no good-quality topic in {total_attempts} attempts (last: {last_reason}) — will retry on next slot")
 
@@ -1401,4 +1399,5 @@ if __name__ == "__main__":
 # v8_accuracy_rebuild 2026-05-23  (single niche HYSA/CD/MMA, no fabrication, 1st-party sources)
 # v15_market_signals 2026-08-02  (real FDIC national-rate data + news-driven timely topics + quality validate/repair loop)
 # v15.1_no_skip 2026-08-02  (never skip publishing: relaxed-retry + best-candidate topic fallback, deterministic content repair)
-# v15.2_quality_floor 2026-08-02  (no-skip AND no-garbage: effort escalates (gpt-4o topic escalation), quality caps never relax; hard fails defer to the next cron slot)
+# v15.2_quality_floor 2026-08-02  (no-skip AND no-garbage: more retries, quality caps never relax; hard fails defer to the next cron slot)
+# v15.3_no_extra_cost 2026-08-02  (dropped the gpt-4o escalation per owner cost rule — all calls stay on gpt-4o-mini)
