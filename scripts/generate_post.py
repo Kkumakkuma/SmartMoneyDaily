@@ -476,10 +476,11 @@ _TITLE_CLICHES = ("unlock", "discover", "boost", "maximize", "secrets", "ultimat
                   "essential guide", "game-changer", "revolutioniz")
 
 
-def _topic_api_call(client, category, year, used_list, banned_str, forced_hint, timely_block, temperature):
+def _topic_api_call(client, category, year, used_list, banned_str, forced_hint, timely_block, temperature,
+                    model="gpt-4o-mini"):
     """제목 생성 GPT 호출 본체 (generate_unique_topic 이 attempt 단위 예외 흡수로 감싼다)."""
     return _openai_retry(lambda: client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=model,
         max_tokens=400,
         temperature=temperature,
         messages=[
@@ -528,16 +529,6 @@ def _topic_api_call(client, category, year, used_list, banned_str, forced_hint, 
     ))
 
 
-# v15.1: 후보가 하나도 안 모였을 때(전 시도 API 장애/슬러그 중복)의 마지막 로컬 폴백 —
-# 발행 스킵 금지 규칙상 GPT 없이도 제목을 만들어야 한다. 니치 안전 각도만 사용.
-_LOCAL_TITLE_TEMPLATES = (
-    "A practical checklist for choosing among {cat} options",
-    "Questions worth asking before you commit to a {cat} decision",
-    "How to double-check a {cat} offer before moving money",
-    "What to compare first when weighing {cat} choices",
-)
-
-
 def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_attempts=7,
                           news_headlines=None):
     """v8: GPT가 단일 니치(HYSA/CD/MMA) 안에서 설명형/비교형 고유 토픽 생성.
@@ -550,11 +541,9 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
     각도를 허용(강제 아님 — 살아있는 글과의 중복 검사는 동일하게 통과해야 함). 에버그린
     질문 공간이 34편으로 포화 상태라, 시의성 각도가 유일하게 계속 새로 생기는 주제 공급원.
     """
-    try:
-        client = OpenAI()
-    except Exception as _e:
-        print(f"[topic] OpenAI client init failed ({_e}) — using local title fallback")
-        client = None
+    # 클라이언트 초기화 실패 = 인프라 장애 — 저품질 대체 발행 대신 raise (exit 1 → Actions
+    # retry + 다음 cron 슬롯이 이어받음. 품질 기준은 어떤 경우에도 낮추지 않는다 — 쿠마님 규칙).
+    client = OpenAI()
     year = datetime.datetime.now().year
     living_titles = living_titles or []
     news_headlines = news_headlines or []
@@ -584,17 +573,20 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
     slug = ""
     category = random.choice(CATEGORIES)
     last_reason = ""
-    # v15.1: 스킵 금지(쿠마님 규칙) — 정규 시도 소진 후 5회는 완화 기준(유사도 0.55, 금지어
-    # 해제)으로 더 시도하고, 그래도 안 되면 수집된 후보 중 유사도 최저를 발행한다.
+    # v15.2: 스킵 금지 + 품질 불변(쿠마님 규칙 2개 동시 충족) — 기준을 낮추는 대신 시도
+    # 강도를 올린다: 정규 7회(mini, 0.42) → 완화 5회(mini, 0.50·금지어 허용) → 승급 3회
+    # (gpt-4o, 0.50). 발행 가능한 최악 후보도 유사도 0.55 미만이어야 한다(그 위는 raise —
+    # 같은 날 다음 cron 슬롯이 이어받아 재도전하므로 '포기'가 아니라 '지연'이다).
     candidates = []
-    total_attempts = max_attempts + 5
+    total_attempts = max_attempts + 5 + 3
     for attempt in range(total_attempts):
-        if client is None:
-            break
         relaxed = attempt >= max_attempts
-        jaccard_limit = 0.55 if relaxed else 0.42
+        escalated = attempt >= max_attempts + 5
+        jaccard_limit = 0.50 if relaxed else 0.42
+        topic_model = "gpt-4o" if escalated else "gpt-4o-mini"
         category = _least_used_category(used_topics, CATEGORIES, window=30)
-        temperature = 1.0 + 0.1 * attempt
+        # 승급(gpt-4o) 구간은 고온 샘플링이 모델 품질 이점을 상쇄하므로 1.2 고정 (codex)
+        temperature = 1.2 if escalated else 1.0 + 0.1 * min(attempt, 9)
 
         hints = []
         if forced_pattern:
@@ -608,10 +600,10 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
         # (codex 높음: _openai_retry 최종 실패 시 폴백까지 못 가던 구멍)
         try:
             response = _topic_api_call(client, category, year, used_list, banned_str,
-                                       forced_hint, timely_block, temperature)
+                                       forced_hint, timely_block, temperature, model=topic_model)
         except Exception as _e:
             last_reason = f"api error: {_e}"
-            print(f"[topic] attempt {attempt + 1} api error (continuing): {_e}")
+            print(f"[topic] attempt {attempt + 1} ({topic_model}) api error (continuing): {_e}")
             continue
         title = response.choices[0].message.content.strip().strip('"').strip("'")
         slug = slugify(title)
@@ -652,26 +644,20 @@ def generate_unique_topic(used_topics, existing_slugs, living_titles=None, max_a
 
         return title, category, slug
 
-    # v15.1: 스킵 금지 — 시도 전부 소진 시 수집된 후보 중 유사도 최저를 발행 (v12 의
-    # fail-closed RuntimeError 폐지, 쿠마님 "어떻게든 고쳐서 발행" 규칙).
+    # v15.2: 시도 전부 소진 — 수집 후보 중 유사도 최저가 **품질 상한(0.55) 미만일 때만** 발행.
+    # 그 위는 '좋은 주제' 기준 미달이라 발행하지 않는다(쿠마님: 스킵 금지 ≠ 쓰레기 주제 허용).
     if candidates:
         candidates.sort(key=lambda c: (c[0], c[1]))
         score, _banned_flag, title, category, slug = candidates[0]
-        print(f"[topic] all {total_attempts} attempts rejected — publishing best candidate "
-              f"(jaccard {score:.2f}): {title}")
-        return title, category, slug
+        if score < 0.55:
+            print(f"[topic] all {total_attempts} attempts rejected — publishing best candidate "
+                  f"(jaccard {score:.2f}, under quality cap): {title}")
+            return title, category, slug
+        last_reason = f"best candidate jaccard {score:.2f} >= 0.55 quality cap"
 
-    # 후보 0개(전 시도 API 장애/슬러그 중복/클리셰) — GPT 없이 로컬 템플릿으로라도 발행.
-    print(f"[topic] no usable candidate in {total_attempts} attempts (last: {last_reason}) — local template fallback")
-    cat_words = category.replace("-", " ")
-    for tpl in _LOCAL_TITLE_TEMPLATES:
-        t = tpl.format(cat=cat_words)
-        s = slugify(t)
-        if re.sub(r"-\d{2,3}$", "", s) not in used_set:
-            return t, category, s
-    # 템플릿 4종까지 전부 소진(사실상 불가) — 월 이름으로 차별화해 무조건 반환
-    t = _LOCAL_TITLE_TEMPLATES[0].format(cat=cat_words) + " this " + datetime.datetime.now().strftime("%B")
-    return t, category, slugify(t)
+    # 여기 도달 = 15회(4o 승급 포함)가 전부 실패 — 사실상 API 장애 수준. 저품질 발행 대신
+    # raise → exit 1 → Actions retry(3회) + 같은 날 남은 cron 슬롯이 이어받아 재도전.
+    raise RuntimeError(f"no good-quality topic in {total_attempts} attempts (last: {last_reason}) — will retry on next slot")
 
 
 # v14 (2026-07-28): 본문에 실제로 쓰는 계산기를 붙인다.
@@ -1307,7 +1293,9 @@ def create_post():
         content = _deterministic_repair(content, market_data, client=_repair_client, title=title)
         residual = validate_post_quality(content, market_data)
         if residual:
-            print(f"[repair] residual issues (publishing anyway per no-skip rule): {residual}")
+            # v15.2: 품질 미달 글은 발행하지 않는다(쿠마님: 좋은 내용 불변). 수리로도 못 채운
+            # 잔여 문제는 raise → 같은 날 다음 슬롯이 새 주제로 재도전 (지연이지 포기가 아님).
+            raise RuntimeError(f"repair could not clear quality issues: {residual} — will retry on next slot")
 
     content = inject_internal_links(content, recent_posts, min_links=5, max_links=8)
     content = _resolve_bare_brackets(content, recent_posts)
@@ -1413,3 +1401,4 @@ if __name__ == "__main__":
 # v8_accuracy_rebuild 2026-05-23  (single niche HYSA/CD/MMA, no fabrication, 1st-party sources)
 # v15_market_signals 2026-08-02  (real FDIC national-rate data + news-driven timely topics + quality validate/repair loop)
 # v15.1_no_skip 2026-08-02  (never skip publishing: relaxed-retry + best-candidate topic fallback, deterministic content repair)
+# v15.2_quality_floor 2026-08-02  (no-skip AND no-garbage: effort escalates (gpt-4o topic escalation), quality caps never relax; hard fails defer to the next cron slot)
